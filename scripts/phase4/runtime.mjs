@@ -52,6 +52,21 @@ function resolvedExecutable(command) {
   return realpathSync(candidate.trim());
 }
 
+export function isValidAnvilOwnerRecord(record, platform = process.platform) {
+  return record !== null && typeof record === "object" &&
+    record.owner === "fairwork-phase4" &&
+    Number.isSafeInteger(record.pid) &&
+    record.pid > 0 &&
+    record.host === HOST &&
+    record.port === PORT &&
+    record.chainId === 31337 &&
+    typeof record.executable === "string" &&
+    (platform === "win32"
+      ? typeof record.createdFileTime === "string"
+      : typeof record.processStart === "string") &&
+    Array.isArray(record.args);
+}
+
 function readOwnerRecord() {
   if (!existsSync(OWNER_FILE)) return undefined;
   let record;
@@ -60,17 +75,7 @@ function readOwnerRecord() {
   } catch {
     throw new Error(`Refusing to stop a process because ${path.relative(ROOT, OWNER_FILE)} is not valid JSON.`);
   }
-  if (
-    record.owner !== "fairwork-phase4" ||
-    !Number.isSafeInteger(record.pid) ||
-    record.pid <= 0 ||
-    record.host !== HOST ||
-    record.port !== PORT ||
-    record.chainId !== 31337 ||
-    typeof record.executable !== "string" ||
-    typeof record.createdFileTime !== "string" ||
-    !Array.isArray(record.args)
-  ) {
+  if (!isValidAnvilOwnerRecord(record)) {
     throw new Error(`Refusing to stop a process using an unrecognized ownership record at ${path.relative(ROOT, OWNER_FILE)}.`);
   }
   return record;
