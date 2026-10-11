@@ -1,5 +1,7 @@
 # Temporary VM demo — 2026-10-11
 
+Status: removed on 2026-10-11 at the user's request. The hostname block, web service, owned Anvil process, isolated source/tools, temporary installers/scripts/logs, certificate and dedicated service account were removed. Other Caddy sites remain configured. The information below records the former deployment.
+
 User explicitly authorized temporary VM hosting and removal of the password gate. URL: https://fairwork.141.148.199.4.sslip.io . HTTPS is publicly accessible without Basic Auth. Unauthenticated page and configuration requests both succeeded after removal.
 
 This is an isolated synthetic Anvil demo, not a production or mainnet release. VM source: `/opt/fairwork-temp-20261011`. Node24.11.1 and Anvil1.8.5 are installed under `/opt/fairwork-tools-20261011`. None of the frozen local app/test/financial sources were changed. The copied demo received exact-host SIWE/Origin/CSP wiring, a bounded same-origin read-only RPC route, the Unix process-record correction and a compatibility fix accepting omitted empty JSON-RPC params.

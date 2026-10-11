@@ -2,7 +2,7 @@
 
 Hackathon prototype coding is complete for the implemented Tier A flow: create, accept, fund, submit, revise, approve, dispute, settle and withdraw. Fresh checks on 2026-10-11 passed 122 contract, 105 web, 24 tooling and 21 backend tests. The GitHub source is published on `main`; historical reports below retain their original no-push/no-deployment status. Exhaustive UI acceptance and production release requirements remain open.
 
-A public temporary synthetic demo is hosted at https://fairwork.141.148.199.4.sslip.io on the user-authorized VM. See [temporary deployment details](docs/TEMPORARY_VM_DEMO.md). Production release remains blocked.
+The temporary VM demo was taken offline on 2026-10-11 at the user's request. Its service, synthetic chain, deployment files and tools have been removed. See [deployment history](docs/TEMPORARY_VM_DEMO.md). Production release remains blocked.
 
 Reopened local Phase4 evidence is in [PHASE4_REOPEN_REPORT.md](docs/PHASE4_REOPEN_REPORT.md). Settled disputes show event-derived payouts and readable fallback reasons; agreement creation clears previous private files before showing the new job. Fresh local browser/chain proofs cover USDC, eight-decimal WBTC, revisions, both arbitration rounds, bounded fallback and scoped owner registry management. The registry browser run added and removed one synthetic wallet (6→7→6) without changing any of 32 recorded panels. Its receipts are from blocks 528–529; the 107-transaction/488-reference proof at block 657 was captured after a different fresh reset, while the latest reset is at head 534. Public release remains blocked; isolated artifact-test packaging is not a production deployment.
 
