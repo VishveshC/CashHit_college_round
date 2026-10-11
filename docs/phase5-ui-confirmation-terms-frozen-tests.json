@@ -1,0 +1,17 @@
+{
+  "title": "Phase 5 UI proposal confirmation plaintext/hash RED freeze",
+  "frozen_at": "2026-10-11 Asia/Kolkata",
+  "command": "node --experimental-strip-types --test apps/web/test/phase5-ui-confirmation-terms.test.ts",
+  "test_exit": 1,
+  "redloghash": "C11E5137CC02AA649E449D0EC04BA5B68EB4C87E683238F0B4D9583551F75725",
+  "frozen_files": [
+    {
+      "file": "apps/web/test/phase5-ui-confirmation-terms.test.ts",
+      "Hash": "6C027CE7C4E3C2EB2C18B0CA22168E2D187E29B42B5224B4EFC053EF4F086D8F"
+    },
+    {
+      "file": "docs/phase5-ui-confirmation-terms-red.log",
+      "Hash": "C11E5137CC02AA649E449D0EC04BA5B68EB4C87E683238F0B4D9583551F75725"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+apps/web/lib/server/routes.ts(561,89): error TS2322: Type 'Buffer<ArrayBufferLike>' is not assignable to type 'BodyInit | null | undefined'.
+  Type 'Buffer<ArrayBufferLike>' is missing the following properties from type 'URLSearchParams': size, append, delete, get, and 2 more.
+apps/web/lib/server/routes.ts(718,27): error TS2345: Argument of type 'Buffer<ArrayBufferLike>' is not assignable to parameter of type 'BodyInit | null | undefined'.
+  Type 'Buffer<ArrayBufferLike>' is missing the following properties from type 'URLSearchParams': size, append, delete, get, and 2 more.

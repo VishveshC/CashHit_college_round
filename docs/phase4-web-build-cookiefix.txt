@@ -1,0 +1,69 @@
+
+> fairwork-v3@0.0.0 build:web:local
+> node scripts/web-build.mjs --target local
+
+Validated local-only chain31337 build; public release remains blocked.
+▲ Next.js 16.4.0 (Turbopack)
+✓ Running next.config.ts took 28ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1329ms
+  Running TypeScript ...
+  Finished TypeScript in 513ms ...
+  Collecting page data using 21 workers ...
+  Generating static pages using 21 workers (0/3) ...
+✓ Generating static pages using 21 workers (3/3) in 687ms
+Turbopack build encountered 1 warning:
+./apps/web/lib/server/runtime.ts:43:19
+Warning: Dynamic filesystem access causes tracing of the whole project
+  41 |   if (path.resolve(databasePath) !== path.join(runtimeDir, 'private.db') || storageDir !==...
+  42 |   const publicDir = path.resolve(process.cwd(), 'public');
+> 43 |   const webRoot = path.resolve(process.cwd());
+     |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  44 |   const relativePublic = path.relative(publicDir, storageDir);
+  45 |   const relativeWeb = path.relative(webRoot, storageDir);
+  46 |   if (!path.isAbsolute(storageDir) || relativePublic === '' || (!relativePublic.startsWith...
+
+Static analysis determined that this filesystem access causes the whole project to be traced and included in the output.
+  Finalizing page optimization ...
+This is usually unintentional and leads to all source files (including the public folder) to be deployed as part of the server code.
+This can slow down deployments or lead to failures when size limits are exceeded.
+To resolve this, you can
+- make sure the path is statically scoped to some subfolder, for example path.join(process.cwd(), 'data', bar), or
+- only use them in development, or
+- opt out by adding an ignore comment to the highlighted call: path.resolve(/*turbopackIgnore: true*/ ...), or
+- remove them.
+
+Import trace:
+  App Route:
+    ./apps/web/lib/server/runtime.ts
+    ./apps/web/app/api/jobs/[jobId]/timeline/route.ts
+
+
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/auth/login
+├ ƒ /api/auth/logout
+├ ƒ /api/auth/nonce
+├ ƒ /api/auth/session
+├ ƒ /api/config
+├ ƒ /api/dev/randomness/fulfill
+├ ƒ /api/dev/randomness/mode
+├ ƒ /api/dev/rpc
+├ ƒ /api/dev/time-warp
+├ ƒ /api/disputes/[disputeId]/evidence
+├ ƒ /api/files/[fileId]/content
+├ ƒ /api/files/[fileId]/download
+├ ƒ /api/jobs/[jobId]
+├ ƒ /api/jobs/[jobId]/audit
+├ ƒ /api/jobs/[jobId]/files
+├ ƒ /api/jobs/[jobId]/notes
+└ ƒ /api/jobs/[jobId]/timeline
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+exit code: 0

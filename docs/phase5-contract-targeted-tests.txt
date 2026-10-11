@@ -1,0 +1,46 @@
+
+> fairwork-v3@0.0.0 test:contracts
+> node scripts/forge-test.mjs --match-path test/Phase5ContractSupplemental.t.sol
+
+forge-std 1.17.0, commit f3dae6e6ee381f25eb6a246f7da9b85c91a68219, normalized source SHA-256 verified.
+Compiling 53 files with Solc 0.8.36
+Solc 0.8.36 finished in 2.35s
+Compiler run successful with warnings:
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:125:29:
+    |
+125 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, signature);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:134:29:
+    |
+134 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecoverCalldata(hash, signature);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:161:29:
+    |
+161 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, r, vs);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:203:29:
+    |
+203 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, v, r, s);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:273:26:
+    |
+273 |     function _throwError(RecoverError error, bytes32 errorArg) private pure {
+    |                          ^^^^^^^^^^^^^^^^^^
+
+
+Ran 3 tests for test/Phase5ContractSupplemental.t.sol:Phase5ContractSupplementalTest
+[PASS] test_Phase5_AllThreeDrawsWithTwoRetriesTerminalizeWithinFifteenAdvances() (gas: 6263034)
+[PASS] test_Phase5_Panel2CommitAndRevealWindowsAreHalfOpen() (gas: 4331421)
+[PASS] test_Phase5_RandomnessRetryAdvanceWorksAtEndPlusOne() (gas: 2536798)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 4.10ms (7.69ms CPU time)
+
+Ran 1 test suite in 6.01ms (4.10ms CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)

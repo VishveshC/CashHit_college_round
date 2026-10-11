@@ -1,0 +1,88 @@
+(node:8608) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/phase4-ui-recovery.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ a successful receipt preserves its private follow-up before a failing fresh read (1.3071ms)
+✔ a failed receipt never runs or preserves a private follow-up (0.1616ms)
+✖ receipt-confirmed stale chain state blocks contract actions until refreshed (0.7791ms)
+✖ an uploaded private file stays a draft until chain verification (0.1013ms)
+✖ a retry resumes after the exact file hash/reference already confirmed on chain (0.117ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 1
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 108.368
+
+✖ failing tests:
+
+test at apps\web\test\phase4-ui-recovery.test.ts:28:1
+✖ a successful receipt preserves its private follow-up before a failing fresh read (1.3071ms)
+  AssertionError [ERR_ASSERTION]: the receipt-dependent secret remains available despite the read failure
+  + actual - expected
+  
+  + ''
+  - '0xabababababababababababababababababababababababababababababababab'
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/phase4-ui-recovery.test.ts:44:10)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: '0xabababababababababababababababababababababababababababababababab',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\phase4-ui-recovery.test.ts:63:1
+✖ receipt-confirmed stale chain state blocks contract actions until refreshed (0.7791ms)
+  AssertionError [ERR_ASSERTION]: create and agreement actions must not use a pre-receipt snapshot
+  + actual - expected
+  
+  + [
+  +   'createJob'
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/phase4-ui-recovery.test.ts:65:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [ 'createJob' ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\phase4-ui-recovery.test.ts:72:1
+✖ an uploaded private file stays a draft until chain verification (0.1013ms)
+  Error: Not implemented: stage uploaded files as unbound drafts
+      at stagePrivateFile (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/client/file-drafts.ts:5:9)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/phase4-ui-recovery.test.ts:76:18)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at apps\web\test\phase4-ui-recovery.test.ts:83:1
+✖ a retry resumes after the exact file hash/reference already confirmed on chain (0.117ms)
+  Error: Not implemented: reconcile evidence plan against confirmed chain events
+      at pendingEvidenceEntries (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/client/evidence-resume.ts:5:9)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/phase4-ui-recovery.test.ts:89:20)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+exit code: 1

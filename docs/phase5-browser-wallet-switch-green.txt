@@ -1,0 +1,56 @@
+Browser tab: 4, Title: "Fairwork — milestone escrow", URL: "http://localhost:3000/".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
++		58 text NEW DIRECT PROPOSAL
++		59 heading Create a private agreement, Value: 2
++			60 text Create a private agreement
++		61 text Terms are committed on chain and encrypted in private storage after the proposal confirms.
++		62 button Close
++		63 container
++			64 text Freelancer wallet address
++			65 text field (settable) Freelancer wallet address
++		66 container
++			67 text Token
++			68 pop up button (collapsed, settable) Token, Value: USDC · 0x5FbD…0aa3, Secondary Actions: Expand
++				69 menu
++					70 (selected) USDC · 0x5FbD…0aa3
++					71 WBTC · 0xe7f1…0512
++		72 container
++			73 text Review window · seconds
++			74 stepper (settable, integer) Review window · seconds, Value: 3600
++		75 container
++			76 text Revision limit
++			77 stepper (settable, integer) Revision limit, Value: 2
++		78 container
++			79 text Agreement title
++			80 text field (settable) Agreement title
++		81 container
++			82 text Description
++			83 text entry area (settable) Description
++		84 container
++			85 text Scope
++			86 text entry area (settable) Scope
++		87 container
++			88 text Delivery rules
++			89 text entry area (settable) Delivery rules
++		90 text PAYMENT PLAN
++		91 text Milestones
++		92 button ＋ Add milestone
++		93 text 01
++		94 container
++			95 text Milestone  1
++		96 container
++			97 text Amount ·  USDC
++			98 text field (settable) Amount · USDC
++		99 container
++			100 text Delivery time · seconds
++			101 stepper (settable, integer) Delivery time · seconds, Value: 86400
++		102 container
++			103 text Acceptance criteria
++			104 text entry area (settable) Acceptance criteria
++		105 text Each milestone amount is exact integer token units. No unlimited approval.
++		106 button Cancel
++		107 button Review and create proposal →
++			108 text Review and create proposal
++			109 text →
+The focused UI element is 57 button ＋ Create a private agreement
+PASS freelancer reopened title is empty; previous client sentinel is absent.

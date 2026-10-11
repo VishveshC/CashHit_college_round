@@ -1,0 +1,36 @@
+(node:32120) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/security.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 5 backend: receipt-bound evidence persistence and active-file rejection
+  ✔ a matching pre-deadline receipt can be saved after the evidence window advances (22.2007ms)
+  ✔ a matching pre-deadline receipt can be saved after the dispute settles (8.7093ms)
+  ✔ late recovery still requires an exact event with a valid pre-deadline timestamp and the authenticated party (7.0202ms)
+  ✖ a syntactically valid active JavaScript PDF is rejected during upload (16.4547ms)
+✖ Phase 5 backend: receipt-bound evidence persistence and active-file rejection (734.0754ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 3
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1221.7332
+
+✖ failing tests:
+
+test at scripts\phase5-backend-evidence-receipt-corrected.test.mjs:233:13
+✖ a syntactically valid active JavaScript PDF is rejected during upload (16.4547ms)
+  AssertionError [ERR_ASSERTION]: PDF acceptance must parse content and reject active JavaScript actions, not just check the %PDF- prefix
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-receipt-corrected.test.mjs:243:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-receipt-corrected.test.mjs:233:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 200,
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }

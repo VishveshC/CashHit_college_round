@@ -1,0 +1,260 @@
+{
+  "generatedAt": "2026-10-11T01:57:06.640Z",
+  "kind": "isolated non-deployable artifact-test packaging evidence",
+  "target": "artifact-test",
+  "evidencePrefix": "phase4-reopen-registry-artifact",
+  "publicTargetRemainsBlocked": true,
+  "sourceEvidence": {
+    "dashboardPath": "apps/web/components/EscrowDashboard.tsx",
+    "dashboardSha256": "5e74b22f5f62a8ceacad27c285431e1c1b42f97c0bec4cf559068e43a5ed6419",
+    "registryComponentPath": "apps/web/components/ArbiterRegistry.tsx",
+    "registryComponentSha256": "ce4f99df0f66adcb5b33bdc780af1a3cfda9f19ed3e41c1339631bc80d14fd74"
+  },
+  "build": {
+    "status": 0,
+    "signal": null,
+    "outputDirectory": "C:\\Users\\vishvesh\\AppData\\Local\\Temp\\fairwork-phase4-artifact-test-Lt3B1r\\apps\\web\\.next-artifact-test",
+    "outputDirectoryIsOutsideWorkspace": true,
+    "environmentKeysPassed": [
+      "CI",
+      "FAIRWORK_BUILD_TARGET",
+      "NEXT_PUBLIC_FAIRWORK_LOCAL",
+      "NEXT_TELEMETRY_DISABLED",
+      "PATH/SystemRoot/TEMP/TMP if set"
+    ],
+    "usedRealPublicConfig": false,
+    "usedPublicDeployment": false
+  },
+  "exclusions": {
+    "excludedSourcePaths": [
+      "apps/web/app/api/dev",
+      "apps/web/app/api/* except the explicit read-only config fixture",
+      "apps/web/lib/dev-wallet.ts",
+      "apps/web/lib/dev-controls.ts",
+      "apps/web/lib/dev-control-runtime.ts",
+      "apps/web/lib/local-rpc.ts",
+      "apps/web/lib/chain-server.ts",
+      "apps/web/lib/server",
+      "apps/web/test",
+      "apps/web/prisma",
+      "apps/web/.next and all generated build directories",
+      "all node_modules directories (dependency resolver only is junctioned read-only)",
+      "all .env* files, databases, runtime backups and private-key files",
+      "infra/local and local runtime files",
+      "packages/chain/generated/MockRandomness.json"
+    ],
+    "stagedFiles": [
+      {
+        "path": "apps/web/app/page.tsx",
+        "bytes": 127,
+        "sha256": "c01a54c657caf1bf6e91bae01ad9b7d47462336e8b6de3b49a6df5c1edb52b0e"
+      },
+      {
+        "path": "apps/web/app/layout.tsx",
+        "bytes": 386,
+        "sha256": "a1d65e7ff201970fa50138e92ac2118d6715d6a391e30f66840759bb2d8f7d67"
+      },
+      {
+        "path": "apps/web/app/globals.css",
+        "bytes": 33948,
+        "sha256": "d4a24d2983b8193ebf8589467c5f185806a64b3fc962451096023e860a9d0e07"
+      },
+      {
+        "path": "apps/web/components/EscrowDashboard.tsx",
+        "bytes": 129087,
+        "sha256": "5e74b22f5f62a8ceacad27c285431e1c1b42f97c0bec4cf559068e43a5ed6419"
+      },
+      {
+        "path": "apps/web/components/ArbiterRegistry.tsx",
+        "bytes": 9946,
+        "sha256": "ce4f99df0f66adcb5b33bdc780af1a3cfda9f19ed3e41c1339631bc80d14fd74"
+      },
+      {
+        "path": "apps/web/tsconfig.json",
+        "bytes": 730,
+        "sha256": "a3fb25a728a0bdc479b2fc04cc3b86e8ed99f5a199c88ad0f8ff50f8abc578af"
+      },
+      {
+        "path": "apps\\web\\lib\\client\\action-policy.ts",
+        "bytes": 8560,
+        "sha256": "960764d3c848f3c9862ff9b63dffe3f00f230d1db1ff2df1e8345f9e0e91f1d1"
+      },
+      {
+        "path": "apps\\web\\lib\\client\\amounts.ts",
+        "bytes": 1439,
+        "sha256": "b5fcc50928b25918bfc455ec8f75a4cc93cf76d36394123e4c34002d7044daae"
+      },
+      {
+        "path": "apps\\web\\lib\\client\\arbiter-registry.ts",
+        "bytes": 5558,
+        "sha256": "bb583765fc8967a37de4fe9d852dc5f39c676dc3be8880f3a93bde25a5a93d18"
+      },
+      {
+        "path": "apps\\web\\lib\\client\\commitments.ts",
+        "bytes": 2051,
+        "sha256": "fc7415c22d26e6ccecba6a4d013b21b491e7db337662324cdebad0ce20f436dc"
+      },
+      {
+        "path": "apps\\web\\lib\\client\\dispute-settlement-view.ts",
+        "bytes": 3724,
+        "sha256": "7d4cb7b7560b44385e979a892108a4100091cbf0d0507b896b67431e6e80acf7"
+      },
+      {
+        "path": "apps\\web\\lib\\client\\evidence-plan.ts",
+        "bytes": 1157,
+        "sha256": "9be642cb64a32ba5fd26211052fb720a3115737f12ae77cff68481969c27259c"
+      },
+      {
+        "path": "apps\\web\\lib\\client\\evidence-receipt.ts",
+        "bytes": 488,
+        "sha256": "a828f189e33c36f22558957ef2e6f644bbfd5195f7ad484f5c60bdd6efe56088"
+      },
+      {
+        "path": "apps\\web\\lib\\client\\evidence-resume.ts",
+        "bytes": 1325,
+        "sha256": "6b1ef82d46bb3538e9366152df2d17f8d7c9d54f8cbe5bde4c18e05fed961a88"
+      },
+      {
+        "path": "apps\\web\\lib\\client\\file-drafts.ts",
+        "bytes": 788,
+        "sha256": "fb27d1890602fd97668a30f6ed6e8c2b0b5c3271ad01cd2c19419343fa05dc5c"
+      },
+      {
+        "path": "apps\\web\\lib\\client\\job-identifiers.ts",
+        "bytes": 889,
+        "sha256": "c75e8372220a8de952d00e189a886a8b34fe4831b30bd47b20c26c356f2acdfb"
+      },
+      {
+        "path": "apps\\web\\lib\\client\\local-arbitration-gas.ts",
+        "bytes": 263,
+        "sha256": "4559aaedd18cbc3213551f0e379b6e5e41c89444cc78811469e9d1a67892e476"
+      },
+      {
+        "path": "apps\\web\\lib\\client\\private-cache-policy.ts",
+        "bytes": 653,
+        "sha256": "7538fe63f7e0cdbb07bf1f3e4190967bee28e9d8c34d446ba363ca53a1c86575"
+      },
+      {
+        "path": "apps\\web\\lib\\client\\private-read-guard.ts",
+        "bytes": 798,
+        "sha256": "04be076d006818be451ba9c04d0c5da007f1a03fd9593672e1e38393475eacc8"
+      },
+      {
+        "path": "apps\\web\\lib\\client\\private-view-policy.ts",
+        "bytes": 2032,
+        "sha256": "315cc9abf9d27e41e4ecdcacedf53a161702e0b077a68f46cfdb3efc2b766719"
+      },
+      {
+        "path": "apps\\web\\lib\\client\\transactions.ts",
+        "bytes": 3343,
+        "sha256": "6ac525a1ba23fe4cb3b3ef4dc61ca07ef0c8a56a77879b99929ff3821bf716c1"
+      },
+      {
+        "path": "apps/web/lib/chain-pins.ts",
+        "bytes": 628,
+        "sha256": "b7740d6b1d210f985fa775f990439576f687841d562c2f5e3f6bb9597d1bbcac"
+      },
+      {
+        "path": "apps/web/lib/chain.ts",
+        "bytes": 4816,
+        "sha256": "a21ca348f6394d9647c82735f7fc7a1d52de198b02d43fb3c634ab70a0cd4869"
+      },
+      {
+        "path": "apps/web/lib/dev-wallet.ts (synthetic type-resolution stub)",
+        "bytes": 230,
+        "sha256": "88738d5fa01672c04f6348abc79b5625b0bde9861d23b52562692535c85a3b3c"
+      },
+      {
+        "path": "packages/chain/generated/FairworkEscrow.json",
+        "bytes": 51211,
+        "sha256": "2de351a29fa6301356c9ae62284fddbcaf2d4393d24a247989d3ef142b07d270"
+      },
+      {
+        "path": "packages/chain/generated/FairworkArbitration.json",
+        "bytes": 23374,
+        "sha256": "ed37357c2fd483b334e875dcbc8a5379947f14753658c4c83d1710f2e3faa3b1"
+      },
+      {
+        "path": "apps/web/app/api/config/route.ts (fixture)",
+        "bytes": 328,
+        "sha256": "310df8dd3abadbe7c1d20b6bf9c00f425116e041297373cc764a8dfcceef8c40"
+      },
+      {
+        "path": "apps/web/next.config.ts (fixture)",
+        "bytes": 622,
+        "sha256": "52564f213cbeef14166fc18ae8b9081a836ec7043d760c5d62989721a3ea904b"
+      }
+    ],
+    "stagedFileCount": 28,
+    "hasMockRandomnessArtifact": false,
+    "hasDevWalletSource": false,
+    "hasOriginalDeploymentPinVerifier": true,
+    "fixtureConfigRoute": "GET only; fixed 503; contains no chain, address, RPC or write-handler data",
+    "sharedProductionChainTransform": "MockRandomness import and ABI exports removed before compilation"
+  },
+  "knownTestKeyScan": {
+    "candidateSource": "apps/web/lib/dev-wallet.ts (read in memory only; excluded from stage)",
+    "exactCandidatesScanned": 0,
+    "exactComparisonApplicable": false,
+    "valuesWrittenToReport": false
+  },
+  "artifact": {
+    "outputFileCount": 109,
+    "textualChunkAndManifestCount": 74,
+    "routeManifestFound": true,
+    "apiRoutes": [
+      "/api/config/route"
+    ],
+    "routeManifestsContainDevApi": false,
+    "chunksContainMockRandomness": false,
+    "chunksContainSeededDemoControls": true,
+    "knownTestPrivateKeyScanComplete": false,
+    "knownTestPrivateKeyCandidateCount": 0,
+    "chunksContainKnownTestPrivateKey": null,
+    "chunksContainLocalRpcOrOrigin": true,
+    "chunksContainLocalOnlyChainUx": true,
+    "routeMethodsAreReadOnlyFixtureOnly": true,
+    "markerCounts": {
+      "devApi": 0,
+      "mockRandomness": 0,
+      "demoControls": 4,
+      "knownTestPrivateKeys": 0,
+      "localRpcOrOrigin": 6,
+      "localOnlyChainUx": 14
+    },
+    "markerFiles": {
+      "devApi": [],
+      "mockRandomness": [],
+      "demoControls": [
+        "react-loadable-manifest.json",
+        "server/chunks/361.js",
+        "server/middleware-react-loadable-manifest.js",
+        "static/chunks/345.7569e2008a3f9f61.js"
+      ],
+      "localRpcOrOrigin": [
+        "server/app/page.js",
+        "static/chunks/757-9e70015d76f2e147.js",
+        "static/chunks/app/page-f566baa43c3dfd4a.js"
+      ],
+      "localOnlyChainUx": [
+        "server/app/page.js",
+        "static/chunks/app/page-f566baa43c3dfd4a.js"
+      ]
+    },
+    "readinessBlockers": [
+      "seededDemoControls",
+      "knownTestKeyCandidatesUnavailable",
+      "localRpcOrOrigin",
+      "localOnlyChainUx"
+    ],
+    "releaseSafe": false
+  },
+  "limitations": [
+    "This is a temporary staging build, not a production artifact and not deployable.",
+    "The fixture config endpoint is a GET-only fixed 503 and contains no runtime handlers or public-write API.",
+    "The current dashboard still has chain-31337 behavior and local SIWE/RPC assumptions outside its localBuild-only controls; actual chunk scans report these markers explicitly.",
+    "dev-wallet.ts relays requests to an unlocked local RPC and contains no private-key literal list, so exact known-key matching is not applicable and does not prove that key values are absent.",
+    "No approved production adapter, chain, RPC, token policy, origin/TLS policy, or rate-limit configuration was supplied.",
+    "A green exclusion subset does not prove a future approved public build; that build must run this shared source transform and pass its own actual-output scan."
+  ]
+}

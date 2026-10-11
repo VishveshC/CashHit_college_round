@@ -1,0 +1,12 @@
+{
+  "frozen_files": [
+    {
+      "path": "scripts/web-trace.test.mjs",
+      "sha256": "185676302BC05280A64220688CA428F884CA0611C1083E236A1B39D5553F0EF4"
+    },
+    {
+      "path": "docs/phase4-web-trace-red.txt",
+      "sha256": "5CA2DC449DCC77CE79F78EE0922394973433B59C9ABEA7C4B702B5DF1537264F"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+- status: Temporary synthetic demo — test tokens only; no real money or mainnet funds.
+- main:
+  - link "Fairwork home":
+    - /url: "#top"
+    - generic: F
+    - generic: fairwork.
+  - generic: LOCAL CHAIN · 31337
+  - generic: Client
+  - generic: 0x7099…79C8
+  - button "Disconnect wallet": ×
+  - paragraph: MILESTONE ESCROW · LOCAL PROTOTYPE
+  - heading "Work moves forward. Trust stays verifiable." [level=1]:
+    - text: Work moves forward.
+    - emphasis: Trust stays verifiable.
+  - paragraph: Agree on the work in private. Put each milestone on chain. Release payment only when the rules say it is due.
+  - generic: FW
+  - text: RULES FIRST
+  - text: FUNDS SECOND
+  - region "Wallet and agreement controls":
+    - generic: "01"
+    - strong: Connect your wallet
+    - generic: Private access follows the signed wallet
+    - generic: Local role
+    - combobox "Local role":
+      - option "Choose a seeded role…"
+      - option "Client" [selected]
+      - option "Freelancer"
+      - option "Treasury"
+      - option "Arbiter 1 · 0x90F7…b906"
+      - option "Arbiter 2 · 0x15d3…6A65"
+      - option "Arbiter 3 · 0x9965…A4dc"
+      - option "Arbiter 4 · 0x976E…0aa9"
+      - option "Arbiter 5 · 0x14dC…9955"
+      - option "Arbiter 6 · 0x2361…1E8f"
+    - generic: Development accounts only
+    - strong: 0x7099…79C8
+    - generic: Client · chain 31337
+    - generic: Private session active until 08:42
+    - button "Sign out"
+    - generic: "02"
+    - strong: Open one agreement
+    - generic: Enter a job ID. There is no public job directory.
+    - generic: Agreement ID
+    - generic: "#"
+    - textbox "Agreement ID":
+      - /placeholder: Enter agreement ID
+      - text: "26"
+    - button "Open agreement →":
+      - text: Open agreement
+      - generic: →
+    - button "＋ Create a private agreement"
+  - region "Arbiter registry":
+    - paragraph: ARBITRATION GOVERNANCE
+    - heading "Arbiter registry" [level=3]
+    - generic: ⌑
+    - paragraph: The owner-controlled on-chain wallet roster. Changes apply to future panel selections; current panel assignments remain snapshotted.
+    - term: On-chain owner
+    - definition: 0xf39Fd6…b92266
+    - term: Registered arbiters
+    - definition: 6 / 128
+    - term: Read at block
+    - definition: "527"
+    - generic "Current arbiter members":
+      - strong: Arbiter 1
+      - code: "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+      - button "Remove arbiter 0x90F79bf6EB2c4f870365E785982E1f101E93b906" [disabled]: Remove
+      - strong: Arbiter 2
+      - code: "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+      - button "Remove arbiter 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65" [disabled]: Remove
+      - strong: Arbiter 3
+      - code: "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc"
+      - button "Remove arbiter 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc" [disabled]: Remove
+      - strong: Arbiter 4
+      - code: "0x976EA74026E726554dB657fA54763abd0C3a0aa9"
+      - button "Remove arbiter 0x976EA74026E726554dB657fA54763abd0C3a0aa9" [disabled]: Remove
+      - strong: Arbiter 5
+      - code: "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955"
+      - button "Remove arbiter 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955" [disabled]: Remove
+      - strong: Arbiter 6
+      - code: "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+      - button "Remove arbiter 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f" [disabled]: Remove
+    - generic: Add an arbiter wallet address
+    - textbox "Add an arbiter wallet address" [disabled]:
+      - /placeholder: 0x…
+    - button "Add arbiter" [disabled]
+    - paragraph:
+      - generic: ⌑
+      - strong: Wallets only.
+      - text: Local demo wallets are synthetic. Real arbiters require off-chain identity vetting before registration; no identity details belong here.
+    - paragraph: Registry changes are disabled for this wallet. Connect the on-chain owner shown above to manage membership.
+    - button "Refresh registry"
+  - paragraph:
+    - text: AGREEMENT
+    - generic: "#26"
+  - heading "Private agreement" [level=2]
+  - paragraph: Terms are encrypted off chain. Verify them after signing in as a party.
+  - generic: Funded
+  - generic: AGREEMENT VALUE
+  - strong: 100 USDC
+  - generic: PARTIES
+  - strong: 0x7099…79C8 ↔ 0x3C44…93BC
+  - generic: MILESTONES
+  - strong: 1 steps
+  - generic: REVISIONS
+  - strong: 1 rounds
+  - generic: PINNED DEPLOYMENT
+  - generic: Chain 31337
+  - text: Escrow
+  - code: 0x9fE4…a6e0
+  - text: Code hash
+  - code: 0xc1cd5694…
+  - generic: Estimated chain time · 2026-10-11 03:48:38 UTC
+  - complementary:
+    - paragraph: AGREEMENT TERMS
+    - heading "What was agreed" [level=3]
+    - generic: ⌑
+    - generic: ⌑
+    - strong: Private terms are sealed
+    - paragraph: Sign in with a party wallet to read the scope, delivery rules and acceptance criteria.
+    - generic: ON-CHAIN COMMITMENTS
+    - generic: Title
+    - code: 0xb288a528e8…032575
+    - generic: Description
+    - code: 0x6049f4d128…d14120
+    - generic: Scope
+    - code: 0x56975a52d0…a9a97d
+    - generic: Delivery rules
+    - code: 0x16023287c0…27855a
+    - paragraph: YOUR LEDGER
+    - heading "Available to withdraw" [level=3]
+    - generic: ↗
+    - strong: 0 USDC
+    - paragraph: Claimable is an escrow balance credited to this wallet. Withdrawn is counted only after a completed token transfer.
+    - generic: Withdrawn to wallet
+    - strong: 0.00606 USDC
+    - generic: Principal still locked
+    - strong: 400.006008 USDC
+    - generic: Dispute deposits held
+    - strong: 2.00002 USDC
+    - button "Withdraw claimable funds" [disabled]
+  - paragraph: WORK IN PROGRESS
+  - heading "Milestone ledger" [level=3]
+  - generic: Chain deadlines · UTC · estimated countdown
+  - button "01 Milestone 1 Criteria commitment 0x353946ea… Ready 100 USDC 5m 50s remaining ⌄":
+    - generic: "01"
+    - strong: Milestone 1
+    - generic: Criteria commitment 0x353946ea…
+    - generic: Ready
+    - strong: 100 USDC
+    - generic: 5m 50s remaining
+    - generic: ⌄
+  - generic: MILESTONE 1
+  - heading "Ready" [level=4]
+  - generic: Deadline
+  - strong: 2026-10-11 03:53:28 UTC
+  - generic: Delivery deadline
+  - strong: 2026-10-11 03:53:28 UTC
+  - generic: Grace ends
+  - strong: 2026-10-11 03:54:28 UTC
+  - generic: Review ends
+  - strong: Not started
+  - generic: Response ends
+  - strong: Not started
+  - generic: Delivery duration
+  - strong: 300s
+  - generic: Revision requests · this milestone
+  - strong: 0 / 1
+  - generic: Submission version
+  - strong: — / 2
+  - paragraph: AVAILABLE ACTIONS · based on chain state and wallet role
+  - button "Submit deliverable" [disabled]
+  - button "Resubmit revision" [disabled]
+  - button "Approve milestone" [disabled]
+  - button "Release after review window" [disabled]
+  - button "Refund missed milestone" [disabled]
+  - button "Refund after no revision" [disabled]
+  - generic: SUBMIT WORK
+  - generic: PDF, PNG, JPEG or TXT · uploaded drafts are shared with both agreement parties
+  - button "Choose File"
+  - button "Upload and submit" [disabled]
+  - button "Open dispute · 2% deposit" [disabled]
+  - paragraph: VERIFIABLE HISTORY
+  - heading "Activity ledger" [level=3]
+  - text: Chain
+  - text: Private audit
+  - strong: Job Funded
+  - generic: Chain · 2026-10-11 03:48:28 UTC
+  - code: 0xed96eb3e…
+  - strong: Job Accepted
+  - generic: Chain · 2026-10-11 03:48:28 UTC
+  - code: 0xee5d9b74…
+  - strong: Job Created
+  - generic: Chain · 2026-10-11 03:48:28 UTC
+  - code: 0xf86b7b5e…
+  - strong: TIMELINE_READ
+  - generic: Private audit · 2026-10-11 02:43:04.605Z
+  - strong: TIMELINE_READ
+  - generic: Private audit · 2026-10-11 02:43:04.561Z
+  - strong: NOTE_READ
+  - generic: Private audit · 2026-10-11 02:43:04.464Z
+  - strong: FILE_LIST_READ
+  - generic: Private audit · 2026-10-11 02:43:04.446Z
+  - strong: NOTE_READ
+  - generic: Private audit · 2026-10-11 02:43:04.416Z
+  - paragraph: LOCAL TESTING ONLY
+  - heading "Development controls" [level=3]
+  - paragraph: These controls change the local chain and never appear in a public build.
+  - text: Advance chain clock
+  - generic: seconds
+  - spinbutton "Advance chain clock seconds": "60"
+  - button "Advance time"
+  - text: Randomness mode
+  - combobox "Randomness mode":
+    - option "Manual fulfillment" [selected]
+    - option "Reject randomness requests"
+    - option "Synchronous deterministic fulfillment"
+  - button "Set mode"
+  - text: Fulfill request
+  - textbox "Fulfill request":
+    - /placeholder: Request ID
+  - button "Fulfill request" [disabled]
+  - generic: Fresh chain read 08:13:04 · countdown estimates advance from this read
+  - button "↻ Refresh"
+  - generic: fairwork. · Local prototype
+  - generic: Local chain only · No real funds · Not audited
+  - generic: Chain time shown in UTC
+- alert

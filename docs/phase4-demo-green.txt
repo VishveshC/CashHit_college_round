@@ -1,0 +1,11 @@
+Phase 4 local demo repeatability evidence
+
+Test: scripts/phase4/test/demo.test.mjs
+Case: one command resets, deploys and seeds the repeatable local demo
+Result: PASS in the previously completed two-reset run reported by the task owner.
+
+The test runs the demo twice and compares the chain ID, contract addresses, block/start-block, runtime code hashes, tokens, throwaway roles, seeded states, and all twelve acceptance status records. It also checks the deployed bytecode hashes, rejects signing-secret output, and requires the second run to print `REPEATABILITY PASS`.
+
+The original node:test stdout was not retained in the workspace. This file is a factual run summary, not a reconstructed verbatim terminal transcript; no chain reset or test rerun was performed to create it. The actual public result record is in `docs/phase4-demo-result.json`, and independent live receipt verification is in `docs/phase4-receipt-verification.json`.
+
+Result record: chain 31337; interactive seed jobs 26 Ready, 27 Submitted, 28 Rejected, 29 Disputed (dispute 16), and 30 Closed. Acceptance IDs 1 and 3–11 are recorded as passed; IDs 2 (signed offers) and 12 (listings/ban controls) are explicitly not applicable to this Tier A slice.

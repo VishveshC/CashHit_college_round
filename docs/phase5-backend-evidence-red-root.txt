@@ -1,0 +1,86 @@
+(node:28380) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/security.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 5 backend: receipt-bound evidence persistence and active-file rejection
+  ✖ a matching pre-deadline receipt can be saved after the evidence window advances (1.9725ms)
+  ✖ a matching pre-deadline receipt can be saved after the dispute settles (0.4047ms)
+  ✖ late recovery still requires an exact event with a valid pre-deadline timestamp and the authenticated party (0.3659ms)
+  ✔ a syntactically valid active JavaScript PDF is rejected during upload (12.775ms)
+✖ Phase 5 backend: receipt-bound evidence persistence and active-file rejection (696.9268ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 1
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1153.5864
+
+✖ failing tests:
+
+test at scripts\phase5-backend-evidence-receipt.test.mjs:189:13
+✖ a matching pre-deadline receipt can be saved after the evidence window advances (1.9725ms)
+  Error [AbiEncodingBytesSizeMismatchError]: Size of bytes "0xa1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1" (bytes64) does not match expected size (bytes32).
+  
+  Version: viem@2.57.4
+      at encodeBytes (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/viem/_esm/utils/abi/encodeAbiParameters.js:194:15)
+      at prepareParam (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/viem/_esm/utils/abi/encodeAbiParameters.js:93:16)
+      at prepareParams (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/viem/_esm/utils/abi/encodeAbiParameters.js:63:29)
+      at encodeAbiParameters (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/viem/_esm/utils/abi/encodeAbiParameters.js:54:28)
+      at privateCommitment (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/security.ts:23:20)
+      at evidence (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-receipt.test.mjs:43:47)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-receipt.test.mjs:190:22)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17) {
+    details: undefined,
+    docsPath: undefined,
+    metaMessages: undefined,
+    shortMessage: 'Size of bytes "0xa1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1" (bytes64) does not match expected size (bytes32).',
+    version: '2.57.4'
+  }
+
+test at scripts\phase5-backend-evidence-receipt.test.mjs:200:13
+✖ a matching pre-deadline receipt can be saved after the dispute settles (0.4047ms)
+  Error [AbiEncodingBytesSizeMismatchError]: Size of bytes "0xa2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2" (bytes64) does not match expected size (bytes32).
+  
+  Version: viem@2.57.4
+      at encodeBytes (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/viem/_esm/utils/abi/encodeAbiParameters.js:194:15)
+      at prepareParam (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/viem/_esm/utils/abi/encodeAbiParameters.js:93:16)
+      at prepareParams (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/viem/_esm/utils/abi/encodeAbiParameters.js:63:29)
+      at encodeAbiParameters (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/viem/_esm/utils/abi/encodeAbiParameters.js:54:28)
+      at privateCommitment (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/security.ts:23:20)
+      at evidence (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-receipt.test.mjs:43:47)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-receipt.test.mjs:201:22)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17) {
+    details: undefined,
+    docsPath: undefined,
+    metaMessages: undefined,
+    shortMessage: 'Size of bytes "0xa2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2" (bytes64) does not match expected size (bytes32).',
+    version: '2.57.4'
+  }
+
+test at scripts\phase5-backend-evidence-receipt.test.mjs:211:13
+✖ late recovery still requires an exact event with a valid pre-deadline timestamp and the authenticated party (0.3659ms)
+  Error [AbiEncodingBytesSizeMismatchError]: Size of bytes "0xa3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3" (bytes64) does not match expected size (bytes32).
+  
+  Version: viem@2.57.4
+      at encodeBytes (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/viem/_esm/utils/abi/encodeAbiParameters.js:194:15)
+      at prepareParam (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/viem/_esm/utils/abi/encodeAbiParameters.js:93:16)
+      at prepareParams (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/viem/_esm/utils/abi/encodeAbiParameters.js:63:29)
+      at encodeAbiParameters (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/viem/_esm/utils/abi/encodeAbiParameters.js:54:28)
+      at privateCommitment (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/security.ts:23:20)
+      at evidence (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-receipt.test.mjs:43:47)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-receipt.test.mjs:215:23)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17) {
+    details: undefined,
+    docsPath: undefined,
+    metaMessages: undefined,
+    shortMessage: 'Size of bytes "0xa3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3" (bytes64) does not match expected size (bytes32).',
+    version: '2.57.4'
+  }

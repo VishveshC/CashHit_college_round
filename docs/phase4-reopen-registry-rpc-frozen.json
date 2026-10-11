@@ -1,0 +1,18 @@
+{
+  "phase": 4,
+  "scope": "A61 local RPC arbiter-registry forwarding behavior frozen before handler implementation",
+  "preImplementationResult": {
+    "status": "RED",
+    "tests": 3,
+    "passed": 2,
+    "failed": 1,
+    "output": "phase4-reopen-registry-rpc-red.txt"
+  },
+  "frozen_files": [
+    {
+      "path": "apps/web/test/local-rpc-arbiter-registry.test.ts",
+      "sha256": "3abf732aca416af30742411653ab56350d707a69a172cd9edd2b4652de2f88c2",
+      "purpose": "public dev-RPC handler boundary: treasury forwarding, party/arbiter/outsider denial, zero address, unrelated selector"
+    }
+  ]
+}

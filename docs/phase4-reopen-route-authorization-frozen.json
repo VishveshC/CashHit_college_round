@@ -1,0 +1,12 @@
+{
+  "phase": 4,
+  "scope": "reopened isolated backend route authorization matrix; frozen before execution",
+  "command": "$env:RUST_LOG='debug'; node --experimental-strip-types --test --test-reporter=spec apps/web/test/phase4-reopen-route-authorization.test.mjs",
+  "tests": [
+    {
+      "path": "apps/web/test/phase4-reopen-route-authorization.test.mjs",
+      "sha256": "9a53f87c137deeb3fcc2062e3641cdac0d007d140b65526f765b67999d7cdaed",
+      "purpose": "exercise outsider 404 parity for every current private handler family, including real file download/content authorization, and Origin/CSRF boundaries for every authenticated write with isolated SQLite"
+    }
+  ]
+}

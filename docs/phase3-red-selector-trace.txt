@@ -1,0 +1,102 @@
+Phase 3 selector-level RED diagnostic
+Command: forge test --root contracts --match-path test/Phase3Disputes.t.sol --match-test test_F30_SubmittedClientOpensOneDisputeAndFreezesPrincipalAtReviewBoundary -vvvv
+Started: 2026-10-11 00:41:43 +05:30
+Exit code: 1
+--- BEGIN RAW FORGE OUTPUT ---
+No files changed, compilation skipped
+
+Ran 1 test for test/Phase3Disputes.t.sol:Phase3DisputesTest
+[FAIL: EvmError: Revert] test_F30_SubmittedClientOpensOneDisputeAndFreezesPrincipalAtReviewBoundary() (gas: 826891)
+Traces:
+  [824787] Phase3DisputesTest::setUp()
+    ├─ [0] VM::chainId(31337 [3.133e4])
+    │   └─ ← [Return]
+    ├─ [0] VM::warp(1800000000 [1.8e9])
+    │   └─ ← [Return]
+    ├─ [521054] → new MockToken@0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f
+    │   └─ ← [Return] 1896 bytes of code
+    ├─ [0] VM::deployCode("src/FairworkEscrow.sol:FairworkEscrow", 0x0000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000003c000000000000000000000000000000000000000000000000000000000000000f00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000001e1338000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000278d000000000000000000000000000000000000000000000000000000000000007ea500000000000000000000000000000000000000000000000000000000000000010000000000000000000000005615deb798bb3e4dfa0139dfa1b3d433cc23b72f000000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000de0b6b3a76400000000000000000000000000000000000000000000000000000000000000000000)
+    │   ├─ [3103339] → new FairworkEscrow@0x2e234DAe75C793f67A35089C9d99245E1C58470b
+    │   │   ├─ [271] MockToken::decimals() [staticcall]
+    │   │   │   └─ ← [Return] 6
+    │   │   └─ ← [Return] 13195 bytes of code
+    │   └─ ← [Return] FairworkEscrow: [0x2e234DAe75C793f67A35089C9d99245E1C58470b]
+    ├─ [68187] MockToken::mint(0x000000000000000000000000000000000000c11e, 10000000000000 [1e13])
+    │   ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: 0x000000000000000000000000000000000000c11e, amount: 10000000000000 [1e13])
+    │   └─ ← [Stop]
+    ├─ [51087] MockToken::mint(0x0000000000000000000000000000000000000FEE, 10000000000000 [1e13])
+    │   ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: 0x0000000000000000000000000000000000000FEE, amount: 10000000000000 [1e13])
+    │   └─ ← [Stop]
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [46678] MockToken::approve(FairworkEscrow: [0x2e234DAe75C793f67A35089C9d99245E1C58470b], 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   ├─ emit Approval(owner: 0x000000000000000000000000000000000000c11e, spender: FairworkEscrow: [0x2e234DAe75C793f67A35089C9d99245E1C58470b], amount: 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   └─ ← [Return] true
+    ├─ [0] VM::prank(0x0000000000000000000000000000000000000FEE)
+    │   └─ ← [Return]
+    ├─ [46678] MockToken::approve(FairworkEscrow: [0x2e234DAe75C793f67A35089C9d99245E1C58470b], 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   ├─ emit Approval(owner: 0x0000000000000000000000000000000000000FEE, spender: FairworkEscrow: [0x2e234DAe75C793f67A35089C9d99245E1C58470b], amount: 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   └─ ← [Return] true
+    └─ ← [Stop]
+
+  [826891] Phase3DisputesTest::test_F30_SubmittedClientOpensOneDisputeAndFreezesPrincipalAtReviewBoundary()
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [394096] FairworkEscrow::createJob(JobInput({ freelancer: 0x0000000000000000000000000000000000000FEE, token: 0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f, titleCommitment: 0x71ae0027bdb393fbc1dd4cc768da79e75e7a0c7d227bba4eb89a975402fbcb92, descriptionCommitment: 0x1596dc38e2ac5a6ddc5e019af4adcc1e017a04f510d57e69d6879d5d2996bb8e, scopeCommitment: 0x6760d0b4f6c19fc4031286d0fcd3500c810a2471efb89cb7e125b719f63fa2f4, deliveryRuleCommitment: 0x54008a92b3c2aa1b10422a877d90c0f2e8ef2add9649dfb9d89370e7fac76d48, reviewWindow: 120, revisionLimit: 0 }), [MilestoneInput({ amount: 10001 [1e4], duration: 10, acceptanceCriteriaCommitment: 0xedf001819fe968bec0d28fe5a2db82cf122a0f06ab270ed98e14e9b55d858193 })])
+    │   ├─ emit JobCreated(jobId: 0, client: 0x000000000000000000000000000000000000c11e, freelancer: 0x0000000000000000000000000000000000000FEE, token: MockToken: [0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f], totalAmount: 10001 [1e4], milestoneCount: 1, createdAt: 1800000000 [1.8e9], proposalEnd: 1800000060 [1.8e9])
+    │   └─ ← [Return] 0
+    ├─ [0] VM::prank(0x0000000000000000000000000000000000000FEE)
+    │   └─ ← [Return]
+    ├─ [45973] FairworkEscrow::acceptJob(0)
+    │   ├─ emit JobAccepted(jobId: 0, acceptedAt: 1800000000 [1.8e9], fundingDeadline: 1800000060 [1.8e9])
+    │   └─ ← [Stop]
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [140102] FairworkEscrow::fundJob(0)
+    │   ├─ [2559] MockToken::balanceOf(FairworkEscrow: [0x2e234DAe75C793f67A35089C9d99245E1C58470b]) [staticcall]
+    │   │   └─ ← [Return] 0
+    │   ├─ emit JobFunded(jobId: 0, totalAmount: 10001 [1e4], fundedAt: 1800000000 [1.8e9])
+    │   ├─ [30420] MockToken::transferFrom(0x000000000000000000000000000000000000c11e, FairworkEscrow: [0x2e234DAe75C793f67A35089C9d99245E1C58470b], 10001 [1e4])
+    │   │   ├─ emit Transfer(from: 0x000000000000000000000000000000000000c11e, to: FairworkEscrow: [0x2e234DAe75C793f67A35089C9d99245E1C58470b], amount: 10001 [1e4])
+    │   │   └─ ← [Return] true
+    │   ├─ [559] MockToken::balanceOf(FairworkEscrow: [0x2e234DAe75C793f67A35089C9d99245E1C58470b]) [staticcall]
+    │   │   └─ ← [Return] 10001 [1e4]
+    │   └─ ← [Stop]
+    ├─ [0] VM::prank(0x0000000000000000000000000000000000000FEE)
+    │   └─ ← [Return]
+    ├─ [161614] FairworkEscrow::submitMilestone(0, 0, 0xbc06ebe2b69400cc4d7163a14266e22c11bda70a17e5b6e491931df471c7c597, 0x0000000000000000000000000000000000000000000000000000000000000000)
+    │   ├─ emit MilestoneSubmitted(jobId: 0, milestoneIndex: 0, version: 1, deliverableHash: 0xbc06ebe2b69400cc4d7163a14266e22c11bda70a17e5b6e491931df471c7c597, opaqueReference: 0x0000000000000000000000000000000000000000000000000000000000000000, submittedAt: 1800000000 [1.8e9], reviewEnd: 1800000120 [1.8e9])
+    │   └─ ← [Stop]
+    ├─ [19437] FairworkEscrow::getMilestone(0, 0) [staticcall]
+    │   └─ ← [Return] MilestoneView({ amount: 10001 [1e4], duration: 10, acceptanceCriteriaCommitment: 0xedf001819fe968bec0d28fe5a2db82cf122a0f06ab270ed98e14e9b55d858193, deadline: 1800000010 [1.8e9], graceEnd: 1800000025 [1.8e9], state: 1, submittedAt: 1800000000 [1.8e9], reviewEnd: 1800000120 [1.8e9], rejectedAt: 0, responseEnd: 0, rejectionCount: 0, submissionCount: 1, latestReasonCommitment: 0x0000000000000000000000000000000000000000000000000000000000000000 })
+    ├─ [2559] MockToken::balanceOf(0x000000000000000000000000000000000000c11e) [staticcall]
+    │   └─ ← [Return] 9999999989999 [9.999e12]
+    ├─ [2559] MockToken::balanceOf(FairworkEscrow: [0x2e234DAe75C793f67A35089C9d99245E1C58470b]) [staticcall]
+    │   └─ ← [Return] 10001 [1e4]
+    ├─ [0] VM::warp(1800000119 [1.8e9])
+    │   └─ ← [Return]
+    ├─ [0] VM::recordLogs()
+    │   └─ ← [Return]
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [21800] FairworkEscrow::openDispute(0, 0)
+    │   └─ ← [Revert] unrecognized function selector 0x6cb9087c for contract 0x2e234DAe75C793f67A35089C9d99245E1C58470b, which has no fallback function.
+    └─ ← [Revert] EvmError: Revert
+
+Backtrace:
+  at FairworkEscrow.openDispute
+  at Phase3DisputesTest.test_F30_SubmittedClientOpensOneDisputeAndFreezesPrincipalAtReviewBoundary
+
+Suite result: FAILED. 0 passed; 1 failed; 0 skipped; finished in 1.34ms (332.80µs CPU time)
+
+Ran 1 test suite in 11.11ms (1.34ms CPU time): 0 tests passed, 1 failed, 0 skipped (1 total tests)
+
+Failing tests:
+Encountered 1 failing test in test/Phase3Disputes.t.sol:Phase3DisputesTest
+[FAIL: EvmError: Revert] test_F30_SubmittedClientOpensOneDisputeAndFreezesPrincipalAtReviewBoundary() (gas: 826891)
+
+Encountered a total of 1 failing tests, 0 tests succeeded
+
+Tip: Run `forge test --rerun` to retry only the 1 failed test
+Tip: Run `forge test --debug --match-test <TEST_NAME>` to inspect one failing test in the debugger
+--- END RAW FORGE OUTPUT ---

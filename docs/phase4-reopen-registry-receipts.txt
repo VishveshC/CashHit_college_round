@@ -1,0 +1,5 @@
+Acceptance receipt verification failed: Error: ENOENT: no such file or directory, open 'C:\Users\vishvesh\Documents\ChatGPT\BNB\infra\local\runtime\attack-lab-result.json'
+    at readFileSync (node:fs:440:20)
+    at readJson (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4/verify-receipts.mjs:23:21)
+    at main (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4/verify-receipts.mjs:81:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)

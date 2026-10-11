@@ -1,0 +1,7 @@
+{
+  "scope": "actual local Next static client assets; two current runtime secret canaries",
+  "files": 16,
+  "bytes": 1682537,
+  "matchedSecrets": 0,
+  "publicArtifact": "absent: public build blocked"
+}

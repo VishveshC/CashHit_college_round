@@ -1,0 +1,8 @@
+
+> fairwork-v3@0.0.0 attack-lab
+> node scripts/attack-lab.mjs
+
+PASS contract hostile regression cases (fresh in-process EVM); evidence docs/phase4-attack-lab-contract.txt
+PASS private route attacks (real SQLite and signatures; controlled chain port); evidence docs/phase4-attack-lab-security.txt
+PASS deployed local-chain attacks; evidence docs/phase4-attack-lab-deployed.txt
+Attack Lab completed. HTTP/browser checks and passive ZAP scan are separate evidence.

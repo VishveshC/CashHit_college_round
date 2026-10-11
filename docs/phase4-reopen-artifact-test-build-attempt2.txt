@@ -1,0 +1,33 @@
+▲ Next.js 16.4.0 (webpack)
+✓ Running next.config.ts took 27ms
+⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 14.4s
+  Running TypeScript ...
+
+  We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+  The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+  	- include was updated to add '.next-artifact-test/types/**/*.ts'
+  	- include was updated to add '.next-artifact-test/dev/types/**/*.ts'
+
+components/EscrowDashboard.tsx(491,51): error TS2307: Cannot find module '../lib/dev-wallet.ts' or its corresponding type declarations.
+⚠ Compiled with warnings in 4.5s
+
+./components/EscrowDashboard.tsx
+Module not found: Can't resolve '../lib/dev-wallet.ts' in 'C:\Users\vishvesh\AppData\Local\Temp\fairwork-phase4-artifact-test-EjsAvv\apps\web\components'
+
+Import trace for requested module:
+./components/EscrowDashboard.tsx
+
+⚠ Compiled with warnings in 9.8s
+
+./components/EscrowDashboard.tsx
+Module not found: Can't resolve '../lib/dev-wallet.ts' in 'C:\Users\vishvesh\AppData\Local\Temp\fairwork-phase4-artifact-test-EjsAvv\apps\web\components'
+
+Import trace for requested module:
+./components/EscrowDashboard.tsx
+
+Failed to type check.
+

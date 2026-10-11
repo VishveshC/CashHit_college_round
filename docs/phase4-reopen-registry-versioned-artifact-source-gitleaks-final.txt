@@ -1,0 +1,208 @@
+7:56AM DBG using github.com/wasilibs/go-re2 regex engine
+7:56AM DBG using gitleaks config .gitleaks.toml from `--config`
+7:56AM DBG no minVersion specified in config... consider adding minVersion to ensure compatibility. config path=.gitleaks.toml
+7:56AM DBG extending config with default config
+7:56AM DBG skipping directory: global allowlist path=.git
+7:56AM DBG skipping file: global allowlist path=.gitleaks.toml
+7:56AM DBG skipping directory: global allowlist path=".tools\\slither"
+7:56AM DBG skipping directory: global allowlist path=".tools\\zap"
+7:56AM DBG skipping file: global allowlist path="apps\\web\\.next\\BUILD_ID"
+7:56AM DBG skipping file: global allowlist path="apps\\web\\.next\\app-path-routes-manifest.json"
+7:56AM DBG skipping file: global allowlist path="apps\\web\\.next\\build-manifest.json"
+7:56AM DBG skipping directory: global allowlist path="apps\\web\\.next\\cache"
+7:56AM DBG skipping directory: global allowlist path="apps\\web\\.next\\dev"
+7:56AM DBG skipping directory: global allowlist path="apps\\web\\.next\\diagnostics"
+7:56AM DBG skipping file: global allowlist path="apps\\web\\.next\\export-marker.json"
+7:56AM DBG skipping file: global allowlist path="apps\\web\\.next\\fallback-build-manifest.json"
+7:56AM DBG skipping file: global allowlist path="apps\\web\\.next\\images-manifest.json"
+7:56AM DBG skipping file: global allowlist path="apps\\web\\.next\\next-minimal-server.js.nft.json"
+7:56AM DBG skipping file: global allowlist path="apps\\web\\.next\\next-server.js.nft.json"
+7:56AM DBG skipping directory: global allowlist path="apps\\web\\.next\\node_modules"
+7:56AM DBG skipping file: global allowlist path="apps\\web\\.next\\package.json"
+7:56AM DBG skipping file: global allowlist path="apps\\web\\.next\\prerender-manifest.json"
+7:56AM DBG skipping file: global allowlist path="apps\\web\\.next\\required-server-files.js"
+7:56AM DBG skipping file: global allowlist path="apps\\web\\.next\\required-server-files.json"
+7:56AM DBG skipping file: global allowlist path="apps\\web\\.next\\routes-manifest.json"
+7:56AM DBG skipping directory: global allowlist path="apps\\web\\.next\\server"
+7:56AM DBG skipping directory: global allowlist path="apps\\web\\.next\\static"
+7:56AM DBG skipping file: global allowlist path="apps\\web\\.next\\trace"
+7:56AM DBG skipping file: global allowlist path="apps\\web\\.next\\trace-build"
+7:56AM DBG skipping empty file path="apps\\web\\.next\\turbopack"
+7:56AM DBG skipping directory: global allowlist path="apps\\web\\.next\\types"
+7:56AM DBG skipping directory: global allowlist path="apps\\web\\node_modules"
+7:56AM DBG skipping binary file mime_type=application/vnd.sqlite3 path="apps\\web\\phase4-retention-32228-586de2183888.sqlite"
+7:56AM DBG skipping binary file mime_type=application/vnd.sqlite3 path="apps\\web\\security-test-25684.sqlite"
+7:56AM DBG skipping binary file mime_type=application/vnd.sqlite3 path="apps\\web\\security-temp.sqlite"
+7:56AM DBG skipping directory: global allowlist path="contracts\\cache\\coverage"
+7:56AM DBG skipping empty file path="contracts\\cache\\coverage.lock"
+7:56AM DBG skipping file: global allowlist path="contracts\\cache\\solidity-files-cache.json"
+7:56AM DBG skipping directory: global allowlist path="contracts\\cache\\solidity-files-cache.json.abi"
+7:56AM DBG skipping empty file path="contracts\\cache\\solidity-files-cache.json.abi.lock"
+7:56AM DBG skipping directory: global allowlist path="contracts\\lib\\forge-std"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Base.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Bytes.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Context.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\ECDSA.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\EIP712.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\ERC20"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\ERC20.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\FairworkArbitration.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\FairworkEscrow.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\IERC1363.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\IERC165.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\IERC20.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\IERC20Metadata.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\IERC5267.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\IMulticall3.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\IRandomness.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\LocalDemoTokens.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\LocalDemoTokens.t.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Math.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\MessageHashUtils.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\MockRandomness.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\MockTokens.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Panic.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Phase0CompileHarness.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Phase1Additional.t.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Phase1Escrow.t.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Phase1Readback.t.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Phase2Milestones.t.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Phase2RevisionExit.t.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Phase3Accounting.t.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Phase3Boundaries.t.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Phase3BoundedExitInvariant.t.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Phase3Disputes.t.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Phase3PhaseErrors.t.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Phase3Randomness.t.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Phase3TestSupport.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Phase5BoundaryCompletion.t.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Phase5ContractSupplemental.t.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\ReentrancyGuard.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\SafeCast.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\SafeERC20.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\ShortStrings.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\SignedMath.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\StdAssertions.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\StdChains.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\StdCheats.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\StdConstants.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\StdError.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\StdInvariant.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\StdJson.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\StdMath.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\StdStorage.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\StdStyle.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\StdToml.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\StdUtils.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\StorageSlot.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Strings.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Test.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\Vm.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\build-info"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\console.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\draft-IERC6093.sol"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\extensions"
+7:56AM DBG skipping directory: global allowlist path="contracts\\out\\safeconsole.sol"
+7:56AM DBG skipping file: global allowlist path="coverage\\phase1.lcov"
+7:56AM DBG skipping file: global allowlist path="coverage\\phase2.lcov"
+7:56AM DBG skipping file: global allowlist path="coverage\\phase3.lcov"
+7:56AM DBG skipping file: global allowlist path="coverage\\phase5.lcov"
+7:56AM DBG skipping file: global allowlist path="docs\\client-gitleaks.toml"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-browser-arbiter-evidence.jpg"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-browser-arbitration-settled.jpg"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-browser-claimable.jpg"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-browser-final-proof.jpg"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-browser-job-zero.jpg"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-browser-mobile.jpg"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-browser-wbtc-claimable.jpg"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-browser-wbtc-draft.jpg"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-browser-wbtc-final.jpg"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-browser-wbtc-mobile-final.jpg"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-browser-withdrawn.jpg"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-reopen-final-mobile.png"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-reopen-final-settlement.png"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-reopen-final-treasury.png"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-reopen-p1-settlement.png"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-reopen-p2-settlement.png"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-reopen-panel2-fallback.png"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-reopen-registry-mobile.png"
+7:56AM DBG segment found: original=[4884,4890] pos=[4884,4890]: "\\u0000" -> "\x00" decoder=unicode
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-reopen-registry-nonowner.png"
+7:56AM DBG segment found: original=[36016,36022] pos=[36016,36022]: "\\u0000" -> "\x00" decoder=unicode
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-reopen-registry-seven.png"
+7:56AM DBG skipping empty file path="docs\\phase4-reopen-registry-versioned-artifact-source-gitleaks-final.txt"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-reopen-released.png"
+7:56AM DBG skipping file: global allowlist path="docs\\phase4-reopen-wbtc-fallback.png"
+7:56AM DBG segment found: original=[11902,11909] pos=[11902,11909]: "\\\\u0000" -> "\x00" decoder=unicode
+7:56AM DBG segment found: original=[12007,12014] pos=[12007,12014]: "\\\\u0000" -> "\x00" decoder=unicode
+7:56AM DBG segment found: original=[14946,14953] pos=[14946,14953]: "\\\\uFEFF" -> "\ufeff" decoder=unicode
+7:56AM DBG segment found: original=[14959,14965] pos=[14959,14965]: "\\ufeff" -> "\ufeff" decoder=unicode
+7:56AM DBG segment found: original=[15045,15060] pos=[15045,15060]: "%5Bturbopack%5D" -> "[turbopack]" decoder=percent
+7:56AM DBG segment found: original=[15161,15164] pos=[15161,15164]: "%40" -> "@" decoder=percent
+7:56AM DBG segment found: original=[15251,15258] pos=[15251,15258]: "\\\\uFEFF" -> "\ufeff" decoder=unicode
+7:56AM DBG segment found: original=[15264,15270] pos=[15264,15270]: "\\ufeff" -> "\ufeff" decoder=unicode
+7:56AM DBG skipping empty file path="docs\\phase4-typecheck-third.txt"
+7:56AM DBG segment found: original=[9604,9611] pos=[9604,9611]: "\\\\u0000" -> "\x00" decoder=unicode
+7:56AM DBG segment found: original=[9709,9716] pos=[9709,9716]: "\\\\u0000" -> "\x00" decoder=unicode
+7:56AM DBG segment found: original=[11884,11891] pos=[11884,11891]: "\\\\u0000" -> "\x00" decoder=unicode
+7:56AM DBG segment found: original=[11991,11998] pos=[11991,11998]: "\\\\u0000" -> "\x00" decoder=unicode
+7:56AM DBG segment found: original=[12098,12105] pos=[12098,12105]: "\\\\uFEFF" -> "\ufeff" decoder=unicode
+7:56AM DBG segment found: original=[12111,12117] pos=[12111,12117]: "\\ufeff" -> "\ufeff" decoder=unicode
+7:56AM DBG segment found: original=[12205,12212] pos=[12205,12212]: "\\\\ufeff" -> "\ufeff" decoder=unicode
+7:56AM DBG segment found: original=[12218,12224] pos=[12218,12224]: "\\ufeff" -> "\ufeff" decoder=unicode
+7:56AM DBG segment found: original=[12312,12327] pos=[12312,12327]: "%5Bturbopack%5D" -> "[turbopack]" decoder=percent
+7:56AM DBG segment found: original=[12432,12435] pos=[12432,12435]: "%40" -> "@" decoder=percent
+7:56AM DBG segment found: original=[12532,12539] pos=[12532,12539]: "\\\\uFEFF" -> "\ufeff" decoder=unicode
+7:56AM DBG segment found: original=[12545,12551] pos=[12545,12551]: "\\ufeff" -> "\ufeff" decoder=unicode
+7:56AM DBG segment found: original=[12639,12646] pos=[12639,12646]: "\\\\ufeff" -> "\ufeff" decoder=unicode
+7:56AM DBG segment found: original=[12652,12658] pos=[12652,12658]: "\\ufeff" -> "\ufeff" decoder=unicode
+7:56AM DBG segment found: original=[13071,13086] pos=[13071,13086]: "%5Bturbopack%5D" -> "[turbopack]" decoder=percent
+7:56AM DBG segment found: original=[13187,13190] pos=[13187,13190]: "%40" -> "@" decoder=percent
+7:56AM DBG segment found: original=[16457,16464] pos=[16457,16464]: "\\\\uFEFF" -> "\ufeff" decoder=unicode
+7:56AM DBG segment found: original=[16470,16476] pos=[16470,16476]: "\\ufeff" -> "\ufeff" decoder=unicode
+7:56AM DBG segment found: original=[16556,16563] pos=[16556,16563]: "\\\\uFEFF" -> "\ufeff" decoder=unicode
+7:56AM DBG segment found: original=[16569,16575] pos=[16569,16575]: "\\ufeff" -> "\ufeff" decoder=unicode
+7:56AM DBG skipping file: global allowlist path="docs\\phase5-browser-cleared-draft.png"
+7:56AM DBG skipping file: global allowlist path="docs\\phase5-browser-confirmation.png"
+7:56AM DBG skipping file: global allowlist path="docs\\phase5-browser-final.png"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\.fairwork-owned"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\attack-lab-result.json"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\attack-lab.log"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\demo-result.json"
+7:56AM DBG skipping directory: global allowlist path="infra\\local\\runtime\\phase4-reopen-before-registry-backup"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\phase4-reopen-browser-redaction-prehash.json"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\phase4-reopen-delivery.txt"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\phase4-reopen-registry-before.json"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\phase4-reopen-registry-client-gitleaks.toml"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\phase4-reopen-revision.txt"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\phase4-reopen-seed-p1-salts.json"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\phase4-reopen-seed-p2-salts.json"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\phase4-reopen-vote-salts.json"
+7:56AM DBG skipping directory: global allowlist path="infra\\local\\runtime\\phase5-migration-backup"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\phase5-preview-owner.json"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\phase5-preview.log"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\private.db"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\receipt-verification.json"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\restored-web-build-CRLF.mjs"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\restored-web-build-LF.mjs"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\server-env.json"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\source-gitleaks-report.json"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\source-gitleaks-run.txt"
+7:56AM DBG skipping directory: global allowlist path="infra\\local\\runtime\\storage"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\web-preview-owner.json"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\web-preview.log"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\web.log"
+7:56AM DBG skipping directory: global allowlist path="infra\\local\\runtime\\zap-home"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\zap-owner.json"
+7:56AM DBG skipping directory: global allowlist path="infra\\local\\runtime\\zap-phase5-home"
+7:56AM DBG skipping file: global allowlist path="infra\\local\\runtime\\zap-phase5-owner.json"
+7:56AM DBG skipping directory: global allowlist path=node_modules
+7:56AM DBG skipping file: global allowlist path=package-lock.json
+7:56AM DBG segment found: original=[193,199] pos=[193,199]: "\\uFEFF" -> "\ufeff" decoder=unicode
+7:56AM DBG segment found: original=[641,656] pos=[641,656]: "%5Bturbopack%5D" -> "[turbopack]" decoder=percent
+7:56AM DBG segment found: original=[1398,1401] pos=[1398,1401]: "%40" -> "@" decoder=percent
+7:56AM DBG segment found: original=[329,335] pos=[329,335]: "\\uFEFF" -> "\ufeff" decoder=unicode
+7:56AM INF scanned ~31930831 bytes (31.93 MB) in 613ms
+7:56AM INF no leaks found
+
+exit_code=0

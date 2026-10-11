@@ -1,0 +1,21 @@
+# Phase 1 independent review
+
+## Scope and evidence
+
+This was a read-only, adversarial review of the Phase 1 contract boundary: direct job creation, named-freelancer acceptance, exact-token funding, pre-funding expiry, per-token accounting, and withdrawal from an already claimable balance. Funded milestone principal remains locked in Phase 1. Delivery, dispute, refund, release, settlement, and a complete bounded exit for funded funds are later-phase work; this review does not establish those paths or production readiness.
+
+Reviewed: `HERO_PROMPT.md`, `DECISIONS.md` (including A-17–A-22), `docs/STATE_MACHINE.md`, `contracts/src/FairworkEscrow.sol`, `contracts/src/Phase0CompileHarness.sol`, `contracts/src/mocks/LocalDemoTokens.sol`, `contracts/test/Phase1Escrow.t.sol`, `contracts/test/Phase1Additional.t.sol`, `contracts/test/Phase1Readback.t.sol`, and the test token fixtures. The implementation uses checked arithmetic for `jobCount`, exact incoming and outgoing balance deltas, half-open funding/acceptance windows, immutable deployment configuration, and non-reentrant external mutations. The local token configuration is a curated allowlist, not generic proof that an arbitrary token is safe.
+
+## Findings and dispositions
+
+1. **Job counter wrap could overwrite an earlier job if increment were unchecked — fixed.** The failure sketch is an unchecked increment at `type(uint256).max`: the count wraps to zero and a subsequent creation could reuse job ID 0, overwriting its record while existing accounting still refers to the old agreement. The reviewed source uses checked `jobCount = jobId + 1`; at the limit creation reverts atomically rather than wrapping. No unchecked increment remains. The counter limit is not practically reachable through normal execution, so the protection is code-level checked arithmetic rather than a state-seeding test.
+
+2. **Withdrawal event naming could split indexer accounting — aligned with A-22.** A consumer filtering for a different planned name would miss successful withdrawals and leave its off-chain liability view stale. The current event is `WithdrawalCompleted(token, account, amount)`, with `account` equal to the recipient because there is no redirect argument. This matches A-22. The event reports the successful transfer amount, while the on-chain claim is cleared before interaction and a failed or inexact token call reverts the whole transaction.
+
+3. **The compact events are not a complete audit feed — getter-based indexing is required; Phase 4 remains open.** An event-only consumer cannot reconstruct every agreed term from `JobCreated`: the four agreement commitments and each milestone's amount, duration, and acceptance-criteria commitment are omitted. A consumer that assumes otherwise could display incomplete terms. `JobCancelled` also has no reason field; an indexer must use the job's prior events and transaction/block context to distinguish expiry paths. A-22 resolves the Phase 1 read model by requiring `getJobCommitments` and `getMilestone` reads, and documents how cancellation is interpreted. This is not a complete Phase 4 audit feed: settlement credits still need source/reason context, and later amendment history is not represented.
+
+## Residual risks and limits
+
+The runtime codehash and exact balance-delta checks detect code changes and non-exact transfers in the tested model. They cannot generically detect future rebasing, proxy implementation changes that preserve proxy bytecode, or arbitrary token callback semantics. Deploy only fixed, vetted local tokens; hostile token fixtures are rejection/reentrancy tests, not supported demo assets. No production-chain deployment, economic audit, funded-job exit, or complete Phase 4 indexer validation is claimed.
+
+The saved Phase 1 test run reports 33 passing tests in `docs/phase1-tests-final.txt`; I did not rerun the build or tests as part of this review. The final bounded Slither scans are recorded in `docs/PHASE1_STATIC_ANALYSIS.md`: they produced 13 documented escrow findings, zero findings for the local demo-token target, and none of the parser warning classes from the initial scan. These results cover the selected source targets, not the whole repository, and do not amount to an audit or production-readiness claim.

@@ -1,0 +1,108 @@
+
+> fairwork-v3@0.0.0 test:contracts
+> node scripts/forge-test.mjs --fuzz-seed 0x64dc8bbdae7c8843cabae57826d87f498f6bbda34fd8452be034ff3a2d6ba3c4
+
+forge-std 1.17.0, commit f3dae6e6ee381f25eb6a246f7da9b85c91a68219, normalized source SHA-256 verified.
+Compiling 52 files with Solc 0.8.36
+Solc 0.8.36 finished in 10.70s
+Compiler run successful with warnings:
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:125:29:
+    |
+125 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, signature);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:134:29:
+    |
+134 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecoverCalldata(hash, signature);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:161:29:
+    |
+161 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, r, vs);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:203:29:
+    |
+203 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, v, r, s);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:273:26:
+    |
+273 |     function _throwError(RecoverError error, bytes32 errorArg) private pure {
+    |                          ^^^^^^^^^^^^^^^^^^
+
+
+Ran 2 tests for test/LocalDemoTokens.t.sol:LocalDemoTokensTest
+[PASS] test_D06_A17_DemoTokenConstructorsRejectNonlocalChains() (gas: 3773)
+[PASS] test_D06_DemoTokenMetadataAndMintAmountsUseRawUnits() (gas: 208296)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 2.33ms (2.60ms CPU time)
+
+Ran 3 tests for test/Phase1Readback.t.sol:Phase1ReadbackTest
+[PASS] test_A17_ConstructorRejectsRevertingDecimalsMetadata() (gas: 132802)
+[PASS] test_A17_ReadbackPreservesTermsAndProtocolConfigAcrossLifecycle() (gas: 981859)
+[PASS] test_A17_UnknownJobReadbackGettersRejectRatherThanReturnDefaults() (gas: 57893)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 2.64ms (1.90ms CPU time)
+
+Ran 10 tests for test/Phase1Additional.t.sol:Phase1AdditionalTest
+[PASS] test_A01_F85_TimeoutsAreClosedOnlyAtAndAfterEachEnd() (gas: 3030335)
+[PASS] test_A18_F03_DeployerAndTreasuryCannotWithdrawLockedPrincipal() (gas: 637242)
+[PASS] test_A18_F03_RuntimeCodehashDriftBlocksFundingWithoutChangingLiabilities() (gas: 534123)
+[PASS] test_A18_F03_RuntimeCodehashDriftBlocksWithdrawalAndPreservesBackedClaim() (gas: 3486664)
+[PASS] test_F01_AcceptsOneAndTenMilestonesAtTheRawAmountLimits() (gas: 1872539)
+[PASS] test_F01_ConstructorRejectsInvalidTokenAndProtocolConfiguration() (gas: 9201044)
+[PASS] test_F01_RequiresEveryAgreementCommitmentToBeNonzero() (gas: 228032)
+[PASS] test_F03_DeadlineAdditionRejectsUint64Overflow() (gas: 578298)
+[PASS] test_F03_DonationsStaySurplusAndEmptyWithdrawalsCannotTouchFundedPrincipal() (gas: 707533)
+[PASS] test_Stateful_F03_SeededAndRandomLedgerPathsAreNonVacuous() (gas: 1833614)
+Suite result: ok. 10 passed; 0 failed; 0 skipped; finished in 13.06ms (45.52ms CPU time)
+
+Ran 17 tests for test/Phase1Escrow.t.sol:Phase1EscrowTest
+[PASS] invariant_F03_EachTokenBalanceCoversItsLiabilities() (runs: 128, calls: 8192, reverts: 0)
+
+╭------------------------+-------------+-------+---------+----------╮
+| Contract               | Selector    | Calls | Reverts | Discards |
++===================================================================+
+| EscrowInvariantHandler | acceptJob   | 2027  | 0       | 0        |
+|------------------------+-------------+-------+---------+----------|
+| EscrowInvariantHandler | advanceTime | 2035  | 0       | 0        |
+|------------------------+-------------+-------+---------+----------|
+| EscrowInvariantHandler | createJob   | 2078  | 0       | 0        |
+|------------------------+-------------+-------+---------+----------|
+| EscrowInvariantHandler | fundJob     | 2052  | 0       | 0        |
+╰------------------------+-------------+-------+---------+----------╯
+
+[PASS] testFuzz_F01_F03_RawAmountRemainsTokenUnits(uint256,uint8) (runs: 512, μ: 626587, ~: 625767)
+[PASS] test_A01_F02_ProposalUsesHalfOpenExpiryAndPublicCancellation() (gas: 1459722)
+[PASS] test_A20_F03_WithdrawalIsEffectsFirstAndReentrancyGuarded() (gas: 949998)
+[PASS] test_A20_F03_WithdrawalTransferFailureRollsBackAllLiabilityAndBalances() (gas: 868432)
+[PASS] test_F01_F02_F03_CreateAcceptFundStartsIndependentRawUnitClocks() (gas: 891372)
+[PASS] test_F01_F02_F03_UnknownJobsAndUnauthorizedWithdrawalCannotMoveFunds() (gas: 773576)
+[PASS] test_F01_F03_RawUnitsForSixEightEighteenDecimalTokens() (gas: 1854810)
+[PASS] test_F01_RejectsInvalidDeploymentConfiguration() (gas: 2024127)
+[PASS] test_F01_RejectsInvalidPartiesTokensCommitmentsAndBounds() (gas: 657401)
+[PASS] test_F02_F03_EnforceRolesAndFundingOrder() (gas: 747761)
+[PASS] test_F03_CallbackCannotReenterCreateDuringFunding() (gas: 1042191)
+[PASS] test_F03_DirectSurplusNeverCreatesClaimableLiability() (gas: 658036)
+[PASS] test_F03_RejectsFeeOnTransferAndFalseReturnDepositsWithRollback() (gas: 7001204)
+[PASS] test_F03_SafeERC20SupportsNoReturnTokenAndExactBalanceDeltas() (gas: 3522983)
+[PASS] test_F03_WithdrawalTransfersExactBackedClaimableAndClearsLedger() (gas: 808122)
+[PASS] test_F85_F03_FundingUsesHalfOpenExpiryAndPublicCancellation() (gas: 1681704)
+Suite result: ok. 17 passed; 0 failed; 0 skipped; finished in 1.50s (1.60s CPU time)
+
+Ran 1 test for test/Phase1Additional.t.sol:Phase1AdditionalInvariantTest
+[PASS] invariant_F03_LedgerMatchesSeededAndRandomFundedPrincipal() (runs: 128, calls: 8192, reverts: 0)
+
+╭-------------------------+----------+-------+---------+----------╮
+| Contract                | Selector | Calls | Reverts | Discards |
++=================================================================+
+| AdditionalLedgerHandler | step     | 8192  | 0       | 0        |
+╰-------------------------+----------+-------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 4.75s (4.74s CPU time)
+
+Ran 5 test suites in 4.76s (6.27s CPU time): 33 tests passed, 0 failed, 0 skipped (33 total tests)

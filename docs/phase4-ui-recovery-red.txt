@@ -1,0 +1,29 @@
+Command: node --experimental-strip-types --test apps/web/test/phase4-ui-recovery.test.ts
+Exit code: 1
+
+(node:35256) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/phase4-ui-recovery.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ a successful receipt preserves its private follow-up before a failing fresh read (1.5404ms)
+✔ a failed receipt never runs or preserves a private follow-up (0.1673ms)
+✖ receipt-confirmed stale chain state blocks contract actions until refreshed (0.8016ms)
+✖ an uploaded private file stays a draft until chain verification (0.0989ms)
+✖ a retry resumes after the exact file hash/reference already confirmed on chain (0.1307ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 1
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 107.5172
+
+RED failures:
+
+- The transaction pipeline ignores the afterReceipt callback: the expected persisted `0xabab...abab` salt remained empty after the confirmed receipt and failed read.
+- A confirmed-receipt action still permits `createJob` while its chain snapshot is stale.
+- `stagePrivateFile` is an inert throwing stub, so uploaded files are not staged as `bound:false` drafts.
+- `pendingEvidenceEntries` is an inert throwing stub, so a retry cannot reconcile and skip a chain-confirmed exact evidence hash/reference.
+
+The failed-receipt callback test passed, confirming follow-up work is not expected after a reverted receipt.

@@ -1,0 +1,48 @@
+✖ applicable acceptance evidence is produced by fresh local-chain scenarios (1.0715ms)
+✖ acceptance proof validation requires successful receipts and observed assertions (0.7027ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 69.4348
+
+✖ failing tests:
+
+test at scripts\phase4\test\acceptance-proof.test.mjs:5:1
+✖ applicable acceptance evidence is produced by fresh local-chain scenarios (1.0715ms)
+  AssertionError [ERR_ASSERTION]: saved Forge logs cannot be presented as this run's acceptance proof
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4/test/acceptance-proof.test.mjs:7:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts\phase4\test\acceptance-proof.test.mjs:13:1
+✖ acceptance proof validation requires successful receipts and observed assertions (0.7027ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\vishvesh\Documents\ChatGPT\BNB\scripts\phase4\acceptance.mjs' imported from C:\Users\vishvesh\Documents\ChatGPT\BNB\scripts\phase4\test\acceptance-proof.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:274:11)
+      at moduleResolve (node:internal/modules/esm/resolve:864:10)
+      at defaultResolve (node:internal/modules/esm/resolve:990:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:737:20)
+      at ModuleLoader.resolve (node:internal/modules/esm/loader:714:38)
+      at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:293:38)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:665:36)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14)
+      at ModuleLoader.import (node:internal/modules/esm/loader:664:21)
+      at defaultImportModuleDynamicallyForModule (node:internal/modules/esm/utils:224:31) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4/acceptance.mjs'
+  }

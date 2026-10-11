@@ -1,0 +1,3 @@
+Local Fairwork browser acceptance fixture.
+Deliverable: a text file created solely for the local escrow demo.
+Acceptance: this file is downloaded intact, approved, and the exact test-token amount is withdrawn.

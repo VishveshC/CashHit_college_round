@@ -1,0 +1,16 @@
+
+> fairwork-v3@0.0.0 build:public
+> node scripts/web-build.mjs --target public
+
+file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/web-build.mjs:5
+if(target!=='local')throw new Error('Public release blocked: No approved production adapter/configuration exists.');
+                          ^
+
+Error: Public release blocked: No approved production adapter/configuration exists.
+    at file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/web-build.mjs:5:27
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:671:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.11.1
+Expected guard exit: 1

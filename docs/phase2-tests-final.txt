@@ -1,0 +1,143 @@
+
+> fairwork-v3@0.0.0 test:contracts
+> node scripts/forge-test.mjs --fuzz-seed 0x64dc8bbdae7c8843cabae57826d87f498f6bbda34fd8452be034ff3a2d6ba3c4
+
+forge-std 1.17.0, commit f3dae6e6ee381f25eb6a246f7da9b85c91a68219, normalized source SHA-256 verified.
+Compiling 4 files with Solc 0.8.36
+Solc 0.8.36 finished in 3.66s
+Compiler run successful!
+
+Ran 2 tests for test/LocalDemoTokens.t.sol:LocalDemoTokensTest
+[PASS] test_D06_A17_DemoTokenConstructorsRejectNonlocalChains() (gas: 3773)
+[PASS] test_D06_DemoTokenMetadataAndMintAmountsUseRawUnits() (gas: 208296)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 2.41ms (2.27ms CPU time)
+
+Ran 1 test for test/Phase2RevisionExit.t.sol:Phase2RevisionExitTest
+[PASS] test_F22_F86_ExhaustedRevisionLimitsStillReleaseAfterSilence() (gas: 4375080)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 16.14ms (14.35ms CPU time)
+
+Ran 10 tests for test/Phase1Additional.t.sol:Phase1AdditionalTest
+[PASS] test_A01_F85_TimeoutsAreClosedOnlyAtAndAfterEachEnd() (gas: 3060668)
+[PASS] test_A18_F03_DeployerAndTreasuryCannotWithdrawLockedPrincipal() (gas: 642499)
+[PASS] test_A18_F03_RuntimeCodehashDriftBlocksFundingWithoutChangingLiabilities() (gas: 539289)
+[PASS] test_A18_F03_RuntimeCodehashDriftBlocksWithdrawalAndPreservesBackedClaim() (gas: 4620321)
+[PASS] test_F01_AcceptsOneAndTenMilestonesAtTheRawAmountLimits() (gas: 1935466)
+[PASS] test_F01_ConstructorRejectsInvalidTokenAndProtocolConfiguration() (gas: 12307831)
+[PASS] test_F01_RequiresEveryAgreementCommitmentToBeNonzero() (gas: 227702)
+[PASS] test_F03_DeadlineAdditionRejectsUint64Overflow() (gas: 583176)
+[PASS] test_F03_DonationsStaySurplusAndEmptyWithdrawalsCannotTouchFundedPrincipal() (gas: 712789)
+[PASS] test_Stateful_F03_SeededAndRandomLedgerPathsAreNonVacuous() (gas: 1849493)
+Suite result: ok. 10 passed; 0 failed; 0 skipped; finished in 18.32ms (44.30ms CPU time)
+Warning: Failure from "C:/Users/vishvesh/Documents/ChatGPT/BNB/cache/invariant/failures/Phase2SettlementInvariantTest/invariants/invariant_A25_FundedPrincipalIsAlwaysLockedClaimableOrWithdrawn" file was ignored because invariant test settings have changed: target selectors changed
+
+Ran 3 tests for test/Phase1Readback.t.sol:Phase1ReadbackTest
+[PASS] test_A17_ConstructorRejectsRevertingDecimalsMetadata() (gas: 132802)
+[PASS] test_A17_ReadbackPreservesTermsAndProtocolConfigAcrossLifecycle() (gas: 1027574)
+[PASS] test_A17_UnknownJobReadbackGettersRejectRatherThanReturnDefaults() (gas: 59584)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 50.95ms (3.41ms CPU time)
+
+Ran 25 tests for test/Phase2Milestones.t.sol:Phase2MilestonesTest
+[PASS] test_A23_ResponseWindowEqualsImmutableFundingWindow() (gas: 835598)
+[PASS] test_A24_SubmissionGetterRejectsUnknownJobsAndOutOfRangeMilestones() (gas: 783470)
+[PASS] test_A24_SubmissionHistoryIsBoundedAtSixAndNeverOverwritesOlderVersions() (gas: 2156559)
+[PASS] test_A25_DonatedSurplusNeverBecomesMilestoneClaimable() (gas: 1377331)
+[PASS] test_A25_FailedTokenTransferCannotBlockMissedDeadlineRefund() (gas: 1553028)
+[PASS] test_A25_FailedTokenTransferCannotBlockSettlementAndClaimRemainsBacked() (gas: 1787607)
+[PASS] test_A25_OnlyLastTerminalMilestoneClosesJobAndPayoutCannotRepeat() (gas: 1786996)
+[PASS] test_A25_RuntimeCodeDriftCannotBlockMissedDeadlineRefund() (gas: 857624)
+[PASS] test_A25_RuntimeCodeDriftCannotBlockSettlementButStillBlocksWithdrawal() (gas: 935131)
+[PASS] test_A25_SettlementCreditAndWithdrawalAreIsolatedAcrossTokenDecimals() (gas: 4166752)
+[PASS] test_A27_ApprovalAndReviewSilenceEmitCausesAndCompatibleCredits() (gas: 1274322)
+[PASS] test_A27_SubmissionAndRejectionEventsExposeExactAuditFields() (gas: 1000860)
+[PASS] test_A27_TimeoutRefundCausesAndCompatibleCreditsIdentifyEachPath() (gas: 1212924)
+[PASS] test_F10_F11_F20_F21_F24_UnknownJobsAndInvalidStatesRevert() (gas: 1302965)
+[PASS] test_F10_F13_SubmitRecordsVersionOneAndAllowsEmptyOpaqueReference() (gas: 893376)
+[PASS] test_F10_F21_DifferentMilestoneDurationsKeepIndependentDeadlinesAndExits() (gas: 1272009)
+[PASS] test_F10_SubmissionRemainsOpenThroughDeliveryDeadlineAndClosesAtGraceEnd() (gas: 2197640)
+[PASS] test_F11_ApprovalIsClientOnlyAndCreditsFreelancerWithoutTokenTransfer() (gas: 1031124)
+[PASS] test_F11_F12_F20_ReviewBoundaryEminus1Eplus() (gas: 3636739)
+[PASS] test_F12_RejectRequiresClientReasonAndAvailableRevision() (gas: 963937)
+[PASS] test_F13_F24_ResponseBoundaryEminus1Eplus() (gas: 2471527)
+[PASS] test_F13_ResubmissionRefreshesReviewClockAndKeepsHistoryAndRejectionMetadata() (gas: 1159681)
+[PASS] test_F20_F21_F24_NondisputedReadySubmittedAndRejectedStatesHavePublicBoundedExits() (gas: 1661895)
+[PASS] test_F21_MissedDeadlineRefundBoundaryEminus1Eplus() (gas: 1069062)
+[PASS] test_F22_RevisionLimitsZeroOneAndFiveAreIndependentPerMilestone() (gas: 3883850)
+Suite result: ok. 25 passed; 0 failed; 0 skipped; finished in 50.44ms (174.01ms CPU time)
+
+Ran 17 tests for test/Phase1Escrow.t.sol:Phase1EscrowTest
+[PASS] invariant_F03_EachTokenBalanceCoversItsLiabilities() (runs: 128, calls: 8192, reverts: 0)
+
+╭------------------------+-------------+-------+---------+----------╮
+| Contract               | Selector    | Calls | Reverts | Discards |
++===================================================================+
+| EscrowInvariantHandler | acceptJob   | 2027  | 0       | 0        |
+|------------------------+-------------+-------+---------+----------|
+| EscrowInvariantHandler | advanceTime | 2035  | 0       | 0        |
+|------------------------+-------------+-------+---------+----------|
+| EscrowInvariantHandler | createJob   | 2078  | 0       | 0        |
+|------------------------+-------------+-------+---------+----------|
+| EscrowInvariantHandler | fundJob     | 2052  | 0       | 0        |
+╰------------------------+-------------+-------+---------+----------╯
+
+[PASS] testFuzz_F01_F03_RawAmountRemainsTokenUnits(uint256,uint8) (runs: 512, μ: 631644, ~: 630844)
+[PASS] test_A01_F02_ProposalUsesHalfOpenExpiryAndPublicCancellation() (gas: 1475018)
+[PASS] test_A20_F03_WithdrawalIsEffectsFirstAndReentrancyGuarded() (gas: 955233)
+[PASS] test_A20_F03_WithdrawalTransferFailureRollsBackAllLiabilityAndBalances() (gas: 873556)
+[PASS] test_F01_F02_F03_CreateAcceptFundStartsIndependentRawUnitClocks() (gas: 931854)
+[PASS] test_F01_F02_F03_UnknownJobsAndUnauthorizedWithdrawalCannotMoveFunds() (gas: 778679)
+[PASS] test_F01_F03_RawUnitsForSixEightEighteenDecimalTokens() (gas: 1870041)
+[PASS] test_F01_RejectsInvalidDeploymentConfiguration() (gas: 2646112)
+[PASS] test_F01_RejectsInvalidPartiesTokensCommitmentsAndBounds() (gas: 656845)
+[PASS] test_F02_F03_EnforceRolesAndFundingOrder() (gas: 752907)
+[PASS] test_F03_CallbackCannotReenterCreateDuringFunding() (gas: 1047246)
+[PASS] test_F03_DirectSurplusNeverCreatesClaimableLiability() (gas: 663204)
+[PASS] test_F03_RejectsFeeOnTransferAndFalseReturnDepositsWithRollback() (gas: 9267589)
+[PASS] test_F03_SafeERC20SupportsNoReturnTokenAndExactBalanceDeltas() (gas: 4656562)
+[PASS] test_F03_WithdrawalTransfersExactBackedClaimableAndClearsLedger() (gas: 813237)
+[PASS] test_F85_F03_FundingUsesHalfOpenExpiryAndPublicCancellation() (gas: 1696780)
+Suite result: ok. 17 passed; 0 failed; 0 skipped; finished in 1.30s (1.38s CPU time)
+
+Ran 1 test for test/Phase1Additional.t.sol:Phase1AdditionalInvariantTest
+[PASS] invariant_F03_LedgerMatchesSeededAndRandomFundedPrincipal() (runs: 128, calls: 8192, reverts: 0)
+
+╭-------------------------+----------+-------+---------+----------╮
+| Contract                | Selector | Calls | Reverts | Discards |
++=================================================================+
+| AdditionalLedgerHandler | step     | 8192  | 0       | 0        |
+╰-------------------------+----------+-------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 3.63s (3.62s CPU time)
+
+Ran 2 tests for test/Phase2Milestones.t.sol:Phase2SettlementInvariantTest
+[PASS]
+Phase2SettlementInvariantTest invariants:
+[PASS] invariant_A25_FundedPrincipalIsAlwaysLockedClaimableOrWithdrawn
+[PASS] invariant_F20_F21_F24_ExpiredNondisputedStatesHaveBoundedPublicExits
+ Phase2SettlementInvariantTest invariants (runs: 128, calls: 8192, reverts: 0)
+
+╭-------------------------+---------------------+-------+---------+----------╮
+| Contract                | Selector            | Calls | Reverts | Discards |
++============================================================================+
+| Phase2SettlementHandler | advanceTime         | 907   | 0       | 0        |
+|-------------------------+---------------------+-------+---------+----------|
+| Phase2SettlementHandler | approve             | 890   | 0       | 0        |
+|-------------------------+---------------------+-------+---------+----------|
+| Phase2SettlementHandler | drainOne            | 896   | 0       | 0        |
+|-------------------------+---------------------+-------+---------+----------|
+| Phase2SettlementHandler | exerciseSeededPaths | 919   | 0       | 0        |
+|-------------------------+---------------------+-------+---------+----------|
+| Phase2SettlementHandler | reject              | 895   | 0       | 0        |
+|-------------------------+---------------------+-------+---------+----------|
+| Phase2SettlementHandler | resubmit            | 929   | 0       | 0        |
+|-------------------------+---------------------+-------+---------+----------|
+| Phase2SettlementHandler | submit              | 951   | 0       | 0        |
+|-------------------------+---------------------+-------+---------+----------|
+| Phase2SettlementHandler | timeout             | 891   | 0       | 0        |
+|-------------------------+---------------------+-------+---------+----------|
+| Phase2SettlementHandler | withdraw            | 914   | 0       | 0        |
+╰-------------------------+---------------------+-------+---------+----------╯
+
+[PASS] test_F20_F21_F24_StatefulHandlerCanDrainEveryNondisputedLifecycle() (gas: 842774)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 14.37s (14.36s CPU time)
+
+Ran 8 test suites in 14.37s (19.43s CPU time): 61 tests passed, 0 failed, 0 skipped (61 total tests)

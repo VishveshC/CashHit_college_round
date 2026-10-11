@@ -1,0 +1,12 @@
+Explicit-file Gitleaks scan of registry JSON outputs; unchanged .gitleaks.toml; no new allowlists or scan exclusions
+files=7
+
+PASS exit_code=0 bytes=664 path=docs\phase4-reopen-registry-artifact-frozen.json
+PASS exit_code=0 bytes=9998 path=docs\phase4-reopen-registry-artifact.json
+PASS exit_code=0 bytes=1847 path=docs\phase4-reopen-registry-attack-lab-deployed.json
+PASS exit_code=0 bytes=566 path=docs\phase4-reopen-registry-backup-proof.json
+PASS exit_code=0 bytes=1313 path=docs\phase4-reopen-registry-chain-proof.json
+PASS exit_code=0 bytes=278 path=docs\phase4-reopen-registry-client-canary-final.json
+PASS exit_code=0 bytes=601 path=docs\phase4-reopen-registry-rpc-frozen.json
+
+files=7 failures=0

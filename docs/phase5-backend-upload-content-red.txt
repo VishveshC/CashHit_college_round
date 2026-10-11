@@ -1,0 +1,97 @@
+(node:26424) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/routes.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 5 backend: bounded passive-PDF upload policy
+  ✔ a valid passive PDF remains uploadable (26.2049ms)
+  ✖ rejects decoded OpenAction plus JavaScript PDF names (27.2269ms)
+  ✖ rejects an otherwise readable PDF carrying an object stream (11.3569ms)
+  ✖ rejects encrypted PDFs whose content cannot be inspected (9.4615ms)
+  ✖ rejects direct OpenAction and embedded-file markers (10.1692ms)
+✖ Phase 5 backend: bounded passive-PDF upload policy (763.2ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 1
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1238.2721
+
+✖ failing tests:
+
+test at scripts\phase5-backend-upload-content.test.mjs:116:13
+✖ rejects decoded OpenAction plus JavaScript PDF names (27.2269ms)
+  AssertionError [ERR_ASSERTION]: PDF #HH name escapes must not hide an automatic JavaScript action
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-upload-content.test.mjs:121:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-upload-content.test.mjs:116:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts\phase5-backend-upload-content.test.mjs:124:13
+✖ rejects an otherwise readable PDF carrying an object stream (11.3569ms)
+  AssertionError [ERR_ASSERTION]: object streams can conceal active objects from a token-level safety check
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-upload-content.test.mjs:129:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-upload-content.test.mjs:124:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts\phase5-backend-upload-content.test.mjs:132:13
+✖ rejects encrypted PDFs whose content cannot be inspected (9.4615ms)
+  AssertionError [ERR_ASSERTION]: encrypted content cannot be inspected by the bounded passive-PDF filter
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-upload-content.test.mjs:137:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-upload-content.test.mjs:132:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts\phase5-backend-upload-content.test.mjs:140:13
+✖ rejects direct OpenAction and embedded-file markers (10.1692ms)
+  AssertionError [ERR_ASSERTION]: unencoded automatic actions and embedded content remain blocked
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-upload-content.test.mjs:144:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-upload-content.test.mjs:140:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

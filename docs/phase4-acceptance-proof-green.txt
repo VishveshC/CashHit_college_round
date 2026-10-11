@@ -1,0 +1,10 @@
+✔ applicable acceptance evidence is produced by fresh local-chain scenarios (0.7518ms)
+✔ acceptance proof validation requires successful receipts and observed assertions (255.7468ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 324.1165

@@ -1,0 +1,26 @@
+(node:35240) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/chain-pins.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ F61 fresh deployment validation accepts only matching chain and all3 runtime codehashes (0.8726ms)
+✔ F61 supported manifest on unsupported RPC chain fails closed (0.2634ms)
+✔ F61 manifest cannot authorize a nonlocal chain even if RPC agrees (0.1226ms)
+✔ F61 missing deployment and drifted engine code fail pin validation (0.27ms)
+(node:32308) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/local-rpc.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ A40 devRPC public mode denies even known account methods without contacting chain (11.7089ms)
+✔ W08 devRPC refuses cross origin before chain access (0.2812ms)
+✔ A40 devRPC cannot expose arbitrary node/admin method or external signing wallet (1.406ms)
+✔ W25 devRPC blocks external targets native value and unlimited approval (2.9623ms)
+✔ F62 devRPC account response contains configured public roles only (0.9027ms)
+✔ W25 exact allowance goes only to pinned escrow and confirmed RPC response returned (0.6318ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 365.4531

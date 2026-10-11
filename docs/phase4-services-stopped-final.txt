@@ -1,0 +1,8 @@
+SUCCESS: The process with PID 34708 (child process of PID 12864) has been terminated.
+
+> fairwork-v3@0.0.0 demo:stop
+> node scripts/local-stop.mjs
+
+Owned local web stopped.
+Owned local chain stopped.
+Verified no listeners on ports 3000, 8545, 8080.

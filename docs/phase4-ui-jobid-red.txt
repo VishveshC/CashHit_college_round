@@ -1,0 +1,57 @@
+(node:4320) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/job-identifiers.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ job identifiers accept canonical unsigned decimal values through uint256 max, including zero (0.8686ms)
+✔ job identifiers reject malformed, signed, fractional, leading-zero, and out-of-range values (0.1199ms)
+✖ JobCreated extraction preserves event ID zero and rejects absent or malformed event IDs (0.1335ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 1
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 100.6832
+
+✖ failing tests:
+
+test at apps\web\test\job-identifiers.test.ts:7:1
+✖ job identifiers accept canonical unsigned decimal values through uint256 max, including zero (0.8686ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  null !== 0n
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/job-identifiers.test.ts:8:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: 0n,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\job-identifiers.test.ts:19:1
+✖ JobCreated extraction preserves event ID zero and rejects absent or malformed event IDs (0.1335ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  null !== 0n
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/job-identifiers.test.ts:20:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: 0n,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

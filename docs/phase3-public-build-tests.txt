@@ -1,0 +1,1 @@
+PASS: local gate, demo-public rejection, missing-production rejection and invalid-target rejection.

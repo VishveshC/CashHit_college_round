@@ -1,0 +1,5175 @@
+{
+  "generatedAt": "2026-10-11T01:43:00.339Z",
+  "evidenceKind": "read-only local-chain snapshot and receipt verification",
+  "rpcUrl": "http://127.0.0.1:8545",
+  "chainId": 31337,
+  "expectedChainId": 31337,
+  "observedBlock": "657",
+  "eventWindow": {
+    "fromBlock": "526",
+    "throughBlock": "657",
+    "queriedContracts": [
+      {
+        "name": "escrow",
+        "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0"
+      },
+      {
+        "name": "arbitration",
+        "address": "0x75537828f2ce51be7289709686A69CbFDbB714F1"
+      },
+      {
+        "name": "randomness",
+        "address": "0x98A01f8FF48B849CcaF4d8D987eE200683a1a11e"
+      },
+      {
+        "name": "USDC",
+        "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+      },
+      {
+        "name": "WBTC",
+        "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+      }
+    ],
+    "logCount": 203,
+    "uniqueEventTransactionCount": 107,
+    "eventTransactionReceiptSuccessCount": 107,
+    "eventTransactionReceiptFailureOrMissingCount": 0,
+    "undecodedLogCount": 0,
+    "coverageNote": "Includes every event log emitted by the listed escrow, arbitration, randomness, USDC, and WBTC addresses in the pinned block window. Chain logs do not encode UI origin; this is an event/receipt scope, not proof that each transaction came from a particular browser action."
+  },
+  "jobEnumeration": {
+    "observedAtBlock": "657",
+    "onChainJobCount": 38,
+    "firstIncludedJobId": 26,
+    "lastIncludedJobId": 37,
+    "includedJobCount": 12,
+    "note": "Enumerated job ids 26 through jobCount-1 with jobCount read at the same pinned block used for all contract calls."
+  },
+  "historicalUiProofReferenceReconciliation": {
+    "sources": [
+      "docs/phase4-browser-payment-chain-proof.json",
+      "docs/phase4-browser-wbtc-chain-proof.json",
+      "docs/phase4-browser-job29-dispute16-proof.json"
+    ],
+    "uniqueReferencedTransactionCount": 21,
+    "currentChainReceiptSuccessCount": 2,
+    "missingOrUnavailableOnCurrentChainCount": 19,
+    "note": "These are references from earlier browser proof files. A missing current-chain receipt means the old transaction is not present on this live chain snapshot; it does not change the separate current event-window result."
+  },
+  "financialSourceHashes": [
+    {
+      "file": "contracts/src/FairworkEscrow.sol",
+      "currentSha256": "fc28871ece735ea4bb38d7aed153d4b6d5c874efa33f43468ddf66d9bf9f4ed0",
+      "phase3Sha256": "fc28871ece735ea4bb38d7aed153d4b6d5c874efa33f43468ddf66d9bf9f4ed0",
+      "matchesPhase3": true
+    },
+    {
+      "file": "contracts/src/FairworkArbitration.sol",
+      "currentSha256": "e821e13d67248127665eb076e60a3713af52cb438040f29920cb347ce596fcb2",
+      "phase3Sha256": "e821e13d67248127665eb076e60a3713af52cb438040f29920cb347ce596fcb2",
+      "matchesPhase3": true
+    },
+    {
+      "file": "contracts/src/interfaces/IRandomness.sol",
+      "currentSha256": "a6762d42031985e1a8388808f640b0684d2aed7683ea0ac9846e0996ddb74c4e",
+      "phase3Sha256": "a6762d42031985e1a8388808f640b0684d2aed7683ea0ac9846e0996ddb74c4e",
+      "matchesPhase3": true
+    },
+    {
+      "file": "contracts/src/mocks/MockRandomness.sol",
+      "currentSha256": "dc24d2f69e135e77ac5a37590203547d0def2148d1242715b1f1067bef9c30a2",
+      "phase3Sha256": "dc24d2f69e135e77ac5a37590203547d0def2148d1242715b1f1067bef9c30a2",
+      "matchesPhase3": true
+    }
+  ],
+  "deployedCodeHashes": {
+    "escrow": {
+      "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+      "codePresent": true,
+      "keccak256": "0xc1cd5694ea0e0a1b9b4bf5d96d3418a6feaeac556f097a282f1b7d80c4a03f8d",
+      "deploymentExpected": "0xc1cd5694ea0e0a1b9b4bf5d96d3418a6feaeac556f097a282f1b7d80c4a03f8d",
+      "matchesDeployment": true
+    },
+    "arbitration": {
+      "address": "0x75537828f2ce51be7289709686A69CbFDbB714F1",
+      "codePresent": true,
+      "keccak256": "0x30138db2258605a793faced6d849c7addc9cbbeeef8e9c610d9b1c8d6a864338",
+      "deploymentExpected": "0x30138db2258605a793faced6d849c7addc9cbbeeef8e9c610d9b1c8d6a864338",
+      "matchesDeployment": true
+    },
+    "randomness": {
+      "address": "0x98A01f8FF48B849CcaF4d8D987eE200683a1a11e",
+      "codePresent": true,
+      "keccak256": "0x6a47db322e73856a8f88d5875f32aebcd392f02f58a65ab2f4fd1c8e57fdb0aa",
+      "deploymentExpected": "0x6a47db322e73856a8f88d5875f32aebcd392f02f58a65ab2f4fd1c8e57fdb0aa",
+      "matchesDeployment": true
+    }
+  },
+  "jobs": [
+    {
+      "jobId": 26,
+      "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "state": 4,
+      "totalAmount": "100000000",
+      "createdAt": "1791674763",
+      "proposalEnd": "1791674823",
+      "acceptedAt": "1791674763",
+      "fundingDeadline": "1791674823",
+      "fundedAt": "1791674763",
+      "reviewWindow": "120",
+      "revisionLimit": 1,
+      "milestoneCount": 1,
+      "milestones": [
+        {
+          "milestoneIndex": 0,
+          "amount": "100000000",
+          "duration": "300",
+          "acceptanceCriteriaCommitment": "0x9e7369e2dc9fe95b2f3f205c98df386fa9ed165cc19f7d74a4d68e8dea3d8e8f",
+          "deadline": "1791675063",
+          "graceEnd": "1791675123",
+          "state": 5,
+          "submittedAt": "0",
+          "reviewEnd": "0",
+          "rejectedAt": "0",
+          "responseEnd": "0",
+          "rejectionCount": 0,
+          "submissionCount": 0,
+          "latestReasonCommitment": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "disputeId": "0"
+        }
+      ]
+    },
+    {
+      "jobId": 27,
+      "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "state": 4,
+      "totalAmount": "100000000",
+      "createdAt": "1791674763",
+      "proposalEnd": "1791674823",
+      "acceptedAt": "1791674763",
+      "fundingDeadline": "1791674823",
+      "fundedAt": "1791674764",
+      "reviewWindow": "120",
+      "revisionLimit": 1,
+      "milestoneCount": 1,
+      "milestones": [
+        {
+          "milestoneIndex": 0,
+          "amount": "100000000",
+          "duration": "300",
+          "acceptanceCriteriaCommitment": "0x3dcfd6b973ee750fa7f046a709fe729ebc3d7b65d1385f7fac0b9b66a28fa236",
+          "deadline": "1791675064",
+          "graceEnd": "1791675124",
+          "state": 4,
+          "submittedAt": "1791674764",
+          "reviewEnd": "1791674884",
+          "rejectedAt": "0",
+          "responseEnd": "0",
+          "rejectionCount": 0,
+          "submissionCount": 1,
+          "latestReasonCommitment": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "disputeId": "0"
+        }
+      ]
+    },
+    {
+      "jobId": 28,
+      "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "state": 4,
+      "totalAmount": "100000000",
+      "createdAt": "1791674764",
+      "proposalEnd": "1791674824",
+      "acceptedAt": "1791674764",
+      "fundingDeadline": "1791674824",
+      "fundedAt": "1791674764",
+      "reviewWindow": "120",
+      "revisionLimit": 1,
+      "milestoneCount": 1,
+      "milestones": [
+        {
+          "milestoneIndex": 0,
+          "amount": "100000000",
+          "duration": "300",
+          "acceptanceCriteriaCommitment": "0xd3a9e5c95e953a25a50ef4a409bf2aab4399fc0b9152f669709bb98f8ecc97a4",
+          "deadline": "1791675064",
+          "graceEnd": "1791675124",
+          "state": 5,
+          "submittedAt": "1791674764",
+          "reviewEnd": "1791674884",
+          "rejectedAt": "1791674764",
+          "responseEnd": "1791674824",
+          "rejectionCount": 1,
+          "submissionCount": 1,
+          "latestReasonCommitment": "0xcdd700688af6058b3bb9496d3004bc7313689c6ad052dee460ac95803872e978",
+          "disputeId": "0"
+        }
+      ]
+    },
+    {
+      "jobId": 29,
+      "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "state": 4,
+      "totalAmount": "100000000",
+      "createdAt": "1791674764",
+      "proposalEnd": "1791674824",
+      "acceptedAt": "1791674764",
+      "fundingDeadline": "1791674824",
+      "fundedAt": "1791674764",
+      "reviewWindow": "120",
+      "revisionLimit": 1,
+      "milestoneCount": 1,
+      "milestones": [
+        {
+          "milestoneIndex": 0,
+          "amount": "100000000",
+          "duration": "300",
+          "acceptanceCriteriaCommitment": "0x7e5d8b18cad0ae39cf711a5d26c0edc6ca4e89e094a5f5bb1647beaf2e3cb353",
+          "deadline": "1791675064",
+          "graceEnd": "1791675124",
+          "state": 6,
+          "submittedAt": "1791674764",
+          "reviewEnd": "1791674884",
+          "rejectedAt": "0",
+          "responseEnd": "0",
+          "rejectionCount": 0,
+          "submissionCount": 1,
+          "latestReasonCommitment": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "disputeId": "16"
+        }
+      ]
+    },
+    {
+      "jobId": 30,
+      "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "state": 4,
+      "totalAmount": "100000000",
+      "createdAt": "1791674765",
+      "proposalEnd": "1791674825",
+      "acceptedAt": "1791674765",
+      "fundingDeadline": "1791674825",
+      "fundedAt": "1791674765",
+      "reviewWindow": "120",
+      "revisionLimit": 1,
+      "milestoneCount": 1,
+      "milestones": [
+        {
+          "milestoneIndex": 0,
+          "amount": "100000000",
+          "duration": "300",
+          "acceptanceCriteriaCommitment": "0xcf92f187b9b0a2fa5a7a5e6c33f7982c895d09913801b8efeb32897dc88bdf3a",
+          "deadline": "1791675065",
+          "graceEnd": "1791675125",
+          "state": 4,
+          "submittedAt": "1791674765",
+          "reviewEnd": "1791674885",
+          "rejectedAt": "0",
+          "responseEnd": "0",
+          "rejectionCount": 0,
+          "submissionCount": 1,
+          "latestReasonCommitment": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "disputeId": "0"
+        }
+      ]
+    },
+    {
+      "jobId": 31,
+      "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "state": 4,
+      "totalAmount": "2500001",
+      "createdAt": "1791674829",
+      "proposalEnd": "1791674889",
+      "acceptedAt": "1791674843",
+      "fundingDeadline": "1791674903",
+      "fundedAt": "1791674861",
+      "reviewWindow": "3600",
+      "revisionLimit": 2,
+      "milestoneCount": 1,
+      "milestones": [
+        {
+          "milestoneIndex": 0,
+          "amount": "2500001",
+          "duration": "3600",
+          "acceptanceCriteriaCommitment": "0xcb49e53666b52d97acb06d1375a481cb3212ea9c05b1c1ec665fc435cc279317",
+          "deadline": "1791678461",
+          "graceEnd": "1791678521",
+          "state": 4,
+          "submittedAt": "1791675003",
+          "reviewEnd": "1791678603",
+          "rejectedAt": "0",
+          "responseEnd": "0",
+          "rejectionCount": 0,
+          "submissionCount": 1,
+          "latestReasonCommitment": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "disputeId": "0"
+        }
+      ]
+    },
+    {
+      "jobId": 32,
+      "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "state": 4,
+      "totalAmount": "2500001",
+      "createdAt": "1791675063",
+      "proposalEnd": "1791675123",
+      "acceptedAt": "1791675076",
+      "fundingDeadline": "1791675136",
+      "fundedAt": "1791675084",
+      "reviewWindow": "3600",
+      "revisionLimit": 2,
+      "milestoneCount": 1,
+      "milestones": [
+        {
+          "milestoneIndex": 0,
+          "amount": "2500001",
+          "duration": "3600",
+          "acceptanceCriteriaCommitment": "0xa5f29f033062bef601df683d96d449e755d87bfa25a1d6e0d0839c6bb3af5f6d",
+          "deadline": "1791678684",
+          "graceEnd": "1791678744",
+          "state": 6,
+          "submittedAt": "1791675121",
+          "reviewEnd": "1791678721",
+          "rejectedAt": "1791675107",
+          "responseEnd": "1791675167",
+          "rejectionCount": 1,
+          "submissionCount": 2,
+          "latestReasonCommitment": "0x035f5798517e6d6f3a4a22e568d48d78882468184b06673f9ef31ee9b2e3709a",
+          "disputeId": "17"
+        }
+      ]
+    },
+    {
+      "jobId": 33,
+      "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "state": 3,
+      "totalAmount": "2500001",
+      "createdAt": "1791679910",
+      "proposalEnd": "1791679970",
+      "acceptedAt": "0",
+      "fundingDeadline": "0",
+      "fundedAt": "0",
+      "reviewWindow": "3600",
+      "revisionLimit": 2,
+      "milestoneCount": 1,
+      "milestones": [
+        {
+          "milestoneIndex": 0,
+          "amount": "2500001",
+          "duration": "3600",
+          "acceptanceCriteriaCommitment": "0xc0d71f156b046b3d94849d9bf814c853b7b7aab90eb885b593fd7c076faad616",
+          "deadline": "0",
+          "graceEnd": "0",
+          "state": 0,
+          "submittedAt": "0",
+          "reviewEnd": "0",
+          "rejectedAt": "0",
+          "responseEnd": "0",
+          "rejectionCount": 0,
+          "submissionCount": 0,
+          "latestReasonCommitment": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "disputeId": "0"
+        }
+      ]
+    },
+    {
+      "jobId": 34,
+      "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "state": 3,
+      "totalAmount": "2500001",
+      "createdAt": "1791690566",
+      "proposalEnd": "1791690626",
+      "acceptedAt": "1791690571",
+      "fundingDeadline": "1791690631",
+      "fundedAt": "0",
+      "reviewWindow": "3600",
+      "revisionLimit": 2,
+      "milestoneCount": 1,
+      "milestones": [
+        {
+          "milestoneIndex": 0,
+          "amount": "2500001",
+          "duration": "3600",
+          "acceptanceCriteriaCommitment": "0x27cb9875b167c80c4a3ad93364f5ebd1416b3c8a93726abc96912108ff954050",
+          "deadline": "0",
+          "graceEnd": "0",
+          "state": 0,
+          "submittedAt": "0",
+          "reviewEnd": "0",
+          "rejectedAt": "0",
+          "responseEnd": "0",
+          "rejectionCount": 0,
+          "submissionCount": 0,
+          "latestReasonCommitment": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "disputeId": "0"
+        }
+      ]
+    },
+    {
+      "jobId": 35,
+      "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "state": 4,
+      "totalAmount": "2501",
+      "createdAt": "1791690640",
+      "proposalEnd": "1791690700",
+      "acceptedAt": "1791690644",
+      "fundingDeadline": "1791690704",
+      "fundedAt": "1791690649",
+      "reviewWindow": "3600",
+      "revisionLimit": 2,
+      "milestoneCount": 1,
+      "milestones": [
+        {
+          "milestoneIndex": 0,
+          "amount": "2501",
+          "duration": "3600",
+          "acceptanceCriteriaCommitment": "0x2190306a033bf1079d0d5372e5b1ab8c991aa52a0934361c71c00aef939e7ac7",
+          "deadline": "1791694249",
+          "graceEnd": "1791694309",
+          "state": 6,
+          "submittedAt": "1791690660",
+          "reviewEnd": "1791694260",
+          "rejectedAt": "1791690683",
+          "responseEnd": "1791690743",
+          "rejectionCount": 1,
+          "submissionCount": 1,
+          "latestReasonCommitment": "0x6c4b6d323af9b10cf42ca85fec6c3dd3447ae4a588315ddc82a965f83a372af6",
+          "disputeId": "18"
+        }
+      ]
+    },
+    {
+      "jobId": 36,
+      "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "state": 4,
+      "totalAmount": "3",
+      "createdAt": "1791691300",
+      "proposalEnd": "1791691360",
+      "acceptedAt": "1791691310",
+      "fundingDeadline": "1791691370",
+      "fundedAt": "1791691326",
+      "reviewWindow": "3600",
+      "revisionLimit": 2,
+      "milestoneCount": 2,
+      "milestones": [
+        {
+          "milestoneIndex": 0,
+          "amount": "1",
+          "duration": "3600",
+          "acceptanceCriteriaCommitment": "0xffd841359cf17a2f7f53421128598a1a9d28627470176b976d407596dacce96f",
+          "deadline": "1791694926",
+          "graceEnd": "1791694986",
+          "state": 4,
+          "submittedAt": "1791691332",
+          "reviewEnd": "1791694932",
+          "rejectedAt": "0",
+          "responseEnd": "0",
+          "rejectionCount": 0,
+          "submissionCount": 1,
+          "latestReasonCommitment": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "disputeId": "0"
+        },
+        {
+          "milestoneIndex": 1,
+          "amount": "2",
+          "duration": "3600",
+          "acceptanceCriteriaCommitment": "0x495d9b7d96005986249b946df380af94f3a8f6b3dbdf04e2c9e8a74fd74b7e2b",
+          "deadline": "1791694926",
+          "graceEnd": "1791694986",
+          "state": 4,
+          "submittedAt": "1791691338",
+          "reviewEnd": "1791694938",
+          "rejectedAt": "0",
+          "responseEnd": "0",
+          "rejectionCount": 0,
+          "submissionCount": 1,
+          "latestReasonCommitment": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "disputeId": "0"
+        }
+      ]
+    },
+    {
+      "jobId": 37,
+      "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "state": 4,
+      "totalAmount": "10001",
+      "createdAt": "1791691454",
+      "proposalEnd": "1791691514",
+      "acceptedAt": "1791691455",
+      "fundingDeadline": "1791691515",
+      "fundedAt": "1791691456",
+      "reviewWindow": "3600",
+      "revisionLimit": 2,
+      "milestoneCount": 1,
+      "milestones": [
+        {
+          "milestoneIndex": 0,
+          "amount": "10001",
+          "duration": "3600",
+          "acceptanceCriteriaCommitment": "0xa50f3f8a0e01c60adf3f6f6158ebd04509cc0fe1186305613e32b08336a2d139",
+          "deadline": "1791695056",
+          "graceEnd": "1791695116",
+          "state": 6,
+          "submittedAt": "1791691465",
+          "reviewEnd": "1791695065",
+          "rejectedAt": "0",
+          "responseEnd": "0",
+          "rejectionCount": 0,
+          "submissionCount": 1,
+          "latestReasonCommitment": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "disputeId": "19"
+        }
+      ]
+    }
+  ],
+  "disputes": [
+    {
+      "disputeId": 16,
+      "observedThroughBlock": "657",
+      "fields": {
+        "jobId": "29",
+        "milestoneIndex": "0",
+        "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "amount": "100000000",
+        "depositAmount": "2000000",
+        "opener": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "phase": 10,
+        "round": 2,
+        "purpose": 2,
+        "attempt": 0,
+        "openedAt": "1791674764",
+        "evidenceDeadline": "1791674824",
+        "commitDeadline": "1791679756",
+        "replacementCommitDeadline": "0",
+        "revealDeadline": "1791679852",
+        "requestEnd": "1791679751",
+        "activeRequestId": "21",
+        "randomnessReady": false,
+        "rulingBps": 6000,
+        "fallbackApplied": false,
+        "clientDeposited": true,
+        "freelancerDeposited": false,
+        "clientEvidenceCount": 1,
+        "freelancerEvidenceCount": 0,
+        "fallbackReason": 0
+      },
+      "currentRound": 2,
+      "currentRoundPanel": [
+        "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+        "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955"
+      ],
+      "panelsByRound": {
+        "1": [
+          "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+          "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+          "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+        ],
+        "2": [
+          "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+          "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+          "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955"
+        ]
+      },
+      "activeRequestKnown": true
+    },
+    {
+      "disputeId": 17,
+      "observedThroughBlock": "657",
+      "fields": {
+        "jobId": "32",
+        "milestoneIndex": "0",
+        "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "amount": "2500001",
+        "depositAmount": "50000",
+        "opener": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "phase": 10,
+        "round": 1,
+        "purpose": 0,
+        "attempt": 1,
+        "openedAt": "1791675133",
+        "evidenceDeadline": "1791675193",
+        "commitDeadline": "1791678987",
+        "replacementCommitDeadline": "0",
+        "revealDeadline": "1791679094",
+        "requestEnd": "1791678979",
+        "activeRequestId": "18",
+        "randomnessReady": false,
+        "rulingBps": 5000,
+        "fallbackApplied": false,
+        "clientDeposited": true,
+        "freelancerDeposited": true,
+        "clientEvidenceCount": 1,
+        "freelancerEvidenceCount": 2,
+        "fallbackReason": 0
+      },
+      "currentRound": 1,
+      "currentRoundPanel": [
+        "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+      ],
+      "panelsByRound": {
+        "1": [
+          "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+          "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+          "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+        ],
+        "2": [
+          "0x0000000000000000000000000000000000000000",
+          "0x0000000000000000000000000000000000000000",
+          "0x0000000000000000000000000000000000000000"
+        ]
+      },
+      "activeRequestKnown": true
+    },
+    {
+      "disputeId": 18,
+      "observedThroughBlock": "657",
+      "fields": {
+        "jobId": "35",
+        "milestoneIndex": "0",
+        "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "amount": "2501",
+        "depositAmount": "50",
+        "opener": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "phase": 10,
+        "round": 1,
+        "purpose": 0,
+        "attempt": 2,
+        "openedAt": "1791690689",
+        "evidenceDeadline": "1791690749",
+        "commitDeadline": "0",
+        "replacementCommitDeadline": "0",
+        "revealDeadline": "0",
+        "requestEnd": "1791690956",
+        "activeRequestId": "24",
+        "randomnessReady": false,
+        "rulingBps": 5000,
+        "fallbackApplied": true,
+        "clientDeposited": true,
+        "freelancerDeposited": true,
+        "clientEvidenceCount": 0,
+        "freelancerEvidenceCount": 0,
+        "fallbackReason": 2
+      },
+      "currentRound": 1,
+      "currentRoundPanel": [
+        "0x0000000000000000000000000000000000000000",
+        "0x0000000000000000000000000000000000000000",
+        "0x0000000000000000000000000000000000000000"
+      ],
+      "panelsByRound": {
+        "1": [
+          "0x0000000000000000000000000000000000000000",
+          "0x0000000000000000000000000000000000000000",
+          "0x0000000000000000000000000000000000000000"
+        ],
+        "2": [
+          "0x0000000000000000000000000000000000000000",
+          "0x0000000000000000000000000000000000000000",
+          "0x0000000000000000000000000000000000000000"
+        ]
+      },
+      "activeRequestKnown": false
+    },
+    {
+      "disputeId": 19,
+      "observedThroughBlock": "657",
+      "fields": {
+        "jobId": "37",
+        "milestoneIndex": "0",
+        "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "amount": "10001",
+        "depositAmount": "200",
+        "opener": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "phase": 10,
+        "round": 2,
+        "purpose": 2,
+        "attempt": 0,
+        "openedAt": "1791691471",
+        "evidenceDeadline": "1791691531",
+        "commitDeadline": "1791691771",
+        "replacementCommitDeadline": "0",
+        "revealDeadline": "1791691833",
+        "requestEnd": "1791691770",
+        "activeRequestId": "26",
+        "randomnessReady": false,
+        "rulingBps": 5000,
+        "fallbackApplied": true,
+        "clientDeposited": true,
+        "freelancerDeposited": false,
+        "clientEvidenceCount": 0,
+        "freelancerEvidenceCount": 0,
+        "fallbackReason": 3
+      },
+      "currentRound": 2,
+      "currentRoundPanel": [
+        "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+      ],
+      "panelsByRound": {
+        "1": [
+          "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+          "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+          "0x976EA74026E726554dB657fA54763abd0C3a0aa9"
+        ],
+        "2": [
+          "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+          "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+          "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+        ]
+      },
+      "activeRequestKnown": true
+    }
+  ],
+  "baselineJob31Withdrawal": {
+    "transactionHash": "0x894c3bc82f98f4677c91a034b8e9e7d6c6cb145c148c0f222f763c304b0ddb7f",
+    "proofSource": "docs/phase4-browser-payment-chain-proof.json exactWithdrawal",
+    "jobAssociationSource": "The proof records jobId 31 and exactWithdrawal hash; WithdrawalCompleted itself has no jobId field.",
+    "event": {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "534",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x894c3bc82f98f4677c91a034b8e9e7d6c6cb145c148c0f222f763c304b0ddb7f",
+      "eventName": "WithdrawalCompleted",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "2500001"
+      }
+    },
+    "receipt": {
+      "hash": "0x894c3bc82f98f4677c91a034b8e9e7d6c6cb145c148c0f222f763c304b0ddb7f",
+      "sources": [
+        "chain-event-window",
+        "docs/phase4-browser-payment-chain-proof.json"
+      ],
+      "status": "success",
+      "blockNumber": "534",
+      "blockHash": "0x08efdd326e2c6ae85453cf1e598d66208727a39595568e86100780b4a4f820b5",
+      "transactionIndex": 0,
+      "inRequestedWindow": true
+    },
+    "expectedRawAmount": "2500001",
+    "parsedEventAmount": "2500001",
+    "checks": {
+      "exactWithdrawalEventFound": true,
+      "amountMatches2500001": true,
+      "accountMatchesFreelancer": true,
+      "tokenMatchesUSDC": true,
+      "receiptSucceeded": true
+    }
+  },
+  "uiReceiptReferences": [
+    {
+      "source": "docs/phase4-browser-payment-chain-proof.json",
+      "field": "receipts",
+      "hash": "0xbc7ba6fea97ce3336ca2ef3887d730959e483dcd86af3190d04d547eb20586de",
+      "currentReceipt": {
+        "hash": "0xbc7ba6fea97ce3336ca2ef3887d730959e483dcd86af3190d04d547eb20586de",
+        "sources": [
+          "docs/phase4-browser-payment-chain-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0xbc7ba6fea97ce3336ca2ef3887d730959e483dcd86af3190d04d547eb20586de\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-payment-chain-proof.json",
+      "field": "receipts",
+      "hash": "0xb1fd3ab6f85df34c1e008f0f33703442fd84debdc4db5fcf550f745325a2fa47",
+      "currentReceipt": {
+        "hash": "0xb1fd3ab6f85df34c1e008f0f33703442fd84debdc4db5fcf550f745325a2fa47",
+        "sources": [
+          "chain-event-window",
+          "docs/phase4-browser-payment-chain-proof.json"
+        ],
+        "status": "success",
+        "blockNumber": "529",
+        "blockHash": "0xcaa981378e5bef9c1a76d3730e39904e5f2ef2e1400585e2e8bd0330fe01db47",
+        "transactionIndex": 0,
+        "inRequestedWindow": true
+      }
+    },
+    {
+      "source": "docs/phase4-browser-payment-chain-proof.json",
+      "field": "receipts",
+      "hash": "0x3eecc6383b997508562d110d4f0a4a3cdca0fadbacd707e02e4253c06ec15e8f",
+      "currentReceipt": {
+        "hash": "0x3eecc6383b997508562d110d4f0a4a3cdca0fadbacd707e02e4253c06ec15e8f",
+        "sources": [
+          "docs/phase4-browser-payment-chain-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0x3eecc6383b997508562d110d4f0a4a3cdca0fadbacd707e02e4253c06ec15e8f\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-payment-chain-proof.json",
+      "field": "receipts",
+      "hash": "0xf29385cb2081e80912144602dc462f899ca1c9d66b04cd6d9d7e4b2fe8dd4608",
+      "currentReceipt": {
+        "hash": "0xf29385cb2081e80912144602dc462f899ca1c9d66b04cd6d9d7e4b2fe8dd4608",
+        "sources": [
+          "docs/phase4-browser-payment-chain-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0xf29385cb2081e80912144602dc462f899ca1c9d66b04cd6d9d7e4b2fe8dd4608\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-payment-chain-proof.json",
+      "field": "receipts",
+      "hash": "0x840bdb24347673f058e1876522fab26d6e8ec519373eba2320808f1f069b54fb",
+      "currentReceipt": {
+        "hash": "0x840bdb24347673f058e1876522fab26d6e8ec519373eba2320808f1f069b54fb",
+        "sources": [
+          "docs/phase4-browser-payment-chain-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0x840bdb24347673f058e1876522fab26d6e8ec519373eba2320808f1f069b54fb\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-payment-chain-proof.json",
+      "field": "receipts",
+      "hash": "0xa7690d30132b21f4f58c4d8dc9e667e7856f3a6fc65b2f7224874ddeff53ff6e",
+      "currentReceipt": {
+        "hash": "0xa7690d30132b21f4f58c4d8dc9e667e7856f3a6fc65b2f7224874ddeff53ff6e",
+        "sources": [
+          "docs/phase4-browser-payment-chain-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0xa7690d30132b21f4f58c4d8dc9e667e7856f3a6fc65b2f7224874ddeff53ff6e\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-payment-chain-proof.json",
+      "field": "receipts",
+      "hash": "0x894c3bc82f98f4677c91a034b8e9e7d6c6cb145c148c0f222f763c304b0ddb7f",
+      "currentReceipt": {
+        "hash": "0x894c3bc82f98f4677c91a034b8e9e7d6c6cb145c148c0f222f763c304b0ddb7f",
+        "sources": [
+          "chain-event-window",
+          "docs/phase4-browser-payment-chain-proof.json"
+        ],
+        "status": "success",
+        "blockNumber": "534",
+        "blockHash": "0x08efdd326e2c6ae85453cf1e598d66208727a39595568e86100780b4a4f820b5",
+        "transactionIndex": 0,
+        "inRequestedWindow": true
+      }
+    },
+    {
+      "source": "docs/phase4-browser-wbtc-chain-proof.json",
+      "field": "receipts",
+      "hash": "0xc92517c884959a123e70e6afd38ecb8cb512aea6aede77067cb963d7fa1c3f9e",
+      "currentReceipt": {
+        "hash": "0xc92517c884959a123e70e6afd38ecb8cb512aea6aede77067cb963d7fa1c3f9e",
+        "sources": [
+          "docs/phase4-browser-wbtc-chain-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0xc92517c884959a123e70e6afd38ecb8cb512aea6aede77067cb963d7fa1c3f9e\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-wbtc-chain-proof.json",
+      "field": "receipts",
+      "hash": "0x191091f383fe7f7bb3f29d10ed5eab4e9834a47294364202435fb98a83ba901c",
+      "currentReceipt": {
+        "hash": "0x191091f383fe7f7bb3f29d10ed5eab4e9834a47294364202435fb98a83ba901c",
+        "sources": [
+          "docs/phase4-browser-wbtc-chain-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0x191091f383fe7f7bb3f29d10ed5eab4e9834a47294364202435fb98a83ba901c\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-wbtc-chain-proof.json",
+      "field": "receipts",
+      "hash": "0x079ba11d37b9c5493d124b5b74be87a8d42b2ef2b1e6fd68281e61c246cd91b8",
+      "currentReceipt": {
+        "hash": "0x079ba11d37b9c5493d124b5b74be87a8d42b2ef2b1e6fd68281e61c246cd91b8",
+        "sources": [
+          "docs/phase4-browser-wbtc-chain-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0x079ba11d37b9c5493d124b5b74be87a8d42b2ef2b1e6fd68281e61c246cd91b8\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-wbtc-chain-proof.json",
+      "field": "receipts",
+      "hash": "0x521b56a6759ecc3dd89235790b129d1e98a708db98e4721e09104e4139dda0f9",
+      "currentReceipt": {
+        "hash": "0x521b56a6759ecc3dd89235790b129d1e98a708db98e4721e09104e4139dda0f9",
+        "sources": [
+          "docs/phase4-browser-wbtc-chain-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0x521b56a6759ecc3dd89235790b129d1e98a708db98e4721e09104e4139dda0f9\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-wbtc-chain-proof.json",
+      "field": "receipts",
+      "hash": "0x6647dc6baad30a8a77cad54ed455685bf739888ce8154d0c3f514820a42342bb",
+      "currentReceipt": {
+        "hash": "0x6647dc6baad30a8a77cad54ed455685bf739888ce8154d0c3f514820a42342bb",
+        "sources": [
+          "docs/phase4-browser-wbtc-chain-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0x6647dc6baad30a8a77cad54ed455685bf739888ce8154d0c3f514820a42342bb\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-wbtc-chain-proof.json",
+      "field": "receipts",
+      "hash": "0x9611cda45253328f3f1b396afd42eb6000b1ff7bb5c217262abbf81dd214ac97",
+      "currentReceipt": {
+        "hash": "0x9611cda45253328f3f1b396afd42eb6000b1ff7bb5c217262abbf81dd214ac97",
+        "sources": [
+          "docs/phase4-browser-wbtc-chain-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0x9611cda45253328f3f1b396afd42eb6000b1ff7bb5c217262abbf81dd214ac97\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-wbtc-chain-proof.json",
+      "field": "receipts",
+      "hash": "0x8af066446c9938e59c36547ff5f24f4a635f2a3a7bc9b188e65b813a627b84fc",
+      "currentReceipt": {
+        "hash": "0x8af066446c9938e59c36547ff5f24f4a635f2a3a7bc9b188e65b813a627b84fc",
+        "sources": [
+          "docs/phase4-browser-wbtc-chain-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0x8af066446c9938e59c36547ff5f24f4a635f2a3a7bc9b188e65b813a627b84fc\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-job29-dispute16-proof.json",
+      "field": "transactionReceipts",
+      "hash": "0x1d62d46a04146ec7c1228cf092fbeb77cffc8a2a4f51281aa07e9602a3fc6555",
+      "currentReceipt": {
+        "hash": "0x1d62d46a04146ec7c1228cf092fbeb77cffc8a2a4f51281aa07e9602a3fc6555",
+        "sources": [
+          "docs/phase4-browser-job29-dispute16-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0x1d62d46a04146ec7c1228cf092fbeb77cffc8a2a4f51281aa07e9602a3fc6555\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-job29-dispute16-proof.json",
+      "field": "transactionReceipts",
+      "hash": "0xc1ce2cc7834b355a88eda02eed3f8b01c1824f391f156320d0c1a1fe607c07ea",
+      "currentReceipt": {
+        "hash": "0xc1ce2cc7834b355a88eda02eed3f8b01c1824f391f156320d0c1a1fe607c07ea",
+        "sources": [
+          "docs/phase4-browser-job29-dispute16-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0xc1ce2cc7834b355a88eda02eed3f8b01c1824f391f156320d0c1a1fe607c07ea\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-job29-dispute16-proof.json",
+      "field": "transactionReceipts",
+      "hash": "0x5635908ec11d94a4f594c923344aae6c1a366dc67193d20bd9cd4a9e8a8ca856",
+      "currentReceipt": {
+        "hash": "0x5635908ec11d94a4f594c923344aae6c1a366dc67193d20bd9cd4a9e8a8ca856",
+        "sources": [
+          "docs/phase4-browser-job29-dispute16-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0x5635908ec11d94a4f594c923344aae6c1a366dc67193d20bd9cd4a9e8a8ca856\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-job29-dispute16-proof.json",
+      "field": "transactionReceipts",
+      "hash": "0x404cbac1f72f2cf23aa241e16d8ce941481209759df49bfb4aeb038da56a4337",
+      "currentReceipt": {
+        "hash": "0x404cbac1f72f2cf23aa241e16d8ce941481209759df49bfb4aeb038da56a4337",
+        "sources": [
+          "docs/phase4-browser-job29-dispute16-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0x404cbac1f72f2cf23aa241e16d8ce941481209759df49bfb4aeb038da56a4337\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-job29-dispute16-proof.json",
+      "field": "transactionReceipts",
+      "hash": "0x762bdc722dda8ac237461353e42d4eadbdebefbee3256566b1321011e123ee6b",
+      "currentReceipt": {
+        "hash": "0x762bdc722dda8ac237461353e42d4eadbdebefbee3256566b1321011e123ee6b",
+        "sources": [
+          "docs/phase4-browser-job29-dispute16-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0x762bdc722dda8ac237461353e42d4eadbdebefbee3256566b1321011e123ee6b\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-job29-dispute16-proof.json",
+      "field": "transactionReceipts",
+      "hash": "0x27e413c9ecb798fa231f6abb34ef29de217b1a0e2ad8b27db5d342124aa01878",
+      "currentReceipt": {
+        "hash": "0x27e413c9ecb798fa231f6abb34ef29de217b1a0e2ad8b27db5d342124aa01878",
+        "sources": [
+          "docs/phase4-browser-job29-dispute16-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0x27e413c9ecb798fa231f6abb34ef29de217b1a0e2ad8b27db5d342124aa01878\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    },
+    {
+      "source": "docs/phase4-browser-job29-dispute16-proof.json",
+      "field": "transactionReceipts",
+      "hash": "0xe5906a5adb5da0ddcc171f92c149cb4dd8da3cad962a75b44cc3714773f2c6f9",
+      "currentReceipt": {
+        "hash": "0xe5906a5adb5da0ddcc171f92c149cb4dd8da3cad962a75b44cc3714773f2c6f9",
+        "sources": [
+          "docs/phase4-browser-job29-dispute16-proof.json"
+        ],
+        "status": "missing-or-unavailable",
+        "error": "Transaction receipt with hash \"0xe5906a5adb5da0ddcc171f92c149cb4dd8da3cad962a75b44cc3714773f2c6f9\" could not be found. The Transaction may not be processed on a block yet.\n\nVersion: viem@2.57.4",
+        "inRequestedWindow": false
+      }
+    }
+  ],
+  "eventTransactions": [
+    {
+      "hash": "0x7993e2cdb86c2a7af9e8561ac3db668e361ff052c2c6dbca246b2cadcf6f137d",
+      "blockNumber": "526",
+      "eventNames": [
+        "WithdrawalCompleted",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x7d83a93907b1c89ae0ce41dfcde58faaf3b202dbef6a77fce47614bb5e08c34a",
+      "blockNumber": "527",
+      "eventNames": [
+        "EvidenceCommitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xd1c484ff7840ea7dc893cec9ce75c1397d8c969b945eb907380eef75d7d0d072",
+      "blockNumber": "528",
+      "eventNames": [
+        "JobCreated"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xb1fd3ab6f85df34c1e008f0f33703442fd84debdc4db5fcf550f745325a2fa47",
+      "blockNumber": "529",
+      "eventNames": [
+        "JobAccepted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xc9dfa278b5b732e5f18f0ff7b3f22f60154e4faf6e7267fe5e23a56ea6521f99",
+      "blockNumber": "530",
+      "eventNames": [
+        "Approval"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xfa87683758ec4f4ba525883222c81fd10fd22658bd9333216c338a9a0538e3a2",
+      "blockNumber": "531",
+      "eventNames": [
+        "JobFunded",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xb4bd5756409ede1b83f17d03afb1ed60c0f359db0ad0d79747308e6236f47324",
+      "blockNumber": "532",
+      "eventNames": [
+        "MilestoneSubmitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xbb8e85ea90898e4a6c97b2ba01c25a907165066d44405637f72dfaf732238240",
+      "blockNumber": "533",
+      "eventNames": [
+        "MilestoneApproved",
+        "MilestoneSettlementCredited",
+        "ClaimableCredited",
+        "JobClosed"
+      ],
+      "logCount": 4,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x894c3bc82f98f4677c91a034b8e9e7d6c6cb145c148c0f222f763c304b0ddb7f",
+      "blockNumber": "534",
+      "eventNames": [
+        "WithdrawalCompleted",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x4a1de388134a450311d728a59585bd7af0ebcb19eb3dba22d12cfe4ce8ccfa99",
+      "blockNumber": "535",
+      "eventNames": [
+        "JobCreated"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x0321502f5b50cf9b4227b43b4ad89f30ced1e8068dd49f6b5806157101bbde64",
+      "blockNumber": "536",
+      "eventNames": [
+        "JobAccepted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xc96d32ebb6a7bb096f90a5551365d0b6cace25683e7378daf0829be5b16a7b1f",
+      "blockNumber": "537",
+      "eventNames": [
+        "Approval"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x2bca5bfb6a8e51e5e657c149aea89999d1bc21aaaafee868b0160ce34d89c7f7",
+      "blockNumber": "538",
+      "eventNames": [
+        "JobFunded",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x379966f26d1765aa7b627e1fa043a547af42e442d0373179053abe7cd0853cbe",
+      "blockNumber": "539",
+      "eventNames": [
+        "MilestoneSubmitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x1c7837ad3d0c9a8c574087052748fe9b16bc455bc12bf859c4e1a03612c6fa06",
+      "blockNumber": "540",
+      "eventNames": [
+        "MilestoneRejected"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xab8c78e0dc6267ce374a3a370841674bc17a71f135e6baf9dbd4d8409ef07447",
+      "blockNumber": "541",
+      "eventNames": [
+        "MilestoneSubmitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x7dbf69c541fdc44d576f8ec9396b61ffa01b66d34fa481a494179584ec1116f9",
+      "blockNumber": "542",
+      "eventNames": [
+        "Approval"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xdc6f46caedb654b274c611edba15f1d38a59b6ea34258353dac58a501b8faa45",
+      "blockNumber": "543",
+      "eventNames": [
+        "DisputeOpened",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x734c6828fbf8c1580ad99ea44a014dfcd17e8fd32ca172df8359054ec5a2da0d",
+      "blockNumber": "544",
+      "eventNames": [
+        "EvidenceCommitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xeb6a2be8533205a6782f4d3e713810c00655f127a2523454c450bed8db19cad6",
+      "blockNumber": "545",
+      "eventNames": [
+        "Approval"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x3dfe8863f643c4ccc94fa7e2038ea879b0b7b11a9c1e3af5a88db2d6f8414d63",
+      "blockNumber": "546",
+      "eventNames": [
+        "DisputeDepositMatched",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xdb80c184475948177d5a53972b36562cc84ba50f3edb958d0da0d41dd2e542c4",
+      "blockNumber": "547",
+      "eventNames": [
+        "EvidenceCommitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xed1daa93da8a2a122fd0c98bd8f1cf783d825f21d26e5bb628e6787e3523eeaf",
+      "blockNumber": "548",
+      "eventNames": [
+        "EvidenceCommitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xdc386f251724a09737a867ced24fd2b8ceccf147cff69cdab1bd2316b7dd845c",
+      "blockNumber": "551",
+      "eventNames": [
+        "PanelRequested",
+        "PanelPhaseAdvanced"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x4fd1f7f7d21a1a889c7514b2316a96fb5cffa999c63c99591fc9cb37c7f73f41",
+      "blockNumber": "553",
+      "eventNames": [
+        "PanelRequested",
+        "PanelPhaseAdvanced",
+        "RandomnessReceived"
+      ],
+      "logCount": 3,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x4b2003404c9905cd64bab19e1a9b3b2d5c14fff6b30fe8d8949154c1509eec18",
+      "blockNumber": "555",
+      "eventNames": [
+        "PanelSelected",
+        "PanelPhaseAdvanced"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x3decc285308f0af4c6c2de8e1fe750c62094816d69a389b14b4117c31831a0b6",
+      "blockNumber": "556",
+      "eventNames": [
+        "VoteCommitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xe81fc3b716fdae33be6cef2d875b65309d092f9ce369c2ea7421772c62f5d0f1",
+      "blockNumber": "557",
+      "eventNames": [
+        "VoteCommitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xd487c54a258c757827969c6476b79c39213d986ce8a7fda7f4e6231140cfedc9",
+      "blockNumber": "558",
+      "eventNames": [
+        "VoteCommitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xa07f790719a050dfa39ffec44fdb21de6c69952ef174123275849fe0c3d33c40",
+      "blockNumber": "560",
+      "eventNames": [
+        "PanelPhaseAdvanced"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x192fbe783148f3a756315fe2c97df5dc8fe4caae1f4811220ecfd07b877790d8",
+      "blockNumber": "561",
+      "eventNames": [
+        "VoteRevealed"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x5476051cc46d20f8ed9b6581dc51f4b6eb17dc042db1fef655990dfe00b1bcd7",
+      "blockNumber": "562",
+      "eventNames": [
+        "VoteRevealed"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xd05746a974fdddd129325d950b7578a112059a940243fb47e434b2f1b92af7a1",
+      "blockNumber": "563",
+      "eventNames": [
+        "VoteRevealed"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x273d1903cf746ec0a96bbb67af1c1531dd4f89272e5048418021c0076aa33966",
+      "blockNumber": "565",
+      "eventNames": [
+        "DisputeRuled",
+        "PanelPhaseAdvanced",
+        "DisputeSettlementCredited",
+        "ClaimableCredited",
+        "MilestoneResolved",
+        "JobClosed"
+      ],
+      "logCount": 14,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x75b454c8fc46326694a9f9312f1f8c0ac97ff512606b2febd3dd31d533624fbf",
+      "blockNumber": "566",
+      "eventNames": [
+        "MilestoneRefunded",
+        "MilestoneSettlementCredited",
+        "ClaimableCredited",
+        "JobClosed"
+      ],
+      "logCount": 4,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x0dd58e4c5fd60b3f03d884956eb838e57fff64f928177f7250df53a585e4f419",
+      "blockNumber": "567",
+      "eventNames": [
+        "MilestoneRefunded",
+        "MilestoneSettlementCredited",
+        "ClaimableCredited",
+        "JobClosed"
+      ],
+      "logCount": 4,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x9df6bb851524bbb8421f5743da6d86a1beb8b80995a32ad6648696ff08d0a166",
+      "blockNumber": "568",
+      "eventNames": [
+        "MilestoneAutoReleased",
+        "MilestoneSettlementCredited",
+        "ClaimableCredited",
+        "JobClosed"
+      ],
+      "logCount": 4,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x4ff5f0bff52c0063eb8944e2a3755cce73e38d8e8df1a918c8457762f0668ab8",
+      "blockNumber": "570",
+      "eventNames": [
+        "PanelRequested",
+        "PanelPhaseAdvanced"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x22a3386490bfe1d9619ce02227d4d7156bcef82dbb45ae10ec9424e79c66281d",
+      "blockNumber": "572",
+      "eventNames": [
+        "PanelRequested",
+        "PanelPhaseAdvanced"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x33f52575c816a1e2b4110f1e07e1a1dc3732fe085b52f93c32ff6cc79b95706a",
+      "blockNumber": "573",
+      "eventNames": [
+        "RandomnessReceived"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x06eab6bc1dfd29edc3d3ca694bf0a1ef123a4c9c171edf4731a6271767ddb752",
+      "blockNumber": "574",
+      "eventNames": [
+        "PanelSelected",
+        "PanelPhaseAdvanced"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xbb7ed37b9ce796d75fe25e57c3b9ee00beab5aa680d6295ac1ea72ed51705e42",
+      "blockNumber": "575",
+      "eventNames": [
+        "VoteCommitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xf942ff9a58b5926a6a0d569cfde00f3c87a2f11a26bb1593c09369970bcb3bd9",
+      "blockNumber": "576",
+      "eventNames": [
+        "VoteCommitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x33638a95d79974f0ef5530f77ec56ca46b7882e282b0946ad5a58f3bcfcee509",
+      "blockNumber": "577",
+      "eventNames": [
+        "VoteCommitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xc5931db624ca73fc614f0a4bd6dd86584c39def3cfc74807960c6dbfa67bb9c9",
+      "blockNumber": "579",
+      "eventNames": [
+        "PanelPhaseAdvanced"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x2ed2ce095c4a229df36b1f469001524f4c1c02658a24baef90cae69364bb65b0",
+      "blockNumber": "581",
+      "eventNames": [
+        "PanelRequested",
+        "PanelPhaseAdvanced"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x564cb6041b9ea8226cd2328f79a88bdc6998cb95408307e92d2ac2074eee6e29",
+      "blockNumber": "582",
+      "eventNames": [
+        "RandomnessReceived"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x8a922776a69612d40ea288f7b5bc832a2eaf29a09ae1e717e4401680b74fe305",
+      "blockNumber": "583",
+      "eventNames": [
+        "PanelSelected",
+        "PanelPhaseAdvanced"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xac0cebd28e97f8078fb947ccdf00e9130b21551076b0557d127e62a05f4fad3c",
+      "blockNumber": "584",
+      "eventNames": [
+        "VoteCommitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xf5734149c84a437a9bdcd54a90b233b2779d7f4ed4880577c9e131b093bfac0d",
+      "blockNumber": "585",
+      "eventNames": [
+        "VoteCommitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xdb3d50b831a44957a348a40d98ad89c4eff108c7c4a5bafe48c503027b2f6d1e",
+      "blockNumber": "586",
+      "eventNames": [
+        "VoteCommitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x651bc6dec7e1b11a16bbeaccaacebf93e339c4d52f10d529e1c9c00bdaf1df2d",
+      "blockNumber": "588",
+      "eventNames": [
+        "PanelPhaseAdvanced"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x562e3801ae05fb4c9e249519f9204c22f99fd045323b1171466691ae1b8ccab5",
+      "blockNumber": "589",
+      "eventNames": [
+        "VoteRevealed"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xdca1b993705ea1d74f3f026531e14d5cde3bb0a659745e1c7fb1b20b47279efa",
+      "blockNumber": "590",
+      "eventNames": [
+        "VoteRevealed"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xf03338d42af63170cb4cd712a1f1f758b5a1bfeb5edb40a6e1960113478e4cb7",
+      "blockNumber": "591",
+      "eventNames": [
+        "VoteRevealed"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x261e91105fdf7b06e8d74f2d4a9794f11cd6b6ef4a485e5a19d58da35984c469",
+      "blockNumber": "593",
+      "eventNames": [
+        "DisputeRuled",
+        "PanelPhaseAdvanced",
+        "DisputeSettlementCredited",
+        "ClaimableCredited",
+        "MilestoneResolved",
+        "JobClosed"
+      ],
+      "logCount": 10,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xa0e5562f982029bc0d6553e7f226cab791f730d612c643d9d453e77d8d1c4548",
+      "blockNumber": "594",
+      "eventNames": [
+        "JobCreated"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x0e723ccae4abbd119b6aab363a541d9a1cee132498ca6bd3d651d9068db23d5f",
+      "blockNumber": "596",
+      "eventNames": [
+        "JobCancelled"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x54d72b0a2460284b10f092b44a72c37af1930f231a83fd16156b809dbc659345",
+      "blockNumber": "597",
+      "eventNames": [
+        "JobCreated"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xd80fb2028952f80027964dca812ebeea0ecc7842caf79760a7c9a86daa0bbed3",
+      "blockNumber": "598",
+      "eventNames": [
+        "JobAccepted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x3065c1a507a9cd6210a4a31dcba52518b053c5ae0ab1ed35fc94bd1ace489880",
+      "blockNumber": "600",
+      "eventNames": [
+        "JobCancelled"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x8ee9c0e64597870834a3d852df648c964146dd4fc08024c3b2829533e133df4b",
+      "blockNumber": "601",
+      "eventNames": [
+        "JobCreated"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x5809a461fc916cfceda6b13eed745b8e6643b057f35904d693ac1abfc69d3872",
+      "blockNumber": "602",
+      "eventNames": [
+        "JobAccepted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x08b984616bf605290907f1e5167a80abdd9efcd19aec146783241a1f1949967f",
+      "blockNumber": "603",
+      "eventNames": [
+        "Approval"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xc026688af3ebf33d21f612e481ed5583495844725d194234b8243cb02cd5afb1",
+      "blockNumber": "604",
+      "eventNames": [
+        "JobFunded",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x9ed350d93937e2d593cb6f41596103aaa5b567cea242f95297f4faa9e8f94cc4",
+      "blockNumber": "605",
+      "eventNames": [
+        "MilestoneSubmitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x501781e3c62de5640a68def7fe38ee00e53ef254c5919810946a4ce09cdb01f3",
+      "blockNumber": "606",
+      "eventNames": [
+        "MilestoneRejected"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xc6839b07a437a36687f325e9cf5b96dc6f0d862cd80d84a2dc29415247f05233",
+      "blockNumber": "607",
+      "eventNames": [
+        "Approval"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xc8dabe15e2f84bbe58562a9392d669b21cdf547057ae6eb8c2cae49bcc1a7c6b",
+      "blockNumber": "608",
+      "eventNames": [
+        "DisputeOpened",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xb7445bade190d61e034da972025df8c5cf90378cae5bb38f61c2621e8c45662a",
+      "blockNumber": "609",
+      "eventNames": [
+        "Approval"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x014d47549fb1daf4ed0d09ff56c68bd26cfb01267541b2a5d4101f94070c2ce4",
+      "blockNumber": "610",
+      "eventNames": [
+        "DisputeDepositMatched",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x5c6d8d238956f04d396aa8e5fd42c426e7fd5aa992ee9e6b4fdabc92aee1aa60",
+      "blockNumber": "613",
+      "eventNames": [
+        "PanelRequested",
+        "PanelPhaseAdvanced"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x33f33a488b04b7e7f089a2fd9e3cde051cfc1b59c6ce7b302ff97e6c12a53f7f",
+      "blockNumber": "615",
+      "eventNames": [
+        "PanelRequested",
+        "PanelPhaseAdvanced"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x71f56f436f8dfdb46b591789ba02a04160832ed302f25aa9258288d51bf046f1",
+      "blockNumber": "617",
+      "eventNames": [
+        "PanelRequested",
+        "PanelPhaseAdvanced"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x1415f2b7a1accc555cb849bc9cc136209352f9fa27638a1a647ca1130fe6eeca",
+      "blockNumber": "619",
+      "eventNames": [
+        "DisputeFallbackApplied",
+        "PanelPhaseAdvanced",
+        "DisputeSettlementCredited",
+        "ClaimableCredited",
+        "MilestoneResolved",
+        "JobClosed"
+      ],
+      "logCount": 12,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xf65cc354e5f4e2f7c8d4b51e013e975a0d660927effafe3ec9f810883fc6b3ad",
+      "blockNumber": "620",
+      "eventNames": [
+        "WithdrawalCompleted",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x434982c7ed9cdf50ca1e64992ed94eadd3177a1a0077b143e06c04bb9d4950f1",
+      "blockNumber": "621",
+      "eventNames": [
+        "WithdrawalCompleted",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xe3ab598a761d98ebca7cff663835f3992e8125b5a6e7728371cbe525b8d9888c",
+      "blockNumber": "622",
+      "eventNames": [
+        "WithdrawalCompleted",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x4edbdcdc7073651167454c6ecad2c3d2a3c92e8c6eb23764d58eccb3683c84fd",
+      "blockNumber": "623",
+      "eventNames": [
+        "WithdrawalCompleted",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xf4b0921925fbb8f55ba9f879cc2fc97dedbd2684f93d9743abf21c6403075a1d",
+      "blockNumber": "624",
+      "eventNames": [
+        "JobCreated"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x15da42266f91874f93012bc8e4dd2613619e4977af5c567ab76e724d187f2461",
+      "blockNumber": "625",
+      "eventNames": [
+        "JobAccepted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x85d42a76f722f7a32d8a4f335b41c7eeebd5208e794bfe7e3738786b3d413303",
+      "blockNumber": "626",
+      "eventNames": [
+        "Approval"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xcc4a8aa504030f453f822819554fec33fc259af796de1b625009390d3b979d13",
+      "blockNumber": "627",
+      "eventNames": [
+        "JobFunded",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x75b9db953b87a0b8d500ba140de8d398ecce124aef6a6606cb74c3550102a3e1",
+      "blockNumber": "628",
+      "eventNames": [
+        "MilestoneSubmitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x444cb525ad6c135acf315c7f9c4952a3860e657a406bcd40171058d3e5d07e99",
+      "blockNumber": "629",
+      "eventNames": [
+        "MilestoneSubmitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x7530d500fa2e40bfbdf1c6e209b84b93d7d6e4208a1cd662637a5c9c605eb3c7",
+      "blockNumber": "630",
+      "eventNames": [
+        "MilestoneApproved",
+        "MilestoneSettlementCredited",
+        "ClaimableCredited"
+      ],
+      "logCount": 3,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xd67bc4d643a9fb4ae9986bfe6b4df5e9513713bf9c75f72382983ddd5974be85",
+      "blockNumber": "631",
+      "eventNames": [
+        "MilestoneApproved",
+        "MilestoneSettlementCredited",
+        "ClaimableCredited",
+        "JobClosed"
+      ],
+      "logCount": 4,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xe58660730b13e1f3d951a8fba42a081b512d6ce6198ef2556ba7f17a3c598fa9",
+      "blockNumber": "632",
+      "eventNames": [
+        "WithdrawalCompleted",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x5db9d4839daca9d6fe67ef96b2439f97a559d77f861d293792a95c201c44590c",
+      "blockNumber": "633",
+      "eventNames": [
+        "JobCreated"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x51f9e6918977bc68a04a2d2de03006250c1efdf2b5e98eee13cbce42284c5565",
+      "blockNumber": "634",
+      "eventNames": [
+        "JobAccepted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xbed3eb9a3c282518241621de184847eb34988ec601212709693a943fd1c6ec60",
+      "blockNumber": "635",
+      "eventNames": [
+        "Approval"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x3a457579420c5937ca771438cd7275b685b5a197040f70e640c57a98868d2c17",
+      "blockNumber": "636",
+      "eventNames": [
+        "JobFunded",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x028b4748c9619755d65ce0d7fa02d853f4d6a356de037cb51a34c766fbea66d2",
+      "blockNumber": "637",
+      "eventNames": [
+        "MilestoneSubmitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x0b727f7db0bb24f7a439dfa4476f9f9c88f52a791ba93b9dc701508bee2f0dfb",
+      "blockNumber": "638",
+      "eventNames": [
+        "Approval"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xc8f314a35785442b65116c110d8386d175629f3a57c6a809f84e23394e7aff13",
+      "blockNumber": "639",
+      "eventNames": [
+        "DisputeOpened",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xbfa504244d4e9b06fd643fe82b67ef3a424b2072d7ba9855abb60a59b9436d3e",
+      "blockNumber": "642",
+      "eventNames": [
+        "PanelRequested",
+        "PanelPhaseAdvanced",
+        "RandomnessReceived"
+      ],
+      "logCount": 3,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x05d93b8f575a52bacb617dafe64c814ff1b758506ae27c10f61c0f90f82f021b",
+      "blockNumber": "643",
+      "eventNames": [
+        "PanelSelected",
+        "PanelPhaseAdvanced"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xf621e76aa32ae2f60041bda380440d8e045777d5a0124bc54f8912bde1250c0c",
+      "blockNumber": "644",
+      "eventNames": [
+        "VoteCommitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xf3a5eb64b008877742412ac903049ca7aea4af50ed3304c837aac34651c8d34e",
+      "blockNumber": "645",
+      "eventNames": [
+        "VoteCommitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x40caf0374da4c7ac9f6becbd48c47be6738e82ee1a21e41297336181d707a5cc",
+      "blockNumber": "646",
+      "eventNames": [
+        "VoteCommitted"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xbff386051b2a0dd650b2d0fa8ddfc15e4c3ac31f55c8663e87db534e786a471c",
+      "blockNumber": "648",
+      "eventNames": [
+        "PanelPhaseAdvanced"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x124bcd446396b5368611f40cb4721bdb7d25f45b1bae0cc59ac65d8352fdbdd2",
+      "blockNumber": "650",
+      "eventNames": [
+        "PanelRequested",
+        "PanelPhaseAdvanced",
+        "RandomnessReceived"
+      ],
+      "logCount": 3,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x9dd5655c6bed05a5d8ccb5f14d3b5205bc3922384e306e32aaa2350c060ecc16",
+      "blockNumber": "651",
+      "eventNames": [
+        "PanelSelected",
+        "PanelPhaseAdvanced"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xef8c894366748bc40a77750577a52433d7d2eb98d0cfceb60a6c2b3e5bd48b9e",
+      "blockNumber": "653",
+      "eventNames": [
+        "PanelPhaseAdvanced"
+      ],
+      "logCount": 1,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xbb3828af14fd56f215d1c552c8c72ff170839e5526ac287ae0d20d1c39eafb64",
+      "blockNumber": "655",
+      "eventNames": [
+        "DisputeFallbackApplied",
+        "PanelPhaseAdvanced",
+        "DisputeSettlementCredited",
+        "ClaimableCredited",
+        "MilestoneResolved",
+        "JobClosed"
+      ],
+      "logCount": 10,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0xc8a253e5f59f551bb1575d2043b8d5558109546667d6eb16be0387abf9d01ab3",
+      "blockNumber": "656",
+      "eventNames": [
+        "WithdrawalCompleted",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    },
+    {
+      "hash": "0x90eb3b673c18b34b00b52ac52e3c982acf61185e4b16458645b34d99b35e9131",
+      "blockNumber": "657",
+      "eventNames": [
+        "WithdrawalCompleted",
+        "Transfer"
+      ],
+      "logCount": 2,
+      "receiptStatus": "success"
+    }
+  ],
+  "eventLogs": [
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "526",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x7993e2cdb86c2a7af9e8561ac3db668e361ff052c2c6dbca246b2cadcf6f137d",
+      "eventName": "WithdrawalCompleted",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "100000000"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "526",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x7993e2cdb86c2a7af9e8561ac3db668e361ff052c2c6dbca246b2cadcf6f137d",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "to": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "value": "100000000"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "527",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x7d83a93907b1c89ae0ce41dfcde58faaf3b202dbef6a77fce47614bb5e08c34a",
+      "eventName": "EvidenceCommitted",
+      "args": {
+        "disputeId": "16",
+        "party": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "version": 1,
+        "evidenceHash": "0x3bd544b5e6848cf2ee7c41ea7fff6a7c31c751d3c07162770e0b61aa8847b70e",
+        "opaqueReference": "0xaca6a351f623fb61eb45b1acfded067275c99b71ccac21d14a2299d5f876e6be",
+        "submittedAt": "1791674766"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "528",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xd1c484ff7840ea7dc893cec9ce75c1397d8c969b945eb907380eef75d7d0d072",
+      "eventName": "JobCreated",
+      "args": {
+        "jobId": "31",
+        "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "totalAmount": "2500001",
+        "milestoneCount": 1,
+        "createdAt": "1791674829",
+        "proposalEnd": "1791674889"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "529",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xb1fd3ab6f85df34c1e008f0f33703442fd84debdc4db5fcf550f745325a2fa47",
+      "eventName": "JobAccepted",
+      "args": {
+        "jobId": "31",
+        "acceptedAt": "1791674843",
+        "fundingDeadline": "1791674903"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "530",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xc9dfa278b5b732e5f18f0ff7b3f22f60154e4faf6e7267fe5e23a56ea6521f99",
+      "eventName": "Approval",
+      "args": {
+        "owner": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "spender": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "2500001"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "531",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xfa87683758ec4f4ba525883222c81fd10fd22658bd9333216c338a9a0538e3a2",
+      "eventName": "JobFunded",
+      "args": {
+        "jobId": "31",
+        "totalAmount": "2500001",
+        "fundedAt": "1791674861"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "531",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0xfa87683758ec4f4ba525883222c81fd10fd22658bd9333216c338a9a0538e3a2",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "to": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "2500001"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "532",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xb4bd5756409ede1b83f17d03afb1ed60c0f359db0ad0d79747308e6236f47324",
+      "eventName": "MilestoneSubmitted",
+      "args": {
+        "jobId": "31",
+        "milestoneIndex": "0",
+        "version": 1,
+        "deliverableHash": "0x9da70104aa5c04bf58e941818452a0a5335ba93a736d44cc465cd6fcb5ae9c37",
+        "opaqueReference": "0x9eef7ac5ed0258a9daeba9500cb31ef63802754aa771bfeb933fa709ed009f05",
+        "submittedAt": "1791675003",
+        "reviewEnd": "1791678603"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "533",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xbb8e85ea90898e4a6c97b2ba01c25a907165066d44405637f72dfaf732238240",
+      "eventName": "MilestoneApproved",
+      "args": {
+        "jobId": "31",
+        "milestoneIndex": "0",
+        "amount": "2500001",
+        "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "533",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0xbb8e85ea90898e4a6c97b2ba01c25a907165066d44405637f72dfaf732238240",
+      "eventName": "MilestoneSettlementCredited",
+      "args": {
+        "jobId": "31",
+        "milestoneIndex": "0",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "2500001",
+        "reason": 0
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "533",
+      "transactionIndex": 0,
+      "logIndex": 2,
+      "transactionHash": "0xbb8e85ea90898e4a6c97b2ba01c25a907165066d44405637f72dfaf732238240",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "2500001"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "533",
+      "transactionIndex": 0,
+      "logIndex": 3,
+      "transactionHash": "0xbb8e85ea90898e4a6c97b2ba01c25a907165066d44405637f72dfaf732238240",
+      "eventName": "JobClosed",
+      "args": {
+        "jobId": "31"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "534",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x894c3bc82f98f4677c91a034b8e9e7d6c6cb145c148c0f222f763c304b0ddb7f",
+      "eventName": "WithdrawalCompleted",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "2500001"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "534",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x894c3bc82f98f4677c91a034b8e9e7d6c6cb145c148c0f222f763c304b0ddb7f",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "to": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "value": "2500001"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "535",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x4a1de388134a450311d728a59585bd7af0ebcb19eb3dba22d12cfe4ce8ccfa99",
+      "eventName": "JobCreated",
+      "args": {
+        "jobId": "32",
+        "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "totalAmount": "2500001",
+        "milestoneCount": 1,
+        "createdAt": "1791675063",
+        "proposalEnd": "1791675123"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "536",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x0321502f5b50cf9b4227b43b4ad89f30ced1e8068dd49f6b5806157101bbde64",
+      "eventName": "JobAccepted",
+      "args": {
+        "jobId": "32",
+        "acceptedAt": "1791675076",
+        "fundingDeadline": "1791675136"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "537",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xc96d32ebb6a7bb096f90a5551365d0b6cace25683e7378daf0829be5b16a7b1f",
+      "eventName": "Approval",
+      "args": {
+        "owner": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "spender": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "2500001"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "538",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x2bca5bfb6a8e51e5e657c149aea89999d1bc21aaaafee868b0160ce34d89c7f7",
+      "eventName": "JobFunded",
+      "args": {
+        "jobId": "32",
+        "totalAmount": "2500001",
+        "fundedAt": "1791675084"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "538",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x2bca5bfb6a8e51e5e657c149aea89999d1bc21aaaafee868b0160ce34d89c7f7",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "to": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "2500001"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "539",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x379966f26d1765aa7b627e1fa043a547af42e442d0373179053abe7cd0853cbe",
+      "eventName": "MilestoneSubmitted",
+      "args": {
+        "jobId": "32",
+        "milestoneIndex": "0",
+        "version": 1,
+        "deliverableHash": "0x9da70104aa5c04bf58e941818452a0a5335ba93a736d44cc465cd6fcb5ae9c37",
+        "opaqueReference": "0x26df0afd63f4ee42990166e0c515e0fd5637b21914b2ae9bcead2ac56f4b2a20",
+        "submittedAt": "1791675093",
+        "reviewEnd": "1791678693"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "540",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x1c7837ad3d0c9a8c574087052748fe9b16bc455bc12bf859c4e1a03612c6fa06",
+      "eventName": "MilestoneRejected",
+      "args": {
+        "jobId": "32",
+        "milestoneIndex": "0",
+        "rejectionCount": 1,
+        "reasonCommitment": "0x035f5798517e6d6f3a4a22e568d48d78882468184b06673f9ef31ee9b2e3709a",
+        "rejectedAt": "1791675107",
+        "responseEnd": "1791675167"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "541",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xab8c78e0dc6267ce374a3a370841674bc17a71f135e6baf9dbd4d8409ef07447",
+      "eventName": "MilestoneSubmitted",
+      "args": {
+        "jobId": "32",
+        "milestoneIndex": "0",
+        "version": 2,
+        "deliverableHash": "0xa263a936e1203839939f8340ad8b9c6a5f93b3ca93f1a9c19c1d63a0d9a0301f",
+        "opaqueReference": "0x1e78e42ca4632b675c91cfe4b0680d71e511b47925d6b71623b39771790d19ee",
+        "submittedAt": "1791675121",
+        "reviewEnd": "1791678721"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "542",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x7dbf69c541fdc44d576f8ec9396b61ffa01b66d34fa481a494179584ec1116f9",
+      "eventName": "Approval",
+      "args": {
+        "owner": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "spender": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "50000"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "543",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xdc6f46caedb654b274c611edba15f1d38a59b6ea34258353dac58a501b8faa45",
+      "eventName": "DisputeOpened",
+      "args": {
+        "disputeId": "17",
+        "jobId": "32",
+        "milestoneIndex": "0",
+        "opener": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "depositAmount": "50000",
+        "evidenceDeadline": "1791675193"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "543",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0xdc6f46caedb654b274c611edba15f1d38a59b6ea34258353dac58a501b8faa45",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "to": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "50000"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "544",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x734c6828fbf8c1580ad99ea44a014dfcd17e8fd32ca172df8359054ec5a2da0d",
+      "eventName": "EvidenceCommitted",
+      "args": {
+        "disputeId": "17",
+        "party": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "version": 1,
+        "evidenceHash": "0x4a6a46dee63c0ff7f1ff6e2817182a02e7b2ba366ebb80c4d58840a32ac24176",
+        "opaqueReference": "0xd2f491f51dea7ddc37d57a19b7d75b94e12dc6c1fb350b933bbed54f3d03a00a",
+        "submittedAt": "1791675140"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "545",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xeb6a2be8533205a6782f4d3e713810c00655f127a2523454c450bed8db19cad6",
+      "eventName": "Approval",
+      "args": {
+        "owner": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "spender": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "50000"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "546",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x3dfe8863f643c4ccc94fa7e2038ea879b0b7b11a9c1e3af5a88db2d6f8414d63",
+      "eventName": "DisputeDepositMatched",
+      "args": {
+        "disputeId": "17",
+        "party": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "50000"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "546",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x3dfe8863f643c4ccc94fa7e2038ea879b0b7b11a9c1e3af5a88db2d6f8414d63",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "to": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "50000"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "547",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xdb80c184475948177d5a53972b36562cc84ba50f3edb958d0da0d41dd2e542c4",
+      "eventName": "EvidenceCommitted",
+      "args": {
+        "disputeId": "17",
+        "party": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "version": 1,
+        "evidenceHash": "0xa263a936e1203839939f8340ad8b9c6a5f93b3ca93f1a9c19c1d63a0d9a0301f",
+        "opaqueReference": "0xfed926d3fce0e95df275cf7d008011a8606f7d2a5ead0c3563399395a6c73234",
+        "submittedAt": "1791675153"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "548",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xed1daa93da8a2a122fd0c98bd8f1cf783d825f21d26e5bb628e6787e3523eeaf",
+      "eventName": "EvidenceCommitted",
+      "args": {
+        "disputeId": "17",
+        "party": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "version": 2,
+        "evidenceHash": "0xf281e7b758c32b04f6f19b2ba819f3daf5121a4c458db3517f39e1d3d4351546",
+        "opaqueReference": "0x8cce585290884965ebbff19304fb4c1d3da34b1f96164568e48636a8af376d4a",
+        "submittedAt": "1791675159"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "551",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xdc386f251724a09737a867ced24fd2b8ceccf147cff69cdab1bd2316b7dd845c",
+      "eventName": "PanelRequested",
+      "args": {
+        "disputeId": "17",
+        "requestId": "17",
+        "purpose": 0,
+        "attempt": 0,
+        "requestEnd": "1791678835"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "551",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0xdc386f251724a09737a867ced24fd2b8ceccf147cff69cdab1bd2316b7dd845c",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "17",
+        "phase": 2,
+        "deadline": "1791678835"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "553",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x4fd1f7f7d21a1a889c7514b2316a96fb5cffa999c63c99591fc9cb37c7f73f41",
+      "eventName": "PanelRequested",
+      "args": {
+        "disputeId": "17",
+        "requestId": "18",
+        "purpose": 0,
+        "attempt": 1,
+        "requestEnd": "1791678979"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "553",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x4fd1f7f7d21a1a889c7514b2316a96fb5cffa999c63c99591fc9cb37c7f73f41",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "17",
+        "phase": 2,
+        "deadline": "1791678979"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "553",
+      "transactionIndex": 0,
+      "logIndex": 2,
+      "transactionHash": "0x4fd1f7f7d21a1a889c7514b2316a96fb5cffa999c63c99591fc9cb37c7f73f41",
+      "eventName": "RandomnessReceived",
+      "args": {
+        "disputeId": "17",
+        "requestId": "18"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "555",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x4b2003404c9905cd64bab19e1a9b3b2d5c14fff6b30fe8d8949154c1509eec18",
+      "eventName": "PanelSelected",
+      "args": {
+        "disputeId": "17",
+        "round": 1,
+        "panel": [
+          "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+          "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+          "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+        ]
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "555",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x4b2003404c9905cd64bab19e1a9b3b2d5c14fff6b30fe8d8949154c1509eec18",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "17",
+        "phase": 3,
+        "deadline": "1791678987"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "556",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x3decc285308f0af4c6c2de8e1fe750c62094816d69a389b14b4117c31831a0b6",
+      "eventName": "VoteCommitted",
+      "args": {
+        "disputeId": "17",
+        "arbiter": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "round": 1,
+        "commitment": "0x3d7200717191872b9065c2291d9ae6e2e7b8cd245dda4846ccaf13a762685dea"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "557",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xe81fc3b716fdae33be6cef2d875b65309d092f9ce369c2ea7421772c62f5d0f1",
+      "eventName": "VoteCommitted",
+      "args": {
+        "disputeId": "17",
+        "arbiter": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "round": 1,
+        "commitment": "0x33de04179deeab149884d0f74965ad75bb607f3b0ac7cb1ae323e78a936976af"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "558",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xd487c54a258c757827969c6476b79c39213d986ce8a7fda7f4e6231140cfedc9",
+      "eventName": "VoteCommitted",
+      "args": {
+        "disputeId": "17",
+        "arbiter": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+        "round": 1,
+        "commitment": "0x8dd93bd221ac9772fe079e90a8d11d5e99af06b5cb2931f6a21ff1c549c49cfd"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "560",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xa07f790719a050dfa39ffec44fdb21de6c69952ef174123275849fe0c3d33c40",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "17",
+        "phase": 6,
+        "deadline": "1791679094"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "561",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x192fbe783148f3a756315fe2c97df5dc8fe4caae1f4811220ecfd07b877790d8",
+      "eventName": "VoteRevealed",
+      "args": {
+        "disputeId": "17",
+        "arbiter": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+        "round": 1,
+        "bps": 5000
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "562",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x5476051cc46d20f8ed9b6581dc51f4b6eb17dc042db1fef655990dfe00b1bcd7",
+      "eventName": "VoteRevealed",
+      "args": {
+        "disputeId": "17",
+        "arbiter": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "round": 1,
+        "bps": 5000
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "563",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xd05746a974fdddd129325d950b7578a112059a940243fb47e434b2f1b92af7a1",
+      "eventName": "VoteRevealed",
+      "args": {
+        "disputeId": "17",
+        "arbiter": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "round": 1,
+        "bps": 5000
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "565",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x273d1903cf746ec0a96bbb67af1c1531dd4f89272e5048418021c0076aa33966",
+      "eventName": "DisputeRuled",
+      "args": {
+        "disputeId": "17",
+        "bps": 5000
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "565",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x273d1903cf746ec0a96bbb67af1c1531dd4f89272e5048418021c0076aa33966",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "17",
+        "phase": 10,
+        "deadline": "0"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "565",
+      "transactionIndex": 0,
+      "logIndex": 2,
+      "transactionHash": "0x273d1903cf746ec0a96bbb67af1c1531dd4f89272e5048418021c0076aa33966",
+      "eventName": "DisputeSettlementCredited",
+      "args": {
+        "disputeId": "17",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "1250001",
+        "source": 0
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "565",
+      "transactionIndex": 0,
+      "logIndex": 3,
+      "transactionHash": "0x273d1903cf746ec0a96bbb67af1c1531dd4f89272e5048418021c0076aa33966",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "1250001"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "565",
+      "transactionIndex": 0,
+      "logIndex": 4,
+      "transactionHash": "0x273d1903cf746ec0a96bbb67af1c1531dd4f89272e5048418021c0076aa33966",
+      "eventName": "DisputeSettlementCredited",
+      "args": {
+        "disputeId": "17",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "1250000",
+        "source": 0
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "565",
+      "transactionIndex": 0,
+      "logIndex": 5,
+      "transactionHash": "0x273d1903cf746ec0a96bbb67af1c1531dd4f89272e5048418021c0076aa33966",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "1250000"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "565",
+      "transactionIndex": 0,
+      "logIndex": 6,
+      "transactionHash": "0x273d1903cf746ec0a96bbb67af1c1531dd4f89272e5048418021c0076aa33966",
+      "eventName": "DisputeSettlementCredited",
+      "args": {
+        "disputeId": "17",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "25000",
+        "source": 1
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "565",
+      "transactionIndex": 0,
+      "logIndex": 7,
+      "transactionHash": "0x273d1903cf746ec0a96bbb67af1c1531dd4f89272e5048418021c0076aa33966",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "25000"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "565",
+      "transactionIndex": 0,
+      "logIndex": 8,
+      "transactionHash": "0x273d1903cf746ec0a96bbb67af1c1531dd4f89272e5048418021c0076aa33966",
+      "eventName": "DisputeSettlementCredited",
+      "args": {
+        "disputeId": "17",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "25000",
+        "source": 1
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "565",
+      "transactionIndex": 0,
+      "logIndex": 9,
+      "transactionHash": "0x273d1903cf746ec0a96bbb67af1c1531dd4f89272e5048418021c0076aa33966",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "25000"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "565",
+      "transactionIndex": 0,
+      "logIndex": 10,
+      "transactionHash": "0x273d1903cf746ec0a96bbb67af1c1531dd4f89272e5048418021c0076aa33966",
+      "eventName": "DisputeSettlementCredited",
+      "args": {
+        "disputeId": "17",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "amount": "50000",
+        "source": 2
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "565",
+      "transactionIndex": 0,
+      "logIndex": 11,
+      "transactionHash": "0x273d1903cf746ec0a96bbb67af1c1531dd4f89272e5048418021c0076aa33966",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "amount": "50000"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "565",
+      "transactionIndex": 0,
+      "logIndex": 12,
+      "transactionHash": "0x273d1903cf746ec0a96bbb67af1c1531dd4f89272e5048418021c0076aa33966",
+      "eventName": "MilestoneResolved",
+      "args": {
+        "jobId": "32",
+        "milestoneIndex": "0",
+        "disputeId": "17",
+        "bps": 5000,
+        "freelancerCredit": "1275000",
+        "clientCredit": "1275001",
+        "treasuryCredit": "50000",
+        "fallbackApplied": false
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "565",
+      "transactionIndex": 0,
+      "logIndex": 13,
+      "transactionHash": "0x273d1903cf746ec0a96bbb67af1c1531dd4f89272e5048418021c0076aa33966",
+      "eventName": "JobClosed",
+      "args": {
+        "jobId": "32"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "566",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x75b454c8fc46326694a9f9312f1f8c0ac97ff512606b2febd3dd31d533624fbf",
+      "eventName": "MilestoneRefunded",
+      "args": {
+        "jobId": "26",
+        "milestoneIndex": "0",
+        "amount": "100000000",
+        "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "timeoutKind": 2
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "566",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x75b454c8fc46326694a9f9312f1f8c0ac97ff512606b2febd3dd31d533624fbf",
+      "eventName": "MilestoneSettlementCredited",
+      "args": {
+        "jobId": "26",
+        "milestoneIndex": "0",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "100000000",
+        "reason": 2
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "566",
+      "transactionIndex": 0,
+      "logIndex": 2,
+      "transactionHash": "0x75b454c8fc46326694a9f9312f1f8c0ac97ff512606b2febd3dd31d533624fbf",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "100000000"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "566",
+      "transactionIndex": 0,
+      "logIndex": 3,
+      "transactionHash": "0x75b454c8fc46326694a9f9312f1f8c0ac97ff512606b2febd3dd31d533624fbf",
+      "eventName": "JobClosed",
+      "args": {
+        "jobId": "26"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "567",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x0dd58e4c5fd60b3f03d884956eb838e57fff64f928177f7250df53a585e4f419",
+      "eventName": "MilestoneRefunded",
+      "args": {
+        "jobId": "28",
+        "milestoneIndex": "0",
+        "amount": "100000000",
+        "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "timeoutKind": 3
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "567",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x0dd58e4c5fd60b3f03d884956eb838e57fff64f928177f7250df53a585e4f419",
+      "eventName": "MilestoneSettlementCredited",
+      "args": {
+        "jobId": "28",
+        "milestoneIndex": "0",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "100000000",
+        "reason": 3
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "567",
+      "transactionIndex": 0,
+      "logIndex": 2,
+      "transactionHash": "0x0dd58e4c5fd60b3f03d884956eb838e57fff64f928177f7250df53a585e4f419",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "100000000"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "567",
+      "transactionIndex": 0,
+      "logIndex": 3,
+      "transactionHash": "0x0dd58e4c5fd60b3f03d884956eb838e57fff64f928177f7250df53a585e4f419",
+      "eventName": "JobClosed",
+      "args": {
+        "jobId": "28"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "568",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x9df6bb851524bbb8421f5743da6d86a1beb8b80995a32ad6648696ff08d0a166",
+      "eventName": "MilestoneAutoReleased",
+      "args": {
+        "jobId": "27",
+        "milestoneIndex": "0",
+        "amount": "100000000",
+        "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "568",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x9df6bb851524bbb8421f5743da6d86a1beb8b80995a32ad6648696ff08d0a166",
+      "eventName": "MilestoneSettlementCredited",
+      "args": {
+        "jobId": "27",
+        "milestoneIndex": "0",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "100000000",
+        "reason": 1
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "568",
+      "transactionIndex": 0,
+      "logIndex": 2,
+      "transactionHash": "0x9df6bb851524bbb8421f5743da6d86a1beb8b80995a32ad6648696ff08d0a166",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "100000000"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "568",
+      "transactionIndex": 0,
+      "logIndex": 3,
+      "transactionHash": "0x9df6bb851524bbb8421f5743da6d86a1beb8b80995a32ad6648696ff08d0a166",
+      "eventName": "JobClosed",
+      "args": {
+        "jobId": "27"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "570",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x4ff5f0bff52c0063eb8944e2a3755cce73e38d8e8df1a918c8457762f0668ab8",
+      "eventName": "PanelRequested",
+      "args": {
+        "disputeId": "16",
+        "requestId": "19",
+        "purpose": 0,
+        "attempt": 0,
+        "requestEnd": "1791679298"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "570",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x4ff5f0bff52c0063eb8944e2a3755cce73e38d8e8df1a918c8457762f0668ab8",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "16",
+        "phase": 2,
+        "deadline": "1791679298"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "572",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x22a3386490bfe1d9619ce02227d4d7156bcef82dbb45ae10ec9424e79c66281d",
+      "eventName": "PanelRequested",
+      "args": {
+        "disputeId": "16",
+        "requestId": "20",
+        "purpose": 0,
+        "attempt": 1,
+        "requestEnd": "1791679583"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "572",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x22a3386490bfe1d9619ce02227d4d7156bcef82dbb45ae10ec9424e79c66281d",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "16",
+        "phase": 2,
+        "deadline": "1791679583"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "573",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x33f52575c816a1e2b4110f1e07e1a1dc3732fe085b52f93c32ff6cc79b95706a",
+      "eventName": "RandomnessReceived",
+      "args": {
+        "disputeId": "16",
+        "requestId": "20"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "574",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x06eab6bc1dfd29edc3d3ca694bf0a1ef123a4c9c171edf4731a6271767ddb752",
+      "eventName": "PanelSelected",
+      "args": {
+        "disputeId": "16",
+        "round": 1,
+        "panel": [
+          "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+          "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+          "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+        ]
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "574",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x06eab6bc1dfd29edc3d3ca694bf0a1ef123a4c9c171edf4731a6271767ddb752",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "16",
+        "phase": 3,
+        "deadline": "1791679588"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "575",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xbb7ed37b9ce796d75fe25e57c3b9ee00beab5aa680d6295ac1ea72ed51705e42",
+      "eventName": "VoteCommitted",
+      "args": {
+        "disputeId": "16",
+        "arbiter": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "round": 1,
+        "commitment": "0xada284b884896ca5e9a5438bca958b1b13f036ce3e1823ae56d20635b0fb736c"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "576",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xf942ff9a58b5926a6a0d569cfde00f3c87a2f11a26bb1593c09369970bcb3bd9",
+      "eventName": "VoteCommitted",
+      "args": {
+        "disputeId": "16",
+        "arbiter": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "round": 1,
+        "commitment": "0x86648f938ff207eae136d1dff6e92f5db769815ed2af53daa0e9b8296b099dcc"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "577",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x33638a95d79974f0ef5530f77ec56ca46b7882e282b0946ad5a58f3bcfcee509",
+      "eventName": "VoteCommitted",
+      "args": {
+        "disputeId": "16",
+        "arbiter": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "round": 1,
+        "commitment": "0xd3533dd025017e283871184d2c72764a4f68b53615360fe97763cc8956fa433b"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "579",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xc5931db624ca73fc614f0a4bd6dd86584c39def3cfc74807960c6dbfa67bb9c9",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "16",
+        "phase": 6,
+        "deadline": "1791679689"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "581",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x2ed2ce095c4a229df36b1f469001524f4c1c02658a24baef90cae69364bb65b0",
+      "eventName": "PanelRequested",
+      "args": {
+        "disputeId": "16",
+        "requestId": "21",
+        "purpose": 2,
+        "attempt": 0,
+        "requestEnd": "1791679751"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "581",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x2ed2ce095c4a229df36b1f469001524f4c1c02658a24baef90cae69364bb65b0",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "16",
+        "phase": 7,
+        "deadline": "1791679751"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "582",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x564cb6041b9ea8226cd2328f79a88bdc6998cb95408307e92d2ac2074eee6e29",
+      "eventName": "RandomnessReceived",
+      "args": {
+        "disputeId": "16",
+        "requestId": "21"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "583",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x8a922776a69612d40ea288f7b5bc832a2eaf29a09ae1e717e4401680b74fe305",
+      "eventName": "PanelSelected",
+      "args": {
+        "disputeId": "16",
+        "round": 2,
+        "panel": [
+          "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+          "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+          "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955"
+        ]
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "583",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x8a922776a69612d40ea288f7b5bc832a2eaf29a09ae1e717e4401680b74fe305",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "16",
+        "phase": 8,
+        "deadline": "1791679756"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "584",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xac0cebd28e97f8078fb947ccdf00e9130b21551076b0557d127e62a05f4fad3c",
+      "eventName": "VoteCommitted",
+      "args": {
+        "disputeId": "16",
+        "arbiter": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "round": 2,
+        "commitment": "0x75172f84526e04bda911f66961e27b8106758188042d257a15671d30f517260a"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "585",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xf5734149c84a437a9bdcd54a90b233b2779d7f4ed4880577c9e131b093bfac0d",
+      "eventName": "VoteCommitted",
+      "args": {
+        "disputeId": "16",
+        "arbiter": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+        "round": 2,
+        "commitment": "0x139e500e1ee6a813f2372dae3242ba14bfe83c1e9234a630ed7250cc4f9e26aa"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "586",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xdb3d50b831a44957a348a40d98ad89c4eff108c7c4a5bafe48c503027b2f6d1e",
+      "eventName": "VoteCommitted",
+      "args": {
+        "disputeId": "16",
+        "arbiter": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "round": 2,
+        "commitment": "0x93c8ea7a9c35b1e394ecb09018e1d26ffc24026e3d6ef369061ecf2fcb093197"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "588",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x651bc6dec7e1b11a16bbeaccaacebf93e339c4d52f10d529e1c9c00bdaf1df2d",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "16",
+        "phase": 9,
+        "deadline": "1791679852"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "589",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x562e3801ae05fb4c9e249519f9204c22f99fd045323b1171466691ae1b8ccab5",
+      "eventName": "VoteRevealed",
+      "args": {
+        "disputeId": "16",
+        "arbiter": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "round": 2,
+        "bps": 6000
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "590",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xdca1b993705ea1d74f3f026531e14d5cde3bb0a659745e1c7fb1b20b47279efa",
+      "eventName": "VoteRevealed",
+      "args": {
+        "disputeId": "16",
+        "arbiter": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+        "round": 2,
+        "bps": 5000
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "591",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xf03338d42af63170cb4cd712a1f1f758b5a1bfeb5edb40a6e1960113478e4cb7",
+      "eventName": "VoteRevealed",
+      "args": {
+        "disputeId": "16",
+        "arbiter": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "round": 2,
+        "bps": 7000
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "593",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x261e91105fdf7b06e8d74f2d4a9794f11cd6b6ef4a485e5a19d58da35984c469",
+      "eventName": "DisputeRuled",
+      "args": {
+        "disputeId": "16",
+        "bps": 6000
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "593",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x261e91105fdf7b06e8d74f2d4a9794f11cd6b6ef4a485e5a19d58da35984c469",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "16",
+        "phase": 10,
+        "deadline": "0"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "593",
+      "transactionIndex": 0,
+      "logIndex": 2,
+      "transactionHash": "0x261e91105fdf7b06e8d74f2d4a9794f11cd6b6ef4a485e5a19d58da35984c469",
+      "eventName": "DisputeSettlementCredited",
+      "args": {
+        "disputeId": "16",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "40000000",
+        "source": 0
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "593",
+      "transactionIndex": 0,
+      "logIndex": 3,
+      "transactionHash": "0x261e91105fdf7b06e8d74f2d4a9794f11cd6b6ef4a485e5a19d58da35984c469",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "40000000"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "593",
+      "transactionIndex": 0,
+      "logIndex": 4,
+      "transactionHash": "0x261e91105fdf7b06e8d74f2d4a9794f11cd6b6ef4a485e5a19d58da35984c469",
+      "eventName": "DisputeSettlementCredited",
+      "args": {
+        "disputeId": "16",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "60000000",
+        "source": 0
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "593",
+      "transactionIndex": 0,
+      "logIndex": 5,
+      "transactionHash": "0x261e91105fdf7b06e8d74f2d4a9794f11cd6b6ef4a485e5a19d58da35984c469",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "60000000"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "593",
+      "transactionIndex": 0,
+      "logIndex": 6,
+      "transactionHash": "0x261e91105fdf7b06e8d74f2d4a9794f11cd6b6ef4a485e5a19d58da35984c469",
+      "eventName": "DisputeSettlementCredited",
+      "args": {
+        "disputeId": "16",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "amount": "2000000",
+        "source": 2
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "593",
+      "transactionIndex": 0,
+      "logIndex": 7,
+      "transactionHash": "0x261e91105fdf7b06e8d74f2d4a9794f11cd6b6ef4a485e5a19d58da35984c469",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "amount": "2000000"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "593",
+      "transactionIndex": 0,
+      "logIndex": 8,
+      "transactionHash": "0x261e91105fdf7b06e8d74f2d4a9794f11cd6b6ef4a485e5a19d58da35984c469",
+      "eventName": "MilestoneResolved",
+      "args": {
+        "jobId": "29",
+        "milestoneIndex": "0",
+        "disputeId": "16",
+        "bps": 6000,
+        "freelancerCredit": "60000000",
+        "clientCredit": "40000000",
+        "treasuryCredit": "2000000",
+        "fallbackApplied": false
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "593",
+      "transactionIndex": 0,
+      "logIndex": 9,
+      "transactionHash": "0x261e91105fdf7b06e8d74f2d4a9794f11cd6b6ef4a485e5a19d58da35984c469",
+      "eventName": "JobClosed",
+      "args": {
+        "jobId": "29"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "594",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xa0e5562f982029bc0d6553e7f226cab791f730d612c643d9d453e77d8d1c4548",
+      "eventName": "JobCreated",
+      "args": {
+        "jobId": "33",
+        "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "totalAmount": "2500001",
+        "milestoneCount": 1,
+        "createdAt": "1791679910",
+        "proposalEnd": "1791679970"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "596",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x0e723ccae4abbd119b6aab363a541d9a1cee132498ca6bd3d651d9068db23d5f",
+      "eventName": "JobCancelled",
+      "args": {
+        "jobId": "33"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "597",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x54d72b0a2460284b10f092b44a72c37af1930f231a83fd16156b809dbc659345",
+      "eventName": "JobCreated",
+      "args": {
+        "jobId": "34",
+        "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "totalAmount": "2500001",
+        "milestoneCount": 1,
+        "createdAt": "1791690566",
+        "proposalEnd": "1791690626"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "598",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xd80fb2028952f80027964dca812ebeea0ecc7842caf79760a7c9a86daa0bbed3",
+      "eventName": "JobAccepted",
+      "args": {
+        "jobId": "34",
+        "acceptedAt": "1791690571",
+        "fundingDeadline": "1791690631"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "600",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x3065c1a507a9cd6210a4a31dcba52518b053c5ae0ab1ed35fc94bd1ace489880",
+      "eventName": "JobCancelled",
+      "args": {
+        "jobId": "34"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "601",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x8ee9c0e64597870834a3d852df648c964146dd4fc08024c3b2829533e133df4b",
+      "eventName": "JobCreated",
+      "args": {
+        "jobId": "35",
+        "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "totalAmount": "2501",
+        "milestoneCount": 1,
+        "createdAt": "1791690640",
+        "proposalEnd": "1791690700"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "602",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x5809a461fc916cfceda6b13eed745b8e6643b057f35904d693ac1abfc69d3872",
+      "eventName": "JobAccepted",
+      "args": {
+        "jobId": "35",
+        "acceptedAt": "1791690644",
+        "fundingDeadline": "1791690704"
+      }
+    },
+    {
+      "contract": "WBTC",
+      "address": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+      "blockNumber": "603",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x08b984616bf605290907f1e5167a80abdd9efcd19aec146783241a1f1949967f",
+      "eventName": "Approval",
+      "args": {
+        "owner": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "spender": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "2501"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "604",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xc026688af3ebf33d21f612e481ed5583495844725d194234b8243cb02cd5afb1",
+      "eventName": "JobFunded",
+      "args": {
+        "jobId": "35",
+        "totalAmount": "2501",
+        "fundedAt": "1791690649"
+      }
+    },
+    {
+      "contract": "WBTC",
+      "address": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+      "blockNumber": "604",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0xc026688af3ebf33d21f612e481ed5583495844725d194234b8243cb02cd5afb1",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "to": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "2501"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "605",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x9ed350d93937e2d593cb6f41596103aaa5b567cea242f95297f4faa9e8f94cc4",
+      "eventName": "MilestoneSubmitted",
+      "args": {
+        "jobId": "35",
+        "milestoneIndex": "0",
+        "version": 1,
+        "deliverableHash": "0x9da70104aa5c04bf58e941818452a0a5335ba93a736d44cc465cd6fcb5ae9c37",
+        "opaqueReference": "0xf3ce5655c45a1790bf8059ce0cd59be0f3b57d3b833d143f4f56c057646ba454",
+        "submittedAt": "1791690660",
+        "reviewEnd": "1791694260"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "606",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x501781e3c62de5640a68def7fe38ee00e53ef254c5919810946a4ce09cdb01f3",
+      "eventName": "MilestoneRejected",
+      "args": {
+        "jobId": "35",
+        "milestoneIndex": "0",
+        "rejectionCount": 1,
+        "reasonCommitment": "0x6c4b6d323af9b10cf42ca85fec6c3dd3447ae4a588315ddc82a965f83a372af6",
+        "rejectedAt": "1791690683",
+        "responseEnd": "1791690743"
+      }
+    },
+    {
+      "contract": "WBTC",
+      "address": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+      "blockNumber": "607",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xc6839b07a437a36687f325e9cf5b96dc6f0d862cd80d84a2dc29415247f05233",
+      "eventName": "Approval",
+      "args": {
+        "owner": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "spender": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "50"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "608",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xc8dabe15e2f84bbe58562a9392d669b21cdf547057ae6eb8c2cae49bcc1a7c6b",
+      "eventName": "DisputeOpened",
+      "args": {
+        "disputeId": "18",
+        "jobId": "35",
+        "milestoneIndex": "0",
+        "opener": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "depositAmount": "50",
+        "evidenceDeadline": "1791690749"
+      }
+    },
+    {
+      "contract": "WBTC",
+      "address": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+      "blockNumber": "608",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0xc8dabe15e2f84bbe58562a9392d669b21cdf547057ae6eb8c2cae49bcc1a7c6b",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "to": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "50"
+      }
+    },
+    {
+      "contract": "WBTC",
+      "address": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+      "blockNumber": "609",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xb7445bade190d61e034da972025df8c5cf90378cae5bb38f61c2621e8c45662a",
+      "eventName": "Approval",
+      "args": {
+        "owner": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "spender": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "50"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "610",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x014d47549fb1daf4ed0d09ff56c68bd26cfb01267541b2a5d4101f94070c2ce4",
+      "eventName": "DisputeDepositMatched",
+      "args": {
+        "disputeId": "18",
+        "party": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "50"
+      }
+    },
+    {
+      "contract": "WBTC",
+      "address": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+      "blockNumber": "610",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x014d47549fb1daf4ed0d09ff56c68bd26cfb01267541b2a5d4101f94070c2ce4",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "to": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "50"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "613",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x5c6d8d238956f04d396aa8e5fd42c426e7fd5aa992ee9e6b4fdabc92aee1aa60",
+      "eventName": "PanelRequested",
+      "args": {
+        "disputeId": "18",
+        "requestId": "22",
+        "purpose": 0,
+        "attempt": 0,
+        "requestEnd": "1791690831"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "613",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x5c6d8d238956f04d396aa8e5fd42c426e7fd5aa992ee9e6b4fdabc92aee1aa60",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "18",
+        "phase": 2,
+        "deadline": "1791690831"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "615",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x33f33a488b04b7e7f089a2fd9e3cde051cfc1b59c6ce7b302ff97e6c12a53f7f",
+      "eventName": "PanelRequested",
+      "args": {
+        "disputeId": "18",
+        "requestId": "23",
+        "purpose": 0,
+        "attempt": 1,
+        "requestEnd": "1791690894"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "615",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x33f33a488b04b7e7f089a2fd9e3cde051cfc1b59c6ce7b302ff97e6c12a53f7f",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "18",
+        "phase": 2,
+        "deadline": "1791690894"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "617",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x71f56f436f8dfdb46b591789ba02a04160832ed302f25aa9258288d51bf046f1",
+      "eventName": "PanelRequested",
+      "args": {
+        "disputeId": "18",
+        "requestId": "24",
+        "purpose": 0,
+        "attempt": 2,
+        "requestEnd": "1791690956"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "617",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x71f56f436f8dfdb46b591789ba02a04160832ed302f25aa9258288d51bf046f1",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "18",
+        "phase": 2,
+        "deadline": "1791690956"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "619",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x1415f2b7a1accc555cb849bc9cc136209352f9fa27638a1a647ca1130fe6eeca",
+      "eventName": "DisputeFallbackApplied",
+      "args": {
+        "disputeId": "18",
+        "reason": 2
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "619",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x1415f2b7a1accc555cb849bc9cc136209352f9fa27638a1a647ca1130fe6eeca",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "18",
+        "phase": 10,
+        "deadline": "0"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "619",
+      "transactionIndex": 0,
+      "logIndex": 2,
+      "transactionHash": "0x1415f2b7a1accc555cb849bc9cc136209352f9fa27638a1a647ca1130fe6eeca",
+      "eventName": "DisputeSettlementCredited",
+      "args": {
+        "disputeId": "18",
+        "token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "1251",
+        "source": 0
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "619",
+      "transactionIndex": 0,
+      "logIndex": 3,
+      "transactionHash": "0x1415f2b7a1accc555cb849bc9cc136209352f9fa27638a1a647ca1130fe6eeca",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "1251"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "619",
+      "transactionIndex": 0,
+      "logIndex": 4,
+      "transactionHash": "0x1415f2b7a1accc555cb849bc9cc136209352f9fa27638a1a647ca1130fe6eeca",
+      "eventName": "DisputeSettlementCredited",
+      "args": {
+        "disputeId": "18",
+        "token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "1250",
+        "source": 0
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "619",
+      "transactionIndex": 0,
+      "logIndex": 5,
+      "transactionHash": "0x1415f2b7a1accc555cb849bc9cc136209352f9fa27638a1a647ca1130fe6eeca",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "1250"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "619",
+      "transactionIndex": 0,
+      "logIndex": 6,
+      "transactionHash": "0x1415f2b7a1accc555cb849bc9cc136209352f9fa27638a1a647ca1130fe6eeca",
+      "eventName": "DisputeSettlementCredited",
+      "args": {
+        "disputeId": "18",
+        "token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "50",
+        "source": 1
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "619",
+      "transactionIndex": 0,
+      "logIndex": 7,
+      "transactionHash": "0x1415f2b7a1accc555cb849bc9cc136209352f9fa27638a1a647ca1130fe6eeca",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "50"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "619",
+      "transactionIndex": 0,
+      "logIndex": 8,
+      "transactionHash": "0x1415f2b7a1accc555cb849bc9cc136209352f9fa27638a1a647ca1130fe6eeca",
+      "eventName": "DisputeSettlementCredited",
+      "args": {
+        "disputeId": "18",
+        "token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "50",
+        "source": 1
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "619",
+      "transactionIndex": 0,
+      "logIndex": 9,
+      "transactionHash": "0x1415f2b7a1accc555cb849bc9cc136209352f9fa27638a1a647ca1130fe6eeca",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "50"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "619",
+      "transactionIndex": 0,
+      "logIndex": 10,
+      "transactionHash": "0x1415f2b7a1accc555cb849bc9cc136209352f9fa27638a1a647ca1130fe6eeca",
+      "eventName": "MilestoneResolved",
+      "args": {
+        "jobId": "35",
+        "milestoneIndex": "0",
+        "disputeId": "18",
+        "bps": 5000,
+        "freelancerCredit": "1300",
+        "clientCredit": "1301",
+        "treasuryCredit": "0",
+        "fallbackApplied": true
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "619",
+      "transactionIndex": 0,
+      "logIndex": 11,
+      "transactionHash": "0x1415f2b7a1accc555cb849bc9cc136209352f9fa27638a1a647ca1130fe6eeca",
+      "eventName": "JobClosed",
+      "args": {
+        "jobId": "35"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "620",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xf65cc354e5f4e2f7c8d4b51e013e975a0d660927effafe3ec9f810883fc6b3ad",
+      "eventName": "WithdrawalCompleted",
+      "args": {
+        "token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "1301"
+      }
+    },
+    {
+      "contract": "WBTC",
+      "address": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+      "blockNumber": "620",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0xf65cc354e5f4e2f7c8d4b51e013e975a0d660927effafe3ec9f810883fc6b3ad",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "to": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "value": "1301"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "621",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x434982c7ed9cdf50ca1e64992ed94eadd3177a1a0077b143e06c04bb9d4950f1",
+      "eventName": "WithdrawalCompleted",
+      "args": {
+        "token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "1300"
+      }
+    },
+    {
+      "contract": "WBTC",
+      "address": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+      "blockNumber": "621",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x434982c7ed9cdf50ca1e64992ed94eadd3177a1a0077b143e06c04bb9d4950f1",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "to": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "value": "1300"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "622",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xe3ab598a761d98ebca7cff663835f3992e8125b5a6e7728371cbe525b8d9888c",
+      "eventName": "WithdrawalCompleted",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "161275000"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "622",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0xe3ab598a761d98ebca7cff663835f3992e8125b5a6e7728371cbe525b8d9888c",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "to": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "value": "161275000"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "623",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x4edbdcdc7073651167454c6ecad2c3d2a3c92e8c6eb23764d58eccb3683c84fd",
+      "eventName": "WithdrawalCompleted",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "241275001"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "623",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x4edbdcdc7073651167454c6ecad2c3d2a3c92e8c6eb23764d58eccb3683c84fd",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "to": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "value": "241275001"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "624",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xf4b0921925fbb8f55ba9f879cc2fc97dedbd2684f93d9743abf21c6403075a1d",
+      "eventName": "JobCreated",
+      "args": {
+        "jobId": "36",
+        "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "totalAmount": "3",
+        "milestoneCount": 2,
+        "createdAt": "1791691300",
+        "proposalEnd": "1791691360"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "625",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x15da42266f91874f93012bc8e4dd2613619e4977af5c567ab76e724d187f2461",
+      "eventName": "JobAccepted",
+      "args": {
+        "jobId": "36",
+        "acceptedAt": "1791691310",
+        "fundingDeadline": "1791691370"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "626",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x85d42a76f722f7a32d8a4f335b41c7eeebd5208e794bfe7e3738786b3d413303",
+      "eventName": "Approval",
+      "args": {
+        "owner": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "spender": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "3"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "627",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xcc4a8aa504030f453f822819554fec33fc259af796de1b625009390d3b979d13",
+      "eventName": "JobFunded",
+      "args": {
+        "jobId": "36",
+        "totalAmount": "3",
+        "fundedAt": "1791691326"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "627",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0xcc4a8aa504030f453f822819554fec33fc259af796de1b625009390d3b979d13",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "to": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "3"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "628",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x75b9db953b87a0b8d500ba140de8d398ecce124aef6a6606cb74c3550102a3e1",
+      "eventName": "MilestoneSubmitted",
+      "args": {
+        "jobId": "36",
+        "milestoneIndex": "0",
+        "version": 1,
+        "deliverableHash": "0x9da70104aa5c04bf58e941818452a0a5335ba93a736d44cc465cd6fcb5ae9c37",
+        "opaqueReference": "0xe646d5da186beb7cb1f12991e2bb18c81a739f9f453df62d0378dab66c462e99",
+        "submittedAt": "1791691332",
+        "reviewEnd": "1791694932"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "629",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x444cb525ad6c135acf315c7f9c4952a3860e657a406bcd40171058d3e5d07e99",
+      "eventName": "MilestoneSubmitted",
+      "args": {
+        "jobId": "36",
+        "milestoneIndex": "1",
+        "version": 1,
+        "deliverableHash": "0xa263a936e1203839939f8340ad8b9c6a5f93b3ca93f1a9c19c1d63a0d9a0301f",
+        "opaqueReference": "0xe9025a8091ab836780b2df0013629a5b7087a0f889c17f3dfb86e285fe454c7e",
+        "submittedAt": "1791691338",
+        "reviewEnd": "1791694938"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "630",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x7530d500fa2e40bfbdf1c6e209b84b93d7d6e4208a1cd662637a5c9c605eb3c7",
+      "eventName": "MilestoneApproved",
+      "args": {
+        "jobId": "36",
+        "milestoneIndex": "1",
+        "amount": "2",
+        "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "630",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x7530d500fa2e40bfbdf1c6e209b84b93d7d6e4208a1cd662637a5c9c605eb3c7",
+      "eventName": "MilestoneSettlementCredited",
+      "args": {
+        "jobId": "36",
+        "milestoneIndex": "1",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "2",
+        "reason": 0
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "630",
+      "transactionIndex": 0,
+      "logIndex": 2,
+      "transactionHash": "0x7530d500fa2e40bfbdf1c6e209b84b93d7d6e4208a1cd662637a5c9c605eb3c7",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "2"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "631",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xd67bc4d643a9fb4ae9986bfe6b4df5e9513713bf9c75f72382983ddd5974be85",
+      "eventName": "MilestoneApproved",
+      "args": {
+        "jobId": "36",
+        "milestoneIndex": "0",
+        "amount": "1",
+        "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "631",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0xd67bc4d643a9fb4ae9986bfe6b4df5e9513713bf9c75f72382983ddd5974be85",
+      "eventName": "MilestoneSettlementCredited",
+      "args": {
+        "jobId": "36",
+        "milestoneIndex": "0",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "1",
+        "reason": 0
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "631",
+      "transactionIndex": 0,
+      "logIndex": 2,
+      "transactionHash": "0xd67bc4d643a9fb4ae9986bfe6b4df5e9513713bf9c75f72382983ddd5974be85",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "1"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "631",
+      "transactionIndex": 0,
+      "logIndex": 3,
+      "transactionHash": "0xd67bc4d643a9fb4ae9986bfe6b4df5e9513713bf9c75f72382983ddd5974be85",
+      "eventName": "JobClosed",
+      "args": {
+        "jobId": "36"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "632",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xe58660730b13e1f3d951a8fba42a081b512d6ce6198ef2556ba7f17a3c598fa9",
+      "eventName": "WithdrawalCompleted",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "amount": "2050000"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "632",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0xe58660730b13e1f3d951a8fba42a081b512d6ce6198ef2556ba7f17a3c598fa9",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "to": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "value": "2050000"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "633",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x5db9d4839daca9d6fe67ef96b2439f97a559d77f861d293792a95c201c44590c",
+      "eventName": "JobCreated",
+      "args": {
+        "jobId": "37",
+        "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "totalAmount": "10001",
+        "milestoneCount": 1,
+        "createdAt": "1791691454",
+        "proposalEnd": "1791691514"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "634",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x51f9e6918977bc68a04a2d2de03006250c1efdf2b5e98eee13cbce42284c5565",
+      "eventName": "JobAccepted",
+      "args": {
+        "jobId": "37",
+        "acceptedAt": "1791691455",
+        "fundingDeadline": "1791691515"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "635",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xbed3eb9a3c282518241621de184847eb34988ec601212709693a943fd1c6ec60",
+      "eventName": "Approval",
+      "args": {
+        "owner": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "spender": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "10001"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "636",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x3a457579420c5937ca771438cd7275b685b5a197040f70e640c57a98868d2c17",
+      "eventName": "JobFunded",
+      "args": {
+        "jobId": "37",
+        "totalAmount": "10001",
+        "fundedAt": "1791691456"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "636",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x3a457579420c5937ca771438cd7275b685b5a197040f70e640c57a98868d2c17",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "to": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "10001"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "637",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x028b4748c9619755d65ce0d7fa02d853f4d6a356de037cb51a34c766fbea66d2",
+      "eventName": "MilestoneSubmitted",
+      "args": {
+        "jobId": "37",
+        "milestoneIndex": "0",
+        "version": 1,
+        "deliverableHash": "0x9da70104aa5c04bf58e941818452a0a5335ba93a736d44cc465cd6fcb5ae9c37",
+        "opaqueReference": "0xd04237b1f27b294b9f9794929a8f058e551fc611b7b08b6d53844fd2de09ad88",
+        "submittedAt": "1791691465",
+        "reviewEnd": "1791695065"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "638",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x0b727f7db0bb24f7a439dfa4476f9f9c88f52a791ba93b9dc701508bee2f0dfb",
+      "eventName": "Approval",
+      "args": {
+        "owner": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "spender": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "200"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "639",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xc8f314a35785442b65116c110d8386d175629f3a57c6a809f84e23394e7aff13",
+      "eventName": "DisputeOpened",
+      "args": {
+        "disputeId": "19",
+        "jobId": "37",
+        "milestoneIndex": "0",
+        "opener": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "depositAmount": "200",
+        "evidenceDeadline": "1791691531"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "639",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0xc8f314a35785442b65116c110d8386d175629f3a57c6a809f84e23394e7aff13",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "to": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "value": "200"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "642",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xbfa504244d4e9b06fd643fe82b67ef3a424b2072d7ba9855abb60a59b9436d3e",
+      "eventName": "PanelRequested",
+      "args": {
+        "disputeId": "19",
+        "requestId": "25",
+        "purpose": 0,
+        "attempt": 0,
+        "requestEnd": "1791691601"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "642",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0xbfa504244d4e9b06fd643fe82b67ef3a424b2072d7ba9855abb60a59b9436d3e",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "19",
+        "phase": 2,
+        "deadline": "1791691601"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "642",
+      "transactionIndex": 0,
+      "logIndex": 2,
+      "transactionHash": "0xbfa504244d4e9b06fd643fe82b67ef3a424b2072d7ba9855abb60a59b9436d3e",
+      "eventName": "RandomnessReceived",
+      "args": {
+        "disputeId": "19",
+        "requestId": "25"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "643",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x05d93b8f575a52bacb617dafe64c814ff1b758506ae27c10f61c0f90f82f021b",
+      "eventName": "PanelSelected",
+      "args": {
+        "disputeId": "19",
+        "round": 1,
+        "panel": [
+          "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+          "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+          "0x976EA74026E726554dB657fA54763abd0C3a0aa9"
+        ]
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "643",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x05d93b8f575a52bacb617dafe64c814ff1b758506ae27c10f61c0f90f82f021b",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "19",
+        "phase": 3,
+        "deadline": "1791691602"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "644",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xf621e76aa32ae2f60041bda380440d8e045777d5a0124bc54f8912bde1250c0c",
+      "eventName": "VoteCommitted",
+      "args": {
+        "disputeId": "19",
+        "arbiter": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "round": 1,
+        "commitment": "0x0d222fc223baf3f499cdaeb14935e466d134843c46a4375fbc3a2a797f6bad11"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "645",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xf3a5eb64b008877742412ac903049ca7aea4af50ed3304c837aac34651c8d34e",
+      "eventName": "VoteCommitted",
+      "args": {
+        "disputeId": "19",
+        "arbiter": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+        "round": 1,
+        "commitment": "0x7d181862948b1fdf9f0b845369e5ec0ba6cedefd2d3fd161fdcddd320689e154"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "646",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x40caf0374da4c7ac9f6becbd48c47be6738e82ee1a21e41297336181d707a5cc",
+      "eventName": "VoteCommitted",
+      "args": {
+        "disputeId": "19",
+        "arbiter": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "round": 1,
+        "commitment": "0xd4522c4c2794751fc79ac98a43afe48495f22618779379cccd54719f73c43ab8"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "648",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xbff386051b2a0dd650b2d0fa8ddfc15e4c3ac31f55c8663e87db534e786a471c",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "19",
+        "phase": 6,
+        "deadline": "1791691708"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "650",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x124bcd446396b5368611f40cb4721bdb7d25f45b1bae0cc59ac65d8352fdbdd2",
+      "eventName": "PanelRequested",
+      "args": {
+        "disputeId": "19",
+        "requestId": "26",
+        "purpose": 2,
+        "attempt": 0,
+        "requestEnd": "1791691770"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "650",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x124bcd446396b5368611f40cb4721bdb7d25f45b1bae0cc59ac65d8352fdbdd2",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "19",
+        "phase": 7,
+        "deadline": "1791691770"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "650",
+      "transactionIndex": 0,
+      "logIndex": 2,
+      "transactionHash": "0x124bcd446396b5368611f40cb4721bdb7d25f45b1bae0cc59ac65d8352fdbdd2",
+      "eventName": "RandomnessReceived",
+      "args": {
+        "disputeId": "19",
+        "requestId": "26"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "651",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x9dd5655c6bed05a5d8ccb5f14d3b5205bc3922384e306e32aaa2350c060ecc16",
+      "eventName": "PanelSelected",
+      "args": {
+        "disputeId": "19",
+        "round": 2,
+        "panel": [
+          "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+          "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+          "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+        ]
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "651",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x9dd5655c6bed05a5d8ccb5f14d3b5205bc3922384e306e32aaa2350c060ecc16",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "19",
+        "phase": 8,
+        "deadline": "1791691771"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "653",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xef8c894366748bc40a77750577a52433d7d2eb98d0cfceb60a6c2b3e5bd48b9e",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "19",
+        "phase": 9,
+        "deadline": "1791691833"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "655",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xbb3828af14fd56f215d1c552c8c72ff170839e5526ac287ae0d20d1c39eafb64",
+      "eventName": "DisputeFallbackApplied",
+      "args": {
+        "disputeId": "19",
+        "reason": 3
+      }
+    },
+    {
+      "contract": "arbitration",
+      "address": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+      "blockNumber": "655",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0xbb3828af14fd56f215d1c552c8c72ff170839e5526ac287ae0d20d1c39eafb64",
+      "eventName": "PanelPhaseAdvanced",
+      "args": {
+        "disputeId": "19",
+        "phase": 10,
+        "deadline": "0"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "655",
+      "transactionIndex": 0,
+      "logIndex": 2,
+      "transactionHash": "0xbb3828af14fd56f215d1c552c8c72ff170839e5526ac287ae0d20d1c39eafb64",
+      "eventName": "DisputeSettlementCredited",
+      "args": {
+        "disputeId": "19",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "5001",
+        "source": 0
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "655",
+      "transactionIndex": 0,
+      "logIndex": 3,
+      "transactionHash": "0xbb3828af14fd56f215d1c552c8c72ff170839e5526ac287ae0d20d1c39eafb64",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "5001"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "655",
+      "transactionIndex": 0,
+      "logIndex": 4,
+      "transactionHash": "0xbb3828af14fd56f215d1c552c8c72ff170839e5526ac287ae0d20d1c39eafb64",
+      "eventName": "DisputeSettlementCredited",
+      "args": {
+        "disputeId": "19",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "5000",
+        "source": 0
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "655",
+      "transactionIndex": 0,
+      "logIndex": 5,
+      "transactionHash": "0xbb3828af14fd56f215d1c552c8c72ff170839e5526ac287ae0d20d1c39eafb64",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "5000"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "655",
+      "transactionIndex": 0,
+      "logIndex": 6,
+      "transactionHash": "0xbb3828af14fd56f215d1c552c8c72ff170839e5526ac287ae0d20d1c39eafb64",
+      "eventName": "DisputeSettlementCredited",
+      "args": {
+        "disputeId": "19",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "200",
+        "source": 1
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "655",
+      "transactionIndex": 0,
+      "logIndex": 7,
+      "transactionHash": "0xbb3828af14fd56f215d1c552c8c72ff170839e5526ac287ae0d20d1c39eafb64",
+      "eventName": "ClaimableCredited",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "200"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "655",
+      "transactionIndex": 0,
+      "logIndex": 8,
+      "transactionHash": "0xbb3828af14fd56f215d1c552c8c72ff170839e5526ac287ae0d20d1c39eafb64",
+      "eventName": "MilestoneResolved",
+      "args": {
+        "jobId": "37",
+        "milestoneIndex": "0",
+        "disputeId": "19",
+        "bps": 5000,
+        "freelancerCredit": "5000",
+        "clientCredit": "5201",
+        "treasuryCredit": "0",
+        "fallbackApplied": true
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "655",
+      "transactionIndex": 0,
+      "logIndex": 9,
+      "transactionHash": "0xbb3828af14fd56f215d1c552c8c72ff170839e5526ac287ae0d20d1c39eafb64",
+      "eventName": "JobClosed",
+      "args": {
+        "jobId": "37"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "656",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xc8a253e5f59f551bb1575d2043b8d5558109546667d6eb16be0387abf9d01ab3",
+      "eventName": "WithdrawalCompleted",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "amount": "5201"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "656",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0xc8a253e5f59f551bb1575d2043b8d5558109546667d6eb16be0387abf9d01ab3",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "to": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "value": "5201"
+      }
+    },
+    {
+      "contract": "escrow",
+      "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "657",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x90eb3b673c18b34b00b52ac52e3c982acf61185e4b16458645b34d99b35e9131",
+      "eventName": "WithdrawalCompleted",
+      "args": {
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "5003"
+      }
+    },
+    {
+      "contract": "USDC",
+      "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "blockNumber": "657",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x90eb3b673c18b34b00b52ac52e3c982acf61185e4b16458645b34d99b35e9131",
+      "eventName": "Transfer",
+      "args": {
+        "from": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "to": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "value": "5003"
+      }
+    }
+  ]
+}

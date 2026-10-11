@@ -1,0 +1,9 @@
+{
+  "scope": "post-reset compiled local Next static assets; current AES_256_GCM_MASTER_KEY and SESSION_SECRET",
+  "buildId": "nkqNC4NVetqXFy1xWMjIV",
+  "files": 16,
+  "bytes": 1701867,
+  "canaries": 2,
+  "matchedSecrets": 0,
+  "publicArtifact": "absent; public build refused"
+}

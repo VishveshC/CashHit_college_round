@@ -1,0 +1,77 @@
+(node:17988) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/security.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 5 backend: evidence identity preserves collisions and idempotent recovery
+  ✖ an exact retry returns the existing private row (28.2642ms)
+  ✖ one party can persist two distinct commitments that reuse its own opaque reference (2.6066ms)
+  ✖ both parties can persist distinct commitments that share an opaque reference (2.6728ms)
+  ✔ current arbiters and unrelated wallets remain unable to submit party evidence (2.1868ms)
+✖ Phase 5 backend: evidence identity preserves collisions and idempotent recovery (730.3694ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 1
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 732.5455
+
+✖ failing tests:
+
+test at scripts\phase5-backend-evidence-idempotency.test.mjs:128:13
+✖ an exact retry returns the existing private row (28.2642ms)
+  AssertionError [ERR_ASSERTION]: a lost response can be retried idempotently after the same event is verified
+  
+  404 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-idempotency.test.mjs:134:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-idempotency.test.mjs:128:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts\phase5-backend-evidence-idempotency.test.mjs:139:13
+✖ one party can persist two distinct commitments that reuse its own opaque reference (2.6066ms)
+  AssertionError [ERR_ASSERTION]: a distinct exact chain event is identified by its party, reference, and commitment
+  
+  404 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-idempotency.test.mjs:142:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-idempotency.test.mjs:139:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts\phase5-backend-evidence-idempotency.test.mjs:146:13
+✖ both parties can persist distinct commitments that share an opaque reference (2.6728ms)
+  AssertionError [ERR_ASSERTION]: the other party's exact event must remain separately persistable
+  
+  404 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-idempotency.test.mjs:149:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-idempotency.test.mjs:146:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

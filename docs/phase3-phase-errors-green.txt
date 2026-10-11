@@ -1,0 +1,130 @@
+Compiling 3 files with Solc 0.8.36
+Solc 0.8.36 finished in 1.50s
+Compiler run successful!
+
+Ran 1 test for test/Phase3PhaseErrors.t.sol:Phase3PhaseErrorsTest
+[PASS] test_A31_VoteWrongPhaseIsInvalidStateWhileValidPhaseWrongSeatIsUnauthorized() (gas: 1918424)
+Traces:
+  [1918424] Phase3PhaseErrorsTest::test_A31_VoteWrongPhaseIsInvalidStateWhileValidPhaseWrongSeatIsUnauthorized()
+    ├─ [0] VM::chainId(31337 [3.133e4])
+    │   └─ ← [Return]
+    ├─ [0] VM::warp(1800000000 [1.8e9])
+    │   └─ ← [Return]
+    ├─ [0] VM::deployCode("src/FairworkArbitration.sol:FairworkArbitration", 0x0000000000000000000000007fa9385be102ac3eac297483dd6233d62b3e1496000000000000000000000000000000000000000000000000000000000000003c)
+    │   ├─ [3584073] → new FairworkArbitration@0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f
+    │   │   ├─ [207141] → new MockRandomness@0x104fBc016F4bb334D775a19E8A6510109AC63E00
+    │   │   │   └─ ← [Return] 1034 bytes of code
+    │   │   └─ ← [Return] 15045 bytes of code
+    │   └─ ← [Return] FairworkArbitration: [0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f]
+    ├─ [260489] FairworkArbitration::openDispute(0, 0, 0x000000000000000000000000000000000000c11e, 0x0000000000000000000000000000000000000FEE, 0x0000000000000000000000000000000000001234, 1001, 20, 0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return] 1
+    ├─ [0] VM::expectRevert(InvalidState())
+    │   └─ ← [Return]
+    ├─ [24559] FairworkArbitration::commitVote(1, 0x000000000000000000000000000000000000a001, 0x0000000000000000000000000000000000000000000000000000000000000001)
+    │   └─ ← [Revert] InvalidState()
+    ├─ [0] VM::expectRevert(InvalidState())
+    │   └─ ← [Return]
+    ├─ [24811] FairworkArbitration::revealVote(1, 0x000000000000000000000000000000000000a001, 5000, 0x0000000000000000000000000000000000000000000000000000000000000000)
+    │   └─ ← [Revert] InvalidState()
+    ├─ [89646] FairworkArbitration::addArbiter(0x000000000000000000000000000000000000a001)
+    │   ├─ emit ArbiterAdded(arbiter: 0x000000000000000000000000000000000000a001)
+    │   └─ ← [Stop]
+    ├─ [72546] FairworkArbitration::addArbiter(0x000000000000000000000000000000000000A002)
+    │   ├─ emit ArbiterAdded(arbiter: 0x000000000000000000000000000000000000A002)
+    │   └─ ← [Stop]
+    ├─ [72546] FairworkArbitration::addArbiter(0x000000000000000000000000000000000000a003)
+    │   ├─ emit ArbiterAdded(arbiter: 0x000000000000000000000000000000000000a003)
+    │   └─ ← [Stop]
+    ├─ [28827] FairworkArbitration::getDispute(1) [staticcall]
+    │   └─ ← [Return] DisputeView({ jobId: 0, milestoneIndex: 0, client: 0x000000000000000000000000000000000000c11e, freelancer: 0x0000000000000000000000000000000000000FEE, token: 0x0000000000000000000000000000000000001234, amount: 1001, depositAmount: 20, opener: 0x000000000000000000000000000000000000c11e, phase: 1, round: 0, purpose: 0, attempt: 0, openedAt: 1800000000 [1.8e9], evidenceDeadline: 1800000060 [1.8e9], commitDeadline: 0, replacementCommitDeadline: 0, revealDeadline: 0, requestEnd: 0, activeRequestId: 0, randomnessReady: false, rulingBps: 0, fallbackApplied: false, clientDeposited: true, freelancerDeposited: false, clientEvidenceCount: 0, freelancerEvidenceCount: 0, fallbackReason: 0 })
+    ├─ [0] VM::warp(1800000060 [1.8e9])
+    │   └─ ← [Return]
+    ├─ [267271] FairworkArbitration::advanceDispute(1)
+    │   ├─ emit PanelRequested(disputeId: 1, requestId: 1, purpose: 0, attempt: 0, requestEnd: 1800000120 [1.8e9])
+    │   ├─ emit PanelPhaseAdvanced(disputeId: 1, phase: 2, deadline: 1800000120 [1.8e9])
+    │   ├─ [24951] MockRandomness::requestRandomness(1)
+    │   │   └─ ← [Stop]
+    │   └─ ← [Return] false, 0, false
+    ├─ [349] FairworkArbitration::randomness() [staticcall]
+    │   └─ ← [Return] MockRandomness: [0x104fBc016F4bb334D775a19E8A6510109AC63E00]
+    ├─ [28827] FairworkArbitration::getDispute(1) [staticcall]
+    │   └─ ← [Return] DisputeView({ jobId: 0, milestoneIndex: 0, client: 0x000000000000000000000000000000000000c11e, freelancer: 0x0000000000000000000000000000000000000FEE, token: 0x0000000000000000000000000000000000001234, amount: 1001, depositAmount: 20, opener: 0x000000000000000000000000000000000000c11e, phase: 2, round: 1, purpose: 0, attempt: 0, openedAt: 1800000000 [1.8e9], evidenceDeadline: 1800000060 [1.8e9], commitDeadline: 0, replacementCommitDeadline: 0, revealDeadline: 0, requestEnd: 1800000120 [1.8e9], activeRequestId: 1, randomnessReady: false, rulingBps: 0, fallbackApplied: false, clientDeposited: true, freelancerDeposited: false, clientEvidenceCount: 0, freelancerEvidenceCount: 0, fallbackReason: 0 })
+    ├─ [64813] MockRandomness::fulfill(1)
+    │   ├─ [38008] FairworkArbitration::fulfillRandomness(1, 38028413284613403747006859399725161307500956873212037393295084993061474331199 [3.802e76])
+    │   │   ├─ emit RandomnessReceived(disputeId: 1, requestId: 1)
+    │   │   └─ ← [Stop]
+    │   └─ ← [Stop]
+    ├─ [213654] FairworkArbitration::advanceDispute(1)
+    │   ├─ emit PanelSelected(disputeId: 1, round: 1, panel: [0x000000000000000000000000000000000000a003, 0x000000000000000000000000000000000000A002, 0x000000000000000000000000000000000000a001])
+    │   ├─ emit PanelPhaseAdvanced(disputeId: 1, phase: 3, deadline: 1800000120 [1.8e9])
+    │   └─ ← [Return] false, 0, false
+    ├─ [9904] FairworkArbitration::getPanel(1, 1) [staticcall]
+    │   └─ ← [Return] [0x000000000000000000000000000000000000a003, 0x000000000000000000000000000000000000A002, 0x000000000000000000000000000000000000a001]
+    ├─ [0] VM::expectRevert(Unauthorized())
+    │   └─ ← [Return]
+    ├─ [31163] FairworkArbitration::commitVote(1, 0x0000000000000000000000000000000000000B0b, 0x0000000000000000000000000000000000000000000000000000000000000001)
+    │   └─ ← [Revert] Unauthorized()
+    ├─ [0] VM::expectRevert(InvalidState())
+    │   └─ ← [Return]
+    ├─ [24811] FairworkArbitration::revealVote(1, 0x000000000000000000000000000000000000a003, 5000, 0x0000000000000000000000000000000000000000000000000000000000000000)
+    │   └─ ← [Revert] InvalidState()
+    ├─ [864] FairworkArbitration::voteCommitment(1, 0x000000000000000000000000000000000000a003, 5000, 0x0000000000000000000000000000000000000000000000000000000000000001) [staticcall]
+    │   └─ ← [Return] 0x7dd1f8f13c794fb0eaddb4730277fa9ab4ec5c826b069113a296bb6a9e2f74ea
+    ├─ [54098] FairworkArbitration::commitVote(1, 0x000000000000000000000000000000000000a003, 0x7dd1f8f13c794fb0eaddb4730277fa9ab4ec5c826b069113a296bb6a9e2f74ea)
+    │   ├─ emit VoteCommitted(disputeId: 1, round: 1, arbiter: 0x000000000000000000000000000000000000a003, commitment: 0x7dd1f8f13c794fb0eaddb4730277fa9ab4ec5c826b069113a296bb6a9e2f74ea)
+    │   └─ ← [Stop]
+    ├─ [864] FairworkArbitration::voteCommitment(1, 0x000000000000000000000000000000000000A002, 5000, 0x0000000000000000000000000000000000000000000000000000000000000002) [staticcall]
+    │   └─ ← [Return] 0xf038969a01dc8a8f8ed7ea814665e49918a486fe0a66b3a773376bb1db151d23
+    ├─ [56251] FairworkArbitration::commitVote(1, 0x000000000000000000000000000000000000A002, 0xf038969a01dc8a8f8ed7ea814665e49918a486fe0a66b3a773376bb1db151d23)
+    │   ├─ emit VoteCommitted(disputeId: 1, round: 1, arbiter: 0x000000000000000000000000000000000000A002, commitment: 0xf038969a01dc8a8f8ed7ea814665e49918a486fe0a66b3a773376bb1db151d23)
+    │   └─ ← [Stop]
+    ├─ [864] FairworkArbitration::voteCommitment(1, 0x000000000000000000000000000000000000a001, 5000, 0x0000000000000000000000000000000000000000000000000000000000000003) [staticcall]
+    │   └─ ← [Return] 0xa60f81d48588c856f4bd63c9c69f518a5951ed7bec30c63a494fd5f69c9801b9
+    ├─ [58404] FairworkArbitration::commitVote(1, 0x000000000000000000000000000000000000a001, 0xa60f81d48588c856f4bd63c9c69f518a5951ed7bec30c63a494fd5f69c9801b9)
+    │   ├─ emit VoteCommitted(disputeId: 1, round: 1, arbiter: 0x000000000000000000000000000000000000a001, commitment: 0xa60f81d48588c856f4bd63c9c69f518a5951ed7bec30c63a494fd5f69c9801b9)
+    │   └─ ← [Stop]
+    ├─ [28827] FairworkArbitration::getDispute(1) [staticcall]
+    │   └─ ← [Return] DisputeView({ jobId: 0, milestoneIndex: 0, client: 0x000000000000000000000000000000000000c11e, freelancer: 0x0000000000000000000000000000000000000FEE, token: 0x0000000000000000000000000000000000001234, amount: 1001, depositAmount: 20, opener: 0x000000000000000000000000000000000000c11e, phase: 3, round: 1, purpose: 0, attempt: 0, openedAt: 1800000000 [1.8e9], evidenceDeadline: 1800000060 [1.8e9], commitDeadline: 1800000120 [1.8e9], replacementCommitDeadline: 0, revealDeadline: 0, requestEnd: 1800000120 [1.8e9], activeRequestId: 1, randomnessReady: false, rulingBps: 0, fallbackApplied: false, clientDeposited: true, freelancerDeposited: false, clientEvidenceCount: 0, freelancerEvidenceCount: 0, fallbackReason: 0 })
+    ├─ [0] VM::warp(1800000120 [1.8e9])
+    │   └─ ← [Return]
+    ├─ [51677] FairworkArbitration::advanceDispute(1)
+    │   ├─ emit PanelPhaseAdvanced(disputeId: 1, phase: 6, deadline: 1800000180 [1.8e9])
+    │   └─ ← [Return] false, 0, false
+    ├─ [0] VM::expectRevert(InvalidState())
+    │   └─ ← [Return]
+    ├─ [24559] FairworkArbitration::commitVote(1, 0x000000000000000000000000000000000000a003, 0x0000000000000000000000000000000000000000000000000000000000000001)
+    │   └─ ← [Revert] InvalidState()
+    ├─ [0] VM::expectRevert(Unauthorized())
+    │   └─ ← [Return]
+    ├─ [31304] FairworkArbitration::revealVote(1, 0x0000000000000000000000000000000000000B0b, 5000, 0x0000000000000000000000000000000000000000000000000000000000000000)
+    │   └─ ← [Revert] Unauthorized()
+    ├─ [61822] FairworkArbitration::revealVote(1, 0x000000000000000000000000000000000000a003, 5000, 0x0000000000000000000000000000000000000000000000000000000000000001)
+    │   ├─ emit VoteRevealed(disputeId: 1, round: 1, arbiter: 0x000000000000000000000000000000000000a003, bps: 5000)
+    │   └─ ← [Stop]
+    ├─ [63975] FairworkArbitration::revealVote(1, 0x000000000000000000000000000000000000A002, 5000, 0x0000000000000000000000000000000000000000000000000000000000000002)
+    │   ├─ emit VoteRevealed(disputeId: 1, round: 1, arbiter: 0x000000000000000000000000000000000000A002, bps: 5000)
+    │   └─ ← [Stop]
+    ├─ [66128] FairworkArbitration::revealVote(1, 0x000000000000000000000000000000000000a001, 5000, 0x0000000000000000000000000000000000000000000000000000000000000003)
+    │   ├─ emit VoteRevealed(disputeId: 1, round: 1, arbiter: 0x000000000000000000000000000000000000a001, bps: 5000)
+    │   └─ ← [Stop]
+    ├─ [28827] FairworkArbitration::getDispute(1) [staticcall]
+    │   └─ ← [Return] DisputeView({ jobId: 0, milestoneIndex: 0, client: 0x000000000000000000000000000000000000c11e, freelancer: 0x0000000000000000000000000000000000000FEE, token: 0x0000000000000000000000000000000000001234, amount: 1001, depositAmount: 20, opener: 0x000000000000000000000000000000000000c11e, phase: 6, round: 1, purpose: 0, attempt: 0, openedAt: 1800000000 [1.8e9], evidenceDeadline: 1800000060 [1.8e9], commitDeadline: 1800000120 [1.8e9], replacementCommitDeadline: 0, revealDeadline: 1800000180 [1.8e9], requestEnd: 1800000120 [1.8e9], activeRequestId: 1, randomnessReady: false, rulingBps: 0, fallbackApplied: false, clientDeposited: true, freelancerDeposited: false, clientEvidenceCount: 0, freelancerEvidenceCount: 0, fallbackReason: 0 })
+    ├─ [0] VM::warp(1800000180 [1.8e9])
+    │   └─ ← [Return]
+    ├─ [55943] FairworkArbitration::advanceDispute(1)
+    │   ├─ emit DisputeRuled(disputeId: 1, bps: 5000)
+    │   ├─ emit PanelPhaseAdvanced(disputeId: 1, phase: 10, deadline: 0)
+    │   └─ ← [Return] true, 5000, false
+    ├─ [0] VM::expectRevert(InvalidState())
+    │   └─ ← [Return]
+    ├─ [24559] FairworkArbitration::commitVote(1, 0x000000000000000000000000000000000000a003, 0x0000000000000000000000000000000000000000000000000000000000000001)
+    │   └─ ← [Revert] InvalidState()
+    ├─ [0] VM::expectRevert(InvalidState())
+    │   └─ ← [Return]
+    ├─ [24823] FairworkArbitration::revealVote(1, 0x000000000000000000000000000000000000a003, 5000, 0x0000000000000000000000000000000000000000000000000000000000000001)
+    │   └─ ← [Revert] InvalidState()
+    └─ ← [Stop]
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.56ms (1.20ms CPU time)
+
+Ran 1 test suite in 5.58ms (1.56ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)

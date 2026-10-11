@@ -1,0 +1,22 @@
+Registry post-reset compiled client Gitleaks scan
+config=source .gitleaks.toml with only apps/web/.next exclusion removed
+assets=16
+
+PASS exit_code=0 bytes=112594 path=apps\web\.next\static\chunks\0cz1d0mv5g_q7.js
+PASS exit_code=0 bytes=35274 path=apps\web\.next\static\chunks\0fxpaf4xbqcpb.js
+PASS exit_code=0 bytes=13822 path=apps\web\.next\static\chunks\0umf92h1sb77c.js
+PASS exit_code=0 bytes=110714 path=apps\web\.next\static\chunks\0w6qchqh8jyps.js
+PASS exit_code=0 bytes=3652 path=apps\web\.next\static\chunks\1ajojdln5fzs_.js
+PASS exit_code=0 bytes=3103 path=apps\web\.next\static\chunks\24t9utxgt5539.js
+PASS exit_code=0 bytes=185237 path=apps\web\.next\static\chunks\2eryvcc1t-ui6.js
+PASS exit_code=0 bytes=229820 path=apps\web\.next\static\chunks\2p_6khx9v67dr.js
+PASS exit_code=0 bytes=950034 path=apps\web\.next\static\chunks\2qh9vyzl2cxp1.js
+PASS exit_code=0 bytes=29540 path=apps\web\.next\static\chunks\3-efzjhp9v88j.css
+PASS exit_code=0 bytes=16898 path=apps\web\.next\static\chunks\3cfn99dbrcvvp.js
+PASS exit_code=0 bytes=754 path=apps\web\.next\static\chunks\450ke0pl4t-0t.js
+PASS exit_code=0 bytes=10030 path=apps\web\.next\static\chunks\turbopack-3-ry682tkyiqk.js
+PASS exit_code=0 bytes=219 path=apps\web\.next\static\nkqNC4NVetqXFy1xWMjIV\_buildManifest.js
+PASS exit_code=0 bytes=96 path=apps\web\.next\static\nkqNC4NVetqXFy1xWMjIV\_clientMiddlewareManifest.js
+PASS exit_code=0 bytes=80 path=apps\web\.next\static\nkqNC4NVetqXFy1xWMjIV\_ssgManifest.js
+
+files=16 failures=0

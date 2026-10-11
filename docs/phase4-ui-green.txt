@@ -1,0 +1,31 @@
+(node:25188) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui-policy-regressions.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Submitted dispute opening belongs to client; rejection permits either party (0.7954ms)
+✔ Only unmatched counterparty can match the deposit during Evidence phase (0.1792ms)
+✔ Ready randomness allows immediate advancement in every pending entropy phase (0.1268ms)
+(node:29332) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ F-60/F-61/S-60: wrong network disables every contract action (0.8844ms)
+✔ F-60/S-15/S-21: named freelancer accepts before the half-open end; expiry action opens at the end (0.1771ms)
+✔ F-60/F-20/S-15/S-21: client approval closes at reviewEnd and permissionless silence release opens there (0.1008ms)
+✔ F-33/S-16: commit voting is available only to a current assigned panel member (0.1702ms)
+✔ F-50: claimable withdrawal remains separate from a terminal milestone (0.0885ms)
+✔ S-06/X-28: token amount parser uses raw integer units and rejects ambiguous input (0.4162ms)
+✔ F-50/S-06: formatted amounts preserve all raw digits without floating-point rounding (8.6545ms)
+✔ P-03/A-38: private commitment matches the typed salted hash vector and validates plaintext (1.5544ms)
+✔ P-03/A-38: commitment creation keeps a fresh 32-byte salt available for encrypted private storage (1.2699ms)
+✔ S-61/S-63: action pipeline rejects a wrong chain before confirmation or wallet send (0.7045ms)
+✔ S-63: action waits for a successful receipt, then refetches chain state (0.2094ms)
+✔ S-63: reverted receipts publish failure and never refetch as a successful action (0.1545ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 370.7125

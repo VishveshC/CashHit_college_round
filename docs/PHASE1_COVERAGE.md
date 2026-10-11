@@ -1,0 +1,10 @@
+# Phase 1 coverage limitations
+
+The first actual Foundry coverage run passed 30 tests and produced coverage/phase1.lcov (ignored generated report). Its output is preserved in phase1-coverage.txt. Reported FairworkEscrow coverage: lines 96.35% (185/192), statements 95.44% (272/285), branches 79.07% (34/43), functions 89.47% (17/19). Overall totals also include unused Phase 0 harness and OpenZeppelin crypto paths: lines 61.51%, statements 65.62%, branches 45.54%, functions 57.83%; these are not escrow-only percentages.
+
+Foundry disables optimizer/viaIR for instrumentation and emitted many `could not find anchor` warnings, including inherited fixture instances of the escrow. The warnings are preserved, not hidden or treated as zero errors. These numbers are the tool's reported measurements, not certified complete coverage; the missing-anchor paths mean a reliable mapping/transition-completeness claim remains UNVERIFIED. The normal optimized build/test suite is a separate passing gate.
+
+Actual missing lines identified in the initial LCOV include constructor decimals() failure handling and getJobCommitments/protocolConfig readbacks. Focused additive tests cover those obligations rather than weakening any frozen test. Phase 1 still cannot prove 100% of the full P0 transition table: funded milestone transitions do not exist. Branch coverage below the target and full transition coverage remain visible gaps for later phases; no audit or all-funds-exit claim is made.
+
+
+Final additive-test run (phase1-coverage-final.txt): 33 tests passed, zero failed/skipped. FairworkEscrow reports lines **100.00% (192/192)**, statements **97.19% (277/285)**, branches **81.40% (35/43)**, functions **100.00% (19/19)**. Local demo token source reports 100% in each category. Full instrumented project totals: lines 62.97% (301/478), statements 66.54% (360/541), branches 46.53% (47/101), functions 60.24% (50/83). The anchor warnings remain and these final values retain the limitations above; full transition/branch targets are not declared met. No extra feature was added to improve coverage.

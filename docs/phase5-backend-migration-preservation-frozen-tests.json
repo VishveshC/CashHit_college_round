@@ -1,0 +1,15 @@
+{
+  "phase": 5,
+  "classification": "GREEN supplemental migration-preservation proof; not pre-fix RED evidence",
+  "scope": "Isolated temporary SQLite database only; does not touch the owned runtime database.",
+  "frozen_files": [
+    {
+      "path": "scripts/phase5-evidence-migration-preservation.test.mjs",
+      "sha256": "510e503f9ffc2926570aee654695f846fdc3dd6633d92850cab7295f95a7468a"
+    },
+    {
+      "path": "docs/phase5-backend-migration-preservation-green.txt",
+      "sha256": "95c739a7b53e55dbcbee910e049e83216f9017b00a3180edcfee07294d929fa1"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "frozen_files": [
+    {
+      "path": "scripts/registry-production-artifact-stage.mjs",
+      "sha256": "38F8DF974AC07DA2EA2D5D339586D59864CD7E3DF2375F46EC77ACE9FF4838E6"
+    },
+    {
+      "path": "scripts/registry-web-build.mjs",
+      "sha256": "A83AF26364F4D0D9BAB17A0CB81F71C7C328BDF6BA1812BDEDC76F1102BE767A"
+    },
+    {
+      "path": "scripts/phase4-reopen-registry-standalone-artifact.test.mjs",
+      "sha256": "BFD4603890DAA8EE5AC4017F2E5F6B099726434B90E4DFC9E8B590508F674D46"
+    },
+    {
+      "path": "docs/phase4-reopen-registry-versioned-artifact.json",
+      "sha256": "AA8CE670C2276811F025BCEC9D9ABFBC3ACFDD8852617E55473DB8972FAC324C"
+    },
+    {
+      "path": "docs/phase4-reopen-registry-versioned-artifact-build.txt",
+      "sha256": "6C551A5D98AFD3857895EB0A31B5DE6E8D4D092F35E8ECA23D844014CBE9FCB2"
+    },
+    {
+      "path": "docs/phase4-reopen-registry-versioned-artifact-final.txt",
+      "sha256": "5CB798F6CC903A739641798E76E177BA9FDAFB1B9DF99394D72D28B4D28CEB0B"
+    },
+    {
+      "path": "docs/phase4-reopen-registry-versioned-artifact-test.txt",
+      "sha256": "8CE1ED3FF0BD36D152EEB8A2B7A54F581691AA47956EB2C314D8F60EF99D8FC7"
+    }
+  ]
+}

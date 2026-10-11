@@ -1,0 +1,34 @@
+✔ automatic retention refuses active jobs without deleting any private rows (70.2682ms)
+✔ retention requires both Closed state and a chain-derived closure timestamp (64.6762ms)
+✖ retention accepts only one positive decimal job ID (26.1837ms)
+✔ automatic retention waits until the exact chain-derived 90-day boundary (115.2742ms)
+✔ a fresh EIP-191 request from either chain-named party permits early deletion (140.5108ms)
+✔ a caller-supplied wallet cannot impersonate a party and wrong-job signatures are refused (80.3501ms)
+✔ signed deletion binds canonical origin, chain, escrow, and a maximum five-minute window (63.6349ms)
+✔ every storage path is validated before any file or row is removed (51.102ms)
+✔ a parent directory junction cannot redirect deletion outside private storage (60.2842ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 8
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2162.3941
+
+✖ failing tests:
+
+test at scripts\phase4-retention.test.mjs:227:1
+✖ retention accepts only one positive decimal job ID (26.1837ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.test.mjs:230:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /job|identifier|decimal|positive/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+exit code: 1

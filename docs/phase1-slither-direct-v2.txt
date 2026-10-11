@@ -1,0 +1,53 @@
+
+Detector: uninitialized-state
+FairworkEscrow._milestones (src/FairworkEscrow.sol#155) is never initialized. It is used in:
+	- FairworkEscrow.createJob(FairworkEscrow.JobInput,FairworkEscrow.MilestoneInput[]) (src/FairworkEscrow.sol#217-295)
+	- FairworkEscrow.fundJob(uint256) (src/FairworkEscrow.sol#314-342)
+	- FairworkEscrow.getMilestone(uint256,uint256) (src/FairworkEscrow.sol#414-426)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-state-variables
+
+Detector: uninitialized-local
+FairworkEscrow.createJob(FairworkEscrow.JobInput,FairworkEscrow.MilestoneInput[]).totalAmount (src/FairworkEscrow.sol#237) is a local variable never initialized
+FairworkEscrow.constructor(FairworkEscrow.TokenConfig[],FairworkEscrow.ProtocolConfig,address).runtimeDecimals (src/FairworkEscrow.sol#194) is a local variable never initialized
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-local-variables
+
+Detector: calls-loop
+FairworkEscrow.constructor(FairworkEscrow.TokenConfig[],FairworkEscrow.ProtocolConfig,address) (src/FairworkEscrow.sol#176-213) has external calls inside a loop: value = IERC20Metadata(config.token).decimals() (src/FairworkEscrow.sol#195-199)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation/#calls-inside-a-loop
+
+Detector: timestamp
+FairworkEscrow.acceptJob(uint256) (src/FairworkEscrow.sol#299-310) uses timestamp for comparisons
+	Dangerous comparisons:
+	- acceptedAt >= job.proposalEnd (src/FairworkEscrow.sol#304)
+FairworkEscrow.fundJob(uint256) (src/FairworkEscrow.sol#314-342) uses timestamp for comparisons
+	Dangerous comparisons:
+	- fundedAt >= job.fundingDeadline (src/FairworkEscrow.sol#319)
+	- balanceAfter < balanceBefore || balanceAfter - balanceBefore != job.totalAmount (src/FairworkEscrow.sol#339)
+FairworkEscrow.cancelExpiredProposal(uint256) (src/FairworkEscrow.sol#346-352) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _now64() < job.proposalEnd (src/FairworkEscrow.sol#349)
+FairworkEscrow.cancelUnfundedJob(uint256) (src/FairworkEscrow.sol#356-362) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _now64() < job.fundingDeadline (src/FairworkEscrow.sol#359)
+FairworkEscrow._assertCodehash(address,FairworkEscrow.TokenConfig) (src/FairworkEscrow.sol#478-480) uses timestamp for comparisons
+	Dangerous comparisons:
+	- token.codehash != config.codehash (src/FairworkEscrow.sol#479)
+FairworkEscrow._now64() (src/FairworkEscrow.sol#500-503) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp > type()(uint64).max (src/FairworkEscrow.sol#501)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+
+Detector: cyclomatic-complexity
+FairworkEscrow.constructor(FairworkEscrow.TokenConfig[],FairworkEscrow.ProtocolConfig,address) (src/FairworkEscrow.sol#176-213) has a high cyclomatic complexity (12).
+FairworkEscrow.createJob(FairworkEscrow.JobInput,FairworkEscrow.MilestoneInput[]) (src/FairworkEscrow.sol#217-295) has a high cyclomatic complexity (12).
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#cyclomatic-complexity
+
+Detector: dead-code
+FairworkEscrow._creditFromEscrow(address,address,uint256) (src/FairworkEscrow.sol#455-465) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+src\FairworkEscrow.sol analyzed (8 contracts with 102 detectors), 13 result(s) found
+'forge config --json' running
+Installing solc '0.8.36'...
+Version '0.8.36' installed.
+'C:/Users/vishvesh/.solc-select/artifacts/solc-0.8.36/solc-0.8.36 --version' running
+'C:/Users/vishvesh/.solc-select/artifacts/solc-0.8.36/solc-0.8.36 @openzeppelin/contracts/=../node_modules/@openzeppelin/contracts/ forge-std/=lib/forge-std/src/ @openzeppelin/=../node_modules/@openzeppelin/ src\FairworkEscrow.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --evm-version osaka --allow-paths .,C:\Users\vishvesh\Documents\ChatGPT\BNB\contracts\src' running

@@ -1,0 +1,52 @@
+(node:26076) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/routes.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ automatic retention purges a due agreement even when the manifest client is not its party (17.991ms)
+✖ a retry completes after an interrupted private-file unlink (25.353ms)
+✖ a signed purge removes an actual uploaded encrypted UUID .enc file (57.3563ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 0
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1617.9288
+
+✖ failing tests:
+
+test at scripts\phase4-retention-regressions.test.mjs:126:1
+✖ automatic retention purges a due agreement even when the manifest client is not its party (17.991ms)
+  Error: Automatic retention could not verify the configured client against the agreement.
+      at fail (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.mjs:19:9)
+      at runRetention (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.mjs:179:5)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention-regressions.test.mjs:131:18)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+
+test at scripts\phase4-retention-regressions.test.mjs:138:1
+✖ a retry completes after an interrupted private-file unlink (25.353ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention-regressions.test.mjs:151:3)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /interrupted/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at scripts\phase4-retention-regressions.test.mjs:163:1
+✖ a signed purge removes an actual uploaded encrypted UUID .enc file (57.3563ms)
+  Error: A private storage path is missing; retention stopped before deleting data.
+      at fail (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.mjs:19:9)
+      at assertNoLinkComponents (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.mjs:80:37)
+      at async checkedStorageFiles (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.mjs:110:5)
+      at async runRetention (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.mjs:190:24)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention-regressions.test.mjs:215:18)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+exit code: 1

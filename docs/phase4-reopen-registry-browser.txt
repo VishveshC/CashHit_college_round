@@ -1,0 +1,1115 @@
+## Registry standalone compiled
+Browser tab: 8, Title: "Fairwork — milestone escrow", URL: "http://localhost:3000/".
+1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+	2 container
+		3 link Description: Fairwork home, Value: localhost:3000/#top
+		4 text LOCAL CHAIN · 31337
+		5 button Connect wallet
+		6 container top
+			7 text MILESTONE ESCROW · LOCAL PROTOTYPE
+			8 heading Work moves forward. Trust stays verifiable., Value: 1
+				9 text Work moves forward.
+				10 text Trust stays verifiable.
+			11 text Agree on the work in private. Put each milestone on chain. Release payment only when the rules say it is due.
+			12 text FW RULES FIRST
+			13 text FUNDS SECOND
+		14 container Wallet and agreement controls
+			15 text 01
+			16 text Connect your wallet
+			17 text Private access follows the signed wallet
+			18 text Local role
+			19 pop up button (collapsed, settable) Local role, Value: Choose a seeded role…, ID: demo-role, Secondary Actions: Expand
+				20 menu
+					21 (selected) Choose a seeded role…
+					22 Client
+					23 Freelancer
+					24 Treasury
+					25 Arbiter 1 · 0x90F7…b906
+					26 Arbiter 2 · 0x15d3…6A65
+					27 Arbiter 3 · 0x9965…A4dc
+					28 Arbiter 4 · 0x976E…0aa9
+					29 Arbiter 5 · 0x14dC…9955
+					30 Arbiter 6 · 0x2361…1E8f
+			31 text Development accounts only
+			32 button Connect browser wallet ↗
+				33 text Connect browser wallet
+				34 text ↗
+			35 text 02
+			36 text Open one agreement
+			37 text Enter a job ID. There is no public job directory.
+			38 container
+				39 text Agreement ID #
+				40 text field (settable) Agreement ID, ID: job-id
+				41 button Open agreement →
+					42 text Open agreement
+					43 text →
+		44 container Arbiter registry
+			45 text ARBITRATION GOVERNANCE
+			46 heading Arbiter registry, Value: 3, ID: arbiter-registry-heading
+				47 text Arbiter registry
+			48 text The owner-controlled on-chain wallet roster. Changes apply to future panel selections; current panel assignments remain snapshotted.
+			49 definition list
+				50 container On-chain owner
+					51 text On-chain owner
+				52 text 0xf39Fd6…b92266
+				53 container Registered arbiters
+					54 text Registered arbiters
+				55 container
+					56 text 6  / 128
+				57 container Read at block
+					58 text Read at block
+				59 text 527
+			60 container Current arbiter members
+				61 container
+					62 text Arbiter  1
+				63 text 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				64 button (disabled) Remove arbiter 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				65 container
+					66 text Arbiter  2
+				67 text 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				68 button (disabled) Remove arbiter 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				69 container
+					70 text Arbiter  3
+				71 text 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				72 button (disabled) Remove arbiter 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				73 container
+					74 text Arbiter  4
+				75 text 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				76 button (disabled) Remove arbiter 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				77 container
+					78 text Arbiter  5
+				79 text 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				80 button (disabled) Remove arbiter 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				81 container
+					82 text Arbiter  6
+				83 text 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+				84 button (disabled) Remove arbiter 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+			85 container
+				86 text Add an arbiter wallet address
+				87 text field (disabled) Add an arbiter wallet address, ID: arbiter-registry-address
+				88 button (disabled) Add arbiter
+			89 container arbiter-registry-vetting
+				90 text Wallets only.
+				91 text  Local demo wallets are synthetic. Real arbiters require off-chain identity vetting before registration; no identity details belong here.
+			92 text Registry changes are disabled for this wallet. Connect the on-chain owner shown above to manage membership.
+			93 button Refresh registry
+		94 text A QUIETER WAY TO WORK TOGETHER
+		95 heading One agreement. Clear next steps., Value: 2
+			96 text One agreement.
+			97 text Clear next steps.
+		98 text Open an agreement by its ID to see milestone status, chain deadlines and the actions available to your wallet. Private terms stay closed until you sign in.
+		99 text ✓ Exact token amounts ✓ Deadline-aware actions ✓ Private evidence access fairwork.  · Local prototype Local chain only · No real funds · Not audited Chain time shown in UTC
+
+The focused UI element is 1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+## Registry owner without loaded job
+Browser tab: 8, Title: "Fairwork — milestone escrow", URL: "http://localhost:3000/".
+1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+	2 container
+		3 link Description: Fairwork home, Value: localhost:3000/#top
+		4 text LOCAL CHAIN · 31337
+		5 button Connect wallet
+		6 container top
+			7 text MILESTONE ESCROW · LOCAL PROTOTYPE
+			8 heading Work moves forward. Trust stays verifiable., Value: 1
+				9 text Work moves forward.
+				10 text Trust stays verifiable.
+			11 text Agree on the work in private. Put each milestone on chain. Release payment only when the rules say it is due.
+			12 text FW RULES FIRST
+			13 text FUNDS SECOND
+		14 container Wallet and agreement controls
+			15 text 01
+			16 text Connect your wallet
+			17 text Private access follows the signed wallet
+			18 text Local role
+			19 pop up button (disabled, collapsed, settable) Local role, Value: Choose a seeded role…, ID: demo-role, Secondary Actions: Expand
+				20 menu
+					21 (selected) Choose a seeded role…
+					22 Client
+					23 Freelancer
+					24 Treasury
+					25 Arbiter 1 · 0x90F7…b906
+					26 Arbiter 2 · 0x15d3…6A65
+					27 Arbiter 3 · 0x9965…A4dc
+					28 Arbiter 4 · 0x976E…0aa9
+					29 Arbiter 5 · 0x14dC…9955
+					30 Arbiter 6 · 0x2361…1E8f
+			31 text Development accounts only
+			32 button Connect browser wallet ↗
+				33 text Connect browser wallet
+				34 text ↗
+			35 text 02
+			36 text Open one agreement
+			37 text Enter a job ID. There is no public job directory.
+			38 container
+				39 text Agreement ID #
+				40 text field (settable) Agreement ID, ID: job-id
+				41 button (disabled) Loading… →
+					42 text Loading… →
+		44 container Arbiter registry
+			45 text ARBITRATION GOVERNANCE
+			46 heading Arbiter registry, Value: 3, ID: arbiter-registry-heading
+				47 text Arbiter registry
+			48 text The owner-controlled on-chain wallet roster. Changes apply to future panel selections; current panel assignments remain snapshotted.
+			49 definition list
+				50 container On-chain owner
+					51 text On-chain owner
+				52 text 0xf39Fd6…b92266
+				53 container Registered arbiters
+					54 text Registered arbiters
+				55 container
+					56 text 6  / 128
+				57 container Read at block
+					58 text Read at block
+				59 text 527
+			60 container Current arbiter members
+				61 container
+					62 text Arbiter  1
+				63 text 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				64 button (disabled) Remove arbiter 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				65 container
+					66 text Arbiter  2
+				67 text 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				68 button (disabled) Remove arbiter 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				69 container
+					70 text Arbiter  3
+				71 text 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				72 button (disabled) Remove arbiter 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				73 container
+					74 text Arbiter  4
+				75 text 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				76 button (disabled) Remove arbiter 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				77 container
+					78 text Arbiter  5
+				79 text 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				80 button (disabled) Remove arbiter 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				81 container
+					82 text Arbiter  6
+				83 text 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+				84 button (disabled) Remove arbiter 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+			85 container
+				86 text Add an arbiter wallet address
+				87 text field (disabled) Add an arbiter wallet address, ID: arbiter-registry-address
+				88 button (disabled) Add arbiter
+			89 container arbiter-registry-vetting
+				90 text Wallets only.
+				91 text  Local demo wallets are synthetic. Real arbiters require off-chain identity vetting before registration; no identity details belong here.
+			92 text Registry changes are disabled for this wallet. Connect the on-chain owner shown above to manage membership.
+			93 button (disabled) Refresh registry
+		94 text A QUIETER WAY TO WORK TOGETHER
+		95 heading One agreement. Clear next steps., Value: 2
+			96 text One agreement.
+			97 text Clear next steps.
+		98 text Open an agreement by its ID to see milestone status, chain deadlines and the actions available to your wallet. Private terms stay closed until you sign in.
+		99 text ✓ Exact token amounts ✓ Deadline-aware actions ✓ Private evidence access fairwork.  · Local prototype Local chain only · No real funds · Not audited Chain time shown in UTC
+
+The focused UI element is 1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+## Registry add synthetic client wallet summary
+Browser tab: 8, Title: "Fairwork — milestone escrow", URL: "http://localhost:3000/".
+1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+	2 container
+		3 link Description: Fairwork home, Value: localhost:3000/#top
+		4 text LOCAL CHAIN · 31337 TREASURY 0xf39F…2266
+		100 button Disconnect wallet
+		6 container top
+			7 text MILESTONE ESCROW · LOCAL PROTOTYPE
+			8 heading Work moves forward. Trust stays verifiable., Value: 1
+				9 text Work moves forward.
+				10 text Trust stays verifiable.
+			11 text Agree on the work in private. Put each milestone on chain. Release payment only when the rules say it is due.
+			12 text FW RULES FIRST
+			13 text FUNDS SECOND
+		14 container Wallet and agreement controls
+			15 text 01
+			16 text Connect your wallet
+			17 text Private access follows the signed wallet
+			18 text Local role
+			19 pop up button (disabled, collapsed, settable) Local role, Value: Treasury, ID: demo-role, Secondary Actions: Expand
+				20 menu
+					21 Choose a seeded role…
+					22 Client
+					23 Freelancer
+					24 (selected) Treasury
+					25 Arbiter 1 · 0x90F7…b906
+					26 Arbiter 2 · 0x15d3…6A65
+					27 Arbiter 3 · 0x9965…A4dc
+					28 Arbiter 4 · 0x976E…0aa9
+					29 Arbiter 5 · 0x14dC…9955
+					30 Arbiter 6 · 0x2361…1E8f
+			31 text Development accounts only
+			101 text 0xf39F…2266
+			102 container
+				103 text Treasury  · chain  31337
+			104 button (disabled) Waiting for wallet…
+			35 text 02
+			36 text Open one agreement
+			37 text Enter a job ID. There is no public job directory.
+			38 container
+				39 text Agreement ID #
+				40 text field (settable) Agreement ID, ID: job-id
+				41 button (disabled) Loading… →
+					42 text Loading… →
+		105 text ⌑ Private by authorization.  Sign a SIWE message to load private agreement text, file access, rejection reasons and evidence. Signing in is separate from each contract transaction.
+		44 container Arbiter registry
+			45 text ARBITRATION GOVERNANCE
+			46 heading Arbiter registry, Value: 3, ID: arbiter-registry-heading
+				47 text Arbiter registry
+			48 text The owner-controlled on-chain wallet roster. Changes apply to future panel selections; current panel assignments remain snapshotted.
+			49 definition list
+				50 container On-chain owner
+					51 text On-chain owner
+				52 text 0xf39Fd6…b92266
+				53 container Registered arbiters
+					54 text Registered arbiters
+				55 container
+					56 text 6  / 128
+				57 container Read at block
+					58 text Read at block
+				59 text 527
+			60 container Current arbiter members
+				61 container
+					62 text Arbiter  1
+				63 text 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				64 button (disabled) Remove arbiter 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				65 container
+					66 text Arbiter  2
+				67 text 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				68 button (disabled) Remove arbiter 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				69 container
+					70 text Arbiter  3
+				71 text 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				72 button (disabled) Remove arbiter 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				73 container
+					74 text Arbiter  4
+				75 text 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				76 button (disabled) Remove arbiter 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				77 container
+					78 text Arbiter  5
+				79 text 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				80 button (disabled) Remove arbiter 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				81 container
+					82 text Arbiter  6
+				83 text 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+				84 button (disabled) Remove arbiter 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+			85 container
+				86 text Add an arbiter wallet address
+				87 text field (disabled) Add an arbiter wallet address, Value: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8, ID: arbiter-registry-address
+				88 button (disabled) Waiting for confirmed receipt…
+			89 container arbiter-registry-vetting
+				90 text Wallets only.
+				91 text  Local demo wallets are synthetic. Real arbiters require off-chain identity vetting before registration; no identity details belong here.
+			106 text Registry order may change after removal. Existing panels and draws keep their recorded membership.
+			93 button (disabled) Refresh registry
+		94 text A QUIETER WAY TO WORK TOGETHER
+		95 heading One agreement. Clear next steps., Value: 2
+			96 text One agreement.
+			97 text Clear next steps.
+		98 text Open an agreement by its ID to see milestone status, chain deadlines and the actions available to your wallet. Private terms stay closed until you sign in.
+		99 text ✓ Exact token amounts ✓ Deadline-aware actions ✓ Private evidence access fairwork.  · Local prototype Local chain only · No real funds · Not audited Chain time shown in UTC
+		107 container Add registered arbiter
+			108 text !
+			109 text READ BEFORE SIGNING
+			110 heading Add registered arbiter, Value: 2, ID: confirm-heading
+				111 text Add registered arbiter
+			112 text This is the exact chain action your wallet is being asked to sign.
+			113 button Close
+			114 container
+				115 text Network Fairwork Local · chain  31337 Contract 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0 Parties 0xf39F…2266 ↔ 0x7099…79C8 Token · raw and formatted USDC ( not transferred  raw units) 0x5FbDB2315678afecb367f032d93F642f64180aa3 Terms and commitments Owner-only registry administration; contract enforcement remains authoritative. Timing and revisions Registry changes affect future panel selection. What happens •  Add 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 to the public registry. •  Future selections use the updated registry. Existing snapshotted panels do not change. •  This action transfers no tokens and grants no access to an already assigned private case.
+			116 button Cancel
+			117 button Continue to wallet ↗
+				118 text Continue to wallet
+				119 text ↗
+
+The focused UI element is 1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+## Registry add synthetic client wallet result
+Browser tab: 8, Title: "Fairwork — milestone escrow", URL: "http://localhost:3000/".
+1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+	2 container
+		3 link Description: Fairwork home, Value: localhost:3000/#top
+		4 text LOCAL CHAIN · 31337 TREASURY 0xf39F…2266
+		100 button Disconnect wallet
+		6 container top
+			7 text MILESTONE ESCROW · LOCAL PROTOTYPE
+			8 heading Work moves forward. Trust stays verifiable., Value: 1
+				9 text Work moves forward.
+				10 text Trust stays verifiable.
+			11 text Agree on the work in private. Put each milestone on chain. Release payment only when the rules say it is due.
+			12 text FW RULES FIRST
+			13 text FUNDS SECOND
+		106 text Add registered arbiter confirmed. State refreshed from chain.
+		107 button Dismiss
+		108 text Receipt confirmed
+		109 text Chain state has been refreshed after confirmation.
+		110 text 0xba74…4c19
+		14 container Wallet and agreement controls
+			15 text 01
+			16 text Connect your wallet
+			17 text Private access follows the signed wallet
+			18 text Local role
+			19 pop up button (collapsed, settable) Local role, Value: Treasury, ID: demo-role, Secondary Actions: Expand
+				20 menu
+					21 Choose a seeded role…
+					22 Client
+					23 Freelancer
+					24 (selected) Treasury
+					25 Arbiter 1 · 0x90F7…b906
+					26 Arbiter 2 · 0x15d3…6A65
+					27 Arbiter 3 · 0x9965…A4dc
+					28 Arbiter 4 · 0x976E…0aa9
+					29 Arbiter 5 · 0x14dC…9955
+					30 Arbiter 6 · 0x2361…1E8f
+			31 text Development accounts only
+			101 text 0xf39F…2266
+			102 container
+				103 text Treasury  · chain  31337
+			104 button Sign in to unlock private terms
+			35 text 02
+			36 text Open one agreement
+			37 text Enter a job ID. There is no public job directory.
+			38 container
+				39 text Agreement ID #
+				40 text field (settable) Agreement ID, ID: job-id
+				41 button Open agreement →
+					42 text Open agreement
+					111 text →
+		105 text ⌑ Private by authorization.  Sign a SIWE message to load private agreement text, file access, rejection reasons and evidence. Signing in is separate from each contract transaction.
+		44 container Arbiter registry
+			45 text ARBITRATION GOVERNANCE
+			46 heading Arbiter registry, Value: 3, ID: arbiter-registry-heading
+				47 text Arbiter registry
+			48 text The owner-controlled on-chain wallet roster. Changes apply to future panel selections; current panel assignments remain snapshotted.
+			112 text The transaction was confirmed. A fresh pinned read will update the roster below.
+			49 definition list
+				50 container On-chain owner
+					51 text On-chain owner
+				52 text 0xf39Fd6…b92266
+				53 container Registered arbiters
+					54 text Registered arbiters
+				55 container
+					56 text 7  / 128
+				57 container Read at block
+					58 text Read at block
+				59 text 528
+			60 container Current arbiter members
+				61 container
+					62 text Arbiter  1
+				63 text 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				64 button Remove arbiter 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				65 container
+					66 text Arbiter  2
+				67 text 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				68 button Remove arbiter 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				69 container
+					70 text Arbiter  3
+				71 text 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				72 button Remove arbiter 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				73 container
+					74 text Arbiter  4
+				75 text 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				76 button Remove arbiter 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				77 container
+					78 text Arbiter  5
+				79 text 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				80 button Remove arbiter 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				81 container
+					82 text Arbiter  6
+				83 text 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+				84 button Remove arbiter 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+				113 container
+					114 text Arbiter  7
+				115 text 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+				116 button Remove arbiter 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+			85 container
+				86 text Add an arbiter wallet address
+				87 text field (settable) Add an arbiter wallet address, ID: arbiter-registry-address
+				88 button (disabled) Add arbiter
+			89 container arbiter-registry-vetting
+				90 text Wallets only.
+				91 text  Local demo wallets are synthetic. Real arbiters require off-chain identity vetting before registration; no identity details belong here.
+			117 text Registry order may change after removal. Existing panels and draws keep their recorded membership.
+			93 button Refresh registry
+		94 text A QUIETER WAY TO WORK TOGETHER
+		95 heading One agreement. Clear next steps., Value: 2
+			96 text One agreement.
+			97 text Clear next steps.
+		98 text Open an agreement by its ID to see milestone status, chain deadlines and the actions available to your wallet. Private terms stay closed until you sign in.
+		99 text ✓ Exact token amounts ✓ Deadline-aware actions ✓ Private evidence access fairwork.  · Local prototype Local chain only · No real funds · Not audited Chain time shown in UTC
+
+The focused UI element is 1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+## Registry seven members confirmed
+Browser tab: 8, Title: "Fairwork — milestone escrow", URL: "http://localhost:3000/".
+1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+	2 container
+		3 link Description: Fairwork home, Value: localhost:3000/#top
+		4 text LOCAL CHAIN · 31337 TREASURY 0xf39F…2266
+		100 button Disconnect wallet
+		6 container top
+			7 text MILESTONE ESCROW · LOCAL PROTOTYPE
+			8 heading Work moves forward. Trust stays verifiable., Value: 1
+				9 text Work moves forward.
+				10 text Trust stays verifiable.
+			11 text Agree on the work in private. Put each milestone on chain. Release payment only when the rules say it is due.
+			12 text FW RULES FIRST
+			13 text FUNDS SECOND
+		106 text Add registered arbiter confirmed. State refreshed from chain.
+		107 button Dismiss
+		108 text Receipt confirmed
+		109 text Chain state has been refreshed after confirmation.
+		110 text 0xba74…4c19
+		14 container Wallet and agreement controls
+			15 text 01
+			16 text Connect your wallet
+			17 text Private access follows the signed wallet
+			18 text Local role
+			19 pop up button (collapsed, settable) Local role, Value: Treasury, ID: demo-role, Secondary Actions: Expand
+				20 menu
+					21 Choose a seeded role…
+					22 Client
+					23 Freelancer
+					24 (selected) Treasury
+					25 Arbiter 1 · 0x90F7…b906
+					26 Arbiter 2 · 0x15d3…6A65
+					27 Arbiter 3 · 0x9965…A4dc
+					28 Arbiter 4 · 0x976E…0aa9
+					29 Arbiter 5 · 0x14dC…9955
+					30 Arbiter 6 · 0x2361…1E8f
+			31 text Development accounts only
+			101 text 0xf39F…2266
+			102 container
+				103 text Treasury  · chain  31337
+			104 button Sign in to unlock private terms
+			35 text 02
+			36 text Open one agreement
+			37 text Enter a job ID. There is no public job directory.
+			38 container
+				39 text Agreement ID #
+				40 text field (settable) Agreement ID, ID: job-id
+				41 button Open agreement →
+					42 text Open agreement
+					111 text →
+		105 text ⌑ Private by authorization.  Sign a SIWE message to load private agreement text, file access, rejection reasons and evidence. Signing in is separate from each contract transaction.
+		44 container Arbiter registry
+			45 text ARBITRATION GOVERNANCE
+			46 heading Arbiter registry, Value: 3, ID: arbiter-registry-heading
+				47 text Arbiter registry
+			48 text The owner-controlled on-chain wallet roster. Changes apply to future panel selections; current panel assignments remain snapshotted.
+			112 text The transaction was confirmed. A fresh pinned read will update the roster below.
+			49 definition list
+				50 container On-chain owner
+					51 text On-chain owner
+				52 text 0xf39Fd6…b92266
+				53 container Registered arbiters
+					54 text Registered arbiters
+				55 container
+					56 text 7  / 128
+				57 container Read at block
+					58 text Read at block
+				59 text 528
+			60 container Current arbiter members
+				61 container
+					62 text Arbiter  1
+				63 text 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				64 button Remove arbiter 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				65 container
+					66 text Arbiter  2
+				67 text 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				68 button Remove arbiter 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				69 container
+					70 text Arbiter  3
+				71 text 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				72 button Remove arbiter 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				73 container
+					74 text Arbiter  4
+				75 text 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				76 button Remove arbiter 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				77 container
+					78 text Arbiter  5
+				79 text 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				80 button Remove arbiter 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				81 container
+					82 text Arbiter  6
+				83 text 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+				84 button Remove arbiter 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+				113 container
+					114 text Arbiter  7
+				115 text 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+				116 button Remove arbiter 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+			85 container
+				86 text Add an arbiter wallet address
+				87 text field (settable) Add an arbiter wallet address, ID: arbiter-registry-address
+				88 button (disabled) Add arbiter
+			89 container arbiter-registry-vetting
+				90 text Wallets only.
+				91 text  Local demo wallets are synthetic. Real arbiters require off-chain identity vetting before registration; no identity details belong here.
+			117 text Registry order may change after removal. Existing panels and draws keep their recorded membership.
+			93 button Refresh registry
+		94 text A QUIETER WAY TO WORK TOGETHER
+		95 heading One agreement. Clear next steps., Value: 2
+			96 text One agreement.
+			97 text Clear next steps.
+		98 text Open an agreement by its ID to see milestone status, chain deadlines and the actions available to your wallet. Private terms stay closed until you sign in.
+		99 text ✓ Exact token amounts ✓ Deadline-aware actions ✓ Private evidence access fairwork.  · Local prototype Local chain only · No real funds · Not audited Chain time shown in UTC
+
+The focused UI element is 1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+## Registry remove synthetic client wallet summary
+Browser tab: 8, Title: "Fairwork — milestone escrow", URL: "http://localhost:3000/".
+1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+	2 container
+		3 link Description: Fairwork home, Value: localhost:3000/#top
+		4 text LOCAL CHAIN · 31337 TREASURY 0xf39F…2266
+		100 button Disconnect wallet
+		6 container top
+			7 text MILESTONE ESCROW · LOCAL PROTOTYPE
+			8 heading Work moves forward. Trust stays verifiable., Value: 1
+				9 text Work moves forward.
+				10 text Trust stays verifiable.
+			11 text Agree on the work in private. Put each milestone on chain. Release payment only when the rules say it is due.
+			12 text FW RULES FIRST
+			13 text FUNDS SECOND
+		14 container Wallet and agreement controls
+			15 text 01
+			16 text Connect your wallet
+			17 text Private access follows the signed wallet
+			18 text Local role
+			19 pop up button (disabled, collapsed, settable) Local role, Value: Treasury, ID: demo-role, Secondary Actions: Expand
+				20 menu
+					21 Choose a seeded role…
+					22 Client
+					23 Freelancer
+					24 (selected) Treasury
+					25 Arbiter 1 · 0x90F7…b906
+					26 Arbiter 2 · 0x15d3…6A65
+					27 Arbiter 3 · 0x9965…A4dc
+					28 Arbiter 4 · 0x976E…0aa9
+					29 Arbiter 5 · 0x14dC…9955
+					30 Arbiter 6 · 0x2361…1E8f
+			31 text Development accounts only
+			101 text 0xf39F…2266
+			102 container
+				103 text Treasury  · chain  31337
+			104 button (disabled) Waiting for wallet…
+			35 text 02
+			36 text Open one agreement
+			37 text Enter a job ID. There is no public job directory.
+			38 container
+				39 text Agreement ID #
+				40 text field (settable) Agreement ID, ID: job-id
+				41 button (disabled) Loading… →
+					42 text Loading… →
+		105 text ⌑ Private by authorization.  Sign a SIWE message to load private agreement text, file access, rejection reasons and evidence. Signing in is separate from each contract transaction.
+		44 container Arbiter registry
+			45 text ARBITRATION GOVERNANCE
+			46 heading Arbiter registry, Value: 3, ID: arbiter-registry-heading
+				47 text Arbiter registry
+			48 text The owner-controlled on-chain wallet roster. Changes apply to future panel selections; current panel assignments remain snapshotted.
+			49 definition list
+				50 container On-chain owner
+					51 text On-chain owner
+				52 text 0xf39Fd6…b92266
+				53 container Registered arbiters
+					54 text Registered arbiters
+				55 container
+					56 text 7  / 128
+				57 container Read at block
+					58 text Read at block
+				59 text 528
+			60 container Current arbiter members
+				61 container
+					62 text Arbiter  1
+				63 text 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				64 button (disabled) Remove arbiter 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				65 container
+					66 text Arbiter  2
+				67 text 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				68 button (disabled) Remove arbiter 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				69 container
+					70 text Arbiter  3
+				71 text 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				72 button (disabled) Remove arbiter 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				73 container
+					74 text Arbiter  4
+				75 text 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				76 button (disabled) Remove arbiter 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				77 container
+					78 text Arbiter  5
+				79 text 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				80 button (disabled) Remove arbiter 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				81 container
+					82 text Arbiter  6
+				83 text 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+				84 button (disabled) Remove arbiter 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+				113 container
+					114 text Arbiter  7
+				115 text 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+				116 button (disabled) Remove arbiter 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+			85 container
+				86 text Add an arbiter wallet address
+				87 text field (disabled) Add an arbiter wallet address, ID: arbiter-registry-address
+				88 button (disabled) Waiting for confirmed receipt…
+			89 container arbiter-registry-vetting
+				90 text Wallets only.
+				91 text  Local demo wallets are synthetic. Real arbiters require off-chain identity vetting before registration; no identity details belong here.
+			117 text Registry order may change after removal. Existing panels and draws keep their recorded membership.
+			93 button (disabled) Refresh registry
+		94 text A QUIETER WAY TO WORK TOGETHER
+		95 heading One agreement. Clear next steps., Value: 2
+			96 text One agreement.
+			97 text Clear next steps.
+		98 text Open an agreement by its ID to see milestone status, chain deadlines and the actions available to your wallet. Private terms stay closed until you sign in.
+		99 text ✓ Exact token amounts ✓ Deadline-aware actions ✓ Private evidence access fairwork.  · Local prototype Local chain only · No real funds · Not audited Chain time shown in UTC
+		118 container Remove registered arbiter
+			119 text !
+			120 text READ BEFORE SIGNING
+			121 heading Remove registered arbiter, Value: 2, ID: confirm-heading
+				122 text Remove registered arbiter
+			123 text This is the exact chain action your wallet is being asked to sign.
+			124 button Close
+			125 container
+				126 text Network Fairwork Local · chain  31337 Contract 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0 Parties 0xf39F…2266 ↔ 0x7099…79C8 Token · raw and formatted USDC ( not transferred  raw units) 0x5FbDB2315678afecb367f032d93F642f64180aa3 Terms and commitments Owner-only registry administration; contract enforcement remains authoritative. Timing and revisions Registry changes affect future panel selection. What happens •  Remove 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 from the public registry. •  Future selections use the updated registry. Existing snapshotted panels do not change. •  This action transfers no tokens and grants no access to an already assigned private case.
+			127 button Cancel
+			128 button Continue to wallet ↗
+				129 text Continue to wallet
+				130 text ↗
+
+The focused UI element is 1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+## Registry remove synthetic client wallet result
+Browser tab: 8, Title: "Fairwork — milestone escrow", URL: "http://localhost:3000/".
+1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+	2 container
+		3 link Description: Fairwork home, Value: localhost:3000/#top
+		4 text LOCAL CHAIN · 31337 TREASURY 0xf39F…2266
+		100 button Disconnect wallet
+		6 container top
+			7 text MILESTONE ESCROW · LOCAL PROTOTYPE
+			8 heading Work moves forward. Trust stays verifiable., Value: 1
+				9 text Work moves forward.
+				10 text Trust stays verifiable.
+			11 text Agree on the work in private. Put each milestone on chain. Release payment only when the rules say it is due.
+			12 text FW RULES FIRST
+			13 text FUNDS SECOND
+		106 text Remove registered arbiter confirmed. State refreshed from chain.
+		107 button Dismiss
+		108 text Receipt confirmed
+		109 text Chain state has been refreshed after confirmation.
+		110 text 0x824d…be1d
+		14 container Wallet and agreement controls
+			15 text 01
+			16 text Connect your wallet
+			17 text Private access follows the signed wallet
+			18 text Local role
+			19 pop up button (collapsed, settable) Local role, Value: Treasury, ID: demo-role, Secondary Actions: Expand
+				20 menu
+					21 Choose a seeded role…
+					22 Client
+					23 Freelancer
+					24 (selected) Treasury
+					25 Arbiter 1 · 0x90F7…b906
+					26 Arbiter 2 · 0x15d3…6A65
+					27 Arbiter 3 · 0x9965…A4dc
+					28 Arbiter 4 · 0x976E…0aa9
+					29 Arbiter 5 · 0x14dC…9955
+					30 Arbiter 6 · 0x2361…1E8f
+			31 text Development accounts only
+			101 text 0xf39F…2266
+			102 container
+				103 text Treasury  · chain  31337
+			104 button Sign in to unlock private terms
+			35 text 02
+			36 text Open one agreement
+			37 text Enter a job ID. There is no public job directory.
+			38 container
+				39 text Agreement ID #
+				40 text field (settable) Agreement ID, ID: job-id
+				41 button Open agreement →
+					42 text Open agreement
+					111 text →
+		105 text ⌑ Private by authorization.  Sign a SIWE message to load private agreement text, file access, rejection reasons and evidence. Signing in is separate from each contract transaction.
+		44 container Arbiter registry
+			45 text ARBITRATION GOVERNANCE
+			46 heading Arbiter registry, Value: 3, ID: arbiter-registry-heading
+				47 text Arbiter registry
+			48 text The owner-controlled on-chain wallet roster. Changes apply to future panel selections; current panel assignments remain snapshotted.
+			112 text The removal was confirmed. A fresh pinned read will update the roster below.
+			49 definition list
+				50 container On-chain owner
+					51 text On-chain owner
+				52 text 0xf39Fd6…b92266
+				53 container Registered arbiters
+					54 text Registered arbiters
+				55 container
+					56 text 6  / 128
+				57 container Read at block
+					58 text Read at block
+				59 text 529
+			60 container Current arbiter members
+				61 container
+					62 text Arbiter  1
+				63 text 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				64 button Remove arbiter 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				65 container
+					66 text Arbiter  2
+				67 text 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				68 button Remove arbiter 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				69 container
+					70 text Arbiter  3
+				71 text 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				72 button Remove arbiter 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				73 container
+					74 text Arbiter  4
+				75 text 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				76 button Remove arbiter 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				77 container
+					78 text Arbiter  5
+				79 text 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				80 button Remove arbiter 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				81 container
+					82 text Arbiter  6
+				83 text 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+				84 button Remove arbiter 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+			85 container
+				86 text Add an arbiter wallet address
+				87 text field (settable) Add an arbiter wallet address, ID: arbiter-registry-address
+				88 button (disabled) Add arbiter
+			89 container arbiter-registry-vetting
+				90 text Wallets only.
+				91 text  Local demo wallets are synthetic. Real arbiters require off-chain identity vetting before registration; no identity details belong here.
+			113 text Registry order may change after removal. Existing panels and draws keep their recorded membership.
+			93 button Refresh registry
+		94 text A QUIETER WAY TO WORK TOGETHER
+		95 heading One agreement. Clear next steps., Value: 2
+			96 text One agreement.
+			97 text Clear next steps.
+		98 text Open an agreement by its ID to see milestone status, chain deadlines and the actions available to your wallet. Private terms stay closed until you sign in.
+		99 text ✓ Exact token amounts ✓ Deadline-aware actions ✓ Private evidence access fairwork.  · Local prototype Local chain only · No real funds · Not audited Chain time shown in UTC
+
+The focused UI element is 1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+## Registry restored six
+Browser tab: 8, Title: "Fairwork — milestone escrow", URL: "http://localhost:3000/".
+1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+	2 container
+		3 link Description: Fairwork home, Value: localhost:3000/#top
+		4 text LOCAL CHAIN · 31337 TREASURY 0xf39F…2266
+		100 button Disconnect wallet
+		6 container top
+			7 text MILESTONE ESCROW · LOCAL PROTOTYPE
+			8 heading Work moves forward. Trust stays verifiable., Value: 1
+				9 text Work moves forward.
+				10 text Trust stays verifiable.
+			11 text Agree on the work in private. Put each milestone on chain. Release payment only when the rules say it is due.
+			12 text FW RULES FIRST
+			13 text FUNDS SECOND
+		106 text Remove registered arbiter confirmed. State refreshed from chain.
+		107 button Dismiss
+		108 text Receipt confirmed
+		109 text Chain state has been refreshed after confirmation.
+		110 text 0x824d…be1d
+		14 container Wallet and agreement controls
+			15 text 01
+			16 text Connect your wallet
+			17 text Private access follows the signed wallet
+			18 text Local role
+			19 pop up button (collapsed, settable) Local role, Value: Treasury, ID: demo-role, Secondary Actions: Expand
+				20 menu
+					21 Choose a seeded role…
+					22 Client
+					23 Freelancer
+					24 (selected) Treasury
+					25 Arbiter 1 · 0x90F7…b906
+					26 Arbiter 2 · 0x15d3…6A65
+					27 Arbiter 3 · 0x9965…A4dc
+					28 Arbiter 4 · 0x976E…0aa9
+					29 Arbiter 5 · 0x14dC…9955
+					30 Arbiter 6 · 0x2361…1E8f
+			31 text Development accounts only
+			101 text 0xf39F…2266
+			102 container
+				103 text Treasury  · chain  31337
+			104 button Sign in to unlock private terms
+			35 text 02
+			36 text Open one agreement
+			37 text Enter a job ID. There is no public job directory.
+			38 container
+				39 text Agreement ID #
+				40 text field (settable) Agreement ID, ID: job-id
+				41 button Open agreement →
+					42 text Open agreement
+					111 text →
+		105 text ⌑ Private by authorization.  Sign a SIWE message to load private agreement text, file access, rejection reasons and evidence. Signing in is separate from each contract transaction.
+		44 container Arbiter registry
+			45 text ARBITRATION GOVERNANCE
+			46 heading Arbiter registry, Value: 3, ID: arbiter-registry-heading
+				47 text Arbiter registry
+			48 text The owner-controlled on-chain wallet roster. Changes apply to future panel selections; current panel assignments remain snapshotted.
+			112 text The removal was confirmed. A fresh pinned read will update the roster below.
+			49 definition list
+				50 container On-chain owner
+					51 text On-chain owner
+				52 text 0xf39Fd6…b92266
+				53 container Registered arbiters
+					54 text Registered arbiters
+				55 container
+					56 text 6  / 128
+				57 container Read at block
+					58 text Read at block
+				59 text 529
+			60 container Current arbiter members
+				61 container
+					62 text Arbiter  1
+				63 text 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				64 button Remove arbiter 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				65 container
+					66 text Arbiter  2
+				67 text 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				68 button Remove arbiter 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				69 container
+					70 text Arbiter  3
+				71 text 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				72 button Remove arbiter 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				73 container
+					74 text Arbiter  4
+				75 text 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				76 button Remove arbiter 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				77 container
+					78 text Arbiter  5
+				79 text 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				80 button Remove arbiter 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				81 container
+					82 text Arbiter  6
+				83 text 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+				84 button Remove arbiter 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+			85 container
+				86 text Add an arbiter wallet address
+				87 text field (settable) Add an arbiter wallet address, ID: arbiter-registry-address
+				88 button (disabled) Add arbiter
+			89 container arbiter-registry-vetting
+				90 text Wallets only.
+				91 text  Local demo wallets are synthetic. Real arbiters require off-chain identity vetting before registration; no identity details belong here.
+			113 text Registry order may change after removal. Existing panels and draws keep their recorded membership.
+			93 button Refresh registry
+		94 text A QUIETER WAY TO WORK TOGETHER
+		95 heading One agreement. Clear next steps., Value: 2
+			96 text One agreement.
+			97 text Clear next steps.
+		98 text Open an agreement by its ID to see milestone status, chain deadlines and the actions available to your wallet. Private terms stay closed until you sign in.
+		99 text ✓ Exact token amounts ✓ Deadline-aware actions ✓ Private evidence access fairwork.  · Local prototype Local chain only · No real funds · Not audited Chain time shown in UTC
+
+The focused UI element is 1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+## Registry nonowner
+Browser tab: 8, Title: "Fairwork — milestone escrow", URL: "http://localhost:3000/".
+1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+	2 container
+		3 link Description: Fairwork home, Value: localhost:3000/#top
+		4 text LOCAL CHAIN · 31337 CLIENT 0x7099…79C8
+		100 button Disconnect wallet
+		6 container top
+			7 text MILESTONE ESCROW · LOCAL PROTOTYPE
+			8 heading Work moves forward. Trust stays verifiable., Value: 1
+				9 text Work moves forward.
+				10 text Trust stays verifiable.
+			11 text Agree on the work in private. Put each milestone on chain. Release payment only when the rules say it is due.
+			12 text FW RULES FIRST
+			13 text FUNDS SECOND
+		106 text Remove registered arbiter confirmed. State refreshed from chain.
+		107 button Dismiss
+		108 text Receipt confirmed
+		109 text Chain state has been refreshed after confirmation.
+		110 text 0x824d…be1d
+		14 container Wallet and agreement controls
+			15 text 01
+			16 text Connect your wallet
+			17 text Private access follows the signed wallet
+			18 text Local role
+			19 pop up button (collapsed, settable) Local role, Value: Client, ID: demo-role, Secondary Actions: Expand
+				20 menu
+					21 Choose a seeded role…
+					22 (selected) Client
+					23 Freelancer
+					24 Treasury
+					25 Arbiter 1 · 0x90F7…b906
+					26 Arbiter 2 · 0x15d3…6A65
+					27 Arbiter 3 · 0x9965…A4dc
+					28 Arbiter 4 · 0x976E…0aa9
+					29 Arbiter 5 · 0x14dC…9955
+					30 Arbiter 6 · 0x2361…1E8f
+			31 text Development accounts only
+			101 text 0x7099…79C8
+			102 container
+				103 text Client  · chain  31337
+			104 button Sign in to unlock private terms
+			35 text 02
+			36 text Open one agreement
+			37 text Enter a job ID. There is no public job directory.
+			38 container
+				39 text Agreement ID #
+				40 text field (settable) Agreement ID, ID: job-id
+				41 button Open agreement →
+					42 text Open agreement
+					111 text →
+		105 text ⌑ Private by authorization.  Sign a SIWE message to load private agreement text, file access, rejection reasons and evidence. Signing in is separate from each contract transaction.
+		44 container Arbiter registry
+			45 text ARBITRATION GOVERNANCE
+			46 heading Arbiter registry, Value: 3, ID: arbiter-registry-heading
+				47 text Arbiter registry
+			48 text The owner-controlled on-chain wallet roster. Changes apply to future panel selections; current panel assignments remain snapshotted.
+			112 text The removal was confirmed. A fresh pinned read will update the roster below.
+			49 definition list
+				50 container On-chain owner
+					51 text On-chain owner
+				52 text 0xf39Fd6…b92266
+				53 container Registered arbiters
+					54 text Registered arbiters
+				55 container
+					56 text 6  / 128
+				57 container Read at block
+					58 text Read at block
+				59 text 529
+			60 container Current arbiter members
+				61 container
+					62 text Arbiter  1
+				63 text 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				64 button (disabled) Remove arbiter 0x90F79bf6EB2c4f870365E785982E1f101E93b906
+				65 container
+					66 text Arbiter  2
+				67 text 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				68 button (disabled) Remove arbiter 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+				69 container
+					70 text Arbiter  3
+				71 text 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				72 button (disabled) Remove arbiter 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+				73 container
+					74 text Arbiter  4
+				75 text 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				76 button (disabled) Remove arbiter 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+				77 container
+					78 text Arbiter  5
+				79 text 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				80 button (disabled) Remove arbiter 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+				81 container
+					82 text Arbiter  6
+				83 text 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+				84 button (disabled) Remove arbiter 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+			85 container
+				86 text Add an arbiter wallet address
+				87 text field (disabled) Add an arbiter wallet address, ID: arbiter-registry-address
+				88 button (disabled) Add arbiter
+			89 container arbiter-registry-vetting
+				90 text Wallets only.
+				91 text  Local demo wallets are synthetic. Real arbiters require off-chain identity vetting before registration; no identity details belong here.
+			93 button Refreshing registry…
+		94 text A QUIETER WAY TO WORK TOGETHER
+		95 heading One agreement. Clear next steps., Value: 2
+			96 text One agreement.
+			97 text Clear next steps.
+		98 text Open an agreement by its ID to see milestone status, chain deadlines and the actions available to your wallet. Private terms stay closed until you sign in.
+		99 text ✓ Exact token amounts ✓ Deadline-aware actions ✓ Private evidence access fairwork.  · Local prototype Local chain only · No real funds · Not audited Chain time shown in UTC
+
+The focused UI element is 1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+## Registry mobile
+- main:
+  - link "Fairwork home":
+    - /url: "#top"
+    - generic: F
+    - generic: fairwork.
+  - generic: LOCAL CHAIN · 31337
+  - generic: Client
+  - generic: 0x7099…79C8
+  - button "Disconnect wallet": ×
+  - paragraph: MILESTONE ESCROW · LOCAL PROTOTYPE
+  - heading "Work moves forward. Trust stays verifiable." [level=1]:
+    - text: Work moves forward.
+    - emphasis: Trust stays verifiable.
+  - paragraph: Agree on the work in private. Put each milestone on chain. Release payment only when the rules say it is due.
+  - status:
+    - generic: Remove registered arbiter confirmed. State refreshed from chain.
+    - button "Dismiss"
+  - status:
+    - strong: Receipt confirmed
+    - generic: Chain state has been refreshed after confirmation.
+    - code: 0x824d…be1d
+  - region "Wallet and agreement controls":
+    - generic: "01"
+    - strong: Connect your wallet
+    - generic: Private access follows the signed wallet
+    - generic: Local role
+    - combobox "Local role":
+      - option "Choose a seeded role…"
+      - option "Client" [selected]
+      - option "Freelancer"
+      - option "Treasury"
+      - option "Arbiter 1 · 0x90F7…b906"
+      - option "Arbiter 2 · 0x15d3…6A65"
+      - option "Arbiter 3 · 0x9965…A4dc"
+      - option "Arbiter 4 · 0x976E…0aa9"
+      - option "Arbiter 5 · 0x14dC…9955"
+      - option "Arbiter 6 · 0x2361…1E8f"
+    - generic: Development accounts only
+    - strong: 0x7099…79C8
+    - generic: Client · chain 31337
+    - button "Sign in to unlock private terms"
+    - generic: "02"
+    - strong: Open one agreement
+    - generic: Enter a job ID. There is no public job directory.
+    - generic: Agreement ID
+    - generic: "#"
+    - textbox "Agreement ID":
+      - /placeholder: Enter agreement ID
+    - button "Open agreement →":
+      - text: Open agreement
+      - generic: →
+  - generic: ⌑
+  - strong: Private by authorization.
+  - text: Sign a SIWE message to load private agreement text, file access, rejection reasons and evidence. Signing in is separate from each contract transaction.
+  - region "Arbiter registry":
+    - paragraph: ARBITRATION GOVERNANCE
+    - heading "Arbiter registry" [level=3]
+    - generic: ⌑
+    - paragraph: The owner-controlled on-chain wallet roster. Changes apply to future panel selections; current panel assignments remain snapshotted.
+    - status:
+      - generic: The removal was confirmed. A fresh pinned read will update the roster below.
+    - term: On-chain owner
+    - definition: 0xf39Fd6…b92266
+    - term: Registered arbiters
+    - definition: 6 / 128
+    - term: Read at block
+    - definition: "529"
+    - generic "Current arbiter members":
+      - strong: Arbiter 1
+      - code: "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+      - button "Remove arbiter 0x90F79bf6EB2c4f870365E785982E1f101E93b906" [disabled]: Remove
+      - strong: Arbiter 2
+      - code: "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+      - button "Remove arbiter 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65" [disabled]: Remove
+      - strong: Arbiter 3
+      - code: "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc"
+      - button "Remove arbiter 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc" [disabled]: Remove
+      - strong: Arbiter 4
+      - code: "0x976EA74026E726554dB657fA54763abd0C3a0aa9"
+      - button "Remove arbiter 0x976EA74026E726554dB657fA54763abd0C3a0aa9" [disabled]: Remove
+      - strong: Arbiter 5
+      - code: "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955"
+      - button "Remove arbiter 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955" [disabled]: Remove
+      - strong: Arbiter 6
+      - code: "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+      - button "Remove arbiter 0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f" [disabled]: Remove
+    - generic: Add an arbiter wallet address
+    - textbox "Add an arbiter wallet address" [disabled]:
+      - /placeholder: 0x…
+    - button "Add arbiter" [disabled]
+    - paragraph:
+      - generic: ⌑
+      - strong: Wallets only.
+      - text: Local demo wallets are synthetic. Real arbiters require off-chain identity vetting before registration; no identity details belong here.
+    - paragraph: Registry changes are disabled for this wallet. Connect the on-chain owner shown above to manage membership.
+    - button "Refresh registry"
+  - paragraph: A QUIETER WAY TO WORK TOGETHER
+  - heading "One agreement. Clear next steps." [level=2]:
+    - text: One agreement.
+    - emphasis: Clear next steps.
+  - paragraph: Open an agreement by its ID to see milestone status, chain deadlines and the actions available to your wallet. Private terms stay closed until you sign in.
+  - generic: ✓ Exact token amounts
+  - generic: ✓ Deadline-aware actions
+  - generic: ✓ Private evidence access
+  - generic: fairwork. · Local prototype
+  - generic: Local chain only · No real funds · Not audited
+  - generic: Chain time shown in UTC
+- alert
+{"viewport":375,"width":360}

@@ -1,0 +1,123 @@
+(node:18204) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/chain-pins.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ F61 fresh deployment validation accepts only matching chain and all3 runtime codehashes (0.895ms)
+✖ F61 supported manifest on unsupported RPC chain fails closed (0.4178ms)
+✖ F61 manifest cannot authorize a nonlocal chain even if RPC agrees (0.1755ms)
+✖ F61 missing deployment and drifted engine code fail pin validation (0.1588ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 0
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 342.3481
+
+✖ failing tests:
+
+test at apps\web\test\chain-pins.test.ts:6:1
+✖ F61 fresh deployment validation accepts only matching chain and all3 runtime codehashes (0.895ms)
+  AssertionError [ERR_ASSERTION]: Got unwanted rejection.
+  Actual message: "UNIMPLEMENTED"
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/chain-pins.test.ts:6:106)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: Error: UNIMPLEMENTED
+        at verifyDeployment (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/chain-pins.ts:2:71)
+        at file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/chain-pins.test.ts:6:137
+        at waitForActual (node:assert:632:21)
+        at strict.doesNotReject (node:assert:789:39)
+        at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/chain-pins.test.ts:6:119)
+        at Test.runInAsyncScope (node:async_hooks:214:14)
+        at Test.run (node:internal/test_runner/test:1106:25)
+        at Test.start (node:internal/test_runner/test:1003:17)
+        at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17),
+    expected: undefined,
+    operator: 'doesNotReject',
+    diff: 'simple'
+  }
+
+test at apps\web\test\chain-pins.test.ts:7:1
+✖ F61 supported manifest on unsupported RPC chain fails closed (0.4178ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /chain/i. Input:
+  
+  'Error: UNIMPLEMENTED'
+  
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/chain-pins.test.ts:7:79)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: UNIMPLEMENTED
+        at verifyDeployment (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/chain-pins.ts:2:71)
+        at file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/chain-pins.test.ts:7:104
+        at waitForActual (node:assert:632:21)
+        at strict.rejects (node:assert:769:31)
+        at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/chain-pins.test.ts:7:92)
+        at Test.runInAsyncScope (node:async_hooks:214:14)
+        at Test.run (node:internal/test_runner/test:1106:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+        at Test.postRun (node:internal/test_runner/test:1235:19)
+        at Test.run (node:internal/test_runner/test:1163:12),
+    expected: /chain/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at apps\web\test\chain-pins.test.ts:8:1
+✖ F61 manifest cannot authorize a nonlocal chain even if RPC agrees (0.1755ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /chain/i. Input:
+  
+  'Error: UNIMPLEMENTED'
+  
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/chain-pins.test.ts:8:84)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: UNIMPLEMENTED
+        at verifyDeployment (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/chain-pins.ts:2:71)
+        at file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/chain-pins.test.ts:8:109
+        at waitForActual (node:assert:632:21)
+        at strict.rejects (node:assert:769:31)
+        at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/chain-pins.test.ts:8:97)
+        at Test.runInAsyncScope (node:async_hooks:214:14)
+        at Test.run (node:internal/test_runner/test:1106:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+        at Test.postRun (node:internal/test_runner/test:1235:19)
+        at Test.run (node:internal/test_runner/test:1163:12),
+    expected: /chain/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at apps\web\test\chain-pins.test.ts:9:1
+✖ F61 missing deployment and drifted engine code fail pin validation (0.1588ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /code|deploy|pin/i. Input:
+  
+  'Error: UNIMPLEMENTED'
+  
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/chain-pins.test.ts:9:85)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: UNIMPLEMENTED
+        at verifyDeployment (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/chain-pins.ts:2:71)
+        at file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/chain-pins.test.ts:9:110
+        at waitForActual (node:assert:632:21)
+        at strict.rejects (node:assert:769:31)
+        at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/chain-pins.test.ts:9:98)
+        at Test.runInAsyncScope (node:async_hooks:214:14)
+        at Test.run (node:internal/test_runner/test:1106:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+        at Test.postRun (node:internal/test_runner/test:1235:19)
+        at Test.run (node:internal/test_runner/test:1163:12),
+    expected: /code|deploy|pin/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }

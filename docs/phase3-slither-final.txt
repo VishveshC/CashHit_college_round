@@ -1,0 +1,225 @@
+
+> fairwork-v3@0.0.0 analyze:contracts
+> node scripts/slither.mjs --json docs/phase3-slither-final.json
+
+Slither target: src/FairworkEscrow.sol (separate escrow report).
+
+Detector: reentrancy-balance
+Reentrancy in FairworkEscrow.openDispute(uint256,uint256) (src/FairworkEscrow.sol#391-437):
+	External call allowing reentrancy:
+	- disputeId = FairworkArbitration(arbitrationEngine).openDispute(jobId,milestoneIndex,job.client,job.freelancer,job.token,milestone.amount,depositAmount,msg.sender) (src/FairworkEscrow.sol#417-426)
+	Balance read before the call:
+	- balanceBefore = token.balanceOf(address(this)) (src/FairworkEscrow.sol#412)
+	Possible stale balance used after the call in a condition:
+	- balanceAfter < balanceBefore || balanceAfter - balanceBefore != depositAmount (src/FairworkEscrow.sol#434)
+		- stale variable `balanceBefore`
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities
+
+Detector: uninitialized-local
+FairworkEscrow._calculateDisputeSettlement(FairworkArbitration.DisputeView,uint16,bool).clientForfeitDue (src/FairworkEscrow.sol#963) is a local variable never initialized
+FairworkEscrow._calculateDisputeSettlement(FairworkArbitration.DisputeView,uint16,bool).freelancerForfeitDue (src/FairworkEscrow.sol#964) is a local variable never initialized
+FairworkArbitration._consumeEntropy(uint256,FairworkArbitration.Dispute,uint64).assigned (src/FairworkArbitration.sol#546) is a local variable never initialized
+FairworkArbitration._applyRuling(uint256,FairworkArbitration.Dispute,uint8).count (src/FairworkArbitration.sol#585) is a local variable never initialized
+FairworkArbitration._applyRuling(uint256,FairworkArbitration.Dispute,uint8).values (src/FairworkArbitration.sol#584) is a local variable never initialized
+FairworkEscrow.createJob(FairworkEscrow.JobInput,FairworkEscrow.MilestoneInput[]).totalAmount (src/FairworkEscrow.sol#539) is a local variable never initialized
+FairworkEscrow.constructor(FairworkEscrow.TokenConfig[],FairworkEscrow.ProtocolConfig,address).runtimeDecimals (src/FairworkEscrow.sol#317) is a local variable never initialized
+FairworkArbitration.commitVote(uint256,address,bytes32).deadline (src/FairworkArbitration.sol#307) is a local variable never initialized
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-local-variables
+
+Detector: calls-loop
+FairworkEscrow.constructor(FairworkEscrow.TokenConfig[],FairworkEscrow.ProtocolConfig,address) (src/FairworkEscrow.sol#299-341) has external calls inside a loop: value = IERC20Metadata(config.token).decimals() (src/FairworkEscrow.sol#318-322)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation/#calls-inside-a-loop
+
+Detector: reentrancy-benign
+Reentrancy in FairworkEscrow.advanceDispute(uint256) (src/FairworkEscrow.sol#461-465):
+	External calls:
+	- (terminal,rulingBps,fallbackApplied) = FairworkArbitration(arbitrationEngine).advanceDispute(disputeId) (src/FairworkEscrow.sol#462-463)
+	State variables written after the call(s):
+	- _settleDispute(disputeId,rulingBps,fallbackApplied) (src/FairworkEscrow.sol#464)
+		- job.terminalMilestoneCount += 1 (src/FairworkEscrow.sol#929)
+		- job.state = JobState.Closed (src/FairworkEscrow.sol#931)
+	- _settleDispute(disputeId,rulingBps,fallbackApplied) (src/FairworkEscrow.sol#464)
+		- milestone.state = MilestoneState.Resolved (src/FairworkEscrow.sol#928)
+	- _settleDispute(disputeId,rulingBps,fallbackApplied) (src/FairworkEscrow.sol#464)
+		- claimable[dispute.token][dispute.client] += amounts.clientCredit (src/FairworkEscrow.sol#933)
+		- claimable[dispute.token][dispute.freelancer] += amounts.freelancerCredit (src/FairworkEscrow.sol#934)
+		- claimable[dispute.token][treasury] += amounts.treasuryCredit (src/FairworkEscrow.sol#935)
+	- _settleDispute(disputeId,rulingBps,fallbackApplied) (src/FairworkEscrow.sol#464)
+		- disputeDeposits[dispute.token] -= amounts.postedDeposits (src/FairworkEscrow.sol#927)
+	- _settleDispute(disputeId,rulingBps,fallbackApplied) (src/FairworkEscrow.sol#464)
+		- lockedEscrow[dispute.token] -= dispute.amount (src/FairworkEscrow.sol#926)
+	- _settleDispute(disputeId,rulingBps,fallbackApplied) (src/FairworkEscrow.sol#464)
+		- totalClaimable[dispute.token] += amounts.clientCredit + amounts.freelancerCredit + amounts.treasuryCredit (src/FairworkEscrow.sol#936)
+Reentrancy in FairworkEscrow.matchDisputeDeposit(uint256) (src/FairworkEscrow.sol#440-455):
+	External calls:
+	- (tokenAddress,depositAmount) = FairworkArbitration(arbitrationEngine).matchDisputeDeposit(disputeId,msg.sender) (src/FairworkEscrow.sol#441-442)
+	State variables written after the call(s):
+	- config = _requireToken(tokenAddress) (src/FairworkEscrow.sol#443)
+		- config = _tokenConfigs[token] (src/FairworkEscrow.sol#1110)
+	- disputeDeposits[tokenAddress] += depositAmount (src/FairworkEscrow.sol#446)
+Reentrancy in FairworkEscrow.openDispute(uint256,uint256) (src/FairworkEscrow.sol#391-437):
+	External calls:
+	- disputeId = FairworkArbitration(arbitrationEngine).openDispute(jobId,milestoneIndex,job.client,job.freelancer,job.token,milestone.amount,depositAmount,msg.sender) (src/FairworkEscrow.sol#417-426)
+	State variables written after the call(s):
+	- disputeDeposits[job.token] += depositAmount (src/FairworkEscrow.sol#427)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3
+
+Detector: timestamp
+FairworkArbitration.matchDisputeDeposit(uint256,address) (src/FairworkArbitration.sol#257-276) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _now64() >= view_.evidenceDeadline (src/FairworkArbitration.sol#269)
+FairworkArbitration.submitEvidence(uint256,address,bytes32,bytes32) (src/FairworkArbitration.sol#279-298) uses timestamp for comparisons
+	Dangerous comparisons:
+	- submittedAt >= view_.evidenceDeadline (src/FairworkArbitration.sol#288)
+FairworkArbitration.commitVote(uint256,address,bytes32) (src/FairworkArbitration.sol#301-319) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _now64() >= deadline (src/FairworkArbitration.sol#312)
+FairworkArbitration.revealVote(uint256,address,uint16,bytes32) (src/FairworkArbitration.sol#322-340) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _now64() >= view_.revealDeadline (src/FairworkArbitration.sol#328)
+FairworkArbitration.fulfillRandomness(uint256,uint256) (src/FairworkArbitration.sol#343-356) uses timestamp for comparisons
+	Dangerous comparisons:
+	- view_.activeRequestId != requestId || ! _isRandomnessPending(view_.phase) || view_.randomnessReady || _now64() >= view_.requestEnd (src/FairworkArbitration.sol#350-351)
+FairworkArbitration.advanceDispute(uint256) (src/FairworkArbitration.sol#360-415) uses timestamp for comparisons
+	Dangerous comparisons:
+	- now_ < view_.evidenceDeadline (src/FairworkArbitration.sol#370)
+	- now_ < view_.requestEnd (src/FairworkArbitration.sol#376)
+	- now_ < view_.commitDeadline (src/FairworkArbitration.sol#384)
+	- now_ < view_.replacementCommitDeadline (src/FairworkArbitration.sol#394)
+	- now_ < view_.revealDeadline (src/FairworkArbitration.sol#399)
+	- now_ < view_.commitDeadline (src/FairworkArbitration.sol#405)
+	- now_ < view_.revealDeadline (src/FairworkArbitration.sol#410)
+FairworkArbitration._now64() (src/FairworkArbitration.sol#681-684) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp > type()(uint64).max (src/FairworkArbitration.sol#682)
+FairworkEscrow.openDispute(uint256,uint256) (src/FairworkEscrow.sol#391-437) uses timestamp for comparisons
+	Dangerous comparisons:
+	- openedAt >= milestone.reviewEnd (src/FairworkEscrow.sol#402)
+	- openedAt >= milestone.responseEnd (src/FairworkEscrow.sol#405)
+FairworkEscrow.acceptJob(uint256) (src/FairworkEscrow.sol#608-619) uses timestamp for comparisons
+	Dangerous comparisons:
+	- acceptedAt >= job.proposalEnd (src/FairworkEscrow.sol#613)
+FairworkEscrow.fundJob(uint256) (src/FairworkEscrow.sol#623-651) uses timestamp for comparisons
+	Dangerous comparisons:
+	- fundedAt >= job.fundingDeadline (src/FairworkEscrow.sol#628)
+	- balanceAfter < balanceBefore || balanceAfter - balanceBefore != job.totalAmount (src/FairworkEscrow.sol#648)
+FairworkEscrow.cancelExpiredProposal(uint256) (src/FairworkEscrow.sol#655-661) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _now64() < job.proposalEnd (src/FairworkEscrow.sol#658)
+FairworkEscrow.cancelUnfundedJob(uint256) (src/FairworkEscrow.sol#665-671) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _now64() < job.fundingDeadline (src/FairworkEscrow.sol#668)
+FairworkEscrow.submitMilestone(uint256,uint256,bytes32,bytes32) (src/FairworkEscrow.sol#675-688) uses timestamp for comparisons
+	Dangerous comparisons:
+	- submittedAt >= milestone.graceEnd (src/FairworkEscrow.sol#686)
+FairworkEscrow.approveMilestone(uint256,uint256) (src/FairworkEscrow.sol#692-706) uses timestamp for comparisons
+	Dangerous comparisons:
+	- now_ >= milestone.reviewEnd (src/FairworkEscrow.sol#699)
+FairworkEscrow.rejectMilestone(uint256,uint256,bytes32) (src/FairworkEscrow.sol#710-728) uses timestamp for comparisons
+	Dangerous comparisons:
+	- rejectedAt >= milestone.reviewEnd (src/FairworkEscrow.sol#719)
+FairworkEscrow.resubmitMilestone(uint256,uint256,bytes32,bytes32) (src/FairworkEscrow.sol#732-745) uses timestamp for comparisons
+	Dangerous comparisons:
+	- submittedAt >= milestone.responseEnd (src/FairworkEscrow.sol#743)
+FairworkEscrow.releaseAfterSilence(uint256,uint256) (src/FairworkEscrow.sol#749-762) uses timestamp for comparisons
+	Dangerous comparisons:
+	- now_ < milestone.reviewEnd (src/FairworkEscrow.sol#755)
+FairworkEscrow.refundAfterMissedDeadline(uint256,uint256) (src/FairworkEscrow.sol#766-786) uses timestamp for comparisons
+	Dangerous comparisons:
+	- now_ < milestone.graceEnd (src/FairworkEscrow.sol#772)
+FairworkEscrow.refundAfterRejectionWindow(uint256,uint256) (src/FairworkEscrow.sol#790-810) uses timestamp for comparisons
+	Dangerous comparisons:
+	- now_ < milestone.responseEnd (src/FairworkEscrow.sol#796)
+FairworkEscrow._assertCodehash(address,FairworkEscrow.TokenConfig) (src/FairworkEscrow.sol#1115-1117) uses timestamp for comparisons
+	Dangerous comparisons:
+	- token.codehash != config.codehash (src/FairworkEscrow.sol#1116)
+FairworkEscrow._now64() (src/FairworkEscrow.sol#1137-1140) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp > type()(uint64).max (src/FairworkEscrow.sol#1138)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+
+Detector: cyclomatic-complexity
+FairworkEscrow.constructor(FairworkEscrow.TokenConfig[],FairworkEscrow.ProtocolConfig,address) (src/FairworkEscrow.sol#299-341) has a high cyclomatic complexity (12).
+FairworkEscrow.createJob(FairworkEscrow.JobInput,FairworkEscrow.MilestoneInput[]) (src/FairworkEscrow.sol#519-604) has a high cyclomatic complexity (12).
+FairworkEscrow._calculateDisputeSettlement(FairworkArbitration.DisputeView,uint16,bool) (src/FairworkEscrow.sol#956-994) has a high cyclomatic complexity (13).
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#cyclomatic-complexity
+
+Detector: dead-code
+FairworkEscrow._creditFromEscrow(address,address,uint256) (src/FairworkEscrow.sol#1016-1026) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+
+Detector: missing-inheritance
+FairworkArbitration (src/FairworkArbitration.sol#11-685) should inherit from IRandomnessConsumer (src/mocks/MockRandomness.sol#6-8)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-inheritance
+
+Detector: cache-array-length
+Loop condition i < _arbiters.length (src/FairworkArbitration.sol#477) should use cached array length instead of referencing `length` member of the storage array.
+ Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#cache-array-length
+src/FairworkEscrow.sol analyzed (12 contracts with 102 detectors), 40 result(s) found
+'forge config --json' running
+'C:/Users/vishvesh/.solc-select/artifacts/solc-0.8.36/solc-0.8.36 --version' running
+'C:/Users/vishvesh/.solc-select/artifacts/solc-0.8.36/solc-0.8.36 @openzeppelin/contracts/=../node_modules/@openzeppelin/contracts/ forge-std/=lib/forge-std/src/ @openzeppelin/=../node_modules/@openzeppelin/ src/FairworkEscrow.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --evm-version osaka --allow-paths .,C:\Users\vishvesh\Documents\ChatGPT\BNB\contracts\src' running
+Slither escrow exit: 4294967295
+Slither target: src/mocks/LocalDemoTokens.sol (separate mocks report).
+src/mocks/LocalDemoTokens.sol analyzed (10 contracts with 102 detectors), 0 result(s) found
+'forge config --json' running
+'C:/Users/vishvesh/.solc-select/artifacts/solc-0.8.36/solc-0.8.36 --version' running
+'C:/Users/vishvesh/.solc-select/artifacts/solc-0.8.36/solc-0.8.36 @openzeppelin/contracts/=../node_modules/@openzeppelin/contracts/ forge-std/=lib/forge-std/src/ @openzeppelin/=../node_modules/@openzeppelin/ src/mocks/LocalDemoTokens.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --evm-version osaka --allow-paths .,C:\Users\vishvesh\Documents\ChatGPT\BNB\contracts\src\mocks' running
+Slither mocks exit: 0
+Slither target: src/FairworkArbitration.sol (separate arbitration report).
+
+Detector: uninitialized-local
+FairworkArbitration._applyRuling(uint256,FairworkArbitration.Dispute,uint8).values (src/FairworkArbitration.sol#584) is a local variable never initialized
+FairworkArbitration._applyRuling(uint256,FairworkArbitration.Dispute,uint8).count (src/FairworkArbitration.sol#585) is a local variable never initialized
+FairworkArbitration._consumeEntropy(uint256,FairworkArbitration.Dispute,uint64).assigned (src/FairworkArbitration.sol#546) is a local variable never initialized
+FairworkArbitration.commitVote(uint256,address,bytes32).deadline (src/FairworkArbitration.sol#307) is a local variable never initialized
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-local-variables
+
+Detector: timestamp
+FairworkArbitration.matchDisputeDeposit(uint256,address) (src/FairworkArbitration.sol#257-276) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _now64() >= view_.evidenceDeadline (src/FairworkArbitration.sol#269)
+FairworkArbitration.submitEvidence(uint256,address,bytes32,bytes32) (src/FairworkArbitration.sol#279-298) uses timestamp for comparisons
+	Dangerous comparisons:
+	- submittedAt >= view_.evidenceDeadline (src/FairworkArbitration.sol#288)
+FairworkArbitration.commitVote(uint256,address,bytes32) (src/FairworkArbitration.sol#301-319) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _now64() >= deadline (src/FairworkArbitration.sol#312)
+FairworkArbitration.revealVote(uint256,address,uint16,bytes32) (src/FairworkArbitration.sol#322-340) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _now64() >= view_.revealDeadline (src/FairworkArbitration.sol#328)
+FairworkArbitration.fulfillRandomness(uint256,uint256) (src/FairworkArbitration.sol#343-356) uses timestamp for comparisons
+	Dangerous comparisons:
+	- view_.activeRequestId != requestId || ! _isRandomnessPending(view_.phase) || view_.randomnessReady || _now64() >= view_.requestEnd (src/FairworkArbitration.sol#350-351)
+FairworkArbitration.advanceDispute(uint256) (src/FairworkArbitration.sol#360-415) uses timestamp for comparisons
+	Dangerous comparisons:
+	- now_ < view_.evidenceDeadline (src/FairworkArbitration.sol#370)
+	- now_ < view_.requestEnd (src/FairworkArbitration.sol#376)
+	- now_ < view_.commitDeadline (src/FairworkArbitration.sol#384)
+	- now_ < view_.replacementCommitDeadline (src/FairworkArbitration.sol#394)
+	- now_ < view_.revealDeadline (src/FairworkArbitration.sol#399)
+	- now_ < view_.commitDeadline (src/FairworkArbitration.sol#405)
+	- now_ < view_.revealDeadline (src/FairworkArbitration.sol#410)
+FairworkArbitration._now64() (src/FairworkArbitration.sol#681-684) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp > type()(uint64).max (src/FairworkArbitration.sol#682)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+
+Detector: missing-inheritance
+FairworkArbitration (src/FairworkArbitration.sol#11-685) should inherit from IRandomnessConsumer (src/mocks/MockRandomness.sol#6-8)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-inheritance
+
+Detector: cache-array-length
+Loop condition i < _arbiters.length (src/FairworkArbitration.sol#477) should use cached array length instead of referencing `length` member of the storage array.
+ Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#cache-array-length
+src/FairworkArbitration.sol analyzed (4 contracts with 102 detectors), 13 result(s) found
+'forge config --json' running
+'C:/Users/vishvesh/.solc-select/artifacts/solc-0.8.36/solc-0.8.36 --version' running
+'C:/Users/vishvesh/.solc-select/artifacts/solc-0.8.36/solc-0.8.36 @openzeppelin/contracts/=../node_modules/@openzeppelin/contracts/ forge-std/=lib/forge-std/src/ @openzeppelin/=../node_modules/@openzeppelin/ src/FairworkArbitration.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --evm-version osaka --allow-paths .,C:\Users\vishvesh\Documents\ChatGPT\BNB\contracts\src' running
+Slither arbitration exit: 4294967295
+Slither target: src/mocks/MockRandomness.sol (separate randomness report).
+src/mocks/MockRandomness.sol analyzed (3 contracts with 102 detectors), 0 result(s) found
+'forge config --json' running
+'C:/Users/vishvesh/.solc-select/artifacts/solc-0.8.36/solc-0.8.36 --version' running
+'C:/Users/vishvesh/.solc-select/artifacts/solc-0.8.36/solc-0.8.36 @openzeppelin/contracts/=../node_modules/@openzeppelin/contracts/ forge-std/=lib/forge-std/src/ @openzeppelin/=../node_modules/@openzeppelin/ src/mocks/MockRandomness.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --evm-version osaka --allow-paths .,C:\Users\vishvesh\Documents\ChatGPT\BNB\contracts\src\mocks' running
+Slither randomness exit: 0

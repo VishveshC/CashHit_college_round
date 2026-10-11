@@ -1,0 +1,16 @@
+{
+  "frozen_files": [
+    {
+      "path": "scripts/phase5-backend-upload-content.test.mjs",
+      "sha256": "4659db0cc0d4428fe4f693a2fa1fcaf467eb951a1b74bc0a367da786bccb6d28"
+    },
+    {
+      "path": "docs/phase5-backend-upload-content-red.txt",
+      "sha256": "273d8c13a1cb6535e79db41ab5686e30648262daf6746d136ebfa54624b83132"
+    },
+    {
+      "path": "docs/phase5-backend-green-final.txt",
+      "sha256": "9c3d20ad8f7bd3c437139e9eb51b12cd34ed23834faaab3aed9164c3d4397246"
+    }
+  ]
+}

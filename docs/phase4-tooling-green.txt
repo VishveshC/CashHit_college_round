@@ -1,0 +1,13 @@
+✔ F70 reset refuses unowned directory and preserves unrelated workspace data (3.9795ms)
+✔ F70 reset clears owned privateDB and storage only while preserving recordedAnvil (9.1153ms)
+✔ A40 directNextbuild configuration fails closed with unset or public target (193.9045ms)
+✔ A40 explicitlocal target remains buildable (87.3884ms)
+✔ A40 wrapper refuses public release before next compilation and localdryrun validatesmode (124.107ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 478.5039

@@ -1,0 +1,40 @@
+
+> fairwork-v3@0.0.0 test:phase4:tooling
+> node scripts/run-phase4-checks.mjs
+
+Frozen retention.test.mjs is historical: its zero-invalid expectation conflicts with the zero-based contract. Current checks explicitly use phase4-retention-corrected.test.mjs plus zero-job regression. See docs/PHASE4_TEST_HARNESS_ERRATA.md.
+✔ F70 reset rejects a junction parent before touching an external owned-looking runtime (9.4494ms)
+✔ Windows runtime reset retries an exclusively locked private DB and preserves unrelated runtime data (1625.8498ms)
+✔ F70 reset refuses unowned directory and preserves unrelated workspace data (8.9519ms)
+✔ F70 reset clears owned privateDB and storage only while preserving recordedAnvil (38.8829ms)
+✔ automatic retention refuses active jobs without deleting any private rows (61.7456ms)
+✔ retention requires both Closed state and a chain-derived closure timestamp (38.1696ms)
+✔ retention accepts only one nonnegative decimal job ID (3.5999ms)
+✔ automatic retention waits until the exact chain-derived 90-day boundary (75.5625ms)
+✔ a fresh EIP-191 request from either chain-named party permits early deletion (69.4521ms)
+✔ a caller-supplied wallet cannot impersonate a party and wrong-job signatures are refused (40.5476ms)
+✔ signed deletion binds canonical origin, chain, escrow, and a maximum five-minute window (48.3152ms)
+✔ every storage path is validated before any file or row is removed (60.2709ms)
+✔ a parent directory junction cannot redirect deletion outside private storage (49.9874ms)
+(node:3500) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/routes.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ automatic retention purges a due agreement even when the manifest client is not its party (28.9287ms)
+✔ a retry completes after an interrupted private-file unlink (70.5607ms)
+✔ a signed purge removes an actual uploaded encrypted UUID .enc file (63.2617ms)
+✔ job ID zero supports due automatic and named-party signed retention while malformed IDs stay denied (110.2329ms)
+✔ applicable acceptance evidence is produced by fresh local-chain scenarios (0.9005ms)
+✔ acceptance proof validation requires successful receipts and observed assertions (368.6933ms)
+✔ A40 directNextbuild configuration fails closed with unset or public target (240.5528ms)
+✔ A40 explicitlocal target remains buildable (121.2042ms)
+✔ A40 wrapper refuses public release before next compilation and localdryrun validatesmode (179.9381ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1977.3381
+exit code: 0

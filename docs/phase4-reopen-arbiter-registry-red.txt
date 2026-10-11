@@ -1,0 +1,41 @@
+Captured from the original test-first run before `lib/client/arbiter-registry.ts` existed.
+Command: `node --experimental-strip-types --test apps/web/test/arbiter-registry.test.ts`
+Exit code: 1
+
+Original captured output:
+```text
+node:internal/modules/esm/resolve:274
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\lib\client\arbiter-registry.ts' imported from C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\test\arbiter-registry.test.ts
+    at finalizeResolution (node:internal/modules/esm/resolve:274:11)
+    at moduleResolve (node:internal/modules/esm/resolve:990:10)
+    at defaultResolve (node:internal/modules/esm/resolve:990:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:737:20)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:714:49)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:293:38)
+    at async ModuleJob._link (node:internal/modules/esm/module_job:183:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/client/arbiter-registry.ts'
+}
+
+Node.js v24.11.1
+✖ apps\web\test\arbiter-registry.test.ts (99.096ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 104.3339
+
+✖ failing tests:
+
+test at apps\web\test\arbiter-registry.test.ts:1:1
+✖ apps\web\test\arbiter-registry.test.ts
+  'test failed'
+```
+
+The frozen test-file SHA-256 at this run was `EA751C565E9F717DBE2BE7254CB513850D7EA544E0FDECFC199D4E7622F0CD27`.

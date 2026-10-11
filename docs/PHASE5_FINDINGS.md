@@ -1,0 +1,21 @@
+# Phase 5 adversarial findings and corrections
+
+Three independent GPT-6 Luna Max reviewers assumed hostile callers and missed edge cases. The request to assume ten mistakes is a review posture, not a quota of invented exploits. No confirmed contract theft, payout duplication or reachable permanent local dispute lock was found. Contract additions are 13 supplemental GREEN tests, not RED exploits.
+
+| Severity / finding | Reproduction and frozen test | Correction |
+|---|---|---|
+| Medium: timely committed private evidence lost after deadline/settlement | Native API returned 404; `phase5-backend-evidence-receipt-corrected.test.mjs` and confirmed RED log | A50 permits only exact timely chain-event tuples; new commitments/drafts remain deadline-bound. |
+| Medium: active PDF content accepted | Real active PDF plus native 200; corrected receipt suite and `phase5-backend-upload-content.test.mjs` | A51 rejects direct/escaped active names, embedded/form actions, encrypted and object-stream PDFs. |
+| Low: arbitrary non-PDF bytes accepted after PDF prefix | Native 200; `phase5-backend-malformed-pdf.test.mjs` | Require terminal EOF; full structural parsing remains a gap. |
+| Medium: party evidence blocked by shared public reference | Native second-party 404; collision and idempotency frozen suites | A55 keys dispute/party/reference/hash; distinct commitments coexist. |
+| Low: exact private-save retry returned 404 | Native identical retry failure; `phase5-backend-evidence-idempotency.test.mjs` | Upsert returns existing ID without ciphertext replacement; outsider/arbiter writes remain denied. |
+| Medium: private draft survived wallet switch | Actual pre-fix browser sentinel, plus `phase5-ui-private-state.test.ts` | A52 clears cached/private/inline drafts and confirmations; browser post-fix title is empty. |
+| Low: local private view outlived session expiry | Source omission and frozen session predicate expectation | Strict expiry predicate/timer and current-session 401 guards; suspended-browser limitations remain. |
+| Medium: other tab retained private view after invalidation | Source path plus frozen missing-subscription expectation | A52 credential-free BroadcastChannel, wired to logout/login/direct revocations/401; compiled cross-tab clearing checked. |
+| Medium: stale confirmation could reach wallet send | Frozen `phase5-ui-transaction-context.test.ts`; validator ordering RED | A53 captured wallet/job/provider/fresh-policy rechecks before send. SIWE post-sign recheck is supplemental hardening without exploit RED. |
+| Medium: post-broadcast timeout reported failure and allowed resend | Frozen unknown-transaction run: 1 pass/2 failures | A54 unknown status, synchronous send fence and read-only original-receipt check; reload/pre-hash loss/other tabs remain gaps. |
+| Low: proposal confirmation omitted actual private terms | Source modal omission and frozen missing-helper RED | A56 plaintext/hash pairs rendered as React text; compiled confirmation checked and cancelled before send. |
+
+Backend current focused runner reports 20 passes (including parent aggregates); UI additions report 8 individual passes within the 89-test full web suite. Severity is local-prototype impact, not a professional audit rating. Source/helper expectations are distinguished from browser/native behavioral exploit reproduction; they do not prove all component races. Exact RED files/manifests and independent limits are in `PHASE5_BACKEND_REVIEW.md`, `PHASE5_UI_RELEASE_REVIEW.md`, and `PHASE5_CONTRACT_REVIEW.md`. Original harness errors remain preserved in `PHASE5_TEST_HARNESS_ERRATA.md`.
+
+Residuals: partial upload parsing; proposal plaintext loss after session/context clearing during unknown receipt; nonpersistent/per-view send fence; server/issuer outages; untested arbitrary RPC and concurrent retention behavior; missing full UI matrix and public artifact/production policies/VRF/identity/backup video. The executed SQLite backup omitted its encryption environment; after demo key rotation its ciphertext is not a recoverable private-content backup. Future helper key copying has not yet been exercised. No claim of zero mistakes or release safety follows from passing tests.

@@ -1,0 +1,41 @@
+{
+  "name": "fairwork-v3",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/web",
+    "packages/chain"
+  ],
+  "scripts": {
+    "compile": "node scripts/compile.mjs",
+    "compile:forge": "node scripts/forge-build.mjs",
+    "scan:secrets": "node scripts/scan-secrets.mjs",
+    "tool:versions": "node scripts/tool-versions.mjs",
+    "audit:deps": "npm audit --audit-level=high",
+    "phase0:verify": "npm run compile && npm run scan:secrets",
+    "setup:contracts": "node scripts/setup-contracts.mjs",
+    "test:contracts": "node scripts/forge-test.mjs",
+    "coverage:contracts": "node scripts/forge-coverage.mjs",
+    "analyze:contracts": "node scripts/slither.mjs",
+    "check:build-target": "node scripts/public-build-check.mjs",
+    "build:public": "node scripts/web-build.mjs --target public",
+    "build:web:local": "node scripts/web-build.mjs --target local",
+    "test:web": "node scripts/run-web-tests.mjs",
+    "demo:reset": "node scripts/phase4/demo.mjs",
+    "demo:stop": "node scripts/local-stop.mjs",
+    "attack-lab": "node scripts/attack-lab.mjs",
+    "dev:web": "node scripts/web-run.mjs",
+    "test:phase4:tooling": "node scripts/run-phase4-checks.mjs",
+    "test:phase5:backend": "node scripts/run-phase5-checks.mjs"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "5.6.1",
+    "solc": "0.8.36"
+  },
+  "overrides": {
+    "solc": {
+      "tmp": "0.2.7"
+    }
+  }
+}

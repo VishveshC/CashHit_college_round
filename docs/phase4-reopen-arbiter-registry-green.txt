@@ -1,0 +1,25 @@
+Captured after the helper and component were implemented; no helper removal or RED rerun was performed.
+Command: `node --experimental-strip-types --test apps/web/test/arbiter-registry.test.ts`
+Exit code: 0
+
+Current captured output:
+```text
+(node:23648) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/arbiter-registry.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ registry read verifies the deployment, bounds count, and pins every value to one block (2.3855ms)
+✔ registry read fails closed above the contract limit before enumerating members (0.554ms)
+✔ registry read rejects zero and duplicate members instead of rendering a corrupt roster (0.5419ms)
+✔ registry authority follows the on-chain owner and not a treasury-role label (0.1478ms)
+✔ owner can add only a new validated nonzero address below the cap (0.3693ms)
+✔ owner can remove only a current member; non-owner and unknown-member requests fail (0.2152ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 360.9593
+```

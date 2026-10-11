@@ -1,0 +1,16 @@
+{
+  "frozen_files": [
+    {
+      "sha256": "F33B5DAC55B5F6178AE00F6583162F3D52F9F4DA72A7CCE1B55AAA88A4F2C822",
+      "path": "scripts/phase4-retention-zero.test.mjs"
+    },
+    {
+      "sha256": "ABA0BA5FA8C17CCD7512D83C2CD3F9B9F6259F0A122B1F3773534D0B901283FB",
+      "path": "scripts/phase4-retention-corrected.test.mjs"
+    },
+    {
+      "sha256": "76599970C1BE96B1BFBE688FAF0EF94AC67376004049D27D46662944A631A873",
+      "path": "docs/phase4-retention-zero-red-root.txt"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "frozen_files": [
+    {
+      "path": "apps/web/test/security-arbiter-terms.test.ts",
+      "sha256": "39EA07BA763355F52F638B8E83EAA32EBE6043678DDFC2CF87EAEE0D644B9D9A"
+    },
+    {
+      "path": "docs/phase4-arbiter-terms-red-root.txt",
+      "sha256": "C7A4637E25580E53BE80F490FEAA5809237652A8D2ED243C87C5312A6B90D836"
+    }
+  ]
+}

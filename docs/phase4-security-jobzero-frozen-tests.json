@@ -1,0 +1,12 @@
+{
+  "frozen_files": [
+    {
+      "path": "apps/web/test/security-job-zero.test.ts",
+      "sha256": "D83AC785A1299C637DCA9AC33B8253D386564C0C322E30AA9E1986ED262F1152"
+    },
+    {
+      "path": "docs/phase4-security-jobzero-red-root.txt",
+      "sha256": "62222C40DC5967486C23BF11657F614AF2CF29D146A5073D9986F6D1656C7290"
+    }
+  ]
+}

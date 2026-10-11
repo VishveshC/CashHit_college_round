@@ -1,0 +1,67 @@
+✖ A40 directNextbuild configuration fails closed with unset or public target (95.0283ms)
+✔ A40 explicitlocal target remains buildable (82.2606ms)
+✖ A40 wrapper refuses public release before next compilation and localdryrun validatesmode (57.3627ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 1
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 304.339
+
+✖ failing tests:
+
+test at scripts\web-build.test.mjs:3:1
+✖ A40 directNextbuild configuration fails closed with unset or public target (95.0283ms)
+  AssertionError [ERR_ASSERTION]: Expected "actual" to be strictly unequal to: 0
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/web-build.test.mjs:3:160)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 0,
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }
+
+test at scripts\web-build.test.mjs:5:1
+✖ A40 wrapper refuses public release before next compilation and localdryrun validatesmode (57.3627ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /No approved|Public release|production adapter/. Input:
+  
+  'node:internal/modules/cjs/loader:1424\r\n' +
+    '  throw err;\r\n' +
+    '  ^\r\n' +
+    '\r\n' +
+    "Error: Cannot find module 'C:\\Users\\vishvesh\\Documents\\ChatGPT\\BNB\\scripts\\web-build.mjs'\r\n" +
+    '    at Module._resolveFilename (node:internal/modules/cjs/loader:1421:15)\r\n' +
+    '    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)\r\n' +
+    '    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)\r\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:1227:37)\r\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\r\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\r\n' +
+    '    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\r\n' +
+    '    at node:internal/main/run_main_module:33:47 {\r\n' +
+    "  code: 'MODULE_NOT_FOUND',\r\n" +
+    '  requireStack: []\r\n' +
+    '}\r\n' +
+    '\r\n' +
+    'Node.js v24.11.1\r\n'
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/web-build.test.mjs:5:254)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: "node:internal/modules/cjs/loader:1424\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:\\Users\\vishvesh\\Documents\\ChatGPT\\BNB\\scripts\\web-build.mjs'\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1421:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1227:37)\r\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\r\n    at node:internal/main/run_main_module:33:47 {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: []\r\n}\r\n\r\nNode.js v24.11.1\r\n",
+    expected: /No approved|Public release|production adapter/,
+    operator: 'match',
+    diff: 'simple'
+  }

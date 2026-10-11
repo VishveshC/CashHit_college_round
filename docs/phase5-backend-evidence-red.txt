@@ -1,0 +1,38 @@
+(node:18040) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/security.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ Phase 5 backend: receipt-bound evidence persistence and active-file rejection (540.2645ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1024.8645
+
+✖ failing tests:
+
+test at scripts\phase5-backend-evidence-receipt.test.mjs:166:1
+✖ Phase 5 backend: receipt-bound evidence persistence and active-file rejection (540.2645ms)
+  AssertionError [ERR_ASSERTION]: Prisma schema loaded from apps\web\prisma\schema.prisma
+  Datasource "db": SQLite database "phase5.sqlite" at "file:C:/Users/vishvesh/AppData/Local/Temp/fairwork-phase5-backend-VfwHHC/phase5.sqlite"
+  
+  
+  Error: Schema engine error:
+  
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-receipt.test.mjs:180:10)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

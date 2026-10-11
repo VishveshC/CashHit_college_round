@@ -1,0 +1,21 @@
+✖ job ID zero supports due automatic and named-party signed retention while malformed IDs stay denied (39.7141ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1050.5388
+
+✖ failing tests:
+
+test at scripts\phase4-retention-zero.test.mjs:114:1
+✖ job ID zero supports due automatic and named-party signed retention while malformed IDs stay denied (39.7141ms)
+  Error: Provide one positive decimal job ID without a sign, fraction, or leading zero.
+      at fail (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.mjs:19:9)
+      at runRetention (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.mjs:180:27)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention-zero.test.mjs:135:27)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+exit code: 1

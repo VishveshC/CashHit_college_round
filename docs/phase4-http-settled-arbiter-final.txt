@@ -1,0 +1,26 @@
+{
+  "source": "live-http-compiled-preview",
+  "origin": "http://localhost:3000",
+  "chainId": 31337,
+  "disputeId": "16",
+  "results": [
+    {
+      "actor": "retained-original-arbiter-6",
+      "nonceStatus": 200,
+      "loginStatus": 200,
+      "realSettledEvidenceStatus": 404,
+      "missingEvidenceStatus": 404,
+      "identicalBodies": true,
+      "genericNotFound": true
+    },
+    {
+      "actor": "replaced-original-arbiter-4",
+      "nonceStatus": 200,
+      "loginStatus": 200,
+      "realSettledEvidenceStatus": 404,
+      "missingEvidenceStatus": 404,
+      "identicalBodies": true,
+      "genericNotFound": true
+    }
+  ]
+}

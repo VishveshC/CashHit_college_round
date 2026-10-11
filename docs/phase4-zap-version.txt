@@ -1,0 +1,10 @@
+310 [main] INFO  org.parosproxy.paros.Constant - Copying default configuration to C:\Users\vishvesh\ZAP\config.xml
+392 [main] INFO  org.parosproxy.paros.Constant - Creating directory C:\Users\vishvesh\ZAP\session
+393 [main] INFO  org.parosproxy.paros.Constant - Creating directory C:\Users\vishvesh\ZAP\dirbuster
+393 [main] INFO  org.parosproxy.paros.Constant - Creating directory C:\Users\vishvesh\ZAP\fuzzers
+394 [main] INFO  org.parosproxy.paros.Constant - Creating directory C:\Users\vishvesh\ZAP\plugin
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by io.netty.util.internal.PlatformDependent0$4 (file:/C:/Users/vishvesh/Documents/ChatGPT/BNB/.tools/zap/ZAP_2.17.0/./plugin/network-beta-0.25.0.zap)
+WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$4
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+2.17.0

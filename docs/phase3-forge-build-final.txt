@@ -1,0 +1,633 @@
+
+> fairwork-v3@0.0.0 compile:forge
+> node scripts/forge-build.mjs --force --sizes
+
+Compiling 64 files with Solc 0.8.36
+Solc 0.8.36 finished in 9.52s
+Compiler run successful with warnings:
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:125:29:
+    |
+125 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, signature);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:134:29:
+    |
+134 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecoverCalldata(hash, signature);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:161:29:
+    |
+161 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, r, vs);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:203:29:
+    |
+203 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, v, r, s);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:273:26:
+    |
+273 |     function _throwError(RecoverError error, bytes32 errorArg) private pure {
+    |                          ^^^^^^^^^^^^^^^^^^
+
+Warning (8760): This declaration has the same name as another declaration.
+  --> test/Phase3BoundedExitInvariant.t.sol:52:13:
+   |
+52 |             IPhase3Escrow.DisputeView memory dispute = p3.getDispute(disputeId);
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Note: The other declaration is here:
+  --> test/Phase3BoundedExitInvariant.t.sol:97:5:
+   |
+97 |     function dispute() external view returns (IPhase3Escrow.DisputeView memory) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+╭--------------------------------+------------------+-------------------+--------------------+---------------------╮
+| Contract                       | Runtime Size (B) | Initcode Size (B) | Runtime Margin (B) | Initcode Margin (B) |
++==================================================================================================================+
+| AdditionalCodeChangedMockToken | 1,914            | 2,425             | 22,662             | 46,727              |
+|--------------------------------+------------------+-------------------+--------------------+---------------------|
+| AdditionalCreditHarness        | 24,124           | 43,463            | 452                | 5,689               |
+|--------------------------------+------------------+-------------------+--------------------+---------------------|
+| AdditionalLedgerHandler        | 5,479            | 7,802             | 19,097             | 41,350              |
+|--------------------------------+------------------+-------------------+--------------------+---------------------|
+| ConfigurableFeeToken           | 2,297            | 3,078             | 22,279             | 46,074              |
+|--------------------------------+------------------+-------------------+--------------------+---------------------|
+| EscrowInvariantHandler         | 2,239            | 2,557             | 22,337             | 46,595              |
+|--------------------------------+------------------+-------------------+--------------------+---------------------|
+| FairworkArbitration            | 15,045           | 16,739            | 9,531              | 32,413              |
+|--------------------------------+------------------+-------------------+--------------------+---------------------|
+| FairworkEscrow                 | 23,644           | 42,977            | 932                | 6,175               |
+|--------------------------------+------------------+-------------------+--------------------+---------------------|
+| FairworkEscrowHarness          | 24,124           | 43,463            | 452                | 5,689               |
+|--------------------------------+------------------+-------------------+--------------------+---------------------|
+| FalseReturnToken               | 2,024            | 2,602             | 22,552             | 46,550              |
+|--------------------------------+------------------+-------------------+--------------------+---------------------|
+| MockRandomness                 | 1,034            | 1,130             | 23,542             | 48,022              |
+|--------------------------------+------------------+-------------------+--------------------+---------------------|
+| MockToken                      | 1,896            | 2,625             | 22,680             | 46,527              |
+|--------------------------------+------------------+-------------------+--------------------+---------------------|
+| MockUSDC                       | 1,862            | 2,401             | 22,714             | 46,751              |
+|--------------------------------+------------------+-------------------+--------------------+---------------------|
+| MockWBTC                       | 1,862            | 2,401             | 22,714             | 46,751              |
+|--------------------------------+------------------+-------------------+--------------------+---------------------|
+| NoReturnToken                  | 1,740            | 2,290             | 22,836             | 46,862              |
+|--------------------------------+------------------+-------------------+--------------------+---------------------|
+| Phase2SettlementHandler        | 7,575            | 9,502             | 17,001             | 39,650              |
+|--------------------------------+------------------+-------------------+--------------------+---------------------|
+| Phase2TransferFailureToken     | 2,078            | 2,603             | 22,498             | 46,549              |
+|--------------------------------+------------------+-------------------+--------------------+---------------------|
+| ReentrantToken                 | 3,988            | 4,592             | 20,588             | 44,560              |
+|--------------------------------+------------------+-------------------+--------------------+---------------------|
+| RevertingDecimalsToken         | 193              | 219               | 24,383             | 48,933              |
+╰--------------------------------+------------------+-------------------+--------------------+---------------------╯
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ contracts/src/FairworkEscrow.sol:323:17
+    │
+323 │             if (runtimeDecimals != config.decimals) revert InvalidTokenConfig();
+    │                 ━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ contracts/src/FairworkEscrow.sol:318:17
+    │
+318 │             try IERC20Metadata(config.token).decimals() returns (uint8 value) {
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ contracts/src/FairworkEscrow.sol:311:15
+    │
+311 │             ) revert InvalidTokenConfig();
+    │               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ contracts/src/FairworkEscrow.sol:314:60
+    │
+314 │                 if (tokenConfigs[j].token == config.token) revert InvalidTokenConfig();
+    │                                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ contracts/src/FairworkEscrow.sol:321:17
+    │
+321 │                 revert InvalidTokenConfig();
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ contracts/src/FairworkEscrow.sol:323:53
+    │
+323 │             if (runtimeDecimals != config.decimals) revert InvalidTokenConfig();
+    │                                                     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ contracts/src/FairworkEscrow.sol:327:17
+    │
+327 │                 revert InvalidTokenConfig();
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkEscrow.sol:402:17
+    │
+402 │             if (openedAt >= milestone.reviewEnd) revert WindowClosed();
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkEscrow.sol:405:17
+    │
+405 │             if (openedAt >= milestone.responseEnd) revert WindowClosed();
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ contracts/src/FairworkEscrow.sol:429:9
+    │
+429 │         emit DisputeOpened(disputeId, jobId, milestoneIndex, msg.sender, depositAmount, evidenceDeadline);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ contracts/src/FairworkEscrow.sol:447:9
+    │
+447 │         emit DisputeDepositMatched(disputeId, msg.sender, depositAmount);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+     ╭▸ contracts/src/FairworkEscrow.sol:1004:9
+     │
+1004 │         emit DisputeSettlementCredited(disputeId, token, account, amount, source);
+     │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+     ╭▸ contracts/src/FairworkEscrow.sol:1005:9
+     │
+1005 │         emit ClaimableCredited(token, account, amount);
+     │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ contracts/src/FairworkEscrow.sol:943:9
+    │
+943 │ ┏         emit MilestoneResolved(
+944 │ ┃             dispute.jobId,
+945 │ ┃             dispute.milestoneIndex,
+946 │ ┃             disputeId,
+    ‡ ┃
+951 │ ┃             fallbackApplied
+952 │ ┃         );
+    │ ┗━━━━━━━━━━┛
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ contracts/src/FairworkEscrow.sol:953:24
+    │
+953 │         if (closesJob) emit JobClosed(dispute.jobId);
+    │                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ contracts/src/FairworkEscrow.sol:547:13
+    │
+547 │             totalAmount += input.amount;
+    │             ━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ contracts/src/FairworkEscrow.sol:542:85
+    │
+542 │             if (input.amount < config.minAmount || input.amount > config.maxAmount) revert InvalidAmount();
+    │                                                                                     ━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ contracts/src/FairworkEscrow.sol:545:15
+    │
+545 │             ) revert InvalidDuration();
+    │               ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ contracts/src/FairworkEscrow.sol:546:67
+    │
+546 │             if (input.acceptanceCriteriaCommitment == bytes32(0)) revert InvalidCommitment();
+    │                                                                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ contracts/src/FairworkEscrow.sol:548:53
+    │
+548 │             if (totalAmount > MAX_JOB_TOTAL_AMOUNT) revert InvalidAmount();
+    │                                                     ━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ contracts/src/FairworkEscrow.sol:566:30
+    │
+566 │         job.milestoneCount = uint8(milestones.length);
+    │                              ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ contracts/src/FairworkEscrow.sol:600:13
+    │
+600 │             uint8(milestones.length),
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkEscrow.sol:613:13
+    │
+613 │         if (acceptedAt >= job.proposalEnd) revert WindowClosed();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkEscrow.sol:628:13
+    │
+628 │         if (fundedAt >= job.fundingDeadline) revert WindowClosed();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkEscrow.sol:658:13
+    │
+658 │         if (_now64() < job.proposalEnd) revert WindowOpen();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkEscrow.sol:668:13
+    │
+668 │         if (_now64() < job.fundingDeadline) revert WindowOpen();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkEscrow.sol:686:13
+    │
+686 │         if (submittedAt >= milestone.graceEnd) revert WindowClosed();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkEscrow.sol:699:13
+    │
+699 │         if (now_ >= milestone.reviewEnd) revert WindowClosed();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkEscrow.sol:719:13
+    │
+719 │         if (rejectedAt >= milestone.reviewEnd) revert WindowClosed();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkEscrow.sol:743:13
+    │
+743 │         if (submittedAt >= milestone.responseEnd) revert WindowClosed();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkEscrow.sol:755:13
+    │
+755 │         if (now_ < milestone.reviewEnd) revert WindowOpen();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkEscrow.sol:772:13
+    │
+772 │         if (now_ < milestone.graceEnd) revert WindowOpen();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkEscrow.sol:796:13
+    │
+796 │         if (now_ < milestone.responseEnd) revert WindowOpen();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ contracts/src/FairworkEscrow.sol:975:74
+    │
+975 │         uint256 freelancerDepositForfeit = dispute.freelancerDeposited ? freelancerForfeitDue : 0;
+    │                                                                          ━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ contracts/src/FairworkEscrow.sol:974:66
+    │
+974 │         uint256 clientDepositForfeit = dispute.clientDeposited ? clientForfeitDue : 0;
+    │                                                                  ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+     ╭▸ contracts/src/FairworkEscrow.sol:1138:13
+     │
+1138 │         if (block.timestamp > type(uint64).max) revert InvalidWindow();
+     │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[unsafe-typecast]: typecast can truncate values
+     ╭▸ contracts/src/FairworkEscrow.sol:1139:16
+     │
+1139 │         return uint64(block.timestamp);
+     │                ━━━━━━━━━━━━━━━━━━━━━━━
+     │
+     ├ note: consider disabling this lint if you're certain the cast is safe
+     │       
+     │       // casting to 'uint64' is safe because [explain why]
+     │       // forge-lint: disable-next-line(unsafe-typecast)
+     │       
+     │       
+     ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkArbitration.sol:269:13
+    │
+269 │         if (_now64() >= view_.evidenceDeadline) revert WindowClosed();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkArbitration.sol:288:13
+    │
+288 │         if (submittedAt >= view_.evidenceDeadline) revert WindowClosed();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ contracts/src/FairworkArbitration.sol:294:25
+    │
+294 │         uint8 version = uint8(items.length);
+    │                         ━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkArbitration.sol:312:13
+    │
+312 │         if (_now64() >= deadline) revert WindowClosed();
+    │             ━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkArbitration.sol:328:13
+    │
+328 │         if (_now64() >= view_.revealDeadline) revert WindowClosed();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkArbitration.sol:351:20
+    │
+351 │                 || _now64() >= view_.requestEnd
+    │                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkArbitration.sol:370:17
+    │
+370 │             if (now_ < view_.evidenceDeadline) revert WindowOpen();
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkArbitration.sol:376:17
+    │
+376 │             if (now_ < view_.requestEnd) revert WindowOpen();
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkArbitration.sol:384:17
+    │
+384 │             if (now_ < view_.commitDeadline) revert WindowOpen();
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkArbitration.sol:394:17
+    │
+394 │             if (now_ < view_.replacementCommitDeadline) revert WindowOpen();
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkArbitration.sol:399:17
+    │
+399 │             if (now_ < view_.revealDeadline) revert WindowOpen();
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkArbitration.sol:405:17
+    │
+405 │             if (now_ < view_.commitDeadline) revert WindowOpen();
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkArbitration.sol:410:17
+    │
+410 │             if (now_ < view_.revealDeadline) revert WindowOpen();
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ contracts/src/FairworkArbitration.sol:549:39
+    │
+549 │                 address replacement = assigned < dispute.drawCandidates.length ? replacements[assigned] : address(0);
+    │                                       ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ contracts/src/FairworkArbitration.sol:543:23
+    │
+543 │                     ? uint8(dispute.drawCandidates.length)
+    │                       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint8' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ contracts/src/FairworkArbitration.sol:589:65
+    │
+589 │             if (panel[i] != address(0) && vote.revealed) values[count++] = vote.bps;
+    │                                                                 ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ contracts/src/FairworkArbitration.sol:591:37
+    │
+591 │         if (count == 2) rulingBps = uint16((uint256(values[0]) + values[1]) / 2);
+    │                                     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/src/FairworkArbitration.sol:682:13
+    │
+682 │         if (block.timestamp > type(uint64).max) revert InvalidWindow();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ contracts/src/FairworkArbitration.sol:683:16
+    │
+683 │         return uint64(block.timestamp);
+    │                ━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint64' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[environment-read-across-mutation]: `block.timestamp` may be reused across `vm.warp`
+    ╭▸ contracts/test/Phase2Milestones.t.sol:318:17
+    │
+318 │         vm.warp(block.timestamp + 1);
+    │         ────────━━━━━━━━━━━━━━━───── `vm.warp` changes this environment here
+    │
+    ├ help: capture it with `vm.getBlockTimestamp()` instead
+    ╰ help: https://getfoundry.sh/forge/linting/environment-read-across-mutation
+
+warning[environment-read-across-mutation]: `block.timestamp` may be reused across `vm.warp`
+     ╭▸ contracts/test/Phase2Milestones.t.sol:1498:13
+     │
+1498 │         if (block.timestamp < end) vm.warp(end);
+     │             ━━━━━━━━━━━━━━━        ──────────── `vm.warp` changes this environment here
+     │
+     ├ help: capture it with `vm.getBlockTimestamp()` instead
+     ╰ help: https://getfoundry.sh/forge/linting/environment-read-across-mutation
+
+warning[environment-read-across-mutation]: `block.timestamp` may be reused across `vm.warp`
+     ╭▸ contracts/test/Phase2Milestones.t.sol:1545:13
+     │
+1545 │         if (block.timestamp < ready.graceEnd) vm.warp(ready.graceEnd);
+     │             ━━━━━━━━━━━━━━━                   ─────────────────────── `vm.warp` changes this environment here
+     │
+     ├ help: capture it with `vm.getBlockTimestamp()` instead
+     ╰ help: https://getfoundry.sh/forge/linting/environment-read-across-mutation
+
+warning[environment-read-across-mutation]: `block.timestamp` may be reused across `vm.warp`
+     ╭▸ contracts/test/Phase2Milestones.t.sol:1554:13
+     │
+1554 │         if (block.timestamp < submitted.reviewEnd) vm.warp(submitted.reviewEnd);
+     │             ━━━━━━━━━━━━━━━                        ──────────────────────────── `vm.warp` changes this environment here
+     │
+     ├ help: capture it with `vm.getBlockTimestamp()` instead
+     ╰ help: https://getfoundry.sh/forge/linting/environment-read-across-mutation
+
+warning[environment-read-across-mutation]: `block.timestamp` may be reused across `vm.warp`
+     ╭▸ contracts/test/Phase2Milestones.t.sol:1545:13
+     │
+1545 │         if (block.timestamp < ready.graceEnd) vm.warp(ready.graceEnd);
+     │             ━━━━━━━━━━━━━━━
+     ‡
+1554 │         if (block.timestamp < submitted.reviewEnd) vm.warp(submitted.reviewEnd);
+     │                                                    ──────────────────────────── `vm.warp` changes this environment here
+     │
+     ├ help: capture it with `vm.getBlockTimestamp()` instead
+     ╰ help: https://getfoundry.sh/forge/linting/environment-read-across-mutation
+

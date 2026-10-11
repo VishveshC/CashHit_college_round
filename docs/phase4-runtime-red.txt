@@ -1,0 +1,50 @@
+✖ F70 reset refuses unowned directory and preserves unrelated workspace data (3.7845ms)
+✖ F70 reset clears owned privateDB and storage only while preserving recordedAnvil (0.5933ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 73.0904
+
+✖ failing tests:
+
+test at scripts\local-runtime.test.mjs:2:1
+✖ F70 reset refuses unowned directory and preserves unrelated workspace data (3.7845ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /owned|marker|refuse/i. Input:
+  
+  'Error: UNIMPLEMENTED'
+  
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/local-runtime.test.mjs:2:286)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: UNIMPLEMENTED
+        at prepareRuntime (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/local-runtime.mjs:2:51)
+        at file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/local-runtime.test.mjs:2:311
+        at waitForActual (node:assert:632:21)
+        at strict.rejects (node:assert:769:31)
+        at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/local-runtime.test.mjs:2:299)
+        at Test.runInAsyncScope (node:async_hooks:214:14)
+        at Test.run (node:internal/test_runner/test:1106:25)
+        at Test.start (node:internal/test_runner/test:1003:17)
+        at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17),
+    expected: /owned|marker|refuse/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at scripts\local-runtime.test.mjs:3:1
+✖ F70 reset clears owned privateDB and storage only while preserving recordedAnvil (0.5933ms)
+  Error: UNIMPLEMENTED
+      at prepareRuntime (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/local-runtime.mjs:2:51)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/local-runtime.test.mjs:3:178)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)

@@ -1,0 +1,42 @@
+UNCHANGED manifest phase1-frozen-tests.json
+UNCHANGED manifest phase2-additional-frozen-tests.json
+UNCHANGED manifest phase2-frozen-tests.json
+UNCHANGED manifest phase3-additional-frozen-tests.json
+UNCHANGED manifest phase3-frozen-tests.json
+UNCHANGED manifest phase3-public-build-frozen-tests.json
+UNCHANGED manifest phase4-acceptance-frozen-tests.json
+UNCHANGED manifest phase4-arbiter-terms-frozen-tests.json
+UNCHANGED manifest phase4-demo-frozen-tests.json
+UNCHANGED manifest phase4-evidence-plan-frozen-tests.json
+UNCHANGED manifest phase4-retention-frozen-tests.json
+UNCHANGED manifest phase4-retention-regressions-frozen-tests.json
+UNCHANGED manifest phase4-retention-zero-frozen-tests.json
+UNCHANGED manifest phase4-root-additional-frozen-tests.json
+UNCHANGED manifest phase4-root-frozen-tests.json
+UNCHANGED manifest phase4-runtime-parent-frozen-tests.json
+UNCHANGED manifest phase4-runtime-shutdown-frozen-tests.json
+UNCHANGED manifest phase4-secret-allowlist-frozen-tests.json
+UNCHANGED manifest phase4-secret-fixture-scope-frozen-tests.json
+UNCHANGED manifest phase4-security-cookie-order-frozen-tests.json
+UNCHANGED manifest phase4-security-corrected-frozen-tests.json
+UNCHANGED manifest phase4-security-frozen-tests.json
+UNCHANGED manifest phase4-security-jobzero-frozen-tests.json
+UNCHANGED manifest phase4-security-regressions-frozen-tests.json
+UNCHANGED manifest phase4-ui-additional-frozen-tests.json
+UNCHANGED manifest phase4-ui-cache-frozen-tests.json
+UNCHANGED manifest phase4-ui-frozen-tests.json
+UNCHANGED manifest phase4-ui-jobid-frozen-tests.json
+UNCHANGED manifest phase4-ui-private-read-frozen-tests.json
+UNCHANGED manifest phase4-ui-recovery-frozen-tests.json
+UNCHANGED manifest phase4-web-trace-frozen-tests.json
+file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-verify-integrity.mjs:13
+    if (actual !== expected.toLowerCase()) throw Error('Changed frozen file: ' + file);
+                                                 ^
+
+Error: Changed frozen file: docs/phase5-backend-green-final.txt
+    at file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-verify-integrity.mjs:13:50
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:671:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.11.1

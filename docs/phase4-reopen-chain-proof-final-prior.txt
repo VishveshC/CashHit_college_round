@@ -1,0 +1,130 @@
+{
+  "output": "docs\\phase4-reopen-chain-proof.json",
+  "chainId": 31337,
+  "observedBlock": "657",
+  "logs": 203,
+  "eventTransactions": 107,
+  "eventReceiptsSucceeded": 107,
+  "eventReceiptsMissingOrFailed": 0,
+  "historicalProofRefsOnCurrentChain": "2/21",
+  "jobs": [
+    {
+      "jobId": 26,
+      "state": 4,
+      "readError": null
+    },
+    {
+      "jobId": 27,
+      "state": 4,
+      "readError": null
+    },
+    {
+      "jobId": 28,
+      "state": 4,
+      "readError": null
+    },
+    {
+      "jobId": 29,
+      "state": 4,
+      "readError": null
+    },
+    {
+      "jobId": 30,
+      "state": 4,
+      "readError": null
+    },
+    {
+      "jobId": 31,
+      "state": 4,
+      "readError": null
+    },
+    {
+      "jobId": 32,
+      "state": 4,
+      "readError": null
+    },
+    {
+      "jobId": 33,
+      "state": 3,
+      "readError": null
+    },
+    {
+      "jobId": 34,
+      "state": 3,
+      "readError": null
+    },
+    {
+      "jobId": 35,
+      "state": 4,
+      "readError": null
+    },
+    {
+      "jobId": 36,
+      "state": 4,
+      "readError": null
+    },
+    {
+      "jobId": 37,
+      "state": 4,
+      "readError": null
+    }
+  ],
+  "disputes": [
+    {
+      "disputeId": 16,
+      "phase": 10,
+      "round": 2,
+      "activeRequestId": "21",
+      "activeRequestKnown": true,
+      "currentRoundPanel": [
+        "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+        "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955"
+      ]
+    },
+    {
+      "disputeId": 17,
+      "phase": 10,
+      "round": 1,
+      "activeRequestId": "18",
+      "activeRequestKnown": true,
+      "currentRoundPanel": [
+        "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+        "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+      ]
+    },
+    {
+      "disputeId": 18,
+      "phase": 10,
+      "round": 1,
+      "activeRequestId": "24",
+      "activeRequestKnown": false,
+      "currentRoundPanel": [
+        "0x0000000000000000000000000000000000000000",
+        "0x0000000000000000000000000000000000000000",
+        "0x0000000000000000000000000000000000000000"
+      ]
+    },
+    {
+      "disputeId": 19,
+      "phase": 10,
+      "round": 2,
+      "activeRequestId": "26",
+      "activeRequestKnown": true,
+      "currentRoundPanel": [
+        "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+      ]
+    }
+  ],
+  "baselineWithdrawalChecks": {
+    "exactWithdrawalEventFound": true,
+    "amountMatches2500001": true,
+    "accountMatchesFreelancer": true,
+    "tokenMatchesUSDC": true,
+    "receiptSucceeded": true
+  },
+  "sourceHashesMatchPhase3": true
+}

@@ -1,0 +1,11 @@
+Phase 1 static-analysis environment
+Verified Python 3.14.6 via python --version.
+Verified package index: python -m pip index versions slither-analyzer reported latest0.11.6.
+Installed in isolated ignored .tools/slither:
+python -m venv .tools/slither
+.tools/slither/Scripts/python.exe -m pip install slither-analyzer==0.11.6
+Install finished successfully.
+.tools/slither/Scripts/slither.exe --version: 0.11.6
+.tools/slither/Scripts/python.exe -m pip check: No broken requirements found.
+Exact installed transitive versions: infra/tools/slither-requirements.txt (pip freeze).
+The Windows py launcher was unavailable; direct python was used. No global Python package installation occurred.

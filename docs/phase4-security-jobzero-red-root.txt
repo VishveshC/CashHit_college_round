@@ -1,0 +1,145 @@
+(node:32500) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-job-zero.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 4 job zero remains a valid job identifier across private routes
+  ✖ party GET and commitment-verified PUT accept job ID zero while stranger access is hidden (16.6954ms)
+  ✖ job-zero rejection notes can be written and read by a party only (3.3979ms)
+  ✖ job-zero file listing, upload, download, and content access work for the party only (9.3685ms)
+  ✖ job-zero timeline and audit remain party-scoped, and dispute zero stays invalid (3.5553ms)
+✖ Phase 4 job zero remains a valid job identifier across private routes (725.4194ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 0
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1235.3628
+
+✖ failing tests:
+
+test at apps\web\test\security-job-zero.test.ts:200:13
+✖ party GET and commitment-verified PUT accept job ID zero while stranger access is hidden (16.6954ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  -   200,
+  -   200,
+      404,
+      404,
+  +   404,
+  +   404
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-job-zero.test.ts:205:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-job-zero.test.ts:200:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 404, 404, 404, 404 ],
+    expected: [ 200, 200, 404, 404 ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security-job-zero.test.ts:209:13
+✖ job-zero rejection notes can be written and read by a party only (3.3979ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  -   200,
+  -   200,
+      404,
+      404,
+  +   404,
+  +   404
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-job-zero.test.ts:215:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-job-zero.test.ts:209:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 404, 404, 404, 404 ],
+    expected: [ 200, 200, 404, 404 ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security-job-zero.test.ts:219:13
+✖ job-zero file listing, upload, download, and content access work for the party only (9.3685ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  -   200,
+  -   200,
+  -   200,
+  -   200,
+      404,
+      404,
+      404,
+  +   404,
+  +   404,
+  +   404,
+  +   404
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-job-zero.test.ts:233:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-job-zero.test.ts:219:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [
+      404, 404, 404,
+      404, 404, 404,
+      404
+    ],
+    expected: [
+      200, 200, 200,
+      200, 404, 404,
+      404
+    ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security-job-zero.test.ts:241:13
+✖ job-zero timeline and audit remain party-scoped, and dispute zero stays invalid (3.5553ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  -   200,
+  -   200,
+      404,
+      404,
+      404,
+  +   404,
+  +   404,
+  +   404
+  -   200
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-job-zero.test.ts:248:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-job-zero.test.ts:241:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 404, 404, 404, 404, 404, 404 ],
+    expected: [ 200, 200, 404, 404, 404, 200 ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+exit code: 1

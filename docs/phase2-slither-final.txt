@@ -1,0 +1,77 @@
+
+> fairwork-v3@0.0.0 analyze:contracts
+> node scripts/slither.mjs --json docs/phase2-slither-final.json
+
+Slither target: src/FairworkEscrow.sol (separate escrow report).
+
+Detector: uninitialized-local
+FairworkEscrow.createJob(FairworkEscrow.JobInput,FairworkEscrow.MilestoneInput[]).totalAmount (src/FairworkEscrow.sol#314) is a local variable never initialized
+FairworkEscrow.constructor(FairworkEscrow.TokenConfig[],FairworkEscrow.ProtocolConfig,address).runtimeDecimals (src/FairworkEscrow.sol#270) is a local variable never initialized
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-local-variables
+
+Detector: calls-loop
+FairworkEscrow.constructor(FairworkEscrow.TokenConfig[],FairworkEscrow.ProtocolConfig,address) (src/FairworkEscrow.sol#252-290) has external calls inside a loop: value = IERC20Metadata(config.token).decimals() (src/FairworkEscrow.sol#271-275)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation/#calls-inside-a-loop
+
+Detector: timestamp
+FairworkEscrow.acceptJob(uint256) (src/FairworkEscrow.sol#383-394) uses timestamp for comparisons
+	Dangerous comparisons:
+	- acceptedAt >= job.proposalEnd (src/FairworkEscrow.sol#388)
+FairworkEscrow.fundJob(uint256) (src/FairworkEscrow.sol#398-426) uses timestamp for comparisons
+	Dangerous comparisons:
+	- fundedAt >= job.fundingDeadline (src/FairworkEscrow.sol#403)
+	- balanceAfter < balanceBefore || balanceAfter - balanceBefore != job.totalAmount (src/FairworkEscrow.sol#423)
+FairworkEscrow.cancelExpiredProposal(uint256) (src/FairworkEscrow.sol#430-436) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _now64() < job.proposalEnd (src/FairworkEscrow.sol#433)
+FairworkEscrow.cancelUnfundedJob(uint256) (src/FairworkEscrow.sol#440-446) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _now64() < job.fundingDeadline (src/FairworkEscrow.sol#443)
+FairworkEscrow.submitMilestone(uint256,uint256,bytes32,bytes32) (src/FairworkEscrow.sol#450-463) uses timestamp for comparisons
+	Dangerous comparisons:
+	- submittedAt >= milestone.graceEnd (src/FairworkEscrow.sol#461)
+FairworkEscrow.approveMilestone(uint256,uint256) (src/FairworkEscrow.sol#467-481) uses timestamp for comparisons
+	Dangerous comparisons:
+	- now_ >= milestone.reviewEnd (src/FairworkEscrow.sol#474)
+FairworkEscrow.rejectMilestone(uint256,uint256,bytes32) (src/FairworkEscrow.sol#485-503) uses timestamp for comparisons
+	Dangerous comparisons:
+	- rejectedAt >= milestone.reviewEnd (src/FairworkEscrow.sol#494)
+FairworkEscrow.resubmitMilestone(uint256,uint256,bytes32,bytes32) (src/FairworkEscrow.sol#507-520) uses timestamp for comparisons
+	Dangerous comparisons:
+	- submittedAt >= milestone.responseEnd (src/FairworkEscrow.sol#518)
+FairworkEscrow.releaseAfterSilence(uint256,uint256) (src/FairworkEscrow.sol#524-537) uses timestamp for comparisons
+	Dangerous comparisons:
+	- now_ < milestone.reviewEnd (src/FairworkEscrow.sol#530)
+FairworkEscrow.refundAfterMissedDeadline(uint256,uint256) (src/FairworkEscrow.sol#541-561) uses timestamp for comparisons
+	Dangerous comparisons:
+	- now_ < milestone.graceEnd (src/FairworkEscrow.sol#547)
+FairworkEscrow.refundAfterRejectionWindow(uint256,uint256) (src/FairworkEscrow.sol#565-585) uses timestamp for comparisons
+	Dangerous comparisons:
+	- now_ < milestone.responseEnd (src/FairworkEscrow.sol#571)
+FairworkEscrow._assertCodehash(address,FairworkEscrow.TokenConfig) (src/FairworkEscrow.sol#798-800) uses timestamp for comparisons
+	Dangerous comparisons:
+	- token.codehash != config.codehash (src/FairworkEscrow.sol#799)
+FairworkEscrow._now64() (src/FairworkEscrow.sol#820-823) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp > type()(uint64).max (src/FairworkEscrow.sol#821)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+
+Detector: cyclomatic-complexity
+FairworkEscrow.constructor(FairworkEscrow.TokenConfig[],FairworkEscrow.ProtocolConfig,address) (src/FairworkEscrow.sol#252-290) has a high cyclomatic complexity (12).
+FairworkEscrow.createJob(FairworkEscrow.JobInput,FairworkEscrow.MilestoneInput[]) (src/FairworkEscrow.sol#294-379) has a high cyclomatic complexity (12).
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#cyclomatic-complexity
+
+Detector: dead-code
+FairworkEscrow._creditFromEscrow(address,address,uint256) (src/FairworkEscrow.sol#699-709) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+src/FairworkEscrow.sol analyzed (8 contracts with 102 detectors), 19 result(s) found
+'forge config --json' running
+'C:/Users/vishvesh/.solc-select/artifacts/solc-0.8.36/solc-0.8.36 --version' running
+'C:/Users/vishvesh/.solc-select/artifacts/solc-0.8.36/solc-0.8.36 @openzeppelin/contracts/=../node_modules/@openzeppelin/contracts/ forge-std/=lib/forge-std/src/ @openzeppelin/=../node_modules/@openzeppelin/ src/FairworkEscrow.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --evm-version osaka --allow-paths .,C:\Users\vishvesh\Documents\ChatGPT\BNB\contracts\src' running
+Slither escrow exit: 4294967295
+Slither target: src/mocks/LocalDemoTokens.sol (separate mocks report).
+src/mocks/LocalDemoTokens.sol analyzed (10 contracts with 102 detectors), 0 result(s) found
+'forge config --json' running
+'C:/Users/vishvesh/.solc-select/artifacts/solc-0.8.36/solc-0.8.36 --version' running
+'C:/Users/vishvesh/.solc-select/artifacts/solc-0.8.36/solc-0.8.36 @openzeppelin/contracts/=../node_modules/@openzeppelin/contracts/ forge-std/=lib/forge-std/src/ @openzeppelin/=../node_modules/@openzeppelin/ src/mocks/LocalDemoTokens.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --evm-version osaka --allow-paths .,C:\Users\vishvesh\Documents\ChatGPT\BNB\contracts\src\mocks' running
+Slither mocks exit: 0

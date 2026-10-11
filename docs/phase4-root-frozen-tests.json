@@ -1,0 +1,18 @@
+[
+  {
+    "file": "apps/web/test/local-rpc.test.ts",
+    "Hash": "3299CB7198B939321A48B855E16F697980689137FCE94AAB0D01D3259C13ABAA"
+  },
+  {
+    "file": "docs/phase4-local-rpc-red.txt",
+    "Hash": "3C78BC60FAA4137FF8D3FA2A7B98B7008FAF6C98A703BD1EB61C2EBF0359E216"
+  },
+  {
+    "file": "apps/web/test/chain-pins.test.ts",
+    "Hash": "CD4DF59AD2B7F82AAF32071D74070B08A14613B1374DCF83A6A7EAA020846469"
+  },
+  {
+    "file": "docs/phase4-chain-pins-red.txt",
+    "Hash": "723B1C3E5EB43DF8E6DA8FB50E7B0BD71B0D4F09636EA6876752BD5E66970C63"
+  }
+]

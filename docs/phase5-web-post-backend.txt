@@ -1,0 +1,163 @@
+
+> fairwork-v3@0.0.0 test:web
+> node scripts/run-web-tests.mjs
+
+Original security.test.ts is preserved as frozen historical evidence with a one-shot Response harness defect; current checks use security-corrected.test.ts. See docs/PHASE4_TEST_HARNESS_ERRATA.md.
+(node:12788) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/chain-pins.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ F61 fresh deployment validation accepts only matching chain and all3 runtime codehashes (1.5374ms)
+✔ F61 supported manifest on unsupported RPC chain fails closed (0.4664ms)
+✔ F61 manifest cannot authorize a nonlocal chain even if RPC agrees (0.2366ms)
+✔ F61 missing deployment and drifted engine code fail pin validation (0.5255ms)
+(node:15620) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/dev-controls.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ A40 all devcontrols deny publictarget and crossorigin without sideeffects (26.608ms)
+✔ F71 warp accepts bounded integer only and reports actual mutationresult (4.2573ms)
+✔ A29 unknown mockrequest cannot be fulfilled and callercannot provideentropy (2.6097ms)
+(node:5368) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/evidence-plan.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ P04 evidence attachment separately binds raw file and salted text using two slots (3.243ms)
+✔ F31 text evidence alone consumes one slot; full party evidence cap denies another (0.6306ms)
+✔ P04 evidence plan rejects malformed hashes, reused references and invalid capacity (0.4908ms)
+(node:33592) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/job-identifiers.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ job identifiers accept canonical unsigned decimal values through uint256 max, including zero (1.0161ms)
+✔ job identifiers reject malformed, signed, fractional, leading-zero, and out-of-range values (0.2559ms)
+✔ JobCreated extraction preserves event ID zero and rejects absent or malformed event IDs (0.2207ms)
+(node:32020) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/local-rpc.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ A40 devRPC public mode denies even known account methods without contacting chain (16.6285ms)
+✔ W08 devRPC refuses cross origin before chain access (0.3604ms)
+✔ A40 devRPC cannot expose arbitrary node/admin method or external signing wallet (1.7056ms)
+✔ W25 devRPC blocks external targets native value and unlimited approval (6.9689ms)
+✔ F62 devRPC account response contains configured public roles only (1.8192ms)
+✔ W25 exact allowance goes only to pinned escrow and confirmed RPC response returned (1.9003ms)
+(node:10004) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/phase4-ui-private-read.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ late private responses are discarded after wallet, session, job, or generation changes (1.4948ms)
+✔ only the newest same-wallet, same-session, same-job request can update private caches (0.3916ms)
+✔ evidence stays duplicate-blocked while a receipt is unknown and becomes retryable only after a revert (0.1913ms)
+✔ transaction pipeline reports only definitive receipt outcomes for evidence recovery (2.2099ms)
+(node:19452) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/phase4-ui-recovery.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ a successful receipt preserves its private follow-up before a failing fresh read (5.1183ms)
+✔ a failed receipt never runs or preserves a private follow-up (0.6753ms)
+✔ receipt-confirmed stale chain state blocks contract actions until refreshed (1.3542ms)
+✔ an uploaded private file stays a draft until chain verification (0.6328ms)
+✔ a retry resumes after the exact file hash/reference already confirmed on chain (0.7902ms)
+(node:25536) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/phase4-ui-unknown-receipt.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ an unrecognized receipt status fails closed without declaring an evidence transaction reverted (2.8527ms)
+(node:33996) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-arbiter-terms.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 4 current assigned arbiter may read private job description and criteria
+  ✔ a currently assigned arbiter reads the private description and acceptance criteria and the read is logged (34.4322ms)
+  ✔ previous-panel, settled-panel, and stranger wallets receive the same generic 404 (6.3517ms)
+  ✔ an assigned arbiter remains read-only while a party can still update terms (21.1639ms)
+✔ Phase 4 current assigned arbiter may read private job description and criteria (1111.7058ms)
+(node:8408) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-cookie-order.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 4 auth accepts later cookies preceded by semicolon whitespace
+  ✔ SIWE login finds the challenge cookie after another cookie (73.14ms)
+  ✔ session lookup and CSRF-protected logout find a later session cookie (15.9984ms)
+✔ Phase 4 auth accepts later cookies preceded by semicolon whitespace (1076.7849ms)
+(node:22320) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-corrected.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 4 backend security behavior
+  ✔ W-01: nonce response is origin-bound and has a five-minute browser challenge cookie (40.2985ms)
+  ✔ W-01: SIWE validates domain, URI, chain, signer, expiry, and consumes a nonce once (122.0802ms)
+  ✔ W-02: session is server-side, short-lived, and invalidated by logout (55.8687ms)
+  ✔ W-04/P-04/P-07: every private resource uses fresh chain roles and hides unauthorized IDs with 404 (24.2364ms)
+  ✔ W-04/P-04: party read permission is rechecked after a role changes (28.4995ms)
+  ✔ W-05/P-03: job terms require A38 salted commitments and remain private at rest (28.1034ms)
+  ✔ P-03/P-04/F-12: rejection notes match the on-chain reason and stay private (42.1735ms)
+  ✔ W-08: every authenticated write rejects cross-origin or missing CSRF (18.635ms)
+  ✔ W-01/W-04: rate limits fail closed and ignore attacker-supplied forwarding headers (8.582ms)
+  ✔ W-10/A38: file upload content-checks, caps size, encrypts at rest, and never exposes a storage URL (40.0553ms)
+  ✔ A38: assigned arbiter file access is limited to its unresolved dispute and milestone (107.8631ms)
+  ✔ W-10/P-04: download tickets expire, bind the session, and recheck chain access at content read (41.2599ms)
+  ✔ P-04/A39: current assigned arbiter may read unresolved evidence only and every read is audited (41.85ms)
+  ✔ W-05/A39: evidence is bound to an existing on-chain commitment and timeline is source-labelled (30.3267ms)
+  ✔ W-05/W-10: bad JSON, malformed file metadata, and oversized uploads return bounded errors (18.4428ms)
+  ✔ A36: private route chain failures fail closed and never return cached access (9.3116ms)
+✔ Phase 4 backend security behavior (1666.6677ms)
+(node:34756) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-job-zero.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 4 job zero remains a valid job identifier across private routes
+  ✔ party GET and commitment-verified PUT accept job ID zero while stranger access is hidden (46.9984ms)
+  ✔ job-zero rejection notes can be written and read by a party only (25.8215ms)
+  ✔ job-zero file listing, upload, download, and content access work for the party only (47.3134ms)
+  ✔ job-zero timeline and audit remain party-scoped, and dispute zero stays invalid (22.0766ms)
+✔ Phase 4 job zero remains a valid job identifier across private routes (1202.1569ms)
+(node:33836) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-regressions.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 4 chain-time and evidence-cap regressions
+  ✔ the fifth already-committed evidence item is still saved privately (38.1073ms)
+  ✔ chain evidence deadline denies text and file uploads even while server time is behind (12.4221ms)
+  ✔ chain evidence window allows text and file uploads while server time is ahead (33.2447ms)
+✔ Phase 4 chain-time and evidence-cap regressions (1070.8869ms)
+(node:34780) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui-cache-policy.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ a rejected private response clears its own cached resource (1.368ms)
+✔ an authorized refresh replaces only its successfully refreshed resource (0.5613ms)
+✔ disconnecting or switching wallet accounts revokes the current private view (0.1794ms)
+✔ the same account remains authorized across case-only address changes (0.1099ms)
+(node:28688) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui-policy-regressions.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Submitted dispute opening belongs to client; rejection permits either party (2.5407ms)
+✔ Only unmatched counterparty can match the deposit during Evidence phase (0.496ms)
+✔ Ready randomness allows immediate advancement in every pending entropy phase (0.3392ms)
+(node:4616) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ F-60/F-61/S-60: wrong network disables every contract action (1.6859ms)
+✔ F-60/S-15/S-21: named freelancer accepts before the half-open end; expiry action opens at the end (0.4258ms)
+✔ F-60/F-20/S-15/S-21: client approval closes at reviewEnd and permissionless silence release opens there (0.2087ms)
+✔ F-33/S-16: commit voting is available only to a current assigned panel member (0.2972ms)
+✔ F-50: claimable withdrawal remains separate from a terminal milestone (0.1629ms)
+✔ S-06/X-28: token amount parser uses raw integer units and rejects ambiguous input (0.8614ms)
+✔ F-50/S-06: formatted amounts preserve all raw digits without floating-point rounding (13.3591ms)
+✔ P-03/A-38: private commitment matches the typed salted hash vector and validates plaintext (1.9018ms)
+✔ P-03/A-38: commitment creation keeps a fresh 32-byte salt available for encrypted private storage (1.2461ms)
+✔ S-61/S-63: action pipeline rejects a wrong chain before confirmation or wallet send (0.9265ms)
+✔ S-63: action waits for a successful receipt, then refetches chain state (0.2973ms)
+✔ S-63: reverted receipts publish failure and never refetch as a successful action (0.2024ms)
+ℹ tests 81
+ℹ suites 0
+ℹ pass 81
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2755.2322

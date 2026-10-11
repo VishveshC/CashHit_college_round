@@ -1,0 +1,20 @@
+{
+  "frozen_files": [
+    {
+      "path": "scripts/phase4-reopen-registry-artifact.test.mjs",
+      "sha256": "0EE80B18ADCD756CDE36B29255CF9421DCB54536B778564298A85C92BF5CC32B"
+    },
+    {
+      "path": "docs/phase4-reopen-registry-artifact-final.txt",
+      "sha256": "7A96FD67E6CB9959DC45EC5839DE53ADF05E2C50EE96B372535CC0DF3534B051"
+    },
+    {
+      "path": "docs/phase4-reopen-registry-artifact.json",
+      "sha256": "34D2E2025398895D0C85497DC6811D717688B0D87DC7274FAB7CF84F65A04E06"
+    },
+    {
+      "path": "docs/phase4-reopen-registry-artifact-build.txt",
+      "sha256": "95CDDB9DADB48B150A5EEC43548804061FE0EE3AFF5A9FB36B0D49DC77AE1E56"
+    }
+  ]
+}

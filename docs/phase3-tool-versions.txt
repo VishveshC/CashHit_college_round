@@ -1,0 +1,13 @@
+
+> fairwork-v3@0.0.0 tool:versions
+> node scripts/tool-versions.mjs
+
+Node.js v24.11.1
+npm 11.19.0
+solc-js 0.8.36+commit.8a079791.Emscripten.clang
+forge forge Version: 1.8.5
+anvil anvil Version: 1.8.5
+cast cast Version: 1.8.5
+gitleaks 8.30.1
+0.11.6
+crytic-compile 0.4.2

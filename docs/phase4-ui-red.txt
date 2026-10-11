@@ -1,0 +1,201 @@
+Command: node --experimental-strip-types --test apps/web/test/ui.test.ts
+(node:4700) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ F-60/F-61/S-60: wrong network disables every contract action (0.5746ms)
+✖ F-60/S-15/S-21: named freelancer accepts before the half-open end; expiry action opens at the end (0.0833ms)
+✖ F-60/F-20/S-15/S-21: client approval closes at reviewEnd and permissionless silence release opens there (0.067ms)
+✖ F-33/S-16: commit voting is available only to a current assigned panel member (0.0683ms)
+✖ F-50: claimable withdrawal remains separate from a terminal milestone (0.0621ms)
+✖ S-06/X-28: token amount parser uses raw integer units and rejects ambiguous input (0.0537ms)
+✖ F-50/S-06: formatted amounts preserve all raw digits without floating-point rounding (0.0491ms)
+✖ P-03/A-38: private commitment matches the typed salted hash vector and validates plaintext (0.0503ms)
+✖ P-03/A-38: commitment creation keeps a fresh 32-byte salt available for encrypted private storage (0.0646ms)
+✖ S-61/S-63: action pipeline rejects a wrong chain before confirmation or wallet send (0.731ms)
+✖ S-63: action waits for a successful receipt, then refetches chain state (0.1562ms)
+✖ S-63: reverted receipts publish failure and never refetch as a successful action (0.1893ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 0
+ℹ fail 12
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 719.4169
+
+✖ failing tests:
+
+test at apps\web\test\ui.test.ts:104:1
+✖ F-60/F-61/S-60: wrong network disables every contract action (0.5746ms)
+  Error: RED baseline: action policy is not implemented
+      at deriveActionPolicy (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/client/action-policy.ts:12:9)
+      at policy (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:97:10)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:105:18)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17)
+
+test at apps\web\test\ui.test.ts:110:1
+✖ F-60/S-15/S-21: named freelancer accepts before the half-open end; expiry action opens at the end (0.0833ms)
+  Error: RED baseline: action policy is not implemented
+      at deriveActionPolicy (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/client/action-policy.ts:12:9)
+      at policy (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:97:10)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:111:21)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+
+test at apps\web\test\ui.test.ts:121:1
+✖ F-60/F-20/S-15/S-21: client approval closes at reviewEnd and permissionless silence release opens there (0.067ms)
+  Error: RED baseline: action policy is not implemented
+      at deriveActionPolicy (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/client/action-policy.ts:12:9)
+      at policy (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:97:10)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:127:24)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at apps\web\test\ui.test.ts:136:1
+✖ F-33/S-16: commit voting is available only to a current assigned panel member (0.0683ms)
+  Error: RED baseline: action policy is not implemented
+      at deriveActionPolicy (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/client/action-policy.ts:12:9)
+      at policy (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:97:10)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:150:24)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at apps\web\test\ui.test.ts:156:1
+✖ F-50: claimable withdrawal remains separate from a terminal milestone (0.0621ms)
+  Error: RED baseline: action policy is not implemented
+      at deriveActionPolicy (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/client/action-policy.ts:12:9)
+      at policy (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:97:10)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:162:18)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at apps\web\test\ui.test.ts:167:1
+✖ S-06/X-28: token amount parser uses raw integer units and rejects ambiguous input (0.0537ms)
+  Error: RED baseline: token amount parsing is not implemented
+      at parseTokenAmount (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/client/amounts.ts:2:9)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:168:16)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at apps\web\test\ui.test.ts:176:1
+✖ F-50/S-06: formatted amounts preserve all raw digits without floating-point rounding (0.0491ms)
+  Error: RED baseline: token amount formatting is not implemented
+      at formatTokenAmount (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/client/amounts.ts:6:9)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:177:16)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at apps\web\test\ui.test.ts:181:1
+✖ P-03/A-38: private commitment matches the typed salted hash vector and validates plaintext (0.0503ms)
+  Error: RED baseline: private commitment hashing is not implemented
+      at privateCommitmentHash (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/client/commitments.ts:18:9)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:184:5)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at apps\web\test\ui.test.ts:191:1
+✖ P-03/A-38: commitment creation keeps a fresh 32-byte salt available for encrypted private storage (0.0646ms)
+  Error: RED baseline: private commitment creation is not implemented
+      at createPrivateCommitment (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/client/commitments.ts:25:9)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:192:17)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at apps\web\test\ui.test.ts:200:1
+✖ S-61/S-63: action pipeline rejects a wrong chain before confirmation or wallet send (0.731ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /chain|network|31337/i. Input:
+  
+  'Error: RED baseline: contract action pipeline is not implemented'
+  
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:202:3)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: RED baseline: contract action pipeline is not implemented
+        at runContractAction (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/client/transactions.ts:15:9)
+        at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:203:5)
+        at Test.runInAsyncScope (node:async_hooks:214:14)
+        at Test.run (node:internal/test_runner/test:1106:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+        at Test.postRun (node:internal/test_runner/test:1235:19)
+        at Test.run (node:internal/test_runner/test:1163:12)
+        at async Test.processPendingSubtests (node:internal/test_runner/test:788:7),
+    expected: /chain|network|31337/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at apps\web\test\ui.test.ts:218:1
+✖ S-63: action waits for a successful receipt, then refetches chain state (0.1562ms)
+  Error: RED baseline: contract action pipeline is not implemented
+      at runContractAction (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/client/transactions.ts:15:9)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:228:24)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+
+test at apps\web\test\ui.test.ts:242:1
+✖ S-63: reverted receipts publish failure and never refetch as a successful action (0.1893ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /revert|failed|transaction/i. Input:
+  
+  'Error: RED baseline: contract action pipeline is not implemented'
+  
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:244:3)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: RED baseline: contract action pipeline is not implemented
+        at runContractAction (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/client/transactions.ts:15:9)
+        at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui.test.ts:245:5)
+        at Test.runInAsyncScope (node:async_hooks:214:14)
+        at Test.run (node:internal/test_runner/test:1106:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+        at Test.postRun (node:internal/test_runner/test:1235:19)
+        at Test.run (node:internal/test_runner/test:1163:12)
+        at async Test.processPendingSubtests (node:internal/test_runner/test:788:7),
+    expected: /revert|failed|transaction/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+Exit code: 1

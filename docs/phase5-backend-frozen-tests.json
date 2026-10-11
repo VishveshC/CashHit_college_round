@@ -1,0 +1,12 @@
+{
+  "phase": 5,
+  "scope": "independent backend security review; red tests frozen before execution",
+  "command": "node --experimental-strip-types --test scripts/phase5-backend-evidence-receipt.test.mjs",
+  "tests": [
+    {
+      "path": "scripts/phase5-backend-evidence-receipt.test.mjs",
+      "sha256": "2c2d7a69baac1b5692f267714d78bf713b65ca7b0230b3e340f9948abe8f30fa",
+      "purpose": "prove receipt-bound evidence can be persisted after deadline/settlement only for exact valid on-chain events, and reject active PDF content"
+    }
+  ]
+}

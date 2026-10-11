@@ -1,0 +1,53 @@
+
+> fairwork-v3@0.0.0 test:contracts
+> node scripts/forge-test.mjs --match-path test/Phase5BoundaryCompletion.t.sol
+
+forge-std 1.17.0, commit f3dae6e6ee381f25eb6a246f7da9b85c91a68219, normalized source SHA-256 verified.
+Compiling 53 files with Solc 0.8.36
+Solc 0.8.36 finished in 2.40s
+Compiler run successful with warnings:
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:125:29:
+    |
+125 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, signature);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:134:29:
+    |
+134 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecoverCalldata(hash, signature);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:161:29:
+    |
+161 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, r, vs);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:203:29:
+    |
+203 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, v, r, s);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:273:26:
+    |
+273 |     function _throwError(RecoverError error, bytes32 errorArg) private pure {
+    |                          ^^^^^^^^^^^^^^^^^^
+
+
+Ran 10 tests for test/Phase5BoundaryCompletion.t.sol:Phase5BoundaryCompletionTest
+[PASS] test_Phase5_ArbiterCannotSpoofForwardedCommitDirectlyToEngine() (gas: 2795665)
+[PASS] test_Phase5_EvidenceAdvanceRejectsEminusOneOnFreshDispute() (gas: 1698822)
+[PASS] test_Phase5_EvidenceAdvanceSucceedsAtEOnFreshDispute() (gas: 2057878)
+[PASS] test_Phase5_EvidenceAdvanceSucceedsAtEplusOneOnFreshDispute() (gas: 2058078)
+[PASS] test_Phase5_Panel1CommitDirectlyRejectsAtEplusOne() (gas: 2850472)
+[PASS] test_Phase5_Panel1RevealDirectlyRejectsAtEplusOne() (gas: 3193902)
+[PASS] test_Phase5_Panel2CommitDirectlyRejectsAtEplusOne() (gas: 3873618)
+[PASS] test_Phase5_Panel2RejectsUnassignedArbiterForCommitAndReveal() (gas: 4281791)
+[PASS] test_Phase5_Panel2RevealDirectlyRejectsAtEplusOne() (gas: 4071538)
+[PASS] test_Phase5_ReplacementCommitDirectlyRejectsAtEplusOne() (gas: 3596566)
+Suite result: ok. 10 passed; 0 failed; 0 skipped; finished in 6.85ms (41.40ms CPU time)
+
+Ran 1 test suite in 8.06ms (6.85ms CPU time): 10 tests passed, 0 failed, 0 skipped (10 total tests)

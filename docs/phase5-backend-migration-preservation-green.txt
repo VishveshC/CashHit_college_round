@@ -1,0 +1,10 @@
+✔ Phase 5 supplemental: evidence index migration preserves existing rows and supports the new identity (1248.9018ms)
+ℹ preserved=2 insertedSharedReference=2 finalRows=4 sha256=0f2e1d98be7802180147673472cc5c03a02b8ed886602fb8815a21bf78a34e0a,b77f0d4eae61952f5878d3b2b35feeef9e25703d1bdc10a485b5b194c5feddbe
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1251.5171

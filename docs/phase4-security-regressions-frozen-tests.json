@@ -1,0 +1,10 @@
+[
+  {
+    "file": "apps/web/test/security-regressions.test.ts",
+    "Hash": "BBA542391B6E39C23C8F593D073DA7B13494B57E78E24896E42A0FADFD8318EF"
+  },
+  {
+    "file": "docs/phase4-security-regressions-red-root.txt",
+    "Hash": "8672434515C6901F62F0362A1E70B9DD3140D768A7E5A263836AE905D6254267"
+  }
+]

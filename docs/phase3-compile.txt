@@ -1,0 +1,34 @@
+
+> fairwork-v3@0.0.0 compile
+> node scripts/compile.mjs
+
+Warning: "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> @openzeppelin/contracts/utils/cryptography/ECDSA.sol:125:29:
+    |
+125 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, signature);
+    |                             ^^^^^^^^^^^^^^^^^^
+solc 0.8.36+commit.8a079791.Emscripten.clang
+Warning: "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> @openzeppelin/contracts/utils/cryptography/ECDSA.sol:134:29:
+    |
+134 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecoverCalldata(hash, signature);
+    |                             ^^^^^^^^^^^^^^^^^^
+Warning: "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> @openzeppelin/contracts/utils/cryptography/ECDSA.sol:161:29:
+    |
+161 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, r, vs);
+    |                             ^^^^^^^^^^^^^^^^^^
+Warning: "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> @openzeppelin/contracts/utils/cryptography/ECDSA.sol:203:29:
+    |
+203 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, v, r, s);
+    |                             ^^^^^^^^^^^^^^^^^^
+Compile succeeded: 29 source units, 32 compiled contract/library artifacts, 0 errors.
+Warning: "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> @openzeppelin/contracts/utils/cryptography/ECDSA.sol:273:26:
+    |
+273 |     function _throwError(RecoverError error, bytes32 errorArg) private pure {
+    |                          ^^^^^^^^^^^^^^^^^^
+Generated local escrow ABI; no address or deployment is implied.
+Generated local FairworkArbitration ABI; no address or deployment is implied.
+Generated local MockRandomness ABI; no address or deployment is implied.

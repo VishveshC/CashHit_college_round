@@ -1,0 +1,14 @@
+[
+  {
+    "file": "contracts/test/Phase2Milestones.t.sol",
+    "Hash": "F84FF8C94738DF47812C880E882954443AD725304CF1B9244049BBC6019093FE"
+  },
+  {
+    "file": "docs/phase2-red.txt",
+    "Hash": "75E98696B7AF2A37A8B747B32EA7F2FFBA6945CFB2794E3535D9648A6250A03E"
+  },
+  {
+    "file": "docs/phase2-red-runtime.txt",
+    "Hash": "FAB3FEA191FF781F0E6BA20DA8D09D8433A7DCFF9CC277D1B8A5664706F877A9"
+  }
+]

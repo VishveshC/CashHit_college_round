@@ -1,0 +1,7 @@
+C:\Users\vishvesh\.solc-select\artifacts\solc-0.8.36\solc-0.8.36
+solc, the solidity compiler commandline interface
+Version: 0.8.36+commit.8a079791.Windows.msvc
+exit: 0
+docs/phase1-slither-final.escrow.json success True error None findings 13
+docs/phase1-slither-final.mocks.json success True error None findings 0
+unresolved references: 0 missing inheritance: 0 missing params: 0

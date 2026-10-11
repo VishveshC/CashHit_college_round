@@ -1,0 +1,305 @@
+{
+  "capturedAt": "2026-10-10T21:37:53.812Z",
+  "files": [
+    {
+      "path": "contracts/src/FairworkArbitration.sol",
+      "sha256": "e821e13d67248127665eb076e60a3713af52cb438040f29920cb347ce596fcb2"
+    },
+    {
+      "path": "contracts/src/FairworkEscrow.sol",
+      "sha256": "fc28871ece735ea4bb38d7aed153d4b6d5c874efa33f43468ddf66d9bf9f4ed0"
+    },
+    {
+      "path": "contracts/src/interfaces/IRandomness.sol",
+      "sha256": "a6762d42031985e1a8388808f640b0684d2aed7683ea0ac9846e0996ddb74c4e"
+    },
+    {
+      "path": "contracts/src/mocks/LocalDemoTokens.sol",
+      "sha256": "d393c0d240ae47a1eb6092b042e3bfcc6e1f578e5e6448390b9701ee891cde47"
+    },
+    {
+      "path": "contracts/src/mocks/MockRandomness.sol",
+      "sha256": "dc24d2f69e135e77ac5a37590203547d0def2148d1242715b1f1067bef9c30a2"
+    },
+    {
+      "path": "contracts/src/Phase0CompileHarness.sol",
+      "sha256": "1913ae49e42dbaf15e7781a3b6432d523a823e52642f211f1e9a4315eff01d01"
+    },
+    {
+      "path": "apps/web/app/api/auth/login/route.ts",
+      "sha256": "b200c75bbdcebddd60b7f749d27193c8ba17cbfa13b5a434d359b32593726d4f"
+    },
+    {
+      "path": "apps/web/app/api/auth/logout/route.ts",
+      "sha256": "3600bf52fc492c735db33dc5aeffcc5cac1b2a04588c2ed25460ada9fc56b8de"
+    },
+    {
+      "path": "apps/web/app/api/auth/nonce/route.ts",
+      "sha256": "cc07a234067b0c2e7fb4f2ec18a9637fa3f9ceeec765bd588a9bb34cc8fa8002"
+    },
+    {
+      "path": "apps/web/app/api/auth/session/route.ts",
+      "sha256": "cde2fd9c611562c1a8f31abe0b8b56db32c1026aceac260619c6ee65aa0aa33b"
+    },
+    {
+      "path": "apps/web/app/api/config/route.ts",
+      "sha256": "97edfc872414ac0266f33e44ab483ef80b3c59fe1a76758de010c678e909a6bc"
+    },
+    {
+      "path": "apps/web/app/api/dev/randomness/fulfill/route.ts",
+      "sha256": "eaa732e4c4e4caa4f562a991bb0c1a1c535b856be3d8879b54208ac2f92e0e45"
+    },
+    {
+      "path": "apps/web/app/api/dev/randomness/mode/route.ts",
+      "sha256": "f0237a6c536906f515f248ee1e1c7095ac2922ec0c5df80af3e5a068c4992f6e"
+    },
+    {
+      "path": "apps/web/app/api/dev/rpc/route.ts",
+      "sha256": "d19f30e6df46aae54fadf6de2c8efd2432291a0ef7701082a4fc9f947cd0e057"
+    },
+    {
+      "path": "apps/web/app/api/dev/time-warp/route.ts",
+      "sha256": "7291dfa4fa6fb8501485e135ca5af5d3fd964eb5b6571e33e266a94412317d12"
+    },
+    {
+      "path": "apps/web/app/api/disputes/[disputeId]/evidence/route.ts",
+      "sha256": "b41b7d4fd448ec9dba3f54136e248e077d34b1566d9b6c2c9a0ec81307de7473"
+    },
+    {
+      "path": "apps/web/app/api/files/[fileId]/content/route.ts",
+      "sha256": "4f48e3e269958dda2a191d23d5a9db37d34d5f052206a93910255df4fc11dd4a"
+    },
+    {
+      "path": "apps/web/app/api/files/[fileId]/download/route.ts",
+      "sha256": "5108b29680b003f59af9b020805e3551daec467a461d6d1a1831186faa195976"
+    },
+    {
+      "path": "apps/web/app/api/jobs/[jobId]/audit/route.ts",
+      "sha256": "b3b587f31e1fc8b02ee889a61682db7a59f1a6bc167252d6bde091296593e6f0"
+    },
+    {
+      "path": "apps/web/app/api/jobs/[jobId]/files/route.ts",
+      "sha256": "fdcbb2e4dbb0234cd7b9709c635a69a3fbcb0a4bb7c685dd3790e87910f655fd"
+    },
+    {
+      "path": "apps/web/app/api/jobs/[jobId]/notes/route.ts",
+      "sha256": "0b45bae299ec307f03ba9d6edea24366a8a1094287c92157d524b7a433f9ae45"
+    },
+    {
+      "path": "apps/web/app/api/jobs/[jobId]/route.ts",
+      "sha256": "0b5087c998dc632275156f550fd835e8158d60e15d3464165bd7570a6cc3a064"
+    },
+    {
+      "path": "apps/web/app/api/jobs/[jobId]/timeline/route.ts",
+      "sha256": "6decb0ebf98a2d02e56d7ee980bd69e6a40b7aa607fe82dea4db7429fc7f25c0"
+    },
+    {
+      "path": "apps/web/app/globals.css",
+      "sha256": "d4a24d2983b8193ebf8589467c5f185806a64b3fc962451096023e860a9d0e07"
+    },
+    {
+      "path": "apps/web/app/layout.tsx",
+      "sha256": "a1d65e7ff201970fa50138e92ac2118d6715d6a391e30f66840759bb2d8f7d67"
+    },
+    {
+      "path": "apps/web/app/page.tsx",
+      "sha256": "c01a54c657caf1bf6e91bae01ad9b7d47462336e8b6de3b49a6df5c1edb52b0e"
+    },
+    {
+      "path": "apps/web/components/EscrowDashboard.tsx",
+      "sha256": "731b0a2e529543bf246ad78688bf322d34c6bc85e3d6d543ed6f6bbb521e27ca"
+    },
+    {
+      "path": "apps/web/lib/chain-pins.ts",
+      "sha256": "b7740d6b1d210f985fa775f990439576f687841d562c2f5e3f6bb9597d1bbcac"
+    },
+    {
+      "path": "apps/web/lib/chain-server.ts",
+      "sha256": "68eb6801bee736d62f1021c76806250712c838b8fff675008bfa7f89df38a4fa"
+    },
+    {
+      "path": "apps/web/lib/chain.ts",
+      "sha256": "2ff59e24073c04009c98ed8e95aed1429311d49b174c472170b6f3c63a702863"
+    },
+    {
+      "path": "apps/web/lib/client/action-policy.ts",
+      "sha256": "960764d3c848f3c9862ff9b63dffe3f00f230d1db1ff2df1e8345f9e0e91f1d1"
+    },
+    {
+      "path": "apps/web/lib/client/amounts.ts",
+      "sha256": "b5fcc50928b25918bfc455ec8f75a4cc93cf76d36394123e4c34002d7044daae"
+    },
+    {
+      "path": "apps/web/lib/client/commitments.ts",
+      "sha256": "fc7415c22d26e6ccecba6a4d013b21b491e7db337662324cdebad0ce20f436dc"
+    },
+    {
+      "path": "apps/web/lib/client/evidence-plan.ts",
+      "sha256": "9be642cb64a32ba5fd26211052fb720a3115737f12ae77cff68481969c27259c"
+    },
+    {
+      "path": "apps/web/lib/client/evidence-receipt.ts",
+      "sha256": "a828f189e33c36f22558957ef2e6f644bbfd5195f7ad484f5c60bdd6efe56088"
+    },
+    {
+      "path": "apps/web/lib/client/evidence-resume.ts",
+      "sha256": "6b1ef82d46bb3538e9366152df2d17f8d7c9d54f8cbe5bde4c18e05fed961a88"
+    },
+    {
+      "path": "apps/web/lib/client/file-drafts.ts",
+      "sha256": "fb27d1890602fd97668a30f6ed6e8c2b0b5c3271ad01cd2c19419343fa05dc5c"
+    },
+    {
+      "path": "apps/web/lib/client/job-identifiers.ts",
+      "sha256": "c75e8372220a8de952d00e189a886a8b34fe4831b30bd47b20c26c356f2acdfb"
+    },
+    {
+      "path": "apps/web/lib/client/private-cache-policy.ts",
+      "sha256": "7538fe63f7e0cdbb07bf1f3e4190967bee28e9d8c34d446ba363ca53a1c86575"
+    },
+    {
+      "path": "apps/web/lib/client/private-read-guard.ts",
+      "sha256": "04be076d006818be451ba9c04d0c5da007f1a03fd9593672e1e38393475eacc8"
+    },
+    {
+      "path": "apps/web/lib/client/transactions.ts",
+      "sha256": "ade29649749bc4e15e26f4ecdc4a5202d791a12e95bbd571826c7868bcac2bb3"
+    },
+    {
+      "path": "apps/web/lib/dev-control-runtime.ts",
+      "sha256": "c3c3f1da5a5221975c8b8ad5a62d6ada2994c9c6b9731a005636627724bda2d5"
+    },
+    {
+      "path": "apps/web/lib/dev-controls.ts",
+      "sha256": "3c01b43025264e027546a4bab5795eea3e7945c61923d6fbcfa21fa5963b561f"
+    },
+    {
+      "path": "apps/web/lib/dev-wallet.ts",
+      "sha256": "f9820e8c5143daf3eb5ee880b8f44ff46c9aa294d66a63b576111f10049d35bd"
+    },
+    {
+      "path": "apps/web/lib/local-rpc.ts",
+      "sha256": "f1c8f85eced43d53956bed04c81fcf7d509d2ebaaa1d00d433b876605ee46187"
+    },
+    {
+      "path": "apps/web/lib/server/routes.ts",
+      "sha256": "1561bd9742c77393381b35304b28e17dabf397417cdf25ea7c33581b883b314b"
+    },
+    {
+      "path": "apps/web/lib/server/runtime.ts",
+      "sha256": "f029717a474e38cedc47651b5de5f727dd9e4938e4f3bf278f1856d8e1210da9"
+    },
+    {
+      "path": "apps/web/lib/server/security.ts",
+      "sha256": "f2d17a1d57b757699d1e457c14d28643efaff6ae495a2d2eca49a146b4989172"
+    },
+    {
+      "path": "scripts/attack-lab.mjs",
+      "sha256": "034392f72a947aa67fe788e4009d4bc3d5b79288fce2a5b9cf1904966c14c6d7"
+    },
+    {
+      "path": "scripts/check-frozen-tests.mjs",
+      "sha256": "e8cdba0efb1b467969b133889c4e78428f52ba24fefeec9016cd068988bd47d7"
+    },
+    {
+      "path": "scripts/compile.mjs",
+      "sha256": "103e00ea80e9c082aa3ef5fc2021ef939e96ecd34d7ad2509adcb7a067184c8f"
+    },
+    {
+      "path": "scripts/forge-build.mjs",
+      "sha256": "f2265797509bf368e68d312e2eab3789c7052617e475168dcebae903ec4ba556"
+    },
+    {
+      "path": "scripts/forge-coverage.mjs",
+      "sha256": "16abb3e0858d4f1132c89de8a66d20a7519b1b9dee4839ae5564a2e1c7a1a996"
+    },
+    {
+      "path": "scripts/forge-test.mjs",
+      "sha256": "6d86a610f44e51c24f7e0166ae5207024eeb93b3099e0fcd29c1cd846d1bdc55"
+    },
+    {
+      "path": "scripts/foundry-dependencies.mjs",
+      "sha256": "028397dad0bff2797b2765bf2d741f048c9fe851cff4a89482ae5e1110d3152a"
+    },
+    {
+      "path": "scripts/local-runtime.mjs",
+      "sha256": "f9397138027be9220ad92d88983dcf481df561386f3ccd3dc358156a36962dbf"
+    },
+    {
+      "path": "scripts/local-stop.mjs",
+      "sha256": "35af9b33ce796828aece95b13c213a6aa721c8f02def8cb80e385378f962a553"
+    },
+    {
+      "path": "scripts/phase4/acceptance.mjs",
+      "sha256": "0836f387e474e3f78b909b737604142e22bbfcdbce1dd9479abac814e464e2ac"
+    },
+    {
+      "path": "scripts/phase4/attack-lab.mjs",
+      "sha256": "e7fd385da28a51bf7af9a80b9700deeb8b96a72fb4d6b1199f205bf6b14cafa0"
+    },
+    {
+      "path": "scripts/phase4/demo.mjs",
+      "sha256": "60c4c5cf21742d6976a798f2e0d47506d188641b0ffebed3af062096fc309335"
+    },
+    {
+      "path": "scripts/phase4/runtime.mjs",
+      "sha256": "24531dea76576334ec7b9a8d84322385a326f282dc7f25b436fdd57a196fb956"
+    },
+    {
+      "path": "scripts/phase4/verify-receipts.mjs",
+      "sha256": "6067c9e48b3166262c33ab4a2b21d657466a6ba23b63bb1673d71a7697b2c40d"
+    },
+    {
+      "path": "scripts/phase4-http-security.mjs",
+      "sha256": "49d181f77decaf803b208c3985f0649a7836cc56d3376801e7ebf14c9ee86e92"
+    },
+    {
+      "path": "scripts/phase4-retention.mjs",
+      "sha256": "7d9ffb8038292d61c34c75825640f915a21af55256d3e7c336cf3d43081a740d"
+    },
+    {
+      "path": "scripts/public-build-check.mjs",
+      "sha256": "5cbf39bedcee86fa739c1b467e617731d445300fc327358827a7e31609a8ea6a"
+    },
+    {
+      "path": "scripts/run-phase4-checks.mjs",
+      "sha256": "bdfd6faaff68f971a954e94ffa9bad57ce55f431a427cd577de9ceba14991b8d"
+    },
+    {
+      "path": "scripts/run-web-tests.mjs",
+      "sha256": "0ec45ad2713d3b2e82eb9992118333cd75a01d7e34c549b7c86beb23175033fd"
+    },
+    {
+      "path": "scripts/scan-secrets.mjs",
+      "sha256": "6f7a7b046dd81fe994d5f6aafe2d5fc34d71a8c71a8a5f826e2fa6c70d0264fa"
+    },
+    {
+      "path": "scripts/setup-contracts.mjs",
+      "sha256": "0691c76a94dedbfcc3b140c75c8c533eb42cd11847e6b48b51516ed0ec637ae2"
+    },
+    {
+      "path": "scripts/slither.mjs",
+      "sha256": "3ac932efc9b18f8af7a7fdc071f8913ef715d32503c7aca19e2d3d8ec54cb369"
+    },
+    {
+      "path": "scripts/tool-versions.mjs",
+      "sha256": "27bca802baf8d5a154e6ac125821c664dc76ba3b2a9c7bd1ec624d9ac766e76c"
+    },
+    {
+      "path": "scripts/verify-client-secrets.mjs",
+      "sha256": "7813fd5d4a789d247dd9055fd9b05a4548f05c06e0a8e04bdf28f3443c3fc372"
+    },
+    {
+      "path": "scripts/web-build.mjs",
+      "sha256": "d5191aa8d09a94dc36f72b4d1322a9aa8402de5ccceced1aa33df81c91c5c419"
+    },
+    {
+      "path": "scripts/web-run.mjs",
+      "sha256": "15b42df05c602c32b14cb80f9540b34a819bbd96d810e6b839fab5a9c7183363"
+    },
+    {
+      "path": "scripts/zap-baseline.mjs",
+      "sha256": "2a7328fc66e43a2bf9c532753338d2081aee68e45a2686fd6bd164b30d189477"
+    }
+  ]
+}

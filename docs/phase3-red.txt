@@ -1,0 +1,141 @@
+Phase 3 pre-implementation RED run
+Command: forge test --root contracts --match-path 'test/Phase3*.t.sol' -vv
+Started: 2026-10-11 00:41:19 +05:30
+Exit code: 1
+FairworkEscrow.sol SHA-256 before: 04D50E1E442F4120E4D11203A90BAED20989CA2605C74E8A5FCEDF2E4DC4E706
+FairworkEscrow.sol SHA-256 after:  04D50E1E442F4120E4D11203A90BAED20989CA2605C74E8A5FCEDF2E4DC4E706
+--- BEGIN RAW FORGE OUTPUT ---
+No files changed, compilation skipped
+
+Ran 1 test for test/Phase3BoundedExitInvariant.t.sol:Phase3BoundedExitInvariantTest
+[FAIL: EvmError: Revert] setUp() (gas: 0)
+Suite result: FAILED. 0 passed; 1 failed; 0 skipped; finished in 1.86ms (0.00ns CPU time)
+
+Ran 12 tests for test/Phase3Randomness.t.sol:Phase3RandomnessTest
+[FAIL: EvmError: Revert] test_A29_CallbackAcceptedAtRequestEndMinusOneCanBeConsumedAtEnd() (gas: 27069)
+[FAIL: EvmError: Revert] test_A29_CallbackFirstArrivingAtEndIsIgnoredAndRetrySupersedesOldRequest() (gas: 27112)
+[FAIL: EvmError: Revert] test_A29_ReplacementAndPanel2DrawsAlsoUseTwoRetriesThenFallback() (gas: 27154)
+[FAIL: EvmError: Revert] test_A29_RevertedRequestsKeepTimerAndThreeDistinctIdsReachTimeoutFallback() (gas: 27113)
+[FAIL: EvmError: Revert] test_A29_SynchronousMockCallbackStoresEntropyWithoutSelectingOrSettling() (gas: 27113)
+[FAIL: EvmError: Revert] test_A29_UnknownDuplicateAndWrongProviderCallbacksAreSafe() (gas: 27091)
+[FAIL: EvmError: Revert] test_A30_Panel2ExcludesAnActuallyAssignedReplacement() (gas: 27083)
+[FAIL: EvmError: Revert] test_A30_Panel2IsEntirelyFreshAndSecondNoQuorumFallsBack() (gas: 27175)
+[FAIL: EvmError: Revert] test_A30_PoolExhaustionIsCheckedAfterRequestAndTimelyCallback() (gas: 27089)
+[FAIL: EvmError: Revert] test_A30_SparseReplacementAssignsAvailableMemberAndLeavesEmptySeat() (gas: 27093)
+[FAIL: EvmError: Revert] test_A35_EntropyCannotBeBiasedByPendingRegistryRemovalOrAddition() (gas: 27094)
+[FAIL: EvmError: Revert] test_A35_RetryUsesCandidateSnapshotTakenByFirstRequest() (gas: 27070)
+Suite result: FAILED. 0 passed; 12 failed; 0 skipped; finished in 5.80ms (22.52ms CPU time)
+
+Ran 17 tests for test/Phase3Disputes.t.sol:Phase3DisputesTest
+[FAIL: EvmError: Revert] test_F30_DepositMinimumRawDeltaMatchOnceAndEvidenceCutoff() (gas: 780405)
+[FAIL: EvmError: Revert] test_F30_DisputeIdCannotBeReusedForAnotherMilestoneOrJob() (gas: 780352)
+[FAIL: call reverted as expected, but without data] test_F30_F31_DepositExactDeltaFailureRollsBackOpenAndLiabilities() (gas: 1593243)
+[FAIL: call reverted as expected, but without data] test_F30_RejectedDisputeRejectsAtResponseEndAndAfter() (gas: 882900)
+[FAIL: EvmError: Revert] test_F30_RejectedMilestoneAllowsEitherPartyBeforeResponseEndOnly() (gas: 853919)
+[FAIL: EvmError: Revert] test_F30_SubmittedClientOpensOneDisputeAndFreezesPrincipalAtReviewBoundary() (gas: 826891)
+[FAIL: call reverted as expected, but without data] test_F30_SubmittedDisputeRejectsAtReviewEndAndAfter() (gas: 618253)
+[FAIL: EvmError: Revert] test_F31_EachPartyMaySubmitFiveEvidenceItemsAndSixthReverts() (gas: 780370)
+[FAIL: EvmError: Revert] test_F31_EngineCannotBeCalledDirectlyWithSpoofedForwardedActor() (gas: 780393)
+[FAIL: EvmError: Revert] test_F32_FirstPanelHasThreeDistinctAllowlistedMembersAndExcludesParties() (gas: 26797)
+[FAIL: EvmError: Revert] test_F32_RemovedAssignedArbiterKeepsSnapshottedVoteRight() (gas: 27135)
+[FAIL: EvmError: Revert] test_F33_CommitAndRevealWindowsAreHalfOpen() (gas: 27091)
+[FAIL: EvmError: Revert] test_F33_ReplacementCommitWindowIsHalfOpenAndNeverReplacesTwice() (gas: 27132)
+[FAIL: EvmError: Revert] test_F33_RevealWindowIsHalfOpen() (gas: 27070)
+[FAIL: EvmError: Revert] test_F33_VoteCommitmentBindsChainEscrowDisputeArbiterBpsAndSalt() (gas: 27117)
+[FAIL: EvmError: Revert] test_F33_WrongSaltBpsAndCopiedCommitCannotReveal() (gas: 27091)
+[FAIL: call reverted as expected, but without data] test_F45_ArbiterRegistryIsOwnerOnlyDistinctAndCappedAt128() (gas: 30055)
+Suite result: FAILED. 0 passed; 17 failed; 0 skipped; finished in 7.67ms (21.75ms CPU time)
+
+Ran 8 tests for test/Phase3Boundaries.t.sol:Phase3BoundariesTest
+[FAIL: EvmError: Revert] test_A29_CallbackAtEndPlusOneIsIgnoredAndAdvanceRetries() (gas: 27091)
+[FAIL: EvmError: Revert] test_A29_MockWordIsBoundToConsumerAndRequestAndCallerCannotChooseIt() (gas: 27092)
+[FAIL: EvmError: Revert] test_A29_ShortPoolRequestFailureStillUsesAllThreeTimeouts() (gas: 27088)
+[FAIL: EvmError: Revert] test_A29_TimelyEntropyRemainsConsumableAfterTimeout() (gas: 27070)
+[FAIL: EvmError: Revert] test_A30_EmptyReplacementStillRequestsEntropyAndGetsOneWindow() (gas: 27050)
+[FAIL: EvmError: Revert] test_F31_MatchingFeeDepositRollsBackWithoutChangingEvidenceClock() (gas: 1675266)
+[FAIL: EvmError: Revert] test_F33_DisplacedNoncommitterCannotCommitOrReveal() (gas: 27066)
+[FAIL: EvmError: Revert] test_F34_RulingCanSettleAfterTokenCodeChangesAndAllTokenCallsRevert() (gas: 27113)
+Suite result: FAILED. 0 passed; 8 failed; 0 skipped; finished in 8.32ms (20.90ms CPU time)
+
+Ran 9 tests for test/Phase3Accounting.t.sol:Phase3AccountingTest
+[FAIL: EvmError: Revert] test_F31_OpenDepositUsesExactDeltaAndRejectsReentryWithoutDoubleDeposit() (gas: 2440378)
+[FAIL: EvmError: Revert] test_F34_BelowHalfRulingForfeitsFreelancerDepositWhenBothPartiesPost() (gas: 27135)
+[FAIL: EvmError: Revert] test_F34_DisputeOnOneMilestoneDoesNotBlockAnotherMilestoneSettlement() (gas: 27090)
+[FAIL: EvmError: Revert] test_F34_MissingLoserDepositIsDeductedExactlyAndCappedAtPrincipal() (gas: 27069)
+[FAIL: EvmError: Revert] test_F34_NormalFiftyFiftyForfeitsFloorPerPartyForDepositOneAndThree() (gas: 27092)
+[FAIL: EvmError: Revert; counterexample: calldata=0xc82565cd00000000000000000000000000000000000000000000000000000000000074d0000000000000000000000000000000000000000000000000000000000000003b args=[29904 [2.99e4], 59]] test_F34_OddRawUnitSplitsFuzzAcrossSixEightAndEighteenDecimals(uint64,uint16) (runs: 0, μ: 0, ~: 0)
+[FAIL: EvmError: Revert] test_F34_ThreeVotesUseMedianAndTwoVotesUseFlooredMean() (gas: 27113)
+[FAIL: EvmError: Revert] test_F34_TreasuryAliasPartyReceivesAdditiveCredits() (gas: 147802)
+[FAIL: EvmError: Revert] test_F34_ZeroAndFullVoteEndpointsSettleAndTerminalAdvanceCannotRepeat() (gas: 27091)
+Suite result: FAILED. 0 passed; 9 failed; 0 skipped; finished in 9.12ms (18.63ms CPU time)
+
+Ran 5 test suites in 11.91ms (32.77ms CPU time): 0 tests passed, 47 failed, 0 skipped (47 total tests)
+
+Failing tests:
+Encountered 9 failing tests in test/Phase3Accounting.t.sol:Phase3AccountingTest
+[FAIL: EvmError: Revert] test_F31_OpenDepositUsesExactDeltaAndRejectsReentryWithoutDoubleDeposit() (gas: 2440378)
+[FAIL: EvmError: Revert] test_F34_BelowHalfRulingForfeitsFreelancerDepositWhenBothPartiesPost() (gas: 27135)
+[FAIL: EvmError: Revert] test_F34_DisputeOnOneMilestoneDoesNotBlockAnotherMilestoneSettlement() (gas: 27090)
+[FAIL: EvmError: Revert] test_F34_MissingLoserDepositIsDeductedExactlyAndCappedAtPrincipal() (gas: 27069)
+[FAIL: EvmError: Revert] test_F34_NormalFiftyFiftyForfeitsFloorPerPartyForDepositOneAndThree() (gas: 27092)
+[FAIL: EvmError: Revert; counterexample: calldata=0xc82565cd00000000000000000000000000000000000000000000000000000000000074d0000000000000000000000000000000000000000000000000000000000000003b args=[29904 [2.99e4], 59]] test_F34_OddRawUnitSplitsFuzzAcrossSixEightAndEighteenDecimals(uint64,uint16) (runs: 0, μ: 0, ~: 0)
+[FAIL: EvmError: Revert] test_F34_ThreeVotesUseMedianAndTwoVotesUseFlooredMean() (gas: 27113)
+[FAIL: EvmError: Revert] test_F34_TreasuryAliasPartyReceivesAdditiveCredits() (gas: 147802)
+[FAIL: EvmError: Revert] test_F34_ZeroAndFullVoteEndpointsSettleAndTerminalAdvanceCannotRepeat() (gas: 27091)
+
+Encountered 8 failing tests in test/Phase3Boundaries.t.sol:Phase3BoundariesTest
+[FAIL: EvmError: Revert] test_A29_CallbackAtEndPlusOneIsIgnoredAndAdvanceRetries() (gas: 27091)
+[FAIL: EvmError: Revert] test_A29_MockWordIsBoundToConsumerAndRequestAndCallerCannotChooseIt() (gas: 27092)
+[FAIL: EvmError: Revert] test_A29_ShortPoolRequestFailureStillUsesAllThreeTimeouts() (gas: 27088)
+[FAIL: EvmError: Revert] test_A29_TimelyEntropyRemainsConsumableAfterTimeout() (gas: 27070)
+[FAIL: EvmError: Revert] test_A30_EmptyReplacementStillRequestsEntropyAndGetsOneWindow() (gas: 27050)
+[FAIL: EvmError: Revert] test_F31_MatchingFeeDepositRollsBackWithoutChangingEvidenceClock() (gas: 1675266)
+[FAIL: EvmError: Revert] test_F33_DisplacedNoncommitterCannotCommitOrReveal() (gas: 27066)
+[FAIL: EvmError: Revert] test_F34_RulingCanSettleAfterTokenCodeChangesAndAllTokenCallsRevert() (gas: 27113)
+
+Encountered 1 failing test in test/Phase3BoundedExitInvariant.t.sol:Phase3BoundedExitInvariantTest
+[FAIL: EvmError: Revert] setUp() (gas: 0)
+
+Encountered 17 failing tests in test/Phase3Disputes.t.sol:Phase3DisputesTest
+[FAIL: EvmError: Revert] test_F30_DepositMinimumRawDeltaMatchOnceAndEvidenceCutoff() (gas: 780405)
+[FAIL: EvmError: Revert] test_F30_DisputeIdCannotBeReusedForAnotherMilestoneOrJob() (gas: 780352)
+[FAIL: call reverted as expected, but without data] test_F30_F31_DepositExactDeltaFailureRollsBackOpenAndLiabilities() (gas: 1593243)
+[FAIL: call reverted as expected, but without data] test_F30_RejectedDisputeRejectsAtResponseEndAndAfter() (gas: 882900)
+[FAIL: EvmError: Revert] test_F30_RejectedMilestoneAllowsEitherPartyBeforeResponseEndOnly() (gas: 853919)
+[FAIL: EvmError: Revert] test_F30_SubmittedClientOpensOneDisputeAndFreezesPrincipalAtReviewBoundary() (gas: 826891)
+[FAIL: call reverted as expected, but without data] test_F30_SubmittedDisputeRejectsAtReviewEndAndAfter() (gas: 618253)
+[FAIL: EvmError: Revert] test_F31_EachPartyMaySubmitFiveEvidenceItemsAndSixthReverts() (gas: 780370)
+[FAIL: EvmError: Revert] test_F31_EngineCannotBeCalledDirectlyWithSpoofedForwardedActor() (gas: 780393)
+[FAIL: EvmError: Revert] test_F32_FirstPanelHasThreeDistinctAllowlistedMembersAndExcludesParties() (gas: 26797)
+[FAIL: EvmError: Revert] test_F32_RemovedAssignedArbiterKeepsSnapshottedVoteRight() (gas: 27135)
+[FAIL: EvmError: Revert] test_F33_CommitAndRevealWindowsAreHalfOpen() (gas: 27091)
+[FAIL: EvmError: Revert] test_F33_ReplacementCommitWindowIsHalfOpenAndNeverReplacesTwice() (gas: 27132)
+[FAIL: EvmError: Revert] test_F33_RevealWindowIsHalfOpen() (gas: 27070)
+[FAIL: EvmError: Revert] test_F33_VoteCommitmentBindsChainEscrowDisputeArbiterBpsAndSalt() (gas: 27117)
+[FAIL: EvmError: Revert] test_F33_WrongSaltBpsAndCopiedCommitCannotReveal() (gas: 27091)
+[FAIL: call reverted as expected, but without data] test_F45_ArbiterRegistryIsOwnerOnlyDistinctAndCappedAt128() (gas: 30055)
+
+Encountered 12 failing tests in test/Phase3Randomness.t.sol:Phase3RandomnessTest
+[FAIL: EvmError: Revert] test_A29_CallbackAcceptedAtRequestEndMinusOneCanBeConsumedAtEnd() (gas: 27069)
+[FAIL: EvmError: Revert] test_A29_CallbackFirstArrivingAtEndIsIgnoredAndRetrySupersedesOldRequest() (gas: 27112)
+[FAIL: EvmError: Revert] test_A29_ReplacementAndPanel2DrawsAlsoUseTwoRetriesThenFallback() (gas: 27154)
+[FAIL: EvmError: Revert] test_A29_RevertedRequestsKeepTimerAndThreeDistinctIdsReachTimeoutFallback() (gas: 27113)
+[FAIL: EvmError: Revert] test_A29_SynchronousMockCallbackStoresEntropyWithoutSelectingOrSettling() (gas: 27113)
+[FAIL: EvmError: Revert] test_A29_UnknownDuplicateAndWrongProviderCallbacksAreSafe() (gas: 27091)
+[FAIL: EvmError: Revert] test_A30_Panel2ExcludesAnActuallyAssignedReplacement() (gas: 27083)
+[FAIL: EvmError: Revert] test_A30_Panel2IsEntirelyFreshAndSecondNoQuorumFallsBack() (gas: 27175)
+[FAIL: EvmError: Revert] test_A30_PoolExhaustionIsCheckedAfterRequestAndTimelyCallback() (gas: 27089)
+[FAIL: EvmError: Revert] test_A30_SparseReplacementAssignsAvailableMemberAndLeavesEmptySeat() (gas: 27093)
+[FAIL: EvmError: Revert] test_A35_EntropyCannotBeBiasedByPendingRegistryRemovalOrAddition() (gas: 27094)
+[FAIL: EvmError: Revert] test_A35_RetryUsesCandidateSnapshotTakenByFirstRequest() (gas: 27070)
+
+Encountered a total of 47 failing tests, 0 tests succeeded
+
+Tip: Run `forge test --rerun` to retry only the 47 failed tests
+Tip: Run `forge test --debug --match-test <TEST_NAME>` to inspect one failing test in the debugger
+
+Fuzz seed: 0x40d5948032e53af1e12648430a13eec8ad5b7199ad2eff0b66266a03989eefbe (use `--fuzz-seed` to reproduce)
+--- END RAW FORGE OUTPUT ---
+
+Summary:
+Expected RED: compile succeeded and runtime tests fail against the Phase 2 source because the Phase 3 public seam is not implemented.

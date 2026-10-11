@@ -1,0 +1,43 @@
+✖ one command resets, deploys and seeds the repeatable local demo (862.5289ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1159.4038
+
+✖ failing tests:
+
+test at scripts\phase4\test\demo.test.mjs:69:1
+✖ one command resets, deploys and seeds the repeatable local demo (862.5289ms)
+  AssertionError [ERR_ASSERTION]: first demo run failed
+  stdout:
+  
+  stderr:
+  Phase 4 demo failed: Error: EPERM, Permission denied: \\?\C:\Users\vishvesh\Documents\ChatGPT\BNB\infra\local\runtime\private.db '\\?\C:\Users\vishvesh\Documents\ChatGPT\BNB\infra\local\runtime\private.db'
+      at rmSync (node:fs:1236:18)
+      at prepareRuntime (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/local-runtime.mjs:17:333)
+      at main (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4/demo.mjs:348:25)
+      at file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4/demo.mjs:775:1
+      at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+      at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:671:26)
+      at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4/test/demo.test.mjs:71:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+exit code: 1

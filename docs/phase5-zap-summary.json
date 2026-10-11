@@ -1,0 +1,33 @@
+{
+  "version": "2.17.0",
+  "urlCount": 18,
+  "alerts": 11,
+  "risks": [
+    {
+      "Name": "Informational",
+      "Count": 2
+    },
+    {
+      "Name": "Medium",
+      "Count": 9
+    }
+  ],
+  "types": [
+    {
+      "Name": "CSP: script-src unsafe-eval",
+      "Count": 3
+    },
+    {
+      "Name": "CSP: script-src unsafe-inline",
+      "Count": 3
+    },
+    {
+      "Name": "CSP: style-src unsafe-inline",
+      "Count": 3
+    },
+    {
+      "Name": "Modern Web Application",
+      "Count": 2
+    }
+  ]
+}

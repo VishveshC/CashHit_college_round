@@ -1,0 +1,5 @@
+
+> fairwork-v3@0.0.0 audit:deps
+> npm audit --audit-level=high
+
+found 0 vulnerabilities

@@ -1,0 +1,16 @@
+{
+  "frozen_files": [
+    {
+      "path": "scripts/phase5-backend-evidence-idempotency.test.mjs",
+      "sha256": "06dd267b25c563ca0d4908781583864d075cfd774d3bf52602a2125b2c50ade9"
+    },
+    {
+      "path": "docs/phase5-backend-evidence-idempotency-red.txt",
+      "sha256": "cd1231a201ed8f4c1f410c9929f8199179e66adf69f226f89560f27d41dc5243"
+    },
+    {
+      "path": "docs/phase5-backend-green-final.txt",
+      "sha256": "9c3d20ad8f7bd3c437139e9eb51b12cd34ed23834faaab3aed9164c3d4397246"
+    }
+  ]
+}

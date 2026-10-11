@@ -1,0 +1,11 @@
+✔ A40 directNextbuild configuration fails closed with unset or public target (178.8515ms)
+✔ A40 explicitlocal target remains buildable (81.2606ms)
+✔ A40 wrapper refuses public release before next compilation and localdryrun validatesmode (127.5747ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 452.4369

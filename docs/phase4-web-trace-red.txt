@@ -1,0 +1,31 @@
+✖ local server trace excludes generated private runtime data and secrets (8.5107ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 74.8648
+
+✖ failing tests:
+
+test at scripts\web-trace.test.mjs:5:1
+✖ local server trace excludes generated private runtime data and secrets (8.5107ms)
+  AssertionError [ERR_ASSERTION]: server packaging must not include generated private runtime data: ../../../../../../../../infra/local/runtime/anvil-owner.json
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/web-trace.test.mjs:9:225)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+exit code: 1

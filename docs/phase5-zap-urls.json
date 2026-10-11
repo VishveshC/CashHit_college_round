@@ -1,0 +1,22 @@
+{
+  "urls": [
+    "http://localhost:3000",
+    "http://localhost:3000/",
+    "http://localhost:3000/_next",
+    "http://localhost:3000/_next/static",
+    "http://localhost:3000/_next/static/chunks",
+    "http://localhost:3000/_next/static/chunks/0cz1d0mv5g_q7.js",
+    "http://localhost:3000/_next/static/chunks/0fxpaf4xbqcpb.js",
+    "http://localhost:3000/_next/static/chunks/0umf92h1sb77c.js",
+    "http://localhost:3000/_next/static/chunks/0w6qchqh8jyps.js",
+    "http://localhost:3000/_next/static/chunks/1ajojdln5fzs_.js",
+    "http://localhost:3000/_next/static/chunks/2eryvcc1t-ui6.js",
+    "http://localhost:3000/_next/static/chunks/2p_6khx9v67dr.js",
+    "http://localhost:3000/_next/static/chunks/3-efzjhp9v88j.css",
+    "http://localhost:3000/_next/static/chunks/389mjnrpq7_-_.js",
+    "http://localhost:3000/_next/static/chunks/3cfn99dbrcvvp.js",
+    "http://localhost:3000/_next/static/chunks/turbopack-3-ry682tkyiqk.js",
+    "http://localhost:3000/robots.txt",
+    "http://localhost:3000/sitemap.xml"
+  ]
+}

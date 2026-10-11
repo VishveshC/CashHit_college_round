@@ -1,0 +1,4 @@
+import type {NextConfig} from 'next';
+if(process.env.FAIRWORK_BUILD_TARGET!=='local')throw new Error('Public release blocked; explicit local target required until production adapter approval.');
+const config:NextConfig={outputFileTracingExcludes:{'/*':['../../infra/local/runtime/**/*']},poweredByHeader:false,allowedDevOrigins:['localhost'],async headers(){return [{source:'/:path*',headers:[{key:'Content-Security-Policy',value:"default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; connect-src 'self' http://127.0.0.1:8545 ws://localhost:3000; img-src 'self' data: blob:; frame-ancestors 'none'; base-uri 'none'; form-action 'self'; object-src 'none'"},{key:'X-Content-Type-Options',value:'nosniff'},{key:'X-Frame-Options',value:'DENY'},{key:'Referrer-Policy',value:'no-referrer'},{key:'Permissions-Policy',value:'camera=(), microphone=(), geolocation=()'}]}];}};
+export default config;

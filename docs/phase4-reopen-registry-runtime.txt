@@ -1,0 +1,1 @@
+Stopped-runtime DB, matching environment, encrypted storage and receipt manifests copied to ignored pre-registry backup; no key values printed.

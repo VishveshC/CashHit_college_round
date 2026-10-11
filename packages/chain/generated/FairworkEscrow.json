@@ -1,0 +1,2262 @@
+{
+  "contractName": "FairworkEscrow",
+  "compiler": "0.8.36+commit.8a079791.Emscripten.clang",
+  "localChainId": 31337,
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint8",
+              "name": "decimals",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "codehash",
+              "type": "bytes32"
+            }
+          ],
+          "internalType": "struct FairworkEscrow.TokenConfig[]",
+          "name": "tokenConfigs",
+          "type": "tuple[]"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint64",
+              "name": "fundingWindow",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "gracePeriod",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "minDuration",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "maxDuration",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "minReviewWindow",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "maxReviewWindow",
+              "type": "uint64"
+            }
+          ],
+          "internalType": "struct FairworkEscrow.ProtocolConfig",
+          "name": "protocolConfig_",
+          "type": "tuple"
+        },
+        {
+          "internalType": "address",
+          "name": "treasury_",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "ArbiterLimitReached",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "EvidenceLimitReached",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ExactTransferRequired",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidAmount",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidArbiter",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidChainId",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidCommitment",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidDuration",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidMilestoneCount",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidRevisionLimit",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidState",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "InvalidToken",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidTokenConfig",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidVote",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidWindow",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ReentrancyGuardReentrantCall",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "SafeERC20FailedOperation",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "TokenCodeChanged",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Unauthorized",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "WindowClosed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "WindowOpen",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "ClaimableCredited",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "disputeId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "party",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "DisputeDepositMatched",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "disputeId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "opener",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "depositAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "evidenceDeadline",
+          "type": "uint64"
+        }
+      ],
+      "name": "DisputeOpened",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "disputeId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "source",
+          "type": "uint8"
+        }
+      ],
+      "name": "DisputeSettlementCredited",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "acceptedAt",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "fundingDeadline",
+          "type": "uint64"
+        }
+      ],
+      "name": "JobAccepted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        }
+      ],
+      "name": "JobCancelled",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        }
+      ],
+      "name": "JobClosed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "client",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "freelancer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "totalAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "milestoneCount",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "createdAt",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "proposalEnd",
+          "type": "uint64"
+        }
+      ],
+      "name": "JobCreated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "totalAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "fundedAt",
+          "type": "uint64"
+        }
+      ],
+      "name": "JobFunded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "freelancer",
+          "type": "address"
+        }
+      ],
+      "name": "MilestoneApproved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "freelancer",
+          "type": "address"
+        }
+      ],
+      "name": "MilestoneAutoReleased",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "client",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "timeoutKind",
+          "type": "uint8"
+        }
+      ],
+      "name": "MilestoneRefunded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "rejectionCount",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "reasonCommitment",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "rejectedAt",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "responseEnd",
+          "type": "uint64"
+        }
+      ],
+      "name": "MilestoneRejected",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "disputeId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint16",
+          "name": "bps",
+          "type": "uint16"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "freelancerCredit",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "clientCredit",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "treasuryCredit",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "fallbackApplied",
+          "type": "bool"
+        }
+      ],
+      "name": "MilestoneResolved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "reason",
+          "type": "uint8"
+        }
+      ],
+      "name": "MilestoneSettlementCredited",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "version",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "deliverableHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "opaqueReference",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "submittedAt",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "reviewEnd",
+          "type": "uint64"
+        }
+      ],
+      "name": "MilestoneSubmitted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "WithdrawalCompleted",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "MAX_JOB_TOTAL_AMOUNT",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MAX_MILESTONES",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MAX_MILESTONE_AMOUNT",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MAX_REVISION_LIMIT",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MAX_TOKENS",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MAX_WINDOW",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        }
+      ],
+      "name": "acceptJob",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "arbiter",
+          "type": "address"
+        }
+      ],
+      "name": "addArbiter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "disputeId",
+          "type": "uint256"
+        }
+      ],
+      "name": "advanceDispute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "approveMilestone",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "arbiterAt",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "arbiterCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "arbiterStakes",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "arbitrationEngine",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        }
+      ],
+      "name": "cancelExpiredProposal",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        }
+      ],
+      "name": "cancelUnfundedJob",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "claimable",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "disputeId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "commitment",
+          "type": "bytes32"
+        }
+      ],
+      "name": "commitVote",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "freelancer",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "titleCommitment",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "descriptionCommitment",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "scopeCommitment",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "deliveryRuleCommitment",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint64",
+              "name": "reviewWindow",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint8",
+              "name": "revisionLimit",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct FairworkEscrow.JobInput",
+          "name": "terms",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64",
+              "name": "duration",
+              "type": "uint64"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "acceptanceCriteriaCommitment",
+              "type": "bytes32"
+            }
+          ],
+          "internalType": "struct FairworkEscrow.MilestoneInput[]",
+          "name": "milestones",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "createJob",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "disputeConfig",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "evidenceWindow",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "commitWindow",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "replacementCommitWindow",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "revealWindow",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "randomnessTimeout",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint16",
+          "name": "depositBps",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "disputeDeposits",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        }
+      ],
+      "name": "fundJob",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "disputeId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getDispute",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "jobId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "milestoneIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "client",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "freelancer",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "depositAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "opener",
+              "type": "address"
+            },
+            {
+              "internalType": "uint8",
+              "name": "phase",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "round",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "purpose",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "attempt",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint64",
+              "name": "openedAt",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "evidenceDeadline",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "commitDeadline",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "replacementCommitDeadline",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "revealDeadline",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "requestEnd",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint256",
+              "name": "activeRequestId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "randomnessReady",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint16",
+              "name": "rulingBps",
+              "type": "uint16"
+            },
+            {
+              "internalType": "bool",
+              "name": "fallbackApplied",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "clientDeposited",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "freelancerDeposited",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint8",
+              "name": "clientEvidenceCount",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "freelancerEvidenceCount",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "fallbackReason",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct FairworkArbitration.DisputeView",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "disputeId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "party",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getEvidence",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "evidenceHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "opaqueReference",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint64",
+          "name": "submittedAt",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getJob",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "client",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "freelancer",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "enum FairworkEscrow.JobState",
+              "name": "state",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64",
+              "name": "createdAt",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "proposalEnd",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "acceptedAt",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "fundingDeadline",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "fundedAt",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "reviewWindow",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint8",
+              "name": "revisionLimit",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "milestoneCount",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct FairworkEscrow.JobView",
+          "name": "view_",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getJobCommitments",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "title",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "description",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "scope",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "deliveryRule",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "getMilestone",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64",
+              "name": "duration",
+              "type": "uint64"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "acceptanceCriteriaCommitment",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint64",
+              "name": "deadline",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "graceEnd",
+              "type": "uint64"
+            },
+            {
+              "internalType": "enum FairworkEscrow.MilestoneState",
+              "name": "state",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint64",
+              "name": "submittedAt",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "reviewEnd",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "rejectedAt",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "responseEnd",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint8",
+              "name": "rejectionCount",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "submissionCount",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "latestReasonCommitment",
+              "type": "bytes32"
+            }
+          ],
+          "internalType": "struct FairworkEscrow.MilestoneView",
+          "name": "view_",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "getMilestoneDispute",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "disputeId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint8",
+          "name": "round",
+          "type": "uint8"
+        }
+      ],
+      "name": "getPanel",
+      "outputs": [
+        {
+          "internalType": "address[3]",
+          "name": "",
+          "type": "address[3]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "disputeId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getPanel1History",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "submissionIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "getSubmission",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint8",
+              "name": "version",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "deliverableHash",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "opaqueReference",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint64",
+              "name": "submittedAt",
+              "type": "uint64"
+            }
+          ],
+          "internalType": "struct FairworkEscrow.Submission",
+          "name": "submission",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "disputeId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint8",
+          "name": "round",
+          "type": "uint8"
+        },
+        {
+          "internalType": "address",
+          "name": "arbiter",
+          "type": "address"
+        }
+      ],
+      "name": "getVote",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "commitment",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint16",
+          "name": "bps",
+          "type": "uint16"
+        },
+        {
+          "internalType": "bool",
+          "name": "revealed",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "arbiter",
+          "type": "address"
+        }
+      ],
+      "name": "isArbiter",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "jobCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "lockedEscrow",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "disputeId",
+          "type": "uint256"
+        }
+      ],
+      "name": "matchDisputeDeposit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "openDispute",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "disputeId",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "protocolConfig",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint64",
+              "name": "fundingWindow",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "gracePeriod",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "minDuration",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "maxDuration",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "minReviewWindow",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "maxReviewWindow",
+              "type": "uint64"
+            }
+          ],
+          "internalType": "struct FairworkEscrow.ProtocolConfig",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "randomness",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "refundAfterMissedDeadline",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "refundAfterRejectionWindow",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "reasonCommitment",
+          "type": "bytes32"
+        }
+      ],
+      "name": "rejectMilestone",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "releaseAfterSilence",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "arbiter",
+          "type": "address"
+        }
+      ],
+      "name": "removeArbiter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "responseWindow",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "deliverableHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "opaqueReference",
+          "type": "bytes32"
+        }
+      ],
+      "name": "resubmitMilestone",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "disputeId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint16",
+          "name": "bps",
+          "type": "uint16"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "salt",
+          "type": "bytes32"
+        }
+      ],
+      "name": "revealVote",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "disputeId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "evidenceHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "opaqueReference",
+          "type": "bytes32"
+        }
+      ],
+      "name": "submitEvidence",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "jobId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "milestoneIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "deliverableHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "opaqueReference",
+          "type": "bytes32"
+        }
+      ],
+      "name": "submitMilestone",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "tokenConfig",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint8",
+              "name": "decimals",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "codehash",
+              "type": "bytes32"
+            }
+          ],
+          "internalType": "struct FairworkEscrow.TokenConfig",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "totalClaimable",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "treasury",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "disputeId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "arbiter",
+          "type": "address"
+        },
+        {
+          "internalType": "uint16",
+          "name": "bps",
+          "type": "uint16"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "salt",
+          "type": "bytes32"
+        }
+      ],
+      "name": "voteCommitment",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenAddress",
+          "type": "address"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
+}

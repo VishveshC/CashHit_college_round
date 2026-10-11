@@ -1,0 +1,2 @@
+apps/web/components/EscrowDashboard.tsx(732,516): error TS1005: ',' expected.
+apps/web/components/EscrowDashboard.tsx(813,1040): error TS1005: ',' expected.

@@ -1,0 +1,56 @@
+
+> fairwork-v3@0.0.0 test:phase4:tooling
+> node scripts/run-phase4-checks.mjs
+
+Frozen retention.test.mjs is historical: its zero-invalid expectation conflicts with the zero-based contract. Current checks explicitly use phase4-retention-corrected.test.mjs plus zero-job regression. See docs/PHASE4_TEST_HARNESS_ERRATA.md.
+✔ F70 reset rejects a junction parent before touching an external owned-looking runtime (9.6444ms)
+✖ Windows runtime reset retries an exclusively locked private DB and preserves unrelated runtime data (2327.9074ms)
+✔ F70 reset refuses unowned directory and preserves unrelated workspace data (6.8203ms)
+✔ F70 reset clears owned privateDB and storage only while preserving recordedAnvil (34.7946ms)
+✔ automatic retention refuses active jobs without deleting any private rows (58.7118ms)
+✔ retention requires both Closed state and a chain-derived closure timestamp (34.7965ms)
+✔ retention accepts only one nonnegative decimal job ID (3.2325ms)
+✔ automatic retention waits until the exact chain-derived 90-day boundary (125.6898ms)
+✔ a fresh EIP-191 request from either chain-named party permits early deletion (78.6809ms)
+✔ a caller-supplied wallet cannot impersonate a party and wrong-job signatures are refused (31.9856ms)
+✔ signed deletion binds canonical origin, chain, escrow, and a maximum five-minute window (31.366ms)
+✔ every storage path is validated before any file or row is removed (63.934ms)
+✔ a parent directory junction cannot redirect deletion outside private storage (47.6841ms)
+(node:35624) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/routes.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ automatic retention purges a due agreement even when the manifest client is not its party (36.8397ms)
+✔ a retry completes after an interrupted private-file unlink (72.7029ms)
+✔ a signed purge removes an actual uploaded encrypted UUID .enc file (62.0121ms)
+✔ job ID zero supports due automatic and named-party signed retention while malformed IDs stay denied (72.1608ms)
+✔ applicable acceptance evidence is produced by fresh local-chain scenarios (1.6138ms)
+✔ acceptance proof validation requires successful receipts and observed assertions (394.7494ms)
+✔ A40 directNextbuild configuration fails closed with unset or public target (249.8394ms)
+✔ A40 explicitlocal target remains buildable (112.9703ms)
+✔ A40 wrapper refuses public release before next compilation and localdryrun validatesmode (200.584ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 21
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2414.7439
+
+✖ failing tests:
+
+test at scripts\local-runtime-shutdown.test.mjs:39:1
+✖ Windows runtime reset retries an exclusively locked private DB and preserves unrelated runtime data (2327.9074ms)
+  AssertionError [ERR_ASSERTION]: the lock-holder process is still present
+      at assertOwnedPowerShell (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/local-runtime-shutdown.test.mjs:14:10)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/local-runtime-shutdown.test.mjs:91:13)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

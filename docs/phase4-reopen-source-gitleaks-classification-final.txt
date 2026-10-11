@@ -1,0 +1,3 @@
+Source Gitleaks finding classification; values intentionally omitted.
+Flagged locations are confined to docs/phase4-reopen-chain-proof.json.
+token: 40-hex address-shaped: 32

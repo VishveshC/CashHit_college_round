@@ -1,0 +1,37 @@
+{
+  "phase": 5,
+  "scope": "Independent backend review tests and preserved execution evidence",
+  "original_metadata": {
+    "manifest": "docs/phase5-backend-frozen-tests.json",
+    "test": "scripts/phase5-backend-evidence-receipt.test.mjs",
+    "note": "The original manifest is preserved unchanged. Its first harness attempts are included for audit history and are not counted as confirmed behavioral RED evidence."
+  },
+  "frozen_files": [
+    { "path": "docs/phase5-backend-frozen-tests.json", "sha256": "eff6a2f72cfe6ee2586d0837ba33b45b6e60c17cd66b3f44fe014bd99432f8e4" },
+    { "path": "scripts/phase5-backend-evidence-receipt.test.mjs", "sha256": "2c2d7a69baac1b5692f267714d78bf713b65ca7b0230b3e340f9948abe8f30fa" },
+    { "path": "docs/phase5-backend-evidence-red.txt", "sha256": "f489ec689f883034f4c3230866cc4e5653858cf69d8bf3cc47096ed0b52ed903" },
+    { "path": "docs/phase5-backend-evidence-red-rustlog.txt", "sha256": "5f849fb300867ddcf4c243807f706b4129f745571e59921e800cd83e36a6be0f" },
+    { "path": "docs/phase5-backend-evidence-red-root.txt", "sha256": "31bfaae01884137f7bf7d1462d416fbbdd11badc7ccc1a0743274abee051cf65" },
+    { "path": "scripts/phase5-backend-evidence-receipt-corrected.test.mjs", "sha256": "ba920af5d6da08b7f52dc90afce1c459df3d41c639871008529f32a6f89e2c71" },
+    { "path": "docs/phase5-backend-evidence-red-confirmed.txt", "sha256": "86297483aaafed538473f5185f167df60a24ae9db53db3c8c6b744cce51fbe6a" },
+    { "path": "scripts/phase5-backend-upload-content.test.mjs", "sha256": "4659db0cc0d4428fe4f693a2fa1fcaf467eb951a1b74bc0a367da786bccb6d28" },
+    { "path": "docs/phase5-backend-upload-content-red.txt", "sha256": "273d8c13a1cb6535e79db41ab5686e30648262daf6746d136ebfa54624b83132" },
+    { "path": "scripts/phase5-backend-malformed-pdf.test.mjs", "sha256": "4f46cc85dcae89aebef4635346063d78b4555d71e5a7dd8df2c2f2dcd3ebeeef" },
+    { "path": "docs/phase5-backend-malformed-pdf-red.txt", "sha256": "8e041e0a4d29b83a68471b8b163ab40d1206859d2acb69cb74c01e05f5816a9b" },
+    { "path": "docs/phase5-backend-malformed-pdf-green.txt", "sha256": "71919a06e087ebef81084a89f75526f66420d553f25631a1ea386636652fe7c9" },
+    { "path": "scripts/phase5-backend-evidence-reference-collision.test.mjs", "sha256": "255efa6c0eeab71878729cd7bbf79eaef20845b9e12be281b0c046ad19b99610" },
+    { "path": "docs/phase5-backend-evidence-collision-red.txt", "sha256": "b64fc5ba4aa762bb381ab6ccb6e8d68e9fb60a5621ab333f987fa90f9ec624de" },
+    { "path": "scripts/phase5-backend-evidence-idempotency.test.mjs", "sha256": "06dd267b25c563ca0d4908781583864d075cfd774d3bf52602a2125b2c50ade9" },
+    { "path": "docs/phase5-backend-evidence-idempotency-red.txt", "sha256": "cd1231a201ed8f4c1f410c9929f8199179e66adf69f226f89560f27d41dc5243" },
+    { "path": "docs/phase5-backend-green-final.txt", "sha256": "9c3d20ad8f7bd3c437139e9eb51b12cd34ed23834faaab3aed9164c3d4397246" },
+    { "path": "docs/phase5-backend-evidence-recovery-only.txt", "sha256": "02ff27f4ddee61f0d38b87e5546913955b2a8687cac6791a316bd459942ddb83" },
+    { "path": "docs/phase5-backend-corrected-frozen-tests.json", "sha256": "4e15377f52c1425b3027182a93a3de73b647aa8eafd709d279d6f9a8d12319da" },
+    { "path": "docs/phase5-backend-upload-frozen-tests.json", "sha256": "b1216ece0bf3cadb2c7643519bbc42d1c66e7c0cdf230fef74f1e22f37c5961d" },
+    { "path": "docs/phase5-backend-malformed-pdf-frozen-tests.json", "sha256": "2b0710c0d92bf6602ae4e65570d25303bbc145812cf89d957a628e33bb69ec76" },
+    { "path": "docs/phase5-backend-evidence-collision-frozen-tests.json", "sha256": "dfac0ebe49a06009d2f7d41b980ab06605075e028a8af95f01e4b8ef5e998992" },
+    { "path": "docs/phase5-backend-evidence-idempotency-frozen-tests.json", "sha256": "f249fe87f4354b886630e46205ddb4ba45844a101a375e19372d0ea87070242d" },
+    { "path": "scripts/phase5-evidence-migration-preservation.test.mjs", "sha256": "510e503f9ffc2926570aee654695f846fdc3dd6633d92850cab7295f95a7468a" },
+    { "path": "docs/phase5-backend-migration-preservation-green.txt", "sha256": "95c739a7b53e55dbcbee910e049e83216f9017b00a3180edcfee07294d929fa1" },
+    { "path": "docs/phase5-backend-migration-preservation-frozen-tests.json", "sha256": "3367afa5f2762ce43c56a5f913d851a63a658ef1d16923132c2cda029e19c3ed" }
+  ]
+}

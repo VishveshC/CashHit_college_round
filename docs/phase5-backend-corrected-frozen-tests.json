@@ -1,0 +1,16 @@
+{
+  "frozen_files": [
+    {
+      "path": "scripts/phase5-backend-evidence-receipt-corrected.test.mjs",
+      "sha256": "ba920af5d6da08b7f52dc90afce1c459df3d41c639871008529f32a6f89e2c71"
+    },
+    {
+      "path": "docs/phase5-backend-evidence-red-confirmed.txt",
+      "sha256": "86297483aaafed538473f5185f167df60a24ae9db53db3c8c6b744cce51fbe6a"
+    },
+    {
+      "path": "docs/phase5-backend-green-final.txt",
+      "sha256": "9c3d20ad8f7bd3c437139e9eb51b12cd34ed23834faaab3aed9164c3d4397246"
+    }
+  ]
+}

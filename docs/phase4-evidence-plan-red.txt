@@ -1,0 +1,96 @@
+(node:25424) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/evidence-plan.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ P04 evidence attachment separately binds raw file and salted text using two slots (1.3274ms)
+✖ F31 text evidence alone consumes one slot; full party evidence cap denies another (0.1886ms)
+✖ P04 evidence plan rejects malformed hashes, reused references and invalid capacity (0.1698ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 0
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 91.2726
+
+✖ failing tests:
+
+test at apps\web\test\evidence-plan.test.ts:7:1
+✖ P04 evidence attachment separately binds raw file and salted text using two slots (1.3274ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + []
+  - [
+  -   {
+  -     hash: '0x3333333333333333333333333333333333333333333333333333333333333333',
+  -     kind: 'file',
+  -     reference: '0x4444444444444444444444444444444444444444444444444444444444444444'
+  -   },
+  -   {
+  -     hash: '0x1111111111111111111111111111111111111111111111111111111111111111',
+  -     kind: 'text',
+  -     reference: '0x2222222222222222222222222222222222222222222222222222222222222222'
+  -   }
+  - ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/evidence-plan.test.ts:8:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [ { kind: 'file', hash: '0x3333333333333333333333333333333333333333333333333333333333333333', reference: '0x4444444444444444444444444444444444444444444444444444444444444444' }, { kind: 'text', hash: '0x1111111111111111111111111111111111111111111111111111111111111111', reference: '0x2222222222222222222222222222222222222222222222222222222222222222' } ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\evidence-plan.test.ts:14:1
+✖ F31 text evidence alone consumes one slot; full party evidence cap denies another (0.1886ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + []
+  - [
+  -   {
+  -     hash: '0x1111111111111111111111111111111111111111111111111111111111111111',
+  -     kind: 'text',
+  -     reference: '0x2222222222222222222222222222222222222222222222222222222222222222'
+  -   }
+  - ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/evidence-plan.test.ts:15:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [ { kind: 'text', hash: '0x1111111111111111111111111111111111111111111111111111111111111111', reference: '0x2222222222222222222222222222222222222222222222222222222222222222' } ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\evidence-plan.test.ts:20:1
+✖ P04 evidence plan rejects malformed hashes, reused references and invalid capacity (0.1698ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/evidence-plan.test.ts:21:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /bytes32|hash/i,
+    operator: 'throws',
+    diff: 'simple'
+  }

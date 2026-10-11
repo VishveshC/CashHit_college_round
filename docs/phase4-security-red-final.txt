@@ -1,0 +1,336 @@
+(node:12188) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 4 backend security behavior
+  ✖ W-01: nonce response is origin-bound and has a five-minute browser challenge cookie (16.4277ms)
+  ✖ W-01: SIWE validates domain, URI, chain, signer, expiry, and consumes a nonce once (4.9141ms)
+  ✖ W-02: session is server-side, short-lived, and invalidated by logout (10.6399ms)
+  ✖ W-04/P-04/P-07: every private resource uses fresh chain roles and hides unauthorized IDs with 404 (7.2041ms)
+  ✖ W-04/P-04: party read permission is rechecked after a role changes (8.3305ms)
+  ✖ W-05/P-03: job terms require A38 salted commitments and remain private at rest (9.697ms)
+  ✖ P-03/P-04/F-12: rejection notes match the on-chain reason and stay private (17.3621ms)
+  ✖ W-08: every authenticated write rejects cross-origin or missing CSRF (10.3303ms)
+  ✖ W-01/W-04: rate limits fail closed and ignore attacker-supplied forwarding headers (6.2462ms)
+  ✖ W-10/A38: file upload content-checks, caps size, encrypts at rest, and never exposes a storage URL (6.7027ms)
+  ✖ A38: assigned arbiter file access is limited to its unresolved dispute and milestone (15.4994ms)
+  ✖ W-10/P-04: download tickets expire, bind the session, and recheck chain access at content read (9.7616ms)
+  ✖ P-04/A39: current assigned arbiter may read unresolved evidence only and every read is audited (9.7561ms)
+  ✖ W-05/A39: evidence is bound to an existing on-chain commitment and timeline is source-labelled (7.5929ms)
+  ✖ W-05/W-10: bad JSON, malformed file metadata, and oversized uploads return bounded errors (6.7557ms)
+  ✖ A36: private route chain failures fail closed and never return cached access (6.9734ms)
+✖ Phase 4 backend security behavior (810.1696ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 0
+ℹ fail 17
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1319.3633
+
+✖ failing tests:
+
+test at apps\web\test\security.test.ts:538:13
+✖ W-01: nonce response is origin-bound and has a five-minute browser challenge cookie (16.4277ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:541:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:538:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security.test.ts:557:13
+✖ W-01: SIWE validates domain, URI, chain, signer, expiry, and consumes a nonce once (4.9141ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:560:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:557:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security.test.ts:596:13
+✖ W-02: session is server-side, short-lived, and invalidated by logout (10.6399ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:599:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:596:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security.test.ts:626:13
+✖ W-04/P-04/P-07: every private resource uses fresh chain roles and hides unauthorized IDs with 404 (7.2041ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 404
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:631:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:626:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 404,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security.test.ts:673:13
+✖ W-04/P-04: party read permission is rechecked after a role changes (8.3305ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:681:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:673:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security.test.ts:694:13
+✖ W-05/P-03: job terms require A38 salted commitments and remain private at rest (9.697ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:699:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:694:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security.test.ts:717:13
+✖ P-03/P-04/F-12: rejection notes match the on-chain reason and stay private (17.3621ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 404
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:735:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:717:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 404,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security.test.ts:763:13
+✖ W-08: every authenticated write rejects cross-origin or missing CSRF (10.3303ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 403
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:770:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:763:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 403,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security.test.ts:795:13
+✖ W-01/W-04: rate limits fail closed and ignore attacker-supplied forwarding headers (6.2462ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 429
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:799:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:795:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 429,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security.test.ts:813:13
+✖ W-10/A38: file upload content-checks, caps size, encrypts at rest, and never exposes a storage URL (6.7027ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:818:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:813:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security.test.ts:872:13
+✖ A38: assigned arbiter file access is limited to its unresolved dispute and milestone (15.4994ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:878:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:872:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security.test.ts:966:13
+✖ W-10/P-04: download tickets expire, bind the session, and recheck chain access at content read (9.7616ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:972:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:966:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security.test.ts:1003:13
+✖ P-04/A39: current assigned arbiter may read unresolved evidence only and every read is audited (9.7561ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:1011:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:1003:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security.test.ts:1039:13
+✖ W-05/A39: evidence is bound to an existing on-chain commitment and timeline is source-labelled (7.5929ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 404
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:1045:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:1039:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 404,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security.test.ts:1068:13
+✖ W-05/W-10: bad JSON, malformed file metadata, and oversized uploads return bounded errors (6.7557ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 400
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:1079:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:1068:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\security.test.ts:1094:13
+✖ A36: private route chain failures fail closed and never return cached access (6.9734ms)
+  AssertionError [ERR_ASSERTION]: missing private terms stay hidden even for an authorized party
+  
+  501 !== 404
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:1098:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security.test.ts:1094:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 404,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

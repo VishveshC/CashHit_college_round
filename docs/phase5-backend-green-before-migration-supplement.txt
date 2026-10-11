@@ -1,0 +1,53 @@
+(node:4392) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/security.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 5 backend: evidence identity preserves collisions and idempotent recovery
+  ✔ an exact retry returns the existing private row (46.9003ms)
+  ✔ one party can persist two distinct commitments that reuse its own opaque reference (14.4873ms)
+  ✔ both parties can persist distinct commitments that share an opaque reference (15.4705ms)
+  ✔ current arbiters and unrelated wallets remain unable to submit party evidence (4.088ms)
+✔ Phase 5 backend: evidence identity preserves collisions and idempotent recovery (1062.9476ms)
+(node:28580) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/security.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 5 backend: receipt-bound evidence persistence and active-file rejection
+  ✔ a matching pre-deadline receipt can be saved after the evidence window advances (31.5978ms)
+  ✔ a matching pre-deadline receipt can be saved after the dispute settles (12.2917ms)
+  ✔ late recovery still requires an exact event with a valid pre-deadline timestamp and the authenticated party (15.6064ms)
+  ✔ a syntactically valid active JavaScript PDF is rejected during upload (9.2863ms)
+✔ Phase 5 backend: receipt-bound evidence persistence and active-file rejection (1037.8236ms)
+(node:28592) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/security.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 5 backend: evidence references remain isolated across both dispute parties
+  ✔ both parties can persist distinct exact commitments that share an opaque reference (49.8051ms)
+✔ Phase 5 backend: evidence references remain isolated across both dispute parties (1010.8485ms)
+(node:5488) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/routes.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 5 backend: malformed PDF upload is rejected
+  ✔ rejects a file that has a PDF header but no PDF structure (18.7019ms)
+✔ Phase 5 backend: malformed PDF upload is rejected (968.4271ms)
+(node:25428) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/routes.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 5 backend: bounded passive-PDF upload policy
+  ✔ a valid passive PDF remains uploadable (43.4054ms)
+  ✔ rejects decoded OpenAction plus JavaScript PDF names (3.881ms)
+  ✔ rejects an otherwise readable PDF carrying an object stream (2.435ms)
+  ✔ rejects encrypted PDFs whose content cannot be inspected (2.7919ms)
+  ✔ rejects direct OpenAction and embedded-file markers (2.3964ms)
+✔ Phase 5 backend: bounded passive-PDF upload policy (997.9324ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1717.6473

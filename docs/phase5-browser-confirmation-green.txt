@@ -1,0 +1,29 @@
+Browser tab: 4, Title: "Fairwork — milestone escrow", URL: "http://localhost:3000/".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 52-53, 56, 109
+~			18 pop up button (disabled, collapsed, settable) Local role, Value: Client, ID: demo-role, Secondary Actions: Expand
+~				39 button (disabled) Loading… →
+~					40 text Loading… →
+~			65 text field (settable) Freelancer wallet address, Value: 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC
+~			80 text field (settable) Agreement title, Value: PHASE5_DRAFT_PRIVATE_SENTINEL
+~			83 text entry area (settable) Description, Value: Phase5 readable description <script>alert(1)</script>
+~			86 text entry area (settable) Scope, Value: Phase5 private scope
+~			89 text entry area (settable) Delivery rules, Value: Phase5 delivery rules
+~			98 text field (settable) Amount · USDC, Value: 2.500001
+~			104 text entry area (settable) Acceptance criteria, Value: Phase5 acceptance criterion
+~		107 button (disabled) Waiting for confirmation… →
+~			108 text Waiting for confirmation… →
++		109 container Create private agreement proposal
++			110 text !
++			111 text READ BEFORE SIGNING
++			112 heading Create private agreement proposal, Value: 2, ID: confirm-heading
++				113 text Create private agreement proposal
++			114 text This is the exact chain action your wallet is being asked to sign.
++			115 button Close
++			116 container
++				117 text Network Fairwork Local · chain  31337 Contract 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0 Parties 0x7099…79C8 ↔ 0x3C44…93BC Token · raw and formatted 2.500001 USDC ( 2500001  raw units) 0x5FbDB2315678afecb367f032d93F642f64180aa3 Terms and commitments Title: PHASE5_DRAFT_PRIVATE_SENTINEL — 0x44d210e35743dbd0b46cf9e9c43420b370960161db0ebb5bdfb8d1509659a9cb Description: Phase5 readable description <script>alert(1)</script> — 0x1a62ac2b54938b69506c4e1681af7081f6f18609132c4fe1c107180ca77bdc91 Scope: Phase5 private scope — 0x30757b2cad3d384a382840c6ac659ff6011382237cf5d9184213d493ce066131 Delivery rules: Phase5 delivery rules — 0x201e9f6d8537ea2cb65a8781f8e86391e3654d122c2828be43bcff6695e34542 Milestone 1 acceptance: Phase5 acceptance criterion — 0xccba7b675e1d4f87d982b45cdabc8c10f2b551d492449daf90efb7cd04cedce0 Revision limit 2 Timing and revisions Review window 3600s Revision limit 2 Milestone 1: 2.500001 USDC, 86400s What happens •  Create a direct proposal naming 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC as the only freelancer who can accept. •  Proposal total: 2.500001 USDC across 1 milestones. •  Private terms and random salts will be saved to the encrypted service after chain confirmation.
++			118 button Cancel
++			119 button Continue to wallet ↗
++				120 text Continue to wallet
++				121 text ↗
+The focused UI element is 0 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/

@@ -1,0 +1,39 @@
+Phase 2 runtime RED (captured before any Phase 2 production-source edits)
+
+Command:
+  npm run test:contracts -- --match-path 'test/Phase2*.t.sol'
+
+Compiler and pinned dependencies:
+  Solc 0.8.36; forge-std 1.17.0, commit f3dae6e6ee381f25eb6a246f7da9b85c91a68219.
+  Compilation succeeded. Foundry settings remain fuzz runs=512, invariant runs=128, depth=64.
+
+Result:
+  Phase2MilestonesTest: 25 tests, 0 passed, 25 failed.
+  Phase2SettlementInvariantTest: 2 tests, 0 passed, 2 failed.
+  Total: 27 tests, 0 passed, 27 failed.
+The complete final command output is preserved verbatim in
+docs/phase2-red-runtime.txt. Its Foundry fuzz seed is
+0x7142bb661578ccc101a7b4ff2d39873333656a6d0da574f51ae106bc3a72a18d.
+
+The failures are the intended Phase1 RED: Phase 1 has no Phase 2 selectors, so
+submission, review, timeout, extended getter, and event-observation calls revert
+against the unchanged implementation. Tests that expect a Phase 2 custom error
+report "call reverted as expected, but without data" because the selector is
+absent. The stateful accounting invariant fails its explicit seed guard
+(settlementCount 0 < 3), and the bounded-exit invariant reaches the unavailable
+Phase 2 timeout selector. Those checks prevent vacuous green results against
+Phase 1. No assertion was relaxed to bypass an absent selector.
+
+Phase 1 source SHA-256 at capture:
+  contracts/src/FairworkEscrow.sol
+  4A9C4A5338BD07718CDC2D516DFCE0DDF8CF2353DB01584411B09A043CF9FA43
+
+Phase 2 test SHA-256 at capture:
+  contracts/test/Phase2Milestones.t.sol
+  F84FF8C94738DF47812C880E882954443AD725304CF1B9244049BBC6019093FE
+
+Historical fixture correction (not part of the final RED count): an earlier
+invariant attempt decoded the extended Phase 2 MilestoneView from Phase 1's
+shorter return data and failed during ABI decoding. The final fixture uses a
+guarded low-level read that requires the complete 13-word Phase 2 view before
+decoding, so Phase 1's missing extended getter remains an intentional RED.

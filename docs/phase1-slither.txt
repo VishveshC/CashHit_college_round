@@ -1,0 +1,107 @@
+
+> fairwork-v3@0.0.0 analyze:contracts
+> node scripts/slither.mjs --json docs/phase1-slither.json
+
+Failed to resolved name for reference id 618 in C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol.
+Failed to resolved name for reference id 10861 in C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol.
+Failed to resolved name for reference id 592 in C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol.
+Failed to resolved name for reference id 10736 in C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol.
+Failed to resolved name for reference id 592 in C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol.
+Failed to resolved name for reference id 10943 in C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol.
+Failed to resolved name for reference id 11067 in C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/@openzeppelin/contracts/utils/ReentrancyGuard.sol.
+Failed to resolved name for reference id 11309 in C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/@openzeppelin/contracts/utils/cryptography/EIP712.sol.
+Failed to resolved name for reference id 11092 in C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/@openzeppelin/contracts/utils/cryptography/EIP712.sol.
+Failed to resolved name for reference id 11480 in C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/@openzeppelin/contracts/utils/cryptography/EIP712.sol.
+Failed to resolved name for reference id 11098 in C:/Users/vishvesh/Documents/ChatGPT/BNB/node_modules/@openzeppelin/contracts/utils/cryptography/EIP712.sol.
+Failed to resolved name for reference id 618 in C:/Users/vishvesh/Documents/ChatGPT/BNB/contracts/src/FairworkEscrow.sol.
+Failed to resolved name for reference id 592 in C:/Users/vishvesh/Documents/ChatGPT/BNB/contracts/src/FairworkEscrow.sol.
+Failed to resolved name for reference id 10943 in C:/Users/vishvesh/Documents/ChatGPT/BNB/contracts/src/FairworkEscrow.sol.
+Failed to resolved name for reference id 11067 in C:/Users/vishvesh/Documents/ChatGPT/BNB/contracts/src/FairworkEscrow.sol.
+Failed to resolved name for reference id 592 in C:/Users/vishvesh/Documents/ChatGPT/BNB/contracts/src/Phase0CompileHarness.sol.
+Failed to resolved name for reference id 11092 in C:/Users/vishvesh/Documents/ChatGPT/BNB/contracts/src/Phase0CompileHarness.sol.
+Failed to resolved name for reference id 11480 in C:/Users/vishvesh/Documents/ChatGPT/BNB/contracts/src/Phase0CompileHarness.sol.
+Failed to resolved name for reference id 11098 in C:/Users/vishvesh/Documents/ChatGPT/BNB/contracts/src/Phase0CompileHarness.sol.
+Failed to resolved name for reference id 11309 in C:/Users/vishvesh/Documents/ChatGPT/BNB/contracts/src/Phase0CompileHarness.sol.
+Failed to resolved name for reference id 11067 in C:/Users/vishvesh/Documents/ChatGPT/BNB/contracts/src/Phase0CompileHarness.sol.
+Failed to resolved name for reference id 10943 in C:/Users/vishvesh/Documents/ChatGPT/BNB/contracts/src/Phase0CompileHarness.sol.
+Failed to resolved name for reference id 618 in C:/Users/vishvesh/Documents/ChatGPT/BNB/contracts/src/mocks/LocalDemoTokens.sol.
+Failed to resolved name for reference id 10861 in C:/Users/vishvesh/Documents/ChatGPT/BNB/contracts/src/mocks/LocalDemoTokens.sol.
+Failed to resolved name for reference id 592 in C:/Users/vishvesh/Documents/ChatGPT/BNB/contracts/src/mocks/LocalDemoTokens.sol.
+Failed to resolved name for reference id 10736 in C:/Users/vishvesh/Documents/ChatGPT/BNB/contracts/src/mocks/LocalDemoTokens.sol.
+Missing inheritance Phase0CompileHarness (572894abda9b9b40)
+Missing inheritance ID: 11092
+Inheritance found:
+	 - EIP712 (ID 1872)
+	 - ReentrancyGuard (ID 1186)
+
+Missing inheritance LocalDemoToken (572894abda9b9b40)
+Missing inheritance ID: 10861
+Inheritance found:
+	 - ERC20 (ID 514)
+
+Missing inheritance MockUSDC (572894abda9b9b40)
+Missing inheritance ID: 10861
+Inheritance found:
+	 - LocalDemoToken (ID 10652)
+	 - ERC20 (ID 514)
+
+Missing inheritance MockWBTC (572894abda9b9b40)
+Missing inheritance ID: 10861
+Inheritance found:
+	 - LocalDemoToken (ID 10652)
+	 - ERC20 (ID 514)
+
+Missing params '_msgSender()' src/mocks/LocalDemoTokens.sol#7-19 (1 - 2)
+Missing params '_msgSender()' src/mocks/LocalDemoTokens.sol#22-28 (1 - 2)
+Missing params '_msgSender()' src/mocks/LocalDemoTokens.sol#31-37 (1 - 2)
+
+Detector: uninitialized-state
+FairworkEscrow._milestones (src/FairworkEscrow.sol#155) is never initialized. It is used in:
+	- FairworkEscrow.createJob(FairworkEscrow.JobInput,FairworkEscrow.MilestoneInput[]) (src/FairworkEscrow.sol#217-295)
+	- FairworkEscrow.fundJob(uint256) (src/FairworkEscrow.sol#314-342)
+	- FairworkEscrow.getMilestone(uint256,uint256) (src/FairworkEscrow.sol#414-426)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-state-variables
+
+Detector: uninitialized-local
+FairworkEscrow.createJob(FairworkEscrow.JobInput,FairworkEscrow.MilestoneInput[]).totalAmount (src/FairworkEscrow.sol#237) is a local variable never initialized
+FairworkEscrow.constructor(FairworkEscrow.TokenConfig[],FairworkEscrow.ProtocolConfig,address).runtimeDecimals (src/FairworkEscrow.sol#194) is a local variable never initialized
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-local-variables
+
+Detector: calls-loop
+FairworkEscrow.constructor(FairworkEscrow.TokenConfig[],FairworkEscrow.ProtocolConfig,address) (src/FairworkEscrow.sol#176-213) has external calls inside a loop: value = IERC20Metadata(config.token).decimals() (src/FairworkEscrow.sol#195-199)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation/#calls-inside-a-loop
+
+Detector: timestamp
+FairworkEscrow.acceptJob(uint256) (src/FairworkEscrow.sol#299-310) uses timestamp for comparisons
+	Dangerous comparisons:
+	- acceptedAt >= job.proposalEnd (src/FairworkEscrow.sol#304)
+FairworkEscrow.fundJob(uint256) (src/FairworkEscrow.sol#314-342) uses timestamp for comparisons
+	Dangerous comparisons:
+	- fundedAt >= job.fundingDeadline (src/FairworkEscrow.sol#319)
+	- balanceAfter < balanceBefore || balanceAfter - balanceBefore != job.totalAmount (src/FairworkEscrow.sol#339)
+FairworkEscrow.cancelExpiredProposal(uint256) (src/FairworkEscrow.sol#346-352) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _now64() < job.proposalEnd (src/FairworkEscrow.sol#349)
+FairworkEscrow.cancelUnfundedJob(uint256) (src/FairworkEscrow.sol#356-362) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _now64() < job.fundingDeadline (src/FairworkEscrow.sol#359)
+FairworkEscrow._assertCodehash(address,FairworkEscrow.TokenConfig) (src/FairworkEscrow.sol#478-480) uses timestamp for comparisons
+	Dangerous comparisons:
+	- token.codehash != config.codehash (src/FairworkEscrow.sol#479)
+FairworkEscrow._now64() (src/FairworkEscrow.sol#500-503) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp > type()(uint64).max (src/FairworkEscrow.sol#501)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+
+Detector: cyclomatic-complexity
+FairworkEscrow.constructor(FairworkEscrow.TokenConfig[],FairworkEscrow.ProtocolConfig,address) (src/FairworkEscrow.sol#176-213) has a high cyclomatic complexity (12).
+FairworkEscrow.createJob(FairworkEscrow.JobInput,FairworkEscrow.MilestoneInput[]) (src/FairworkEscrow.sol#217-295) has a high cyclomatic complexity (12).
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#cyclomatic-complexity
+
+Detector: dead-code
+FairworkEscrow._creditFromEscrow(address,address,uint256) (src/FairworkEscrow.sol#455-465) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+contracts analyzed (28 contracts with 102 detectors), 13 result(s) found
+'forge clean' running (wd: C:\Users\vishvesh\Documents\ChatGPT\BNB\contracts)
+'forge config --json' running
+'forge build --build-info --deny never --skip ./test/** ./script/** --force' running (wd: C:\Users\vishvesh\Documents\ChatGPT\BNB\contracts)

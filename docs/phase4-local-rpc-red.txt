@@ -1,0 +1,122 @@
+(node:35080) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/local-rpc.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ A40 devRPC public mode denies even known account methods without contacting chain (13.1785ms)
+✖ W08 devRPC refuses cross origin before chain access (0.3595ms)
+✖ A40 devRPC cannot expose arbitrary node/admin method or external signing wallet (0.2991ms)
+✖ W25 devRPC blocks external targets native value and unlimited approval (1.6387ms)
+✖ F62 devRPC account response contains configured public roles only (0.3253ms)
+✖ W25 exact allowance goes only to pinned escrow and confirmed RPC response returned (0.6628ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 0
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2324.3767
+
+✖ failing tests:
+
+test at apps\web\test\local-rpc.test.ts:8:1
+✖ A40 devRPC public mode denies even known account methods without contacting chain (13.1785ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 404
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/local-rpc.test.ts:8:204)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 404,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\local-rpc.test.ts:9:1
+✖ W08 devRPC refuses cross origin before chain access (0.3595ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 403
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/local-rpc.test.ts:9:173)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 403,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\local-rpc.test.ts:10:1
+✖ A40 devRPC cannot expose arbitrary node/admin method or external signing wallet (0.2991ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 400
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/local-rpc.test.ts:10:405)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\local-rpc.test.ts:11:1
+✖ W25 devRPC blocks external targets native value and unlimited approval (1.6387ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 400
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/local-rpc.test.ts:11:408)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\local-rpc.test.ts:12:1
+✖ F62 devRPC account response contains configured public roles only (0.3253ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/local-rpc.test.ts:12:226)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\local-rpc.test.ts:13:1
+✖ W25 exact allowance goes only to pinned escrow and confirmed RPC response returned (0.6628ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  501 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/local-rpc.test.ts:13:424)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 501,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

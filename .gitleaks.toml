@@ -1,0 +1,52 @@
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Generated output and installed dependencies are excluded from source scanning."
+paths = [
+  '''(^|/)\.git/''',
+  '''(^|/)node_modules/''',
+  '''(^|/)contracts/(out|cache|broadcast|lib)/''',
+  '''(^|/)apps/web/(\.next|out)/''',
+  '''(^|/)(dist|coverage)/''',
+  '''(^|/)\.tools/''',
+  '''(^|/)infra/local/runtime/''',
+]
+
+[[allowlists]]
+description = "Exact public mock-token fields in the two verified local browser receipt proofs (A49)."
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''(^|/)docs/phase4-browser-(payment|wbtc)-chain-proof\.json$''']
+regexTarget = "line"
+regexes = ['''^\s*"token": "0x(5FbDB2315678afecb367f032d93F642f64180aa3|e7f1725E7734CE288F8367e1Bb143E90bb3F0512)",\s*$''']
+
+[[allowlists]]
+description = "A60 exact public token fields in the read-only Phase4 reopen chain proof."
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''(^|/)docs/phase4-reopen-chain-proof\.json$''']
+regexTarget = "line"
+regexes = ['''^\s*"token": "0x(5FbDB2315678afecb367f032d93F642f64180aa3|e7f1725E7734CE288F8367e1Bb143E90bb3F0512)"[,]?\s*$''']
+
+[[allowlists]]
+description = "A60 exact public token fields in the preserved prior Phase4 reopen chain proof."
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''(^|/)docs/phase4-reopen-chain-proof-prior\.json$''']
+regexTarget = "line"
+regexes = ['''^\s*"token": "0x(5FbDB2315678afecb367f032d93F642f64180aa3|e7f1725E7734CE288F8367e1Bb143E90bb3F0512)"[,]?\s*$''']
+
+
+
+[[allowlists]]
+description = "Only the three immutable public-address assertions in the A49 scanner regression."
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''(^|/)scripts/phase4-secret-allowlist\.test\.mjs$''']
+regexTarget = "line"
+regexes = [
+  '''^\s*assert\.equal\(scan\('phase4-browser-payment-chain-proof\.json','"token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",'\),0\);\s*$''',
+  '''^\s*assert\.equal\(scan\('phase4-browser-wbtc-chain-proof\.json','"token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",'\),0\);\s*$''',
+  '''^\s*assert\.equal\(scan\('unrelated\.json','"token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",'\),1\);\s*$''',
+]

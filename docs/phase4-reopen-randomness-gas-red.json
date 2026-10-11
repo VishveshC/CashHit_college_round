@@ -1,0 +1,29 @@
+{
+  "hash": "0x4ff5f0bff52c0063eb8944e2a3755cce73e38d8e8df1a918c8457762f0668ab8",
+  "trace": {
+    "from": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+    "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+    "type": "CALL",
+    "gas": "0x4f7eb",
+    "gasUsed": "0x52eaf",
+    "calls": [
+      {
+        "from": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+        "to": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+        "type": "CALL",
+        "gas": "0x4c4f0",
+        "gasUsed": "0x4c4f0",
+        "calls": [
+          {
+            "from": "0x75537828f2ce51be7289709686a69cbfdbb714f1",
+            "to": "0x98a01f8ff48b849ccaf4d8d987ee200683a1a11e",
+            "type": "CALL",
+            "gas": "0x3b4f",
+            "gasUsed": "0x3b4f",
+            "error": "out of gas"
+          }
+        ]
+      }
+    ]
+  }
+}

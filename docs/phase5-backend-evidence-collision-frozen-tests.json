@@ -1,0 +1,16 @@
+{
+  "frozen_files": [
+    {
+      "path": "scripts/phase5-backend-evidence-reference-collision.test.mjs",
+      "sha256": "255efa6c0eeab71878729cd7bbf79eaef20845b9e12be281b0c046ad19b99610"
+    },
+    {
+      "path": "docs/phase5-backend-evidence-collision-red.txt",
+      "sha256": "b64fc5ba4aa762bb381ab6ccb6e8d68e9fb60a5621ab333f987fa90f9ec624de"
+    },
+    {
+      "path": "docs/phase5-backend-green-final.txt",
+      "sha256": "9c3d20ad8f7bd3c437139e9eb51b12cd34ed23834faaab3aed9164c3d4397246"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+apps/web/components/EscrowDashboard.tsx(802,20): error TS2304: Cannot find name 'criterion'.
+apps/web/components/EscrowDashboard.tsx(802,99): error TS2304: Cannot find name 'criterion'.

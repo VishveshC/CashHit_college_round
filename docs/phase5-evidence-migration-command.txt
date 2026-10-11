@@ -1,0 +1,11 @@
+Prisma schema loaded from apps\web\prisma\schema.prisma
+Datasource "db": SQLite database "private.db" at "file:C:/Users/vishvesh/Documents/ChatGPT/BNB/infra/local/runtime/private.db"
+
+⚠️  There might be data loss when applying the changes:
+
+  • A unique constraint covering the columns `[disputeId,partyWallet,reference,evidenceHash]` on the table `PrivateEvidence` will be added. If there are existing duplicate values, this will fail.
+
+
+
+Your database is now in sync with your Prisma schema. Done in 3.97s
+

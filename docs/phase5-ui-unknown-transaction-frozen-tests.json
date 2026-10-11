@@ -1,0 +1,17 @@
+{
+  "title": "Phase 5 UI unknown transaction regression freeze",
+  "frozen_at": "2026-10-11 Asia/Kolkata",
+  "command": "node --experimental-strip-types --test apps/web/test/phase5-ui-unknown-transaction.test.ts",
+  "test_exit": 1,
+  "redloghash": "EF419B05814762BBFDE286CAE7BB57DBE0B502A8AF2D1CB75F6DBBA45921B65D",
+  "frozen_files": [
+    {
+      "file": "apps/web/test/phase5-ui-unknown-transaction.test.ts",
+      "Hash": "15E316A56B2B53448281735C6918A6FB7649F470C194FE3E629559BBCB608A2D"
+    },
+    {
+      "file": "docs/phase5-ui-unknown-transaction-red.log",
+      "Hash": "EF419B05814762BBFDE286CAE7BB57DBE0B502A8AF2D1CB75F6DBBA45921B65D"
+    }
+  ]
+}

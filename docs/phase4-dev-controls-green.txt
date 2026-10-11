@@ -1,0 +1,15 @@
+(node:30384) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/dev-controls.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ A40 all devcontrols deny publictarget and crossorigin without sideeffects (13.5325ms)
+✔ F71 warp accepts bounded integer only and reports actual mutationresult (1.6023ms)
+✔ A29 unknown mockrequest cannot be fulfilled and callercannot provideentropy (0.7185ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 120.4401

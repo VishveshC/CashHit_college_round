@@ -1,0 +1,16 @@
+{
+  "scope": "actual compiled local build in Codex in-app browser",
+  "beforeFix": {
+    "nonceHttpStatus": 200,
+    "personalSignHttpStatus": 200,
+    "loginHttpStatus": 401,
+    "challengeCookieBlocked": false,
+    "challengeCookieMatchesIssuedAndDatabaseHash": true,
+    "signatureRecoversClaimedWallet": true,
+    "nonceConsumed": false,
+    "rootCause": "cookie parser computed the separator index on a trimmed cookie item but compared and sliced the untrimmed item; a second cookie after semicolon-space was ignored"
+  },
+  "credentials": "omitted; throwaway local signed data retained only in ignored runtime during diagnosis",
+  "browserReadProof": "agreement zero opened as Cancelled; private terms stayed sealed",
+  "responsiveReadProof": {"effectiveDocumentWidth": 375, "documentScrollWidth": 375}
+}

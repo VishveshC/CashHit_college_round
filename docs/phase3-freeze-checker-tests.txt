@@ -1,0 +1,6 @@
+PASS legacy array
+PASS phase3 object
+PASS empty records
+PASS missing records
+PASS malformed hash
+PASS tampered file rejected

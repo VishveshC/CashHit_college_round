@@ -1,0 +1,11 @@
+import {readFileSync} from 'node:fs';import path from 'node:path';
+import {publicClient,readJobSnapshot as readSnapshot,readChainEvents as readEvents,escrowAbi,type PublicConfig} from './chain.ts';
+export function loadDeployment():PublicConfig{const file=process.env.FAIRWORK_DEPLOYMENT_FILE||path.resolve(process.cwd().endsWith('web')?'../../infra/local/deployment.json':'infra/local/deployment.json');const c=JSON.parse(readFileSync(file,'utf8'));return {...c,domain:'localhost:3000',uri:'http://localhost:3000'};}
+export const getPublicConfig=loadDeployment;
+export async function readJobSnapshot(jobId:bigint){return readSnapshot(BigInt(jobId),loadDeployment());}
+export async function readChainEvents(jobId:bigint){return readEvents(BigInt(jobId),loadDeployment());}
+export async function readJobAccess(jobId:bigint,wallet:string){const c=loadDeployment(),s=await readSnapshot(BigInt(jobId),c);const lower=wallet.toLowerCase();let isCurrentArbiter=false,unresolved=false;
+ for(const m of s.milestones){if(m.dispute&&Number(m.dispute.phase)!==10){unresolved=true;const phase=Number(m.dispute.phase);const round=phase>=7?2:1;if(m.panels[round].some((a:string)=>a.toLowerCase()===lower))isCurrentArbiter=true;}}
+ let closedAt=null;if(Number(s.job.state)===4){const pc:any=publicClient(c);const events=await readEvents(BigInt(jobId),c);const close=events.find((e:any)=>e.name==='JobClosed');if(close)closedAt=Number((await pc.getBlock({blockNumber:BigInt(close.blockNumber)})).timestamp)*1000;}
+ return {client:lower===s.job.client.toLowerCase(),freelancer:lower===s.job.freelancer.toLowerCase(),clientAddress:s.job.client,freelancerAddress:s.job.freelancer,isCurrentArbiter,unresolved,closedAt,jobId:String(jobId),snapshot:s};}
+export async function readDisputeAccess(disputeId:bigint,wallet:string){const c=loadDeployment(),pc:any=publicClient(c);const d:any=await pc.readContract({address:c.escrow,abi:escrowAbi,functionName:'getDispute',args:[BigInt(disputeId)]});const a:any=await readJobAccess(BigInt(d.jobId),wallet);const m=a.snapshot.milestones[Number(d.milestoneIndex)];const round=Number(d.phase)>=7?2:1;return {...a,isCurrentArbiter:Number(d.phase)!==10&&m.panels[round].some((x:string)=>x.toLowerCase()===wallet.toLowerCase()),unresolved:Number(d.phase)!==10,disputeId:String(disputeId),dispute:d};}

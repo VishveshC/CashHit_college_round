@@ -1,0 +1,99 @@
+(node:15980) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/phase4-ui-private-read.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ late private responses are discarded after wallet, session, job, or generation changes (0.9621ms)
+✖ only the newest same-wallet, same-session, same-job request can update private caches (0.6329ms)
+✖ evidence stays duplicate-blocked while a receipt is unknown and becomes retryable only after a revert (0.7547ms)
+✖ transaction pipeline reports only definitive receipt outcomes for evidence recovery (0.5346ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 0
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 109.4148
+
+✖ failing tests:
+
+test at apps\web\test\phase4-ui-private-read.test.ts:21:1
+✖ late private responses are discarded after wallet, session, job, or generation changes (0.9621ms)
+  AssertionError [ERR_ASSERTION]: must reject changed context {"generation":4,"jobId":"31","wallet":"0x2222222222222222222222222222222222222222","session":"session-a"}
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/phase4-ui-private-read.test.ts:37:12)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\phase4-ui-private-read.test.ts:42:1
+✖ only the newest same-wallet, same-session, same-job request can update private caches (0.6329ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/phase4-ui-private-read.test.ts:52:10)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\phase4-ui-private-read.test.ts:58:1
+✖ evidence stays duplicate-blocked while a receipt is unknown and becomes retryable only after a revert (0.7547ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    {
+      receiptConfirmed: false,
+  +   submitted: true
+  -   submitted: false
+    }
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/phase4-ui-private-read.test.ts:61:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { submitted: true, receiptConfirmed: false },
+    expected: { submitted: false, receiptConfirmed: false },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\phase4-ui-private-read.test.ts:65:1
+✖ transaction pipeline reports only definitive receipt outcomes for evidence recovery (0.5346ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + []
+  - [
+  -   'reverted'
+  - ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/phase4-ui-private-read.test.ts:79:10)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [ 'reverted' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

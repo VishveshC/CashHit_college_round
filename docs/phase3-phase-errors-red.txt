@@ -1,0 +1,40 @@
+No files changed, compilation skipped
+
+Ran 1 test for test/Phase3PhaseErrors.t.sol:Phase3PhaseErrorsTest
+[FAIL: Error != expected error: Unauthorized() != InvalidState()] test_A31_VoteWrongPhaseIsInvalidStateWhileValidPhaseWrongSeatIsUnauthorized() (gas: 290793)
+Traces:
+  [290793] Phase3PhaseErrorsTest::test_A31_VoteWrongPhaseIsInvalidStateWhileValidPhaseWrongSeatIsUnauthorized()
+    ├─ [0] VM::chainId(31337 [3.133e4])
+    │   └─ ← [Return]
+    ├─ [0] VM::warp(1800000000 [1.8e9])
+    │   └─ ← [Return]
+    ├─ [0] VM::deployCode("src/FairworkArbitration.sol:FairworkArbitration", 0x0000000000000000000000007fa9385be102ac3eac297483dd6233d62b3e1496000000000000000000000000000000000000000000000000000000000000003c)
+    │   ├─ [3574981] → new FairworkArbitration@0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f
+    │   │   ├─ [207141] → new MockRandomness@0x104fBc016F4bb334D775a19E8A6510109AC63E00
+    │   │   │   └─ ← [Return] 1034 bytes of code
+    │   │   └─ ← [Return] 15003 bytes of code
+    │   └─ ← [Return] FairworkArbitration: [0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f]
+    ├─ [260489] FairworkArbitration::openDispute(0, 0, 0x000000000000000000000000000000000000c11e, 0x0000000000000000000000000000000000000FEE, 0x0000000000000000000000000000000000001234, 1001, 20, 0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return] 1
+    ├─ [0] VM::expectRevert(InvalidState())
+    │   └─ ← [Return]
+    ├─ [24577] FairworkArbitration::commitVote(1, 0x000000000000000000000000000000000000a001, 0x0000000000000000000000000000000000000000000000000000000000000001)
+    │   └─ ← [Revert] Unauthorized()
+    └─ ← [Revert] Error != expected error: Unauthorized() != InvalidState()
+
+Backtrace:
+  at FairworkArbitration.commitVote
+  at Phase3PhaseErrorsTest.test_A31_VoteWrongPhaseIsInvalidStateWhileValidPhaseWrongSeatIsUnauthorized
+
+Suite result: FAILED. 0 passed; 1 failed; 0 skipped; finished in 918.80µs (595.30µs CPU time)
+
+Ran 1 test suite in 11.41ms (918.80µs CPU time): 0 tests passed, 1 failed, 0 skipped (1 total tests)
+
+Failing tests:
+Encountered 1 failing test in test/Phase3PhaseErrors.t.sol:Phase3PhaseErrorsTest
+[FAIL: Error != expected error: Unauthorized() != InvalidState()] test_A31_VoteWrongPhaseIsInvalidStateWhileValidPhaseWrongSeatIsUnauthorized() (gas: 290793)
+
+Encountered a total of 1 failing tests, 0 tests succeeded
+
+Tip: Run `forge test --rerun` to retry only the 1 failed test
+Tip: Run `forge test --debug --match-test <TEST_NAME>` to inspect one failing test in the debugger

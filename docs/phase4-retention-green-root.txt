@@ -1,0 +1,17 @@
+✔ automatic retention refuses active jobs without deleting any private rows (46.9489ms)
+✔ retention requires both Closed state and a chain-derived closure timestamp (40.1179ms)
+✔ retention accepts only one positive decimal job ID (3.03ms)
+✔ automatic retention waits until the exact chain-derived 90-day boundary (44.793ms)
+✔ a fresh EIP-191 request from either chain-named party permits early deletion (84.6472ms)
+✔ a caller-supplied wallet cannot impersonate a party and wrong-job signatures are refused (57.9966ms)
+✔ signed deletion binds canonical origin, chain, escrow, and a maximum five-minute window (19.1107ms)
+✔ every storage path is validated before any file or row is removed (58.8025ms)
+✔ a parent directory junction cannot redirect deletion outside private storage (32.2013ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1405.197

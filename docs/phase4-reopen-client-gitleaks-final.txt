@@ -1,0 +1,3 @@
+Client Gitleaks scan of apps/web/.next/static; default rules and repository allowlists retained, generated-client exclusion removed only in an OS temporary config; redaction enabled.
+Scanner exit status: 0
+Finding count: 0

@@ -1,0 +1,13 @@
+{
+  "sameDetectorIds": true,
+  "occurrences": [
+    53,
+    53
+  ],
+  "uniqueIds": [
+    40,
+    40
+  ],
+  "dispositions": "docs/PHASE3_STATIC_ANALYSIS.md",
+  "financialSourcesUnchanged": true
+}

@@ -1,0 +1,74 @@
+(node:21416) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/security.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 5 backend: receipt-bound evidence persistence and active-file rejection
+  ✖ a matching pre-deadline receipt can be saved after the evidence window advances (16.398ms)
+  ✖ a matching pre-deadline receipt can be saved after the dispute settles (2.5167ms)
+  ✔ late recovery still requires an exact event with a valid pre-deadline timestamp and the authenticated party (10.5371ms)
+  ✖ a syntactically valid active JavaScript PDF is rejected during upload (11.5804ms)
+✖ Phase 5 backend: receipt-bound evidence persistence and active-file rejection (729.571ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 1
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1221.8872
+
+✖ failing tests:
+
+test at scripts\phase5-backend-evidence-receipt-corrected.test.mjs:189:13
+✖ a matching pre-deadline receipt can be saved after the evidence window advances (16.398ms)
+  AssertionError [ERR_ASSERTION]: a mined EvidenceCommitted event should authorize recovery of its private text and salt after the write window closes
+  
+  404 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-receipt-corrected.test.mjs:196:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-receipt-corrected.test.mjs:189:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts\phase5-backend-evidence-receipt-corrected.test.mjs:200:13
+✖ a matching pre-deadline receipt can be saved after the dispute settles (2.5167ms)
+  AssertionError [ERR_ASSERTION]: settlement revokes arbiter reads but must not strand a party's private record for an already committed entry
+  
+  404 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-receipt-corrected.test.mjs:207:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-receipt-corrected.test.mjs:200:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts\phase5-backend-evidence-receipt-corrected.test.mjs:233:13
+✖ a syntactically valid active JavaScript PDF is rejected during upload (11.5804ms)
+  AssertionError [ERR_ASSERTION]: PDF acceptance must parse content and reject active JavaScript actions, not just check the %PDF- prefix
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-receipt-corrected.test.mjs:243:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase5-backend-evidence-receipt-corrected.test.mjs:233:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 200,
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }

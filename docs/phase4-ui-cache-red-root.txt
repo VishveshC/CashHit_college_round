@@ -1,0 +1,62 @@
+(node:29772) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui-cache-policy.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ a rejected private response clears its own cached resource (1.1404ms)
+✔ an authorized refresh replaces only its successfully refreshed resource (0.2958ms)
+✖ disconnecting or switching wallet accounts revokes the current private view (0.1569ms)
+✔ the same account remains authorized across case-only address changes (0.0636ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 2
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 93.2578
+
+✖ failing tests:
+
+test at apps\web\test\ui-cache-policy.test.ts:6:1
+✖ a rejected private response clears its own cached resource (1.1404ms)
+  AssertionError [ERR_ASSERTION]: terms should clear after HTTP 401
+  + actual - expected
+  
+  + {
+  +   title: 'old private terms'
+  + }
+  - null
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui-cache-policy.test.ts:18:14)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: { title: 'old private terms' },
+    expected: null,
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at apps\web\test\ui-cache-policy.test.ts:36:1
+✖ disconnecting or switching wallet accounts revokes the current private view (0.1569ms)
+  AssertionError [ERR_ASSERTION]: an empty accountsChanged event is a disconnect
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/ui-cache-policy.test.ts:38:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

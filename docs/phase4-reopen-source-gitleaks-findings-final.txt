@@ -1,0 +1,35 @@
+Source Gitleaks metadata-only detail pass; redaction enabled; secret/match fields intentionally omitted.
+Scanner exit status: 1
+Finding count: 32
+generic-api-key docs/phase4-reopen-chain-proof.json:105-105
+generic-api-key docs/phase4-reopen-chain-proof.json:140-140
+generic-api-key docs/phase4-reopen-chain-proof.json:175-175
+generic-api-key docs/phase4-reopen-chain-proof.json:210-210
+generic-api-key docs/phase4-reopen-chain-proof.json:245-245
+generic-api-key docs/phase4-reopen-chain-proof.json:280-280
+generic-api-key docs/phase4-reopen-chain-proof.json:315-315
+generic-api-key docs/phase4-reopen-chain-proof.json:356-356
+generic-api-key docs/phase4-reopen-chain-proof.json:408-408
+generic-api-key docs/phase4-reopen-chain-proof.json:466-466
+generic-api-key docs/phase4-reopen-chain-proof.json:1224-1224
+generic-api-key docs/phase4-reopen-chain-proof.json:1272-1272
+generic-api-key docs/phase4-reopen-chain-proof.json:1379-1379
+generic-api-key docs/phase4-reopen-chain-proof.json:1394-1394
+generic-api-key docs/phase4-reopen-chain-proof.json:1420-1420
+generic-api-key docs/phase4-reopen-chain-proof.json:1451-1451
+generic-api-key docs/phase4-reopen-chain-proof.json:1951-1951
+generic-api-key docs/phase4-reopen-chain-proof.json:1966-1966
+generic-api-key docs/phase4-reopen-chain-proof.json:1981-1981
+generic-api-key docs/phase4-reopen-chain-proof.json:1996-1996
+generic-api-key docs/phase4-reopen-chain-proof.json:2011-2011
+generic-api-key docs/phase4-reopen-chain-proof.json:2026-2026
+generic-api-key docs/phase4-reopen-chain-proof.json:2041-2041
+generic-api-key docs/phase4-reopen-chain-proof.json:2056-2056
+generic-api-key docs/phase4-reopen-chain-proof.json:2071-2071
+generic-api-key docs/phase4-reopen-chain-proof.json:2086-2086
+generic-api-key docs/phase4-reopen-chain-proof.json:2149-2149
+generic-api-key docs/phase4-reopen-chain-proof.json:2164-2164
+generic-api-key docs/phase4-reopen-chain-proof.json:2208-2208
+generic-api-key docs/phase4-reopen-chain-proof.json:2223-2223
+generic-api-key docs/phase4-reopen-chain-proof.json:2266-2266
+generic-api-key docs/phase4-reopen-chain-proof.json:2281-2281

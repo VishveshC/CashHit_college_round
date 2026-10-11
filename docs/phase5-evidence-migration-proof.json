@@ -1,0 +1,64 @@
+{
+  "preserved": true,
+  "before": {
+    "AuthNonce": {
+      "count": 8,
+      "digest": "20fa2b9e8e97569db29799b6395d69c384f2c89b5935f4ae93d1da3019ddd59c"
+    },
+    "AuthSession": {
+      "count": 8,
+      "digest": "6967519ee205aa71f638a0e8db231a7c41a14efbe80256928bf1a8b382b6981d"
+    },
+    "PrivateJobData": {
+      "count": 1,
+      "digest": "d3f6757a152471f24b7ae35c94fa639a42edaab8f10678dbb113676a098bc451"
+    },
+    "PrivateNote": {
+      "count": 0,
+      "digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "PrivateEvidence": {
+      "count": 1,
+      "digest": "e243dcc0125a95b0bd107f48f6099a65a0e1b47c54303240a277b1f0959bae65"
+    },
+    "PrivateFile": {
+      "count": 1,
+      "digest": "18a2376fdd9700ab64ace0c825f94eecd9e7d5736e219250a133e1a85dd35675"
+    },
+    "AuditEntry": {
+      "count": 10,
+      "digest": "2dcfbb3e532ef82e6dec840f36d616e6c745ecb5e8febaecfd0850283bc64075"
+    }
+  },
+  "after": {
+    "AuthNonce": {
+      "count": 8,
+      "digest": "20fa2b9e8e97569db29799b6395d69c384f2c89b5935f4ae93d1da3019ddd59c"
+    },
+    "AuthSession": {
+      "count": 8,
+      "digest": "6967519ee205aa71f638a0e8db231a7c41a14efbe80256928bf1a8b382b6981d"
+    },
+    "PrivateJobData": {
+      "count": 1,
+      "digest": "d3f6757a152471f24b7ae35c94fa639a42edaab8f10678dbb113676a098bc451"
+    },
+    "PrivateNote": {
+      "count": 0,
+      "digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "PrivateEvidence": {
+      "count": 1,
+      "digest": "e243dcc0125a95b0bd107f48f6099a65a0e1b47c54303240a277b1f0959bae65"
+    },
+    "PrivateFile": {
+      "count": 1,
+      "digest": "18a2376fdd9700ab64ace0c825f94eecd9e7d5736e219250a133e1a85dd35675"
+    },
+    "AuditEntry": {
+      "count": 10,
+      "digest": "2dcfbb3e532ef82e6dec840f36d616e6c745ecb5e8febaecfd0850283bc64075"
+    }
+  },
+  "backup": "ignored owned runtime/phase5-migration-backup; not a production backup"
+}

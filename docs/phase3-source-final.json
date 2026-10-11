@@ -1,0 +1,18 @@
+[
+  {
+    "file": "contracts/src/FairworkEscrow.sol",
+    "sha256": "fc28871ece735ea4bb38d7aed153d4b6d5c874efa33f43468ddf66d9bf9f4ed0"
+  },
+  {
+    "file": "contracts/src/FairworkArbitration.sol",
+    "sha256": "e821e13d67248127665eb076e60a3713af52cb438040f29920cb347ce596fcb2"
+  },
+  {
+    "file": "contracts/src/interfaces/IRandomness.sol",
+    "sha256": "a6762d42031985e1a8388808f640b0684d2aed7683ea0ac9846e0996ddb74c4e"
+  },
+  {
+    "file": "contracts/src/mocks/MockRandomness.sol",
+    "sha256": "dc24d2f69e135e77ac5a37590203547d0def2148d1242715b1f1067bef9c30a2"
+  }
+]

@@ -1,0 +1,6 @@
+Frozen manifests: 48/49 fully unchanged; checked 161 entries across 142 unique files.
+Financial contract sources: 6/6 unchanged against docs/phase5-source-baseline.json.
+Historical docs/phase5-source-comparison.json was not written or modified.
+MISMATCH manifest=phase4-reopen-artifact-test-frozen.json file=scripts/production-artifact-stage.mjs expected=29ADF974CDBAFF79B10FB4603C8DD272AF2E9861FF1FF64D96A4795522DE0582 actual=38f8df974ac07da2ea2d5d339586d59864cd7e3df2375f46ec77ace9ff4838e6
+MISMATCH manifest=phase4-reopen-artifact-test-frozen.json file=scripts/web-build.mjs expected=33BF5F0700AE2166C7EA511B05B75D6F99148C3E7DE3E8028067FABCFA598EE6 actual=69fffe19e0123992c9088485ec8d1605acf97fa748bcaec37c2b819f981db7f3
+RESULT FAIL

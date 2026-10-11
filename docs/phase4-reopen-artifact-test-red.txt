@@ -1,0 +1,42 @@
+✖ isolated artifact-test scans real Next output and leaves public target fail-closed (132.6687ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 200.0847
+
+✖ failing tests:
+
+test at scripts\phase4-reopen-artifact-test.test.mjs:12:1
+✖ isolated artifact-test scans real Next output and leaves public target fail-closed (132.6687ms)
+  AssertionError [ERR_ASSERTION]: 
+  file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/web-build.mjs:5
+  if(target!=='local')throw new Error('Public release blocked: No approved production adapter/configuration exists.');
+                            ^
+  
+  Error: Public release blocked: No approved production adapter/configuration exists.
+      at file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/web-build.mjs:5:27
+      at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+      at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:671:26)
+      at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+  
+  Node.js v24.11.1
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-reopen-artifact-test.test.mjs:18:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

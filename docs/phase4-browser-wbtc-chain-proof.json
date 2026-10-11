@@ -1,0 +1,220 @@
+{
+  "chainId": 31337,
+  "escrow": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+  "jobId": "32",
+  "token": {
+    "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+    "symbol": "WBTC",
+    "decimals": 8
+  },
+  "jobState": 4,
+  "milestoneState": 4,
+  "milestoneAmount": "2501",
+  "claimable": "0",
+  "withdrawnBefore": "1804",
+  "withdrawnAfter": "4305",
+  "withdrawnDelta": "2501",
+  "approvalRaw": "2501",
+  "allowanceAfterFunding": "0",
+  "downloadSHA256": "5741D6076114993BD3BFF67F5C217B57CB0E27E2818B6C61D765A145BFD67C5A",
+  "browserObserved": {
+    "amountLabel": "Amount · WBTC",
+    "freelancerBefore": "0.00001804 WBTC",
+    "client": "0.0000222 WBTC",
+    "freelancerCredit": "0.00002501 WBTC",
+    "freelancerAfter": "0.00004305 WBTC",
+    "manualRefreshOnRoleChange": false
+  },
+  "events": [
+    {
+      "source": "chain",
+      "name": "JobCreated",
+      "contract": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "557",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xc92517c884959a123e70e6afd38ecb8cb512aea6aede77067cb963d7fa1c3f9e",
+      "args": {
+        "jobId": "32",
+        "client": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "totalAmount": "2501",
+        "milestoneCount": 1,
+        "createdAt": "1791671689",
+        "proposalEnd": "1791671749"
+      }
+    },
+    {
+      "source": "chain",
+      "name": "JobAccepted",
+      "contract": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "558",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x191091f383fe7f7bb3f29d10ed5eab4e9834a47294364202435fb98a83ba901c",
+      "args": {
+        "jobId": "32",
+        "acceptedAt": "1791671707",
+        "fundingDeadline": "1791671767"
+      }
+    },
+    {
+      "source": "chain",
+      "name": "JobFunded",
+      "contract": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "560",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x079ba11d37b9c5493d124b5b74be87a8d42b2ef2b1e6fd68281e61c246cd91b8",
+      "args": {
+        "jobId": "32",
+        "totalAmount": "2501",
+        "fundedAt": "1791671719"
+      }
+    },
+    {
+      "source": "chain",
+      "name": "MilestoneSubmitted",
+      "contract": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "561",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x521b56a6759ecc3dd89235790b129d1e98a708db98e4721e09104e4139dda0f9",
+      "args": {
+        "jobId": "32",
+        "milestoneIndex": "0",
+        "version": 1,
+        "deliverableHash": "0x9697e4c492e0e11eaa549b3a8b294199b0bded709d93e53dae2c7b421ed22193",
+        "opaqueReference": "0x252f29b0262b354e85fd6c143a374b208c3fa56bb77d990155b3e157fdcb2964",
+        "submittedAt": "1791671753",
+        "reviewEnd": "1791675353"
+      }
+    },
+    {
+      "source": "chain",
+      "name": "MilestoneApproved",
+      "contract": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "562",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x6647dc6baad30a8a77cad54ed455685bf739888ce8154d0c3f514820a42342bb",
+      "args": {
+        "jobId": "32",
+        "milestoneIndex": "0",
+        "amount": "2501",
+        "freelancer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+      }
+    },
+    {
+      "source": "chain",
+      "name": "MilestoneSettlementCredited",
+      "contract": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "562",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x6647dc6baad30a8a77cad54ed455685bf739888ce8154d0c3f514820a42342bb",
+      "args": {
+        "jobId": "32",
+        "milestoneIndex": "0",
+        "token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "2501",
+        "reason": 0
+      }
+    },
+    {
+      "source": "chain",
+      "name": "JobClosed",
+      "contract": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "blockNumber": "562",
+      "transactionIndex": 0,
+      "logIndex": 3,
+      "transactionHash": "0x6647dc6baad30a8a77cad54ed455685bf739888ce8154d0c3f514820a42342bb",
+      "args": {
+        "jobId": "32"
+      }
+    }
+  ],
+  "approval": {
+    "eventName": "Approval",
+    "args": {
+      "owner": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "spender": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+      "value": "2501"
+    },
+    "address": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+    "topics": [
+      "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925",
+      "0x00000000000000000000000070997970c51812dc3a010c7d01b50e0d17dc79c8",
+      "0x0000000000000000000000009fe46736679d2d9a65f0992f2272de9f3c7fa6e0"
+    ],
+    "data": "0x00000000000000000000000000000000000000000000000000000000000009c5",
+    "blockHash": "0xd4134f47ad67b748e9b48340a6a1503c77bffd856f368005bb1b7b088ac52303",
+    "blockNumber": "559",
+    "blockTimestamp": "1791671714",
+    "transactionHash": "0x9611cda45253328f3f1b396afd42eb6000b1ff7bb5c217262abbf81dd214ac97",
+    "transactionIndex": 0,
+    "logIndex": 0,
+    "removed": false
+  },
+  "withdrawal": {
+    "eventName": "WithdrawalCompleted",
+    "args": {
+      "token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "amount": "2501"
+    },
+    "address": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+    "topics": [
+      "0xb00382203b46c3b6ad0a2d7af0268e334bd9406256a7c7ba8f7fc8bc47f8cde9",
+      "0x000000000000000000000000e7f1725e7734ce288f8367e1bb143e90bb3f0512",
+      "0x0000000000000000000000003c44cdddb6a900fa2b585dd299e03d12fa4293bc"
+    ],
+    "data": "0x00000000000000000000000000000000000000000000000000000000000009c5",
+    "blockHash": "0xe229d385f363093cd82a6f96c3ae348e3097d944fe207ec0e1524f8dd4c61ff4",
+    "blockNumber": "563",
+    "blockTimestamp": "1791671779",
+    "transactionHash": "0x8af066446c9938e59c36547ff5f24f4a635f2a3a7bc9b188e65b813a627b84fc",
+    "transactionIndex": 0,
+    "logIndex": 0,
+    "removed": false
+  },
+  "receipts": [
+    {
+      "hash": "0xc92517c884959a123e70e6afd38ecb8cb512aea6aede77067cb963d7fa1c3f9e",
+      "status": "success",
+      "blockNumber": "557"
+    },
+    {
+      "hash": "0x191091f383fe7f7bb3f29d10ed5eab4e9834a47294364202435fb98a83ba901c",
+      "status": "success",
+      "blockNumber": "558"
+    },
+    {
+      "hash": "0x079ba11d37b9c5493d124b5b74be87a8d42b2ef2b1e6fd68281e61c246cd91b8",
+      "status": "success",
+      "blockNumber": "560"
+    },
+    {
+      "hash": "0x521b56a6759ecc3dd89235790b129d1e98a708db98e4721e09104e4139dda0f9",
+      "status": "success",
+      "blockNumber": "561"
+    },
+    {
+      "hash": "0x6647dc6baad30a8a77cad54ed455685bf739888ce8154d0c3f514820a42342bb",
+      "status": "success",
+      "blockNumber": "562"
+    },
+    {
+      "hash": "0x9611cda45253328f3f1b396afd42eb6000b1ff7bb5c217262abbf81dd214ac97",
+      "status": "success",
+      "blockNumber": "559"
+    },
+    {
+      "hash": "0x8af066446c9938e59c36547ff5f24f4a635f2a3a7bc9b188e65b813a627b84fc",
+      "status": "success",
+      "blockNumber": "563"
+    }
+  ]
+}

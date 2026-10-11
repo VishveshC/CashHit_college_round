@@ -1,0 +1,81 @@
+forge-std 1.17.0, commit f3dae6e6ee381f25eb6a246f7da9b85c91a68219, normalized source SHA-256 verified.
+No files changed, compilation skipped
+
+Ran 1 test for test/Phase3PhaseErrors.t.sol:Phase3PhaseErrorsTest
+[PASS] test_A31_VoteWrongPhaseIsInvalidStateWhileValidPhaseWrongSeatIsUnauthorized() (gas: 1918424)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 4.34ms (3.40ms CPU time)
+
+Ran 2 tests for test/Phase2Milestones.t.sol:Phase2MilestonesTest
+[PASS] test_A25_DonatedSurplusNeverBecomesMilestoneClaimable() (gas: 1377054)
+[PASS] test_A25_OnlyLastTerminalMilestoneClosesJobAndPayoutCannotRepeat() (gas: 1787270)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 5.47ms (5.11ms CPU time)
+
+Ran 2 tests for test/Phase1Additional.t.sol:Phase1AdditionalTest
+[PASS] test_A18_F03_DeployerAndTreasuryCannotWithdrawLockedPrincipal() (gas: 642533)
+[PASS] test_F03_DonationsStaySurplusAndEmptyWithdrawalsCannotTouchFundedPrincipal() (gas: 712822)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 7.15ms (3.48ms CPU time)
+
+Ran 1 test for test/Phase3Randomness.t.sol:Phase3RandomnessTest
+[PASS] test_A30_Panel2IsEntirelyFreshAndSecondNoQuorumFallsBack() (gas: 4226687)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 9.13ms (6.30ms CPU time)
+
+Ran 5 tests for test/Phase1Escrow.t.sol:Phase1EscrowTest
+[PASS] test_A20_F03_WithdrawalIsEffectsFirstAndReentrancyGuarded() (gas: 955381)
+[PASS] test_A20_F03_WithdrawalTransferFailureRollsBackAllLiabilityAndBalances() (gas: 873676)
+[PASS] test_F01_F02_F03_UnknownJobsAndUnauthorizedWithdrawalCannotMoveFunds() (gas: 778520)
+[PASS] test_F03_DirectSurplusNeverCreatesClaimableLiability() (gas: 663368)
+[PASS] test_F03_RejectsFeeOnTransferAndFalseReturnDepositsWithRollback() (gas: 20930810)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 9.53ms (12.06ms CPU time)
+
+Ran 3 tests for test/Phase3Accounting.t.sol:Phase3AccountingTest
+[PASS] test_F31_OpenDepositUsesExactDeltaAndRejectsReentryWithoutDoubleDeposit() (gas: 3074594)
+[PASS] test_F34_MissingLoserDepositIsDeductedExactlyAndCappedAtPrincipal() (gas: 11615997)
+[PASS] test_F34_ZeroAndFullVoteEndpointsSettleAndTerminalAdvanceCannotRepeat() (gas: 6229894)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 13.57ms (23.19ms CPU time)
+
+Ran 3 tests for test/Phase3Disputes.t.sol:Phase3DisputesTest
+[PASS] test_F30_SubmittedClientOpensOneDisputeAndFreezesPrincipalAtReviewBoundary() (gas: 1554056)
+[PASS] test_F33_WrongSaltBpsAndCopiedCommitCannotReveal() (gas: 3233675)
+[PASS] test_F45_ArbiterRegistryIsOwnerOnlyDistinctAndCappedAt128() (gas: 13625937)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 13.92ms (19.15ms CPU time)
+
+Ran 1 test for test/Phase2Milestones.t.sol:Phase2SettlementInvariantTest
+[PASS] invariant_A25_FundedPrincipalIsAlwaysLockedClaimableOrWithdrawn() (runs: 128, calls: 8192, reverts: 0)
+
+╭-------------------------+---------------------+-------+---------+----------╮
+| Contract                | Selector            | Calls | Reverts | Discards |
++============================================================================+
+| Phase2SettlementHandler | advanceTime         | 888   | 0       | 0        |
+|-------------------------+---------------------+-------+---------+----------|
+| Phase2SettlementHandler | approve             | 918   | 0       | 0        |
+|-------------------------+---------------------+-------+---------+----------|
+| Phase2SettlementHandler | drainOne            | 913   | 0       | 0        |
+|-------------------------+---------------------+-------+---------+----------|
+| Phase2SettlementHandler | exerciseSeededPaths | 906   | 0       | 0        |
+|-------------------------+---------------------+-------+---------+----------|
+| Phase2SettlementHandler | reject              | 938   | 0       | 0        |
+|-------------------------+---------------------+-------+---------+----------|
+| Phase2SettlementHandler | resubmit            | 891   | 0       | 0        |
+|-------------------------+---------------------+-------+---------+----------|
+| Phase2SettlementHandler | submit              | 922   | 0       | 0        |
+|-------------------------+---------------------+-------+---------+----------|
+| Phase2SettlementHandler | timeout             | 896   | 0       | 0        |
+|-------------------------+---------------------+-------+---------+----------|
+| Phase2SettlementHandler | withdraw            | 920   | 0       | 0        |
+╰-------------------------+---------------------+-------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.97s (1.97s CPU time)
+
+Ran 1 test for test/Phase1Additional.t.sol:Phase1AdditionalInvariantTest
+[PASS] invariant_F03_LedgerMatchesSeededAndRandomFundedPrincipal() (runs: 128, calls: 8192, reverts: 0)
+
+╭-------------------------+----------+-------+---------+----------╮
+| Contract                | Selector | Calls | Reverts | Discards |
++=================================================================+
+| AdditionalLedgerHandler | step     | 8192  | 0       | 0        |
+╰-------------------------+----------+-------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 2.34s (2.34s CPU time)
+
+Ran 9 test suites in 2.35s (4.38s CPU time): 19 tests passed, 0 failed, 0 skipped (19 total tests)
+Warning: Failure from "C:/Users/vishvesh/Documents/ChatGPT/BNB/cache/invariant/failures/Phase2SettlementInvariantTest/invariants/invariant_A25_FundedPrincipalIsAlwaysLockedClaimableOrWithdrawn" file was ignored because invariant test settings have changed: target selectors changed

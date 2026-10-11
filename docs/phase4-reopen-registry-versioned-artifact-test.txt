@@ -1,0 +1,14 @@
+✔ versioned registry artifact wrapper uses the registry stage and a non-writing evidence-prefix dry run (69.8074ms)
+✔ versioned registry wrapper rejects unsafe or non-artifact evidence prefixes (138.0999ms)
+✔ versioned registry wrapper continues to refuse public compilation without approved inputs (69.1048ms)
+✔ A40 directNextbuild configuration fails closed with unset or public target (162.7309ms)
+✔ A40 explicitlocal target remains buildable (81.9905ms)
+✔ A40 wrapper refuses public release before next compilation and localdryrun validatesmode (138.687ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 461.1326

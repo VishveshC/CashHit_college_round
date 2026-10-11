@@ -1,0 +1,12 @@
+{
+  "frozen_files": [
+    {
+      "sha256": "2E09E2BCDE7C4FEB027575A7B8C2C75497425AAC5F93599792D5D8BA2169EAA0",
+      "path": "scripts/local-runtime-shutdown.test.mjs"
+    },
+    {
+      "sha256": "A9C7A5AD5BCAF7245E86950B4221B63D2C91CA76E3D5648166BC62B94463392E",
+      "path": "docs/phase4-runtime-shutdown-red-root.txt"
+    }
+  ]
+}

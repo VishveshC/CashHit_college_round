@@ -1,0 +1,12 @@
+{
+  "frozen_files": [
+    {
+      "path": "scripts/phase4-retention-regressions.test.mjs",
+      "sha256": "8924BF83EDB076FA8ABADD1A7CA87201B29256EF696F6E8F6EC61F5968C6E458"
+    },
+    {
+      "path": "docs/phase4-retention-regressions-red-root.txt",
+      "sha256": "9ED5134B3F5A49A8D795E98E80D15E7C4B6FEC69EE59A0389A8348F24447C277"
+    }
+  ]
+}

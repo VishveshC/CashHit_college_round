@@ -1,0 +1,67 @@
+{
+  "source": "live-http-localhost",
+  "origin": "http://localhost:3000",
+  "chainId": 31337,
+  "checks": [
+    {
+      "name": "live Next app reports pinned local chain and deployment config",
+      "result": "passed"
+    },
+    {
+      "name": "CORS preflight does not receive an allow-origin response",
+      "result": "passed"
+    },
+    {
+      "name": "nonce route rejects a hostile Origin",
+      "result": "passed"
+    },
+    {
+      "name": "nonce route rejects a missing Origin header",
+      "result": "passed"
+    },
+    {
+      "name": "anonymous access reveals no distinction between an existing and missing private job",
+      "result": "passed"
+    },
+    {
+      "name": "SIWE challenge, signature, session cookie, and nonce replay are exercised over HTTP",
+      "result": "passed"
+    },
+    {
+      "name": "authenticated stranger gets the same 404 for a real and nonexistent job",
+      "result": "passed"
+    },
+    {
+      "name": "authenticated stranger gets the same 404 for a real and nonexistent dispute evidence route",
+      "result": "passed"
+    },
+    {
+      "name": "authenticated stranger gets the same 404 for a real and nonexistent job file list",
+      "result": "passed"
+    },
+    {
+      "name": "authenticated writes reject missing CSRF and a hostile Origin over HTTP",
+      "result": "passed"
+    },
+    {
+      "name": "a seeded party can read its private job through the live HTTP route",
+      "result": "passed"
+    },
+    {
+      "name": "a seeded party can read committed dispute evidence through the live HTTP route",
+      "result": "passed"
+    },
+    {
+      "name": "authenticated stranger gets the same 404 for a real and nonexistent file",
+      "result": "passed"
+    },
+    {
+      "name": "download ticket is bound to its authenticated session over HTTP",
+      "result": "passed"
+    },
+    {
+      "name": "live upload rejects SVG and over-limit content without storing either file",
+      "result": "passed"
+    }
+  ]
+}

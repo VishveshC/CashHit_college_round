@@ -1,0 +1,369 @@
+Compiling 47 files with Solc 0.8.36
+Solc 0.8.36 finished in 2.07s
+Compiler run successful with warnings:
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:125:29:
+    |
+125 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, signature);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:134:29:
+    |
+134 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecoverCalldata(hash, signature);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:161:29:
+    |
+161 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, r, vs);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:203:29:
+    |
+203 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, v, r, s);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> ../node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol:273:26:
+    |
+273 |     function _throwError(RecoverError error, bytes32 errorArg) private pure {
+    |                          ^^^^^^^^^^^^^^^^^^
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/FairworkEscrow.sol:126:5:
+    |
+126 |     function createJob(JobInput calldata, MilestoneInput[] calldata) external returns (uint256) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/FairworkEscrow.sol:130:5:
+    |
+130 |     function acceptJob(uint256) external {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/FairworkEscrow.sol:134:5:
+    |
+134 |     function fundJob(uint256) external {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/FairworkEscrow.sol:138:5:
+    |
+138 |     function cancelExpiredProposal(uint256) external {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/FairworkEscrow.sol:142:5:
+    |
+142 |     function cancelUnfundedJob(uint256) external {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> src/FairworkEscrow.sol:146:5:
+    |
+146 |     function withdraw(address) external {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+  --> test/Phase1Escrow.t.sol:17:5:
+   |
+17 |     function seedClaimableFromLocked(address token, address recipient, uint256 amount) external {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 17 tests for test/Phase1Escrow.t.sol:Phase1EscrowTest
+[FAIL: custom error 0xac9984c3] invariant_F03_EachTokenBalanceCoversItsLiabilities() (runs: 1, calls: 1, reverts: 0)
+
+╭------------------------+-----------+-------+---------+----------╮
+| Contract               | Selector  | Calls | Reverts | Discards |
++=================================================================+
+| EscrowInvariantHandler | createJob | 1     | 0       | 0        |
+╰------------------------+-----------+-------+---------+----------╯
+
+Traces:
+  [19475] Phase1EscrowTest::invariant_F03_EachTokenBalanceCoversItsLiabilities()
+    ├─ [2559] MockToken::balanceOf(FairworkEscrowHarness: [0x5991A2dF15A8F6A256D3Ec51E99254Cd3fb576A9]) [staticcall]
+    │   └─ ← [Return] 0
+    ├─ [368] FairworkEscrowHarness::totalClaimable(MockToken: [0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f]) [staticcall]
+    │   └─ ← [Revert] ShellOnly()
+    └─ ← [Revert] ShellOnly()
+
+Backtrace:
+  at FairworkEscrowHarness.totalClaimable
+  at Phase1EscrowTest.invariant_F03_EachTokenBalanceCoversItsLiabilities
+
+[FAIL: ShellOnly(); counterexample: calldata=0xa09c70440000000000000000000000000000000000000000000000000000000000000c7a0000000000000000000000000000000000000000000000000000000000000020 args=[3194, 32]] testFuzz_F01_F03_RawAmountRemainsTokenUnits(uint256,uint8) (runs: 0, μ: 0, ~: 0)
+Traces:
+  [55010] Phase1EscrowTest::testFuzz_F01_F03_RawAmountRemainsTokenUnits(3194, 32)
+    ├─ [2582] ReentrantToken::balanceOf(FairworkEscrowHarness: [0x5991A2dF15A8F6A256D3Ec51E99254Cd3fb576A9]) [staticcall]
+    │   └─ ← [Return] 0
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [30960] FairworkEscrowHarness::createJob(JobInput({ freelancer: 0x0000000000000000000000000000000000000FEE, token: 0xF62849F9A0B5Bf2913b396098F7c7019b51A820a, titleCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595, descriptionCommitment: 0x1596dc38e2ac5a6ddc5e019af4adcc1e017a04f510d57e69d6879d5d2996bb8e, scopeCommitment: 0x6760d0b4f6c19fc4031286d0fcd3500c810a2471efb89cb7e125b719f63fa2f4, deliveryRuleCommitment: 0x54008a92b3c2aa1b10422a877d90c0f2e8ef2add9649dfb9d89370e7fac76d48, reviewWindow: 30, revisionLimit: 0 }), [MilestoneInput({ amount: 3194, duration: 10, acceptanceCriteriaCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595 })])
+    │   └─ ← [Revert] ShellOnly()
+    └─ ← [Revert] ShellOnly()
+
+Backtrace:
+  at FairworkEscrowHarness.createJob
+  at Phase1EscrowTest.testFuzz_F01_F03_RawAmountRemainsTokenUnits
+
+[FAIL: ShellOnly()] test_A01_F02_ProposalUsesHalfOpenExpiryAndPublicCancellation() (gas: 42605)
+Traces:
+  [42605] Phase1EscrowTest::test_A01_F02_ProposalUsesHalfOpenExpiryAndPublicCancellation()
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [30930] FairworkEscrowHarness::createJob(JobInput({ freelancer: 0x0000000000000000000000000000000000000FEE, token: 0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f, titleCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595, descriptionCommitment: 0x1596dc38e2ac5a6ddc5e019af4adcc1e017a04f510d57e69d6879d5d2996bb8e, scopeCommitment: 0x6760d0b4f6c19fc4031286d0fcd3500c810a2471efb89cb7e125b719f63fa2f4, deliveryRuleCommitment: 0x54008a92b3c2aa1b10422a877d90c0f2e8ef2add9649dfb9d89370e7fac76d48, reviewWindow: 30, revisionLimit: 0 }), [MilestoneInput({ amount: 100, duration: 10, acceptanceCriteriaCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595 })])
+    │   └─ ← [Revert] ShellOnly()
+    └─ ← [Revert] ShellOnly()
+
+Backtrace:
+  at FairworkEscrowHarness.createJob
+  at Phase1EscrowTest.test_A01_F02_ProposalUsesHalfOpenExpiryAndPublicCancellation
+
+[FAIL: ShellOnly()] test_A20_F03_WithdrawalIsEffectsFirstAndReentrancyGuarded() (gas: 42744)
+Traces:
+  [42744] Phase1EscrowTest::test_A20_F03_WithdrawalIsEffectsFirstAndReentrancyGuarded()
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [30990] FairworkEscrowHarness::createJob(JobInput({ freelancer: 0x0000000000000000000000000000000000000FEE, token: 0xF62849F9A0B5Bf2913b396098F7c7019b51A820a, titleCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595, descriptionCommitment: 0x1596dc38e2ac5a6ddc5e019af4adcc1e017a04f510d57e69d6879d5d2996bb8e, scopeCommitment: 0x6760d0b4f6c19fc4031286d0fcd3500c810a2471efb89cb7e125b719f63fa2f4, deliveryRuleCommitment: 0x54008a92b3c2aa1b10422a877d90c0f2e8ef2add9649dfb9d89370e7fac76d48, reviewWindow: 30, revisionLimit: 0 }), [MilestoneInput({ amount: 300001 [3e5], duration: 10, acceptanceCriteriaCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595 })])
+    │   └─ ← [Revert] ShellOnly()
+    └─ ← [Revert] ShellOnly()
+
+Backtrace:
+  at FairworkEscrowHarness.createJob
+  at Phase1EscrowTest.test_A20_F03_WithdrawalIsEffectsFirstAndReentrancyGuarded
+
+[FAIL: ShellOnly()] test_A20_F03_WithdrawalTransferFailureRollsBackAllLiabilityAndBalances() (gas: 42706)
+Traces:
+  [42706] Phase1EscrowTest::test_A20_F03_WithdrawalTransferFailureRollsBackAllLiabilityAndBalances()
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [30990] FairworkEscrowHarness::createJob(JobInput({ freelancer: 0x0000000000000000000000000000000000000FEE, token: 0xF62849F9A0B5Bf2913b396098F7c7019b51A820a, titleCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595, descriptionCommitment: 0x1596dc38e2ac5a6ddc5e019af4adcc1e017a04f510d57e69d6879d5d2996bb8e, scopeCommitment: 0x6760d0b4f6c19fc4031286d0fcd3500c810a2471efb89cb7e125b719f63fa2f4, deliveryRuleCommitment: 0x54008a92b3c2aa1b10422a877d90c0f2e8ef2add9649dfb9d89370e7fac76d48, reviewWindow: 30, revisionLimit: 0 }), [MilestoneInput({ amount: 200000 [2e5], duration: 10, acceptanceCriteriaCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595 })])
+    │   └─ ← [Revert] ShellOnly()
+    └─ ← [Revert] ShellOnly()
+
+Backtrace:
+  at FairworkEscrowHarness.createJob
+  at Phase1EscrowTest.test_A20_F03_WithdrawalTransferFailureRollsBackAllLiabilityAndBalances
+
+[FAIL: ShellOnly()] test_F01_F02_F03_CreateAcceptFundStartsIndependentRawUnitClocks() (gas: 45174)
+Traces:
+  [45174] Phase1EscrowTest::test_F01_F02_F03_CreateAcceptFundStartsIndependentRawUnitClocks()
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [33060] FairworkEscrowHarness::createJob(JobInput({ freelancer: 0x0000000000000000000000000000000000000FEE, token: 0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f, titleCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595, descriptionCommitment: 0x1596dc38e2ac5a6ddc5e019af4adcc1e017a04f510d57e69d6879d5d2996bb8e, scopeCommitment: 0x6760d0b4f6c19fc4031286d0fcd3500c810a2471efb89cb7e125b719f63fa2f4, deliveryRuleCommitment: 0x54008a92b3c2aa1b10422a877d90c0f2e8ef2add9649dfb9d89370e7fac76d48, reviewWindow: 30, revisionLimit: 3 }), [MilestoneInput({ amount: 1000001 [1e6], duration: 7, acceptanceCriteriaCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595 }), MilestoneInput({ amount: 2000003 [2e6], duration: 37, acceptanceCriteriaCommitment: 0x9eae1a1eb233bafada166b9d91952c832ea0dc55a981c9177b8b9aff9b9d022f })])
+    │   └─ ← [Revert] ShellOnly()
+    └─ ← [Revert] ShellOnly()
+
+Backtrace:
+  at FairworkEscrowHarness.createJob
+  at Phase1EscrowTest.test_F01_F02_F03_CreateAcceptFundStartsIndependentRawUnitClocks
+
+[FAIL: Error != expected error: ShellOnly() != InvalidState()] test_F01_F02_F03_UnknownJobsAndUnauthorizedWithdrawalCannotMoveFunds() (gas: 30088)
+Traces:
+  [30088] Phase1EscrowTest::test_F01_F02_F03_UnknownJobsAndUnauthorizedWithdrawalCannotMoveFunds()
+    ├─ [0] VM::expectRevert(InvalidState())
+    │   └─ ← [Return]
+    ├─ [0] VM::prank(0x0000000000000000000000000000000000000FEE)
+    │   └─ ← [Return]
+    ├─ [21544] FairworkEscrowHarness::acceptJob(999)
+    │   └─ ← [Revert] ShellOnly()
+    └─ ← [Revert] Error != expected error: ShellOnly() != InvalidState()
+
+Backtrace:
+  at FairworkEscrowHarness.acceptJob
+  at Phase1EscrowTest.test_F01_F02_F03_UnknownJobsAndUnauthorizedWithdrawalCannotMoveFunds
+
+[FAIL: ShellOnly()] test_F01_F03_RawUnitsForSixEightEighteenDecimalTokens() (gas: 12316)
+Traces:
+  [12316] Phase1EscrowTest::test_F01_F03_RawUnitsForSixEightEighteenDecimalTokens()
+    ├─ [574] FairworkEscrowHarness::tokenConfig(MockToken: [0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f]) [staticcall]
+    │   └─ ← [Revert] ShellOnly()
+    └─ ← [Revert] ShellOnly()
+
+Backtrace:
+  at FairworkEscrowHarness.tokenConfig
+  at Phase1EscrowTest.test_F01_F03_RawUnitsForSixEightEighteenDecimalTokens
+
+[FAIL: next call did not revert as expected] test_F01_RejectsInvalidDeploymentConfiguration() (gas: 498342)
+Traces:
+  [498342] Phase1EscrowTest::test_F01_RejectsInvalidDeploymentConfiguration()
+    ├─ [0] VM::chainId(1)
+    │   └─ ← [Return]
+    ├─ [0] VM::expectRevert(InvalidChainId())
+    │   └─ ← [Return]
+    ├─ [457702] → new FairworkEscrowHarness@0x03A6a84cD762D9707A21605b548aaaB891562aAb
+    │   └─ ← [Return] 1699 bytes of code
+    └─ ← [Revert] next call did not revert as expected
+
+Backtrace:
+  at Phase1EscrowTest.test_F01_RejectsInvalidDeploymentConfiguration
+
+[FAIL: Error != expected error: ShellOnly() != InvalidAddress()] test_F01_RejectsInvalidPartiesTokensCommitmentsAndBounds() (gas: 43079)
+Traces:
+  [43079] Phase1EscrowTest::test_F01_RejectsInvalidPartiesTokensCommitmentsAndBounds()
+    ├─ [0] VM::expectRevert(InvalidAddress())
+    │   └─ ← [Return]
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [30870] FairworkEscrowHarness::createJob(JobInput({ freelancer: 0x0000000000000000000000000000000000000000, token: 0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f, titleCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595, descriptionCommitment: 0x1596dc38e2ac5a6ddc5e019af4adcc1e017a04f510d57e69d6879d5d2996bb8e, scopeCommitment: 0x6760d0b4f6c19fc4031286d0fcd3500c810a2471efb89cb7e125b719f63fa2f4, deliveryRuleCommitment: 0x54008a92b3c2aa1b10422a877d90c0f2e8ef2add9649dfb9d89370e7fac76d48, reviewWindow: 30, revisionLimit: 0 }), [MilestoneInput({ amount: 1, duration: 10, acceptanceCriteriaCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595 })])
+    │   └─ ← [Revert] ShellOnly()
+    └─ ← [Revert] Error != expected error: ShellOnly() != InvalidAddress()
+
+Backtrace:
+  at FairworkEscrowHarness.createJob
+  at Phase1EscrowTest.test_F01_RejectsInvalidPartiesTokensCommitmentsAndBounds
+
+[FAIL: ShellOnly()] test_F02_F03_EnforceRolesAndFundingOrder() (gas: 42648)
+Traces:
+  [42648] Phase1EscrowTest::test_F02_F03_EnforceRolesAndFundingOrder()
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [30930] FairworkEscrowHarness::createJob(JobInput({ freelancer: 0x0000000000000000000000000000000000000FEE, token: 0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f, titleCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595, descriptionCommitment: 0x1596dc38e2ac5a6ddc5e019af4adcc1e017a04f510d57e69d6879d5d2996bb8e, scopeCommitment: 0x6760d0b4f6c19fc4031286d0fcd3500c810a2471efb89cb7e125b719f63fa2f4, deliveryRuleCommitment: 0x54008a92b3c2aa1b10422a877d90c0f2e8ef2add9649dfb9d89370e7fac76d48, reviewWindow: 30, revisionLimit: 0 }), [MilestoneInput({ amount: 100, duration: 10, acceptanceCriteriaCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595 })])
+    │   └─ ← [Revert] ShellOnly()
+    └─ ← [Revert] ShellOnly()
+
+Backtrace:
+  at FairworkEscrowHarness.createJob
+  at Phase1EscrowTest.test_F02_F03_EnforceRolesAndFundingOrder
+
+[FAIL: ShellOnly()] test_F03_CallbackCannotReenterCreateDuringFunding() (gas: 42697)
+Traces:
+  [42697] Phase1EscrowTest::test_F03_CallbackCannotReenterCreateDuringFunding()
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [30990] FairworkEscrowHarness::createJob(JobInput({ freelancer: 0x0000000000000000000000000000000000000FEE, token: 0xF62849F9A0B5Bf2913b396098F7c7019b51A820a, titleCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595, descriptionCommitment: 0x1596dc38e2ac5a6ddc5e019af4adcc1e017a04f510d57e69d6879d5d2996bb8e, scopeCommitment: 0x6760d0b4f6c19fc4031286d0fcd3500c810a2471efb89cb7e125b719f63fa2f4, deliveryRuleCommitment: 0x54008a92b3c2aa1b10422a877d90c0f2e8ef2add9649dfb9d89370e7fac76d48, reviewWindow: 30, revisionLimit: 0 }), [MilestoneInput({ amount: 100003 [1e5], duration: 10, acceptanceCriteriaCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595 })])
+    │   └─ ← [Revert] ShellOnly()
+    └─ ← [Revert] ShellOnly()
+
+Backtrace:
+  at FairworkEscrowHarness.createJob
+  at Phase1EscrowTest.test_F03_CallbackCannotReenterCreateDuringFunding
+
+[FAIL: ShellOnly()] test_F03_DirectSurplusNeverCreatesClaimableLiability() (gas: 42718)
+Traces:
+  [42718] Phase1EscrowTest::test_F03_DirectSurplusNeverCreatesClaimableLiability()
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [30990] FairworkEscrowHarness::createJob(JobInput({ freelancer: 0x0000000000000000000000000000000000000FEE, token: 0x2e234DAe75C793f67A35089C9d99245E1C58470b, titleCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595, descriptionCommitment: 0x1596dc38e2ac5a6ddc5e019af4adcc1e017a04f510d57e69d6879d5d2996bb8e, scopeCommitment: 0x6760d0b4f6c19fc4031286d0fcd3500c810a2471efb89cb7e125b719f63fa2f4, deliveryRuleCommitment: 0x54008a92b3c2aa1b10422a877d90c0f2e8ef2add9649dfb9d89370e7fac76d48, reviewWindow: 30, revisionLimit: 0 }), [MilestoneInput({ amount: 123459 [1.234e5], duration: 10, acceptanceCriteriaCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595 })])
+    │   └─ ← [Revert] ShellOnly()
+    └─ ← [Revert] ShellOnly()
+
+Backtrace:
+  at FairworkEscrowHarness.createJob
+  at Phase1EscrowTest.test_F03_DirectSurplusNeverCreatesClaimableLiability
+
+[FAIL: ShellOnly()] test_F03_RejectsFeeOnTransferAndFalseReturnDepositsWithRollback() (gas: 1346841)
+Traces:
+  [1346841] Phase1EscrowTest::test_F03_RejectsFeeOnTransferAndFalseReturnDepositsWithRollback()
+    ├─ [630818] → new ConfigurableFeeToken@0x03A6a84cD762D9707A21605b548aaaB891562aAb
+    │   └─ ← [Return] 2297 bytes of code
+    ├─ [26543] ConfigurableFeeToken::setFeeEnabled(true)
+    │   └─ ← [Stop]
+    ├─ [205] ConfigurableFeeToken::decimals() [staticcall]
+    │   └─ ← [Return] 6
+    ├─ [457702] → new FairworkEscrowHarness@0x15cF58144EF33af1e14b5208015d11F9143E27b9
+    │   └─ ← [Return] 1699 bytes of code
+    ├─ [70462] ConfigurableFeeToken::mint(0x000000000000000000000000000000000000c11e, 1000000 [1e6])
+    │   ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: 0x000000000000000000000000000000000000c11e, amount: 1000000 [1e6])
+    │   └─ ← [Stop]
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [46678] ConfigurableFeeToken::approve(FairworkEscrowHarness: [0x15cF58144EF33af1e14b5208015d11F9143E27b9], 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   ├─ emit Approval(owner: 0x000000000000000000000000000000000000c11e, spender: FairworkEscrowHarness: [0x15cF58144EF33af1e14b5208015d11F9143E27b9], amount: 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   └─ ← [Return] true
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [30990] FairworkEscrowHarness::createJob(JobInput({ freelancer: 0x0000000000000000000000000000000000000FEE, token: 0x03A6a84cD762D9707A21605b548aaaB891562aAb, titleCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595, descriptionCommitment: 0x1596dc38e2ac5a6ddc5e019af4adcc1e017a04f510d57e69d6879d5d2996bb8e, scopeCommitment: 0x6760d0b4f6c19fc4031286d0fcd3500c810a2471efb89cb7e125b719f63fa2f4, deliveryRuleCommitment: 0x54008a92b3c2aa1b10422a877d90c0f2e8ef2add9649dfb9d89370e7fac76d48, reviewWindow: 30, revisionLimit: 0 }), [MilestoneInput({ amount: 100000 [1e5], duration: 10, acceptanceCriteriaCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595 })])
+    │   └─ ← [Revert] ShellOnly()
+    └─ ← [Revert] ShellOnly()
+
+Backtrace:
+  at FairworkEscrowHarness.createJob
+  at Phase1EscrowTest.test_F03_RejectsFeeOnTransferAndFalseReturnDepositsWithRollback
+
+[FAIL: ShellOnly()] test_F03_SafeERC20SupportsNoReturnTokenAndExactBalanceDeltas() (gas: 1168913)
+Traces:
+  [1168913] Phase1EscrowTest::test_F03_SafeERC20SupportsNoReturnTokenAndExactBalanceDeltas()
+    ├─ [482760] → new NoReturnToken@0x03A6a84cD762D9707A21605b548aaaB891562aAb
+    │   └─ ← [Return] 1740 bytes of code
+    ├─ [292] NoReturnToken::decimals() [staticcall]
+    │   └─ ← [Return] 8
+    ├─ [457702] → new FairworkEscrowHarness@0xD6BbDE9174b1CdAa358d2Cf4D57D1a9F7178FBfF
+    │   └─ ← [Return] 1699 bytes of code
+    ├─ [68040] NoReturnToken::mint(0x000000000000000000000000000000000000c11e, 1000000 [1e6])
+    │   ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: 0x000000000000000000000000000000000000c11e, amount: 1000000 [1e6])
+    │   └─ ← [Stop]
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [46377] NoReturnToken::approve(FairworkEscrowHarness: [0xD6BbDE9174b1CdAa358d2Cf4D57D1a9F7178FBfF], 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   ├─ emit Approval(owner: 0x000000000000000000000000000000000000c11e, spender: FairworkEscrowHarness: [0xD6BbDE9174b1CdAa358d2Cf4D57D1a9F7178FBfF], amount: 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   └─ ← [Stop]
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [30990] FairworkEscrowHarness::createJob(JobInput({ freelancer: 0x0000000000000000000000000000000000000FEE, token: 0x03A6a84cD762D9707A21605b548aaaB891562aAb, titleCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595, descriptionCommitment: 0x1596dc38e2ac5a6ddc5e019af4adcc1e017a04f510d57e69d6879d5d2996bb8e, scopeCommitment: 0x6760d0b4f6c19fc4031286d0fcd3500c810a2471efb89cb7e125b719f63fa2f4, deliveryRuleCommitment: 0x54008a92b3c2aa1b10422a877d90c0f2e8ef2add9649dfb9d89370e7fac76d48, reviewWindow: 30, revisionLimit: 0 }), [MilestoneInput({ amount: 123457 [1.234e5], duration: 10, acceptanceCriteriaCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595 })])
+    │   └─ ← [Revert] ShellOnly()
+    └─ ← [Revert] ShellOnly()
+
+Backtrace:
+  at FairworkEscrowHarness.createJob
+  at Phase1EscrowTest.test_F03_SafeERC20SupportsNoReturnTokenAndExactBalanceDeltas
+
+[FAIL: ShellOnly()] test_F03_WithdrawalTransfersExactBackedClaimableAndClearsLedger() (gas: 42739)
+Traces:
+  [42739] Phase1EscrowTest::test_F03_WithdrawalTransfersExactBackedClaimableAndClearsLedger()
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [30990] FairworkEscrowHarness::createJob(JobInput({ freelancer: 0x0000000000000000000000000000000000000FEE, token: 0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f, titleCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595, descriptionCommitment: 0x1596dc38e2ac5a6ddc5e019af4adcc1e017a04f510d57e69d6879d5d2996bb8e, scopeCommitment: 0x6760d0b4f6c19fc4031286d0fcd3500c810a2471efb89cb7e125b719f63fa2f4, deliveryRuleCommitment: 0x54008a92b3c2aa1b10422a877d90c0f2e8ef2add9649dfb9d89370e7fac76d48, reviewWindow: 30, revisionLimit: 0 }), [MilestoneInput({ amount: 456789 [4.567e5], duration: 10, acceptanceCriteriaCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595 })])
+    │   └─ ← [Revert] ShellOnly()
+    └─ ← [Revert] ShellOnly()
+
+Backtrace:
+  at FairworkEscrowHarness.createJob
+  at Phase1EscrowTest.test_F03_WithdrawalTransfersExactBackedClaimableAndClearsLedger
+
+[FAIL: ShellOnly()] test_F85_F03_FundingUsesHalfOpenExpiryAndPublicCancellation() (gas: 42603)
+Traces:
+  [42603] Phase1EscrowTest::test_F85_F03_FundingUsesHalfOpenExpiryAndPublicCancellation()
+    ├─ [0] VM::prank(0x000000000000000000000000000000000000c11e)
+    │   └─ ← [Return]
+    ├─ [30930] FairworkEscrowHarness::createJob(JobInput({ freelancer: 0x0000000000000000000000000000000000000FEE, token: 0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f, titleCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595, descriptionCommitment: 0x1596dc38e2ac5a6ddc5e019af4adcc1e017a04f510d57e69d6879d5d2996bb8e, scopeCommitment: 0x6760d0b4f6c19fc4031286d0fcd3500c810a2471efb89cb7e125b719f63fa2f4, deliveryRuleCommitment: 0x54008a92b3c2aa1b10422a877d90c0f2e8ef2add9649dfb9d89370e7fac76d48, reviewWindow: 30, revisionLimit: 0 }), [MilestoneInput({ amount: 200, duration: 10, acceptanceCriteriaCommitment: 0x40922c40c96212abea62d2bc2b60d4e61abbba87b30b457d93f36486a22c4595 })])
+    │   └─ ← [Revert] ShellOnly()
+    └─ ← [Revert] ShellOnly()
+
+Backtrace:
+  at FairworkEscrowHarness.createJob
+  at Phase1EscrowTest.test_F85_F03_FundingUsesHalfOpenExpiryAndPublicCancellation
+
+Suite result: FAILED. 0 passed; 17 failed; 0 skipped; finished in 12.51ms (47.94ms CPU time)
+
+Ran 1 test suite in 111.90ms (12.51ms CPU time): 0 tests passed, 17 failed, 0 skipped (17 total tests)
+
+Failing tests:
+Encountered 17 failing tests in test/Phase1Escrow.t.sol:Phase1EscrowTest
+[FAIL: custom error 0xac9984c3] invariant_F03_EachTokenBalanceCoversItsLiabilities() (runs: 1, calls: 1, reverts: 0)
+[FAIL: ShellOnly(); counterexample: calldata=0xa09c70440000000000000000000000000000000000000000000000000000000000000c7a0000000000000000000000000000000000000000000000000000000000000020 args=[3194, 32]] testFuzz_F01_F03_RawAmountRemainsTokenUnits(uint256,uint8) (runs: 0, μ: 0, ~: 0)
+[FAIL: ShellOnly()] test_A01_F02_ProposalUsesHalfOpenExpiryAndPublicCancellation() (gas: 42605)
+[FAIL: ShellOnly()] test_A20_F03_WithdrawalIsEffectsFirstAndReentrancyGuarded() (gas: 42744)
+[FAIL: ShellOnly()] test_A20_F03_WithdrawalTransferFailureRollsBackAllLiabilityAndBalances() (gas: 42706)
+[FAIL: ShellOnly()] test_F01_F02_F03_CreateAcceptFundStartsIndependentRawUnitClocks() (gas: 45174)
+[FAIL: Error != expected error: ShellOnly() != InvalidState()] test_F01_F02_F03_UnknownJobsAndUnauthorizedWithdrawalCannotMoveFunds() (gas: 30088)
+[FAIL: ShellOnly()] test_F01_F03_RawUnitsForSixEightEighteenDecimalTokens() (gas: 12316)
+[FAIL: next call did not revert as expected] test_F01_RejectsInvalidDeploymentConfiguration() (gas: 498342)
+[FAIL: Error != expected error: ShellOnly() != InvalidAddress()] test_F01_RejectsInvalidPartiesTokensCommitmentsAndBounds() (gas: 43079)
+[FAIL: ShellOnly()] test_F02_F03_EnforceRolesAndFundingOrder() (gas: 42648)
+[FAIL: ShellOnly()] test_F03_CallbackCannotReenterCreateDuringFunding() (gas: 42697)
+[FAIL: ShellOnly()] test_F03_DirectSurplusNeverCreatesClaimableLiability() (gas: 42718)
+[FAIL: ShellOnly()] test_F03_RejectsFeeOnTransferAndFalseReturnDepositsWithRollback() (gas: 1346841)
+[FAIL: ShellOnly()] test_F03_SafeERC20SupportsNoReturnTokenAndExactBalanceDeltas() (gas: 1168913)
+[FAIL: ShellOnly()] test_F03_WithdrawalTransfersExactBackedClaimableAndClearsLedger() (gas: 42739)
+[FAIL: ShellOnly()] test_F85_F03_FundingUsesHalfOpenExpiryAndPublicCancellation() (gas: 42603)
+
+Encountered a total of 17 failing tests, 0 tests succeeded
+
+Tip: Run `forge test --rerun` to retry only the 17 failed tests
+
+Fuzz seed: 0x64dc8bbdae7c8843cabae57826d87f498f6bbda34fd8452be034ff3a2d6ba3c4 (use `--fuzz-seed` to reproduce)

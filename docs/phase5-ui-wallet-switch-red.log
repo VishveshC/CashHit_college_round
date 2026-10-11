@@ -1,0 +1,51 @@
+PHASE 5 UI HOSTILE AUDIT — BROWSER REPRODUCTION
+Date: 2026-10-11 (Asia/Kolkata)
+Target: local Fairwork UI at http://localhost:3000/ (local chain 31337)
+Result: reproduced unsaved private proposal draft visible after switching from Client to Freelancer role.
+
+Reproduction steps
+1. In the local UI, select the seeded Client role (0x7099…79C8) and sign in.
+2. Open “Create a private agreement”. Enter the synthetic title PHASE5_DRAFT_PRIVATE_SENTINEL; leave it unsaved and do not submit.
+3. Close the form. Switch the local role to the seeded Freelancer (0x3C44…93BC) and sign in.
+4. Reopen “Create a private agreement”. The form still displays PHASE5_DRAFT_PRIVATE_SENTINEL while the page identifies the current role as Freelancer.
+5. Stop. No agreement was submitted, no transaction was sent, and the sentinel is synthetic audit data.
+
+Captured rendered accessibility text (after step 4)
+0 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+3 text LOCAL CHAIN · 31337 FREELANCER 0x3C44…93BC
+53 text Freelancer · chain 31337
+56 text Private session active until 03:41
+59 button ＋ Create a private agreement
+60 text NEW DIRECT PROPOSAL
+61 heading Create a private agreement
+63 text Terms are committed on chain and encrypted in private storage after the proposal confirms.
+66 text Freelancer wallet address
+67 text field Freelancer wallet address
+80 text Agreement title
+82 text field Agreement title, Value: PHASE5_DRAFT_PRIVATE_SENTINEL
+84 text Description
+85 text entry area Description
+87 text Scope
+88 text entry area Scope
+90 text Delivery rules
+91 text entry area Delivery rules
+92 text PAYMENT PLAN
+93 text Milestones
+99 text Amount · USDC
+100 text field Amount · USDC
+105 text Acceptance criteria
+106 text entry area Acceptance criteria
+109 button Review and create proposal →
+
+Screenshot evidence
+The browser screenshot was captured inline through the CUA screenshot API during the same observed state; it showed the open proposal form and PHASE5_DRAFT_PRIVATE_SENTINEL. The API returned 43,935 PNG bytes; SHA-256: cb4338910c760ed652b68abe4ff7c40f78431ede38ab4109e0ab79604a4a17e4.
+The CUA API displayed the screenshot in its tool result but exposed no workspace file sink. Therefore this log records its digest and the AX/steps rather than claiming a local PNG file exists.
+
+Relevant source locations
+- apps/web/components/EscrowDashboard.tsx:245-249 clears the authenticated private caches but leaves agreement, milestoneDrafts, showAgreement, and confirmSummary state untouched.
+- apps/web/components/EscrowDashboard.tsx:400-413 invokes logout/clearPrivate on wallet account change.
+- apps/web/components/EscrowDashboard.tsx:442-454 switches demo roles through logout and updates the local wallet.
+- apps/web/components/EscrowDashboard.tsx:157-160 declares the proposal draft and modal state that survives the switch.
+
+Expected privacy behavior
+A wallet or role context change should clear the private agreement draft and close private forms/confirmation summaries before another wallet can use the UI. See spec.md A-37/A-47 and HERO_PROMPT.md section 3.

@@ -1,0 +1,7 @@
+{
+  "scope": "Final compiled local client; two current server-secret canaries",
+  "files": 16,
+  "bytes": 1687188,
+  "matchedSecrets": 0,
+  "publicArtifact": "absent; public build refused"
+}

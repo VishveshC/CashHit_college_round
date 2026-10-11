@@ -1,0 +1,30 @@
+(node:20368) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-corrected.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 4 backend security behavior
+  ✔ W-01: nonce response is origin-bound and has a five-minute browser challenge cookie (24.6412ms)
+  ✔ W-01: SIWE validates domain, URI, chain, signer, expiry, and consumes a nonce once (85.9903ms)
+  ✔ W-02: session is server-side, short-lived, and invalidated by logout (38.1372ms)
+  ✔ W-04/P-04/P-07: every private resource uses fresh chain roles and hides unauthorized IDs with 404 (20.4696ms)
+  ✔ W-04/P-04: party read permission is rechecked after a role changes (20.8934ms)
+  ✔ W-05/P-03: job terms require A38 salted commitments and remain private at rest (22.198ms)
+  ✔ P-03/P-04/F-12: rejection notes match the on-chain reason and stay private (37.9797ms)
+  ✔ W-08: every authenticated write rejects cross-origin or missing CSRF (15.9057ms)
+  ✔ W-01/W-04: rate limits fail closed and ignore attacker-supplied forwarding headers (7.9727ms)
+  ✔ W-10/A38: file upload content-checks, caps size, encrypts at rest, and never exposes a storage URL (35.5021ms)
+  ✔ A38: assigned arbiter file access is limited to its unresolved dispute and milestone (76.911ms)
+  ✔ W-10/P-04: download tickets expire, bind the session, and recheck chain access at content read (31.6696ms)
+  ✔ P-04/A39: current assigned arbiter may read unresolved evidence only and every read is audited (35.0086ms)
+  ✔ W-05/A39: evidence is bound to an existing on-chain commitment and timeline is source-labelled (25.4679ms)
+  ✔ W-05/W-10: bad JSON, malformed file metadata, and oversized uploads return bounded errors (13.5599ms)
+  ✔ A36: private route chain failures fail closed and never return cached access (7.9949ms)
+✔ Phase 4 backend security behavior (1171.1695ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1690.832

@@ -1,0 +1,25 @@
+✖ Windows runtime reset retries an exclusively locked private DB and preserves unrelated runtime data (1465.7634ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1540.4083
+
+✖ failing tests:
+
+test at scripts\local-runtime-shutdown.test.mjs:39:1
+✖ Windows runtime reset retries an exclusively locked private DB and preserves unrelated runtime data (1465.7634ms)
+  Error: EPERM, Permission denied: \\?\C:\Users\vishvesh\AppData\Local\Temp\fw-runtime-shutdown-Nyvjk2\infra\local\runtime\private.db '\\?\C:\Users\vishvesh\AppData\Local\Temp\fw-runtime-shutdown-Nyvjk2\infra\local\runtime\private.db'
+      at rmSync (node:fs:1236:18)
+      at prepareRuntime (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/local-runtime.mjs:17:333)
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/local-runtime-shutdown.test.mjs:77:26)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    errno: 1,
+    code: 'EPERM',
+    path: '\\\\?\\C:\\Users\\vishvesh\\AppData\\Local\\Temp\\fw-runtime-shutdown-Nyvjk2\\infra\\local\\runtime\\private.db',
+    syscall: 'rm'
+  }

@@ -1,0 +1,12 @@
+{
+  "newJob": 33,
+  "oldJob": 32,
+  "oldFilesBefore": true,
+  "oldEvidenceBefore": true,
+  "newJobHasDownload": false,
+  "newJobHasOldEvidence": false,
+  "newTitle": false,
+  "newTitleAfterReopen": true,
+  "newJobDownloadAfterReopen": false,
+  "interruptedBeforePostFetchObservation": true
+}

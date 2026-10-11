@@ -1,0 +1,12 @@
+{
+  "frozen_files": [
+    {
+      "sha256": "5621A3DB2C23A207820235FB5CC03595B35D9152ABF9D3F53C839F8475D591D5",
+      "path": "apps/web/test/job-identifiers.test.ts"
+    },
+    {
+      "sha256": "C1FF01A77458C32028C023E4729D2C2EF7A65F077BB4EB5F84C5A51762F73210",
+      "path": "docs/phase4-ui-jobid-red-root.txt"
+    }
+  ]
+}

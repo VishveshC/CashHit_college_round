@@ -1,0 +1,3 @@
+{"kind":"read-only decryption proof of stopped synthetic demo backup before registry reset","matchingKeyDecryptsAllRowsAndFiles":true,"plaintextOrKeyValuesWritten":false,"counts":{"PrivateJobData":8,"PrivateNote":2,"PrivateEvidence":3,"PrivateFile":9},"limits":["Local ignored backup includes its matching unencrypted environment file.","Not an encrypted operational backup, full API/chain restore or production key-recovery procedure.","Older Phase5 backup still lacks its historical rotated key."]}
+(node:21912) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

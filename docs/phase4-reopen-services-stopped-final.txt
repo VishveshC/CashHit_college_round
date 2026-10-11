@@ -1,0 +1,10 @@
+SUCCESS: The process with PID 24200 (child process of PID 30108) has been terminated.
+SUCCESS: The process with PID 30108 (child process of PID 6428) has been terminated.
+SUCCESS: The process with PID 6428 (child process of PID 31436) has been terminated.
+
+> fairwork-v3@0.0.0 demo:stop
+> node scripts/local-stop.mjs
+
+Owned local web stopped.
+Owned local chain stopped.
+Verified no listeners on 3000,8545,8080.

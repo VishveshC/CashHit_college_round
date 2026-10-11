@@ -1,0 +1,11 @@
+✔ F70 reset rejects a junction parent before touching an external owned-looking runtime (5.395ms)
+✔ F70 reset refuses unowned directory and preserves unrelated workspace data (4.3669ms)
+✔ F70 reset clears owned privateDB and storage only while preserving recordedAnvil (9.2669ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 88.5848

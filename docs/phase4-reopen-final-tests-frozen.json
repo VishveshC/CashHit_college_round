@@ -1,0 +1,31 @@
+{
+  "phase": 4,
+  "scope": "reopened Phase 4 supplemental tests frozen before final isolated verification",
+  "frozen_files": [
+    {
+      "path": "apps/web/test/phase4-reopen-route-authorization.test.mjs",
+      "sha256": "9a53f87c137deeb3fcc2062e3641cdac0d007d140b65526f765b67999d7cdaed",
+      "purpose": "isolated route authorization, Origin, and CSRF matrix"
+    },
+    {
+      "path": "apps/web/test/phase4-reopen-job-private-reset.test.ts",
+      "sha256": "e60f22003e829eb81d0b56315b46716d5be9553e971e7e3ecefcc63d4533d3ca",
+      "purpose": "private state reset when switching selected job"
+    },
+    {
+      "path": "apps/web/test/dispute-settlement-view.test.ts",
+      "sha256": "1fc7f489fb2fb990d755042b3cac9e1b6434777e96777d00b90d54e96ba3aa3d",
+      "purpose": "settled disclosure reads matching chain events and preserves bigint credit values"
+    },
+    {
+      "path": "apps/web/test/local-arbitration-gas.test.ts",
+      "sha256": "aa70d5a5cc205d4ecc096e6d45a7bcc55bfdbdfd08e98b03851ab4abdf8dc1a5",
+      "purpose": "local demo-only advanceDispute gas override boundary"
+    },
+    {
+      "path": "scripts/phase5-backup-key-preservation.test.mjs",
+      "sha256": "e789141f547d9d5b58b8238be8189d2d7d3bbf0f1ab30aeb04c00ab518957ffa",
+      "purpose": "isolated backup-helper environment-key preservation proof"
+    }
+  ]
+}

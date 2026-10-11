@@ -1,0 +1,11 @@
+import { readdirSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const tests = readdirSync(path.join(root, 'apps/web/test')).filter(name => name.endsWith('.test.ts') && name !== 'security.test.ts').sort().map(name => path.join(root, 'apps/web/test', name));
+if (!tests.some(name => name.endsWith('security-corrected.test.ts'))) throw new Error('Corrected security successor is required');
+console.log('Original security.test.ts is preserved as frozen historical evidence with a one-shot Response harness defect; current checks use security-corrected.test.ts. See docs/PHASE4_TEST_HARNESS_ERRATA.md.');
+const result = spawnSync(process.execPath, ['--experimental-strip-types', '--test', ...tests], { cwd: root, stdio: 'inherit', windowsHide: true });
+if (result.error) throw result.error;
+process.exitCode = result.status ?? 1;

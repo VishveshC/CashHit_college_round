@@ -1,0 +1,10 @@
+SUCCESS: The process with PID 17168 (child process of PID 30408) has been terminated.
+SUCCESS: The process with PID 30408 (child process of PID 27016) has been terminated.
+SUCCESS: The process with PID 27016 (child process of PID 13024) has been terminated.
+
+> fairwork-v3@0.0.0 demo:stop
+> node scripts/local-stop.mjs
+
+Owned local web stopped.
+Owned local chain stopped.
+Verified no listeners on 3000/8545/8080

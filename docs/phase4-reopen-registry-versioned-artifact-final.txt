@@ -1,0 +1,24 @@
+wrapperExit=2
+NON-DEPLOYABLE ARTIFACT TEST BLOCKED: actual output failed exclusion scan
+{
+  "report": "docs/phase4-reopen-registry-versioned-artifact.json",
+  "outputDirectory": "C:\\Users\\vishvesh\\AppData\\Local\\Temp\\fairwork-phase4-artifact-test-2ktBl4\\apps\\web\\.next-artifact-test",
+  "apiRoutes": [
+    "/api/config/route"
+  ],
+  "routeManifestsContainDevApi": false,
+  "chunksContainMockRandomness": false,
+  "chunksContainSeededDemoControls": true,
+  "chunksContainKnownTestPrivateKey": null,
+  "knownTestPrivateKeyScanComplete": false,
+  "chunksContainLocalRpcOrOrigin": true,
+  "chunksContainLocalOnlyChainUx": true,
+  "routeMethodsAreReadOnlyFixtureOnly": true,
+  "readinessBlockers": [
+    "seededDemoControls",
+    "knownTestKeyCandidatesUnavailable",
+    "localRpcOrOrigin",
+    "localOnlyChainUx"
+  ],
+  "releaseSafe": false
+}

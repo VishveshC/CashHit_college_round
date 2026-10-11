@@ -1,0 +1,112 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model AuthNonce {
+  id                 String   @id
+  nonceHash          String   @unique
+  challengeTokenHash String
+  expiresAt          DateTime
+  createdAt          DateTime @default(now())
+  usedAt             DateTime?
+
+  @@index([expiresAt])
+}
+
+model AuthSession {
+  id               String    @id
+  wallet           String
+  sessionTokenHash String    @unique
+  csrfTokenHash    String
+  expiresAt        DateTime
+  createdAt        DateTime  @default(now())
+  revokedAt        DateTime?
+
+  @@index([wallet, expiresAt])
+  @@index([expiresAt])
+}
+
+model PrivateJobData {
+  jobId     String   @id
+  ciphertext Bytes
+  iv        Bytes
+  authTag   Bytes
+  version   Int      @default(1)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model PrivateNote {
+  id              String   @id
+  jobId           String
+  disputeId       String?
+  kind            String
+  milestoneIndex  Int
+  version         Int
+  commitment      String
+  writerWallet    String
+  ciphertext      Bytes
+  iv              Bytes
+  authTag          Bytes
+  createdAt        DateTime @default(now())
+
+  @@unique([jobId, kind, milestoneIndex, version])
+  @@index([jobId, milestoneIndex, kind])
+  @@index([disputeId])
+}
+
+model PrivateEvidence {
+  id            String   @id
+  jobId         String
+  disputeId     String
+  partyWallet   String
+  evidenceHash  String
+  reference     String
+  ciphertext    Bytes
+  iv            Bytes
+  authTag       Bytes
+  createdAt     DateTime @default(now())
+
+  @@unique([disputeId, partyWallet, reference, evidenceHash])
+  @@index([jobId, disputeId, partyWallet])
+}
+
+model PrivateFile {
+  id             String   @id
+  jobId          String
+  disputeId      String?
+  uploaderWallet String
+  kind           String
+  milestoneIndex Int
+  rawHash        String
+  reference      String
+  mime           String
+  size           Int
+  storageKey     String   @unique
+  iv             Bytes
+  authTag        Bytes
+  createdAt      DateTime @default(now())
+
+  @@index([jobId, milestoneIndex, kind])
+  @@index([disputeId])
+  @@index([uploaderWallet, createdAt])
+}
+
+model AuditEntry {
+  id           String   @id
+  jobId        String
+  disputeId    String?
+  actorWallet  String
+  event        String
+  resourceId   String?
+  createdAt    DateTime @default(now())
+
+  @@index([jobId, createdAt])
+  @@index([disputeId, createdAt])
+  @@index([actorWallet, createdAt])
+}

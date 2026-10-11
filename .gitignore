@@ -1,0 +1,49 @@
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Dependencies and generated build output
+node_modules/
+**/node_modules/
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+contracts/lib/
+apps/web/.next/
+apps/web/out/
+apps/web/next-env.d.ts
+dist/
+coverage/
+*.tsbuildinfo
+
+# Local databases and private user files
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+storage/
+**/storage/
+infra/local/private-storage/
+
+# Tool reports and editor/OS noise
+gitleaks-report.*
+.tools/
+.DS_Store
+Thumbs.db
+
+# Foundry failure seeds emitted relative to repository root
+cache/
+
+# Phase4 owned local runtime only
+infra/local/runtime/
+infra/local/deployment.json
+infra/local/processes.json
+apps/web/certificates/
+
+# Individual capture frames; the finished demo video is retained
+docs/demo-frames/

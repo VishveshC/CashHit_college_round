@@ -1,0 +1,148 @@
+✖ automatic retention refuses active jobs without deleting any private rows (40.0936ms)
+✖ retention requires both Closed state and a chain-derived closure timestamp (11.4188ms)
+✖ retention accepts only one positive decimal job ID (2.7481ms)
+✖ automatic retention waits until the exact chain-derived 90-day boundary (9.8257ms)
+✖ a fresh EIP-191 request from either chain-named party permits early deletion (14.4471ms)
+✖ a caller-supplied wallet cannot impersonate a party and wrong-job signatures are refused (12.5601ms)
+✖ signed deletion binds canonical origin, chain, escrow, and a maximum five-minute window (14.2847ms)
+✖ every storage path is validated before any file or row is removed (18.8553ms)
+✖ a parent directory junction cannot redirect deletion outside private storage (15.8864ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 0
+ℹ fail 9
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1146.5342
+
+✖ failing tests:
+
+test at scripts\phase4-retention.test.mjs:205:1
+✖ automatic retention refuses active jobs without deleting any private rows (40.0936ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.test.mjs:209:3)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /closed|eligible|retention/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at scripts\phase4-retention.test.mjs:214:1
+✖ retention requires both Closed state and a chain-derived closure timestamp (11.4188ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.test.mjs:221:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /closed|closure|eligible|retention/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at scripts\phase4-retention.test.mjs:227:1
+✖ retention accepts only one positive decimal job ID (2.7481ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.test.mjs:230:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /job|identifier|decimal|positive/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at scripts\phase4-retention.test.mjs:235:1
+✖ automatic retention waits until the exact chain-derived 90-day boundary (9.8257ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.test.mjs:238:3)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /90|eligible|retention/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at scripts\phase4-retention.test.mjs:254:1
+✖ a fresh EIP-191 request from either chain-named party permits early deletion (14.4471ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.test.mjs:261:12)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts\phase4-retention.test.mjs:268:1
+✖ a caller-supplied wallet cannot impersonate a party and wrong-job signatures are refused (12.5601ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.test.mjs:272:3)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /party|signer|signature|authorization/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at scripts\phase4-retention.test.mjs:281:1
+✖ signed deletion binds canonical origin, chain, escrow, and a maximum five-minute window (14.2847ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.test.mjs:294:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /origin|chain|escrow|time|expired|valid|authorization|message/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at scripts\phase4-retention.test.mjs:300:1
+✖ every storage path is validated before any file or row is removed (18.8553ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.test.mjs:316:3)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /path|storage|boundary|outside|symlink/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at scripts\phase4-retention.test.mjs:323:1
+✖ a parent directory junction cannot redirect deletion outside private storage (15.8864ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4-retention.test.mjs:339:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /path|storage|boundary|outside|symlink|junction/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }

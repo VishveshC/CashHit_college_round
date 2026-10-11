@@ -1,0 +1,26 @@
+[
+  {
+    "file": "contracts/test/Phase1Escrow.t.sol",
+    "Hash": "E6A0EEB8145D813503F16951303A2A7463316EAFCD7330C0EF05469D9AFCD555"
+  },
+  {
+    "file": "contracts/test/support/MockTokens.sol",
+    "Hash": "FC2C13A08F843C02E4628CA0283D86F3D81FF3C2B4B1995ADFACB5E292917220"
+  },
+  {
+    "file": "contracts/test/Phase1Additional.t.sol",
+    "Hash": "869C086CF5B46B4AC3EA9A11AB7DC8232AC8CFE4EA1A945B93D9820B5CEE1E96"
+  },
+  {
+    "file": "contracts/test/LocalDemoTokens.t.sol",
+    "Hash": "A59D815C347DE9F1C3A9EE3DD71D6FB004B3471084A505C03B5E6F842E1171C3"
+  },
+  {
+    "file": "contracts/test/Phase1Readback.t.sol",
+    "Hash": "EA60C60E761032FDA703C4E5C56EBD5E0981569E038C329D3C05AECC607F9005"
+  },
+  {
+    "file": "contracts/test/evidence-red.txt",
+    "Hash": "146409F92AFFBE891568337D77B22E3644B2DB6308A2EBD1EFC011B3CCCA48EC"
+  }
+]

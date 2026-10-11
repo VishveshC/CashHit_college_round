@@ -1,0 +1,83 @@
+Phase 0 web dependency verification — actual npm registry queries, 2026-10-10
+Commands: npm view <package> version; npm view <package>@<version> version; npm view next@16.4.0 peerDependencies --json; npm view wagmi@3.7.7 peerDependencies --json.
+next 16.4.0
+react 19.3.0
+react-dom 19.3.0
+typescript 7.0.2
+wagmi 3.7.7
+viem 2.57.4
+tailwindcss 4.3.3
+siwe 3.0.0
+zod 4.6.5
+@tanstack/react-query 5.104.1
+@types/react 19.3.0
+@types/react-dom 19.3.0
+@types/node 26.6.5
+prisma@6.19.3 -> 6.19.3
+@prisma/client@6.19.3 -> 6.19.3
+
+The current Prisma CLI latest tag is 8.0.0-rc.22 while the client latest is 7.10.0. Selected matching stable 6.19.3 deliberately for the SQLite schema scaffold; no generated production database is claimed.
+Next peerDependencies accepts react/react-dom ^19.0.0.
+wagmi peerDependencies requires viem 2.x, React >=18, TypeScript >=5.9.3 and @tanstack/react-query >=5.0.0.
+
+Command: npm run typecheck --workspace @fairwork/web
+> @fairwork/web@0.0.0 typecheck
+> tsc --noEmit
+Exit code: 0
+
+Command: $env:NEXT_TELEMETRY_DISABLED='1'; npm run build --workspace @fairwork/web
+> @fairwork/web@0.0.0 build
+> next build
+▲ Next.js 16.4.0 (Turbopack)
+✓ Running next.config.ts took 96ms
+Creating an optimized production build ...
+✓ Compiled successfully in 3.0s
+Running TypeScript ...
+Next added .next/dev/types/**/*.ts to tsconfig includes.
+Finished TypeScript in 386ms ...
+Collecting page data using 4 workers ...
+✓ Generating static pages using 4 workers (3/3) in 616ms
+Finalizing page optimization ...
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+○ (Static) prerendered as static content
+Exit code: 0
+
+Command: $env:DATABASE_URL='file:./dev.db'; npm run db:validate --workspace @fairwork/web
+> @fairwork/web@0.0.0 db:validate
+> prisma validate
+Prisma schema loaded from prisma\schema.prisma
+The schema at prisma\schema.prisma is valid 🚀
+Exit code: 0
+
+No runtime database schema, authentication or business routes have been implemented. Prisma validation proves schema/toolchain parsing only.
+
+Rendered verification: opened http://127.0.0.1:3140/ with Codex in-app browser. AX title Fairwork — Phase 0, heading Rules first. Funds second., and explicit unavailable-actions notice were present. Screenshot inspected: heading, notice card and local-only footer are readable without clipping at the default desktop viewport. This is only a scaffold page, not end-to-end product verification.
+
+Dependency-audit correction: actual npm audit --json exited 1 with five high findings: Prisma6.19.3/config/deepmerge-ts recursive merge exhaustion and solc0.8.37/tmp0.2.6 path traversal. Registry verified prisma@6.12.0 and @prisma/client@6.12.0 both output 6.12.0; prisma6.12.0 requires Node>=18.18. Selected matching 6.12.0, following npm audit recommended version, before any database behavior exists. Previous schema/build outputs above describe the initial scaffold; validation is repeated below with final pins. Contract compiler remediation is recorded in phase0-tooling.txt.
+
+Final Prisma pin checks:
+Command without DATABASE_URL first failed (exit 1): P1012, Environment variable not found: DATABASE_URL, Prisma CLI Version 6.12.0. No schema defect; required local environment must be set as below.
+Command: $env:DATABASE_URL='file:./dev.db'; npm run db:validate --workspace @fairwork/web
+Prisma schema loaded from prisma\schema.prisma
+The schema at prisma\schema.prisma is valid 🚀
+Exit code: 0
+Command: npm run db:generate --workspace @fairwork/web (same DATABASE_URL environment)
+Prisma schema loaded from prisma\schema.prisma
+✔ Generated Prisma Client (v6.12.0) to .\node_modules\@prisma\client in 27ms
+Exit code: 0
+No database migration or private data storage has been implemented.
+
+Final locked dependency graph web verification:
+Command: npm run typecheck --workspace @fairwork/web
+> tsc --noEmit
+Exit code: 0
+Command: $env:NEXT_TELEMETRY_DISABLED='1'; npm run build --workspace @fairwork/web
+▲ Next.js 16.4.0 (Turbopack)
+✓ Running next.config.ts took 28ms
+✓ Compiled successfully in 218ms
+Finished TypeScript in 313ms
+✓ Generating static pages using 4 workers (3/3) in 617ms
+Route (app): static / and /_not-found
+Exit code: 0

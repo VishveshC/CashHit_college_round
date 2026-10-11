@@ -1,0 +1,39 @@
+{
+  "feature": "F-45 arbiter registry UI helper",
+  "capturedAt": "2026-10-11",
+  "frozenTest": {
+    "path": "apps/web/test/arbiter-registry.test.ts",
+    "sha256AtOriginalRed": "EA751C565E9F717DBE2BE7254CB513850D7EA544E0FDECFC199D4E7622F0CD27",
+    "sha256Current": "EA751C565E9F717DBE2BE7254CB513850D7EA544E0FDECFC199D4E7622F0CD27"
+  },
+  "red": {
+    "command": "node --experimental-strip-types --test apps/web/test/arbiter-registry.test.ts",
+    "exitCode": 1,
+    "failure": "ERR_MODULE_NOT_FOUND because lib/client/arbiter-registry.ts had not yet been added",
+    "output": "docs/phase4-reopen-arbiter-registry-red.txt",
+    "outputSha256": "C69F7883360D27E6A305C1033CF9967A03CD98DA9B4D3781EA79D0CEC202543B"
+  },
+  "green": {
+    "command": "node --experimental-strip-types --test apps/web/test/arbiter-registry.test.ts",
+    "exitCode": 0,
+    "tests": 6,
+    "passed": 6,
+    "failed": 0,
+    "output": "docs/phase4-reopen-arbiter-registry-green.txt",
+    "outputSha256": "5480F5DC2A9FF674C7770AA018C15D4E746A6C36CEB514CE6E452316FA5F7BBE"
+  },
+  "implementedFiles": {
+    "helper": {
+      "path": "apps/web/lib/client/arbiter-registry.ts",
+      "sha256": "BB583765FC8967A37DE4FE9D852DC5F39C676DC3BE8880F3A93BDE25A5A93D18"
+    },
+    "component": {
+      "path": "apps/web/components/ArbiterRegistry.tsx",
+      "sha256": "CE4F99DF0F66ADCB5B33BDC780AF1A3CFDA9F19ED3E41C1339631BC80D14FD74"
+    }
+  },
+  "typecheck": {
+    "command": "npm run typecheck --prefix apps/web",
+    "exitCode": 0
+  }
+}

@@ -1,0 +1,17 @@
+▲ Next.js 16.4.0 (webpack)
+✓ Running next.config.ts took 27ms
+⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 6.1s
+  Running TypeScript ...
+
+  We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+  The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+  	- include was updated to add '.next-artifact-test/types/**/*.ts'
+  	- include was updated to add '.next-artifact-test/dev/types/**/*.ts'
+
+components/EscrowDashboard.tsx(492,43): error TS2554: Expected 0 arguments, but got 2.
+Failed to type check.
+

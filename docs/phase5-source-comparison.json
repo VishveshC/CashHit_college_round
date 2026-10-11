@@ -1,0 +1,305 @@
+{
+  "financialSourcesUnchanged": true,
+  "changes": [
+    {
+      "file": "contracts/src/FairworkArbitration.sol",
+      "unchanged": true
+    },
+    {
+      "file": "contracts/src/FairworkEscrow.sol",
+      "unchanged": true
+    },
+    {
+      "file": "contracts/src/interfaces/IRandomness.sol",
+      "unchanged": true
+    },
+    {
+      "file": "contracts/src/mocks/LocalDemoTokens.sol",
+      "unchanged": true
+    },
+    {
+      "file": "contracts/src/mocks/MockRandomness.sol",
+      "unchanged": true
+    },
+    {
+      "file": "contracts/src/Phase0CompileHarness.sol",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/api/auth/login/route.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/api/auth/logout/route.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/api/auth/nonce/route.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/api/auth/session/route.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/api/config/route.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/api/dev/randomness/fulfill/route.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/api/dev/randomness/mode/route.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/api/dev/rpc/route.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/api/dev/time-warp/route.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/api/disputes/[disputeId]/evidence/route.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/api/files/[fileId]/content/route.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/api/files/[fileId]/download/route.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/api/jobs/[jobId]/audit/route.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/api/jobs/[jobId]/files/route.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/api/jobs/[jobId]/notes/route.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/api/jobs/[jobId]/route.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/api/jobs/[jobId]/timeline/route.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/globals.css",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/layout.tsx",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/app/page.tsx",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/components/EscrowDashboard.tsx",
+      "unchanged": false
+    },
+    {
+      "file": "apps/web/lib/chain-pins.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/chain-server.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/chain.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/client/action-policy.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/client/amounts.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/client/commitments.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/client/evidence-plan.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/client/evidence-receipt.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/client/evidence-resume.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/client/file-drafts.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/client/job-identifiers.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/client/private-cache-policy.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/client/private-read-guard.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/client/transactions.ts",
+      "unchanged": false
+    },
+    {
+      "file": "apps/web/lib/dev-control-runtime.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/dev-controls.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/dev-wallet.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/local-rpc.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/server/routes.ts",
+      "unchanged": false
+    },
+    {
+      "file": "apps/web/lib/server/runtime.ts",
+      "unchanged": true
+    },
+    {
+      "file": "apps/web/lib/server/security.ts",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/attack-lab.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/check-frozen-tests.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/compile.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/forge-build.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/forge-coverage.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/forge-test.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/foundry-dependencies.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/local-runtime.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/local-stop.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/phase4/acceptance.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/phase4/attack-lab.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/phase4/demo.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/phase4/runtime.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/phase4/verify-receipts.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/phase4-http-security.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/phase4-retention.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/public-build-check.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/run-phase4-checks.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/run-web-tests.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/scan-secrets.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/setup-contracts.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/slither.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/tool-versions.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/verify-client-secrets.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/web-build.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/web-run.mjs",
+      "unchanged": true
+    },
+    {
+      "file": "scripts/zap-baseline.mjs",
+      "unchanged": true
+    }
+  ]
+}

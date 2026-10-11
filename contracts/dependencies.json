@@ -1,0 +1,9 @@
+{
+  "forgeStd": {
+    "repository": "foundry-rs/forge-std",
+    "tag": "v1.17.0",
+    "commit": "f3dae6e6ee381f25eb6a246f7da9b85c91a68219",
+    "version": "1.17.0",
+    "sourceSha256": "35a3abcc9a403c05173e3d26e8ad30640739345682ce9cbe9f843931215cbd5d"
+  }
+}

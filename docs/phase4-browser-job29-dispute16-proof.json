@@ -1,0 +1,449 @@
+{
+  "source": "live-owned-anvil-public-reads",
+  "chainId": 31337,
+  "headBlockNumber": "556",
+  "checkedAt": "2026-10-10T21:14:59.150Z",
+  "job": {
+    "jobId": "29",
+    "stateCode": 4,
+    "state": "Closed",
+    "milestoneCount": 1,
+    "totalAmount": "100000000",
+    "targetMilestone": {
+      "index": 0,
+      "stateCode": 6,
+      "state": "Resolved",
+      "amount": "100000000",
+      "disputeId": "16"
+    }
+  },
+  "dispute": {
+    "disputeId": "16",
+    "jobId": "29",
+    "milestoneIndex": "0",
+    "phase": 10,
+    "rulingBps": 5000,
+    "fallbackApplied": false,
+    "round": 1,
+    "originalPanel": [
+      "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+      "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+      "0x976EA74026E726554dB657fA54763abd0C3a0aa9"
+    ],
+    "currentPanelRound1": [
+      "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+      "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+      "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc"
+    ],
+    "panel2": [
+      "0x0000000000000000000000000000000000000000",
+      "0x0000000000000000000000000000000000000000",
+      "0x0000000000000000000000000000000000000000"
+    ],
+    "panel1History": [
+      "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+      "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+      "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+      "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc"
+    ],
+    "originalPanelMembersReplaced": [
+      "0x976EA74026E726554dB657fA54763abd0C3a0aa9"
+    ],
+    "currentReplacementMembers": [
+      "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc"
+    ],
+    "originalRevealed5000VoteCount": 2,
+    "originalRevealed5000Votes": [
+      {
+        "round": 1,
+        "arbiter": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "bps": 5000,
+        "transactionHash": "0x762bdc722dda8ac237461353e42d4eadbdebefbee3256566b1321011e123ee6b",
+        "blockNumber": "553"
+      },
+      {
+        "round": 1,
+        "arbiter": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+        "bps": 5000,
+        "transactionHash": "0x27e413c9ecb798fa231f6abb34ef29de217b1a0e2ad8b27db5d342124aa01878",
+        "blockNumber": "554"
+      }
+    ]
+  },
+  "events": [
+    {
+      "contract": "escrow",
+      "name": "DisputeOpened",
+      "blockNumber": "519",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x158a1336dfd6ca10db714ba213422a103b36246b2f1097f3a95912159841d0db",
+      "args": {
+        "jobId": "29",
+        "milestoneIndex": "0",
+        "disputeId": "16",
+        "opener": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "name": "PanelPhaseAdvanced",
+      "blockNumber": "533",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x89cabb86c05dcb7c9a40415237310e01f1dd26e582f30e30df2496224647d865",
+      "args": {
+        "disputeId": "16",
+        "phase": 2,
+        "deadline": "1791669944"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "name": "PanelPhaseAdvanced",
+      "blockNumber": "541",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x891ef94e4d28226af21ba08c76b1e6579de28043a966ff673f53fce80aeaa031",
+      "args": {
+        "disputeId": "16",
+        "phase": 2,
+        "deadline": "1791670378"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "name": "PanelSelected",
+      "blockNumber": "542",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x1d62d46a04146ec7c1228cf092fbeb77cffc8a2a4f51281aa07e9602a3fc6555",
+      "args": {
+        "disputeId": "16",
+        "round": 1,
+        "panel": [
+          "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+          "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+          "0x976EA74026E726554dB657fA54763abd0C3a0aa9"
+        ]
+      }
+    },
+    {
+      "contract": "arbitration",
+      "name": "PanelPhaseAdvanced",
+      "blockNumber": "542",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x1d62d46a04146ec7c1228cf092fbeb77cffc8a2a4f51281aa07e9602a3fc6555",
+      "args": {
+        "disputeId": "16",
+        "phase": 3,
+        "deadline": "1791670387"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "name": "VoteCommitted",
+      "blockNumber": "543",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xc1ce2cc7834b355a88eda02eed3f8b01c1824f391f156320d0c1a1fe607c07ea",
+      "args": {
+        "disputeId": "16",
+        "round": 1,
+        "arbiter": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "name": "VoteCommitted",
+      "blockNumber": "544",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x5635908ec11d94a4f594c923344aae6c1a366dc67193d20bd9cd4a9e8a8ca856",
+      "args": {
+        "disputeId": "16",
+        "round": 1,
+        "arbiter": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "name": "PanelPhaseAdvanced",
+      "blockNumber": "546",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x96e5321a4b8f5b30f38d0036a56b6d8faa92e3245317c81a51f4eb288b61141e",
+      "args": {
+        "disputeId": "16",
+        "phase": 4,
+        "deadline": "1791670520"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "name": "PanelPhaseAdvanced",
+      "blockNumber": "548",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0xd7bd5f4ef1147eba85a840defcb71399b60fc027a39ff66e42a3fe84ef8dab6e",
+      "args": {
+        "disputeId": "16",
+        "phase": 4,
+        "deadline": "1791670849"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "name": "PanelSelected",
+      "blockNumber": "550",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x404cbac1f72f2cf23aa241e16d8ce941481209759df49bfb4aeb038da56a4337",
+      "args": {
+        "disputeId": "16",
+        "round": 1,
+        "panel": [
+          "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+          "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+          "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc"
+        ]
+      }
+    },
+    {
+      "contract": "arbitration",
+      "name": "PanelPhaseAdvanced",
+      "blockNumber": "550",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0x404cbac1f72f2cf23aa241e16d8ce941481209759df49bfb4aeb038da56a4337",
+      "args": {
+        "disputeId": "16",
+        "phase": 5,
+        "deadline": "1791670874"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "name": "PanelPhaseAdvanced",
+      "blockNumber": "552",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x3e0fbd48421cd655479a33bbb2b386ef40b74dee126613097a6a9ec544ab5bda",
+      "args": {
+        "disputeId": "16",
+        "phase": 6,
+        "deadline": "1791670942"
+      }
+    },
+    {
+      "contract": "arbitration",
+      "name": "VoteRevealed",
+      "blockNumber": "553",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x762bdc722dda8ac237461353e42d4eadbdebefbee3256566b1321011e123ee6b",
+      "args": {
+        "disputeId": "16",
+        "round": 1,
+        "arbiter": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "bps": 5000
+      }
+    },
+    {
+      "contract": "arbitration",
+      "name": "VoteRevealed",
+      "blockNumber": "554",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0x27e413c9ecb798fa231f6abb34ef29de217b1a0e2ad8b27db5d342124aa01878",
+      "args": {
+        "disputeId": "16",
+        "round": 1,
+        "arbiter": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+        "bps": 5000
+      }
+    },
+    {
+      "contract": "arbitration",
+      "name": "DisputeRuled",
+      "blockNumber": "556",
+      "transactionIndex": 0,
+      "logIndex": 0,
+      "transactionHash": "0xe5906a5adb5da0ddcc171f92c149cb4dd8da3cad962a75b44cc3714773f2c6f9",
+      "args": {
+        "disputeId": "16",
+        "bps": 5000
+      }
+    },
+    {
+      "contract": "arbitration",
+      "name": "PanelPhaseAdvanced",
+      "blockNumber": "556",
+      "transactionIndex": 0,
+      "logIndex": 1,
+      "transactionHash": "0xe5906a5adb5da0ddcc171f92c149cb4dd8da3cad962a75b44cc3714773f2c6f9",
+      "args": {
+        "disputeId": "16",
+        "phase": 10,
+        "deadline": "0"
+      }
+    },
+    {
+      "contract": "escrow",
+      "name": "DisputeSettlementCredited",
+      "blockNumber": "556",
+      "transactionIndex": 0,
+      "logIndex": 2,
+      "transactionHash": "0xe5906a5adb5da0ddcc171f92c149cb4dd8da3cad962a75b44cc3714773f2c6f9",
+      "args": {
+        "disputeId": "16",
+        "amount": "50000000",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "source": 0
+      }
+    },
+    {
+      "contract": "escrow",
+      "name": "DisputeSettlementCredited",
+      "blockNumber": "556",
+      "transactionIndex": 0,
+      "logIndex": 4,
+      "transactionHash": "0xe5906a5adb5da0ddcc171f92c149cb4dd8da3cad962a75b44cc3714773f2c6f9",
+      "args": {
+        "disputeId": "16",
+        "amount": "49000000",
+        "account": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "source": 0
+      }
+    },
+    {
+      "contract": "escrow",
+      "name": "DisputeSettlementCredited",
+      "blockNumber": "556",
+      "transactionIndex": 0,
+      "logIndex": 6,
+      "transactionHash": "0xe5906a5adb5da0ddcc171f92c149cb4dd8da3cad962a75b44cc3714773f2c6f9",
+      "args": {
+        "disputeId": "16",
+        "amount": "1000000",
+        "account": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "source": 1
+      }
+    },
+    {
+      "contract": "escrow",
+      "name": "DisputeSettlementCredited",
+      "blockNumber": "556",
+      "transactionIndex": 0,
+      "logIndex": 8,
+      "transactionHash": "0xe5906a5adb5da0ddcc171f92c149cb4dd8da3cad962a75b44cc3714773f2c6f9",
+      "args": {
+        "disputeId": "16",
+        "amount": "2000000",
+        "account": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "source": 2
+      }
+    },
+    {
+      "contract": "escrow",
+      "name": "MilestoneResolved",
+      "blockNumber": "556",
+      "transactionIndex": 0,
+      "logIndex": 10,
+      "transactionHash": "0xe5906a5adb5da0ddcc171f92c149cb4dd8da3cad962a75b44cc3714773f2c6f9",
+      "args": {
+        "jobId": "29",
+        "milestoneIndex": "0",
+        "disputeId": "16",
+        "bps": 5000,
+        "fallbackApplied": false,
+        "freelancerCredit": "49000000",
+        "clientCredit": "51000000",
+        "treasuryCredit": "2000000"
+      }
+    },
+    {
+      "contract": "escrow",
+      "name": "JobClosed",
+      "blockNumber": "556",
+      "transactionIndex": 0,
+      "logIndex": 11,
+      "transactionHash": "0xe5906a5adb5da0ddcc171f92c149cb4dd8da3cad962a75b44cc3714773f2c6f9",
+      "args": {
+        "jobId": "29"
+      }
+    }
+  ],
+  "transactionReceipts": [
+    {
+      "transactionHash": "0x1d62d46a04146ec7c1228cf092fbeb77cffc8a2a4f51281aa07e9602a3fc6555",
+      "status": "success",
+      "blockNumber": "542",
+      "eventNames": [
+        "PanelSelected"
+      ]
+    },
+    {
+      "transactionHash": "0xc1ce2cc7834b355a88eda02eed3f8b01c1824f391f156320d0c1a1fe607c07ea",
+      "status": "success",
+      "blockNumber": "543",
+      "eventNames": [
+        "VoteCommitted"
+      ]
+    },
+    {
+      "transactionHash": "0x5635908ec11d94a4f594c923344aae6c1a366dc67193d20bd9cd4a9e8a8ca856",
+      "status": "success",
+      "blockNumber": "544",
+      "eventNames": [
+        "VoteCommitted"
+      ]
+    },
+    {
+      "transactionHash": "0x404cbac1f72f2cf23aa241e16d8ce941481209759df49bfb4aeb038da56a4337",
+      "status": "success",
+      "blockNumber": "550",
+      "eventNames": [
+        "PanelSelected"
+      ]
+    },
+    {
+      "transactionHash": "0x762bdc722dda8ac237461353e42d4eadbdebefbee3256566b1321011e123ee6b",
+      "status": "success",
+      "blockNumber": "553",
+      "eventNames": [
+        "VoteRevealed"
+      ]
+    },
+    {
+      "transactionHash": "0x27e413c9ecb798fa231f6abb34ef29de217b1a0e2ad8b27db5d342124aa01878",
+      "status": "success",
+      "blockNumber": "554",
+      "eventNames": [
+        "VoteRevealed"
+      ]
+    },
+    {
+      "transactionHash": "0xe5906a5adb5da0ddcc171f92c149cb4dd8da3cad962a75b44cc3714773f2c6f9",
+      "status": "success",
+      "blockNumber": "556",
+      "eventNames": [
+        "DisputeRuled",
+        "DisputeSettlementCredited",
+        "MilestoneResolved",
+        "JobClosed"
+      ]
+    }
+  ],
+  "checks": {
+    "settledPhase10": true,
+    "ruling5000": true,
+    "noFallback": true,
+    "jobClosed": true,
+    "milestoneResolved": true,
+    "twoOriginal5000Reveals": true,
+    "exactlyOneOriginalPanelReplacement": true,
+    "allRelevantTransactionsSucceeded": true
+  }
+}

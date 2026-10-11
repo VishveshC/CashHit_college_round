@@ -1,0 +1,16 @@
+Explicit-file Gitleaks check; unchanged .gitleaks.toml; no new allowlists or scan exclusions
+files=11
+
+PASS exit_code=0 bytes=484 path=docs\phase4-attack-lab-aggregate.txt
+PASS exit_code=0 bytes=5628 path=docs\phase4-attack-lab-contract.txt
+PASS exit_code=0 bytes=1847 path=docs\phase4-attack-lab-deployed.json
+PASS exit_code=0 bytes=1580 path=docs\phase4-attack-lab-deployed.txt
+PASS exit_code=0 bytes=470 path=docs\phase4-attack-lab-final.txt
+PASS exit_code=0 bytes=2323 path=docs\phase4-attack-lab-security.txt
+PASS exit_code=0 bytes=5628 path=docs\phase4-reopen-registry-attack-lab-contract.txt
+PASS exit_code=0 bytes=1847 path=docs\phase4-reopen-registry-attack-lab-deployed.json
+PASS exit_code=0 bytes=1580 path=docs\phase4-reopen-registry-attack-lab-deployed.txt
+PASS exit_code=0 bytes=2323 path=docs\phase4-reopen-registry-attack-lab-security.txt
+PASS exit_code=0 bytes=51816 path=docs\phase4-reopen-registry-browser.txt
+
+files=11 failures=0

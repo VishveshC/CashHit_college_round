@@ -1,0 +1,82 @@
+Fairwork Phase 0 tooling evidence
+Captured 2026-10-10 on Windows x64, PowerShell, working tree C:\Users\vishvesh\Documents\ChatGPT\BNB.
+
+Installed and pinned versions
+-----------------------------
+Node.js: 24.11.1
+npm: 11.19.0
+solc-js package: 0.8.36
+solc-js compiler: 0.8.36+commit.8a079791.Emscripten.clang
+OpenZeppelin Contracts: 5.6.1
+Foundry forge / anvil / cast: 1.8.5 (commit 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f)
+gitleaks: 8.30.1
+Web stack pins in apps/web/package.json: Next 16.4.0, React 19.3.0, wagmi 3.7.7, viem 2.57.4, Tailwind 4.3.3, SIWE 3.0.0, Zod 4.6.5, Prisma and @prisma/client 6.12.0.
+
+Foundry and gitleaks were installed from their official GitHub release archives under the user's profile, outside this repository. The installed folders were appended to the user PATH. Download verification:
+- Foundry v1.8.5 Windows x64 SHA-256: 21f86b563d87404a68481f513bf3e419780ee536307b89c658215ae6f8f5aa45 (matches the release's .sha256 file).
+- gitleaks v8.30.1 Windows x64 SHA-256: d29144deff3a68aa93ced33dddf84b7fdc26070add4aa0f4513094c8332afc4e (matches the release's checksums file).
+
+Install and lock output
+-----------------------
+Command: npm install --include-workspace-root
+Final output excerpt:
+  removed 1 package, changed 1 package, and audited 93 packages in 2s
+  found 0 vulnerabilities
+npm also warned that its install-script allow-list does not yet cover @prisma/client@6.12.0, @prisma/engines@6.12.0, and prisma@6.12.0. The app validation/generation results are recorded in docs/phase0-web.txt.
+
+The first audit of the originally selected pins reported high findings in Prisma's deepmerge-ts path and solc's tmp path. The final lock keeps Prisma 6.12.0 and pins solc's tmp dependency to 0.2.7 through a scoped npm override. `npm ls tmp --all` printed:
+  solc@0.8.36
+    tmp@0.2.7 overridden
+
+Compile output
+--------------
+Command: npm run compile
+  solc 0.8.36+commit.8a079791.Emscripten.clang
+  Compile succeeded: 20 source units, 18 compiled contract/library artifacts, 0 errors.
+
+Clean Foundry output after `forge clean --root contracts`:
+Command: npm run compile:forge
+  Compiling 21 files with Solc 0.8.36
+  Solc 0.8.36 finished in 165.52ms
+  Compiler run successful with warnings:
+Both compilers emitted five warning-6335 diagnostics from OpenZeppelin 5.6.1's ECDSA.sol: its local identifier `error` will become a reserved keyword in a future compiler. There were no compiler errors. No warning was suppressed or edited in the vendored package.
+
+Secret scan and dependency audit
+--------------------------------
+Command: npm run scan:secrets
+  10:39PM INF scanned ~370800 bytes (370.80 KB) in 57ms
+  10:39PM INF no leaks found
+
+The gitleaks directory scan uses the repository's default rules. `.gitleaks.toml` excludes `.git`, installed dependencies, generated build output, and `.tools`. This checks the working tree only. The repository has no commits yet, so no history scan was possible.
+
+Command: npm run audit:deps
+  found 0 vulnerabilities
+
+Tool version script output
+--------------------------
+Command: npm run tool:versions
+  Node.js v24.11.1
+  npm 11.19.0
+  solc-js 0.8.36+commit.8a079791.Emscripten.clang
+  forge Version: 1.8.5
+  anvil Version: 1.8.5
+  cast Version: 1.8.5
+  gitleaks 8.30.1
+
+Unavailable or not run in Phase 0
+---------------------------------
+`slither`, Docker, `zap`, `zap-cli`, and `zaproxy` were not found on PATH. Slither and OWASP ZAP were not installed or run. No tests, deployment, or mainnet commands were run; this phase contains only a compile harness, not escrow behavior.
+
+Compile harness boundary
+------------------------
+`contracts/src/Phase0CompileHarness.sol` is abstract and only imports/extends ReentrancyGuard and EIP712, associates SafeERC20 with IERC20, and compiles the ECDSA/EIP-712 recovery primitive. It has no external methods, ledger, token transfers, escrow state, or business behavior.
+
+Final source/docs rerun after report synchronization and exclusion-pattern correction:
+Command: npm run scan:secrets
+10:41PM INF scanned ~387918 bytes (387.92 KB) in 35.9ms
+10:41PM INF no leaks found
+Exit code: 0
+Command: npm run audit:deps
+found 0 vulnerabilities
+Exit code: 0
+Temporary web verification listener on127.0.0.1:3140 was stopped; Get-NetTCPConnection -LocalPort3140 -State Listen returned no entries.

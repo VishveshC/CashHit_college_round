@@ -1,0 +1,31 @@
+{
+  "title": "Phase 5 UI red evidence freeze",
+  "frozen_at": "2026-10-11 Asia/Kolkata",
+  "command": "node --experimental-strip-types --test apps/web/test/phase5-ui-private-state.test.ts apps/web/test/phase5-ui-transaction-context.test.ts",
+  "test_exit": 1,
+  "redloghash": "1DB78B3661497F2249DECEC13CADDA201E310BDB66E329135CB8FE9B09A2DFEA",
+  "screenshot_capture": {
+    "source": "CUA browser screenshot, inline tool result",
+    "local_file": null,
+    "sha256": "cb4338910c760ed652b68abe4ff7c40f78431ede38ab4109e0ab79604a4a17e4",
+    "bytes": 43935
+  },
+  "frozen_files": [
+    {
+      "file": "apps/web/test/phase5-ui-private-state.test.ts",
+      "Hash": "897CBB3C5725C4B133A7AEF8C21A86639AD3B40489DF51C09FB7C4A39611FF49"
+    },
+    {
+      "file": "apps/web/test/phase5-ui-transaction-context.test.ts",
+      "Hash": "DC7C8E19DF1D3F94993F35D2FF7DE05174F44A2A094E6F16692F6250A85D9829"
+    },
+    {
+      "file": "docs/phase5-ui-tests-red.log",
+      "Hash": "1DB78B3661497F2249DECEC13CADDA201E310BDB66E329135CB8FE9B09A2DFEA"
+    },
+    {
+      "file": "docs/phase5-ui-wallet-switch-red.log",
+      "Hash": "CB92BDC3A465335F7C44474D93D40852EC98D08A6BCCF0727EC5D11A754EBF08"
+    }
+  ]
+}

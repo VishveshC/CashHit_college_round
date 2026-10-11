@@ -1,0 +1,26 @@
+[
+  {
+    "file": "apps/web/test/dev-controls.test.ts",
+    "Hash": "8041BAC2EE4329DD265AC3E6077B5FE47B26E8C80749FE18E9B204C0E5366D50"
+  },
+  {
+    "file": "docs/phase4-dev-controls-red.txt",
+    "Hash": "AAB863E32E85B0DE918862AB8031FA36415369096E0E44E34B0703B0EBD87562"
+  },
+  {
+    "file": "scripts/local-runtime.test.mjs",
+    "Hash": "8DB97B9384D8489C6FF71F529EF9FFB82E0572724603EBCE98D237AE3C67C081"
+  },
+  {
+    "file": "docs/phase4-runtime-red.txt",
+    "Hash": "E3385AB7B52A71C7BB76D454CF787EFD199B82E4577BAB0679736772EAF2414C"
+  },
+  {
+    "file": "scripts/web-build.test.mjs",
+    "Hash": "2EB158536C6AD96D5C0586C337CC264B9FBF50CC5D5F54E632E40901B484AB88"
+  },
+  {
+    "file": "docs/phase4-build-red.txt",
+    "Hash": "8429CA0697A6C4B54EB7397E35A2B85DA0AA0659912B43E9B87B36A15BF7CE9B"
+  }
+]

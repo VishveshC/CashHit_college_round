@@ -1,0 +1,56 @@
+{
+  "frozen_files": [
+    {
+      "path": "scripts/phase4-reopen-artifact-test.test.mjs",
+      "sha256": "2C65CCE164D1A0633E51733DB85518B0BC7DE5FD4A48ED92224677CC56AF86D4"
+    },
+    {
+      "path": "docs/phase4-reopen-artifact-test-red.txt",
+      "sha256": "36DEA5E16380961213B0A2D44A2BAA59D50D4B409D24CAE65EC860BA7E0A64F9"
+    },
+    {
+      "path": "docs/phase4-reopen-artifact-test-build-attempt1.txt",
+      "sha256": "635BEE8FEE724A7E9CACCA0E042899FD26A1617466DDB868E252C85D9BCC2671"
+    },
+    {
+      "path": "docs/phase4-reopen-artifact-test-report-attempt1.json",
+      "sha256": "EEADA1CE3D0918C222E7A5B61D6277F7D5E9F46FA9B11FCE6F3B086E7CF17C23"
+    },
+    {
+      "path": "docs/phase4-reopen-artifact-test-build-attempt2.txt",
+      "sha256": "3E921BB2E017F80239FE9E96A4D5FBEF02A5A45C81085752DFD6DBD9F69D2A6B"
+    },
+    {
+      "path": "docs/phase4-reopen-artifact-test-report-attempt2.json",
+      "sha256": "399EB9B5A106E32125437BAA996C9A4DA6C2A93830DE57865CFBFB779528F40B"
+    },
+    {
+      "path": "docs/phase4-reopen-artifact-test-build-attempt3.txt",
+      "sha256": "E1D4818E60F85589B865D5721BF9402C8DBFE696B4D91E344F4F795F901CDB4E"
+    },
+    {
+      "path": "docs/phase4-reopen-artifact-test-report-attempt3.json",
+      "sha256": "5CED165C3BD1040B36056F7805D07EC80F70C505D5FFC5F8407218DDD4BC1E40"
+    },
+    {
+      "path": "scripts/production-artifact-stage.mjs",
+      "sha256": "29ADF974CDBAFF79B10FB4603C8DD272AF2E9861FF1FF64D96A4795522DE0582"
+    },
+    {
+      "path": "scripts/web-build.mjs",
+      "sha256": "33BF5F0700AE2166C7EA511B05B75D6F99148C3E7DE3E8028067FABCFA598EE6"
+    },
+    {
+      "path": "docs/phase4-reopen-artifact-test-build.txt",
+      "sha256": "2392F2AA20A94E8A5AB5E9AAE2AC86537BB3B70BD823D87F08AC92C560CEC46A"
+    },
+    {
+      "path": "docs/phase4-reopen-artifact-test-final.txt",
+      "sha256": "BB8F55C0CE68A405663647D8BCBB73E93E59FC2B44821F1ECE4440820777BD75"
+    },
+    {
+      "path": "docs/phase4-reopen-artifact-test.json",
+      "sha256": "9B9F3D9EB6D10CCCC25DE71BE546D8A5210B1C0B4D3EEEC893F25DA59BF1E076"
+    }
+  ]
+}

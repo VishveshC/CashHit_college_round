@@ -1,0 +1,16 @@
+{
+  "frozen_files": [
+    {
+      "path": "scripts/phase5-backend-malformed-pdf.test.mjs",
+      "sha256": "4f46cc85dcae89aebef4635346063d78b4555d71e5a7dd8df2c2f2dcd3ebeeef"
+    },
+    {
+      "path": "docs/phase5-backend-malformed-pdf-red.txt",
+      "sha256": "8e041e0a4d29b83a68471b8b163ab40d1206859d2acb69cb74c01e05f5816a9b"
+    },
+    {
+      "path": "docs/phase5-backend-malformed-pdf-green.txt",
+      "sha256": "71919a06e087ebef81084a89f75526f66420d553f25631a1ea386636652fe7c9"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/web-build.mjs:23
+  throw new Error('Public release blocked: No approved production adapter/configuration exists.');
+        ^
+
+Error: Public release blocked: No approved production adapter/configuration exists.
+    at requireApprovedPublicInputs (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/web-build.mjs:23:9)
+    at buildPublicIfApproved (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/web-build.mjs:64:20)
+    at file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/web-build.mjs:149:9
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:671:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.11.1

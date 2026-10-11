@@ -1,0 +1,30 @@
+
+> fairwork-v3@0.0.0 build:web:local
+> node scripts/web-build.mjs --target local
+
+Validated local-only chain31337 build; public release remains blocked.
+▲ Next.js 16.4.0 (Turbopack)
+✓ Running next.config.ts took 111ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 3.5s
+  Running TypeScript ...
+  Finished TypeScript in 906ms ...
+  Collecting page data using 9 workers ...
+  Generating static pages using 9 workers (0/3) ...
+✓ Generating static pages using 9 workers (3/3) in 669ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/config
+├ ƒ /api/dev/randomness/fulfill
+├ ƒ /api/dev/randomness/mode
+├ ƒ /api/dev/rpc
+└ ƒ /api/dev/time-warp
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

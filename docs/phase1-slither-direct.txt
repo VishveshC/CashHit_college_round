@@ -1,0 +1,51 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\vishvesh\Documents\ChatGPT\BNB\.tools\slither\Scripts\slither.exe\__main__.py", line 5, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\vishvesh\Documents\ChatGPT\BNB\.tools\slither\Lib\site-packages\slither\__main__.py", line 815, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vishvesh\Documents\ChatGPT\BNB\.tools\slither\Lib\site-packages\slither\__main__.py", line 936, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vishvesh\Documents\ChatGPT\BNB\.tools\slither\Lib\site-packages\slither\__main__.py", line 100, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "C:\Users\vishvesh\Documents\ChatGPT\BNB\.tools\slither\Lib\site-packages\crytic_compile\crytic_compile.py", line 870, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+                        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vishvesh\Documents\ChatGPT\BNB\.tools\slither\Lib\site-packages\crytic_compile\crytic_compile.py", line 231, in __init__
+    platform_config = platform_wd.config(str(config_root))
+  File "C:\Users\vishvesh\Documents\ChatGPT\BNB\.tools\slither\Lib\site-packages\crytic_compile\platform\foundry.py", line 225, in config
+    subprocess.run(
+    ~~~~~~~~~~~~~~^
+        ["forge", "config", "--json"], cwd=working_dir, stdout=subprocess.PIPE, check=True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).stdout
+    ^
+  File "C:\Program Files\Python314\Lib\subprocess.py", line 555, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python314\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python314\Lib\subprocess.py", line 1553, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+'forge config --json' running

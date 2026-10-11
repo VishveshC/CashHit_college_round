@@ -1,0 +1,112 @@
+Browser tab: 4, Title: "Fairwork — milestone escrow", URL: "http://localhost:3000/".
+0 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+	1 container
+		2 link Description: Fairwork home, Value: localhost:3000/#top
+		3 text LOCAL CHAIN · 31337 CLIENT 0x7099…79C8
+		48 button Disconnect wallet
+		5 container top
+			6 text MILESTONE ESCROW · LOCAL PROTOTYPE
+			7 heading Work moves forward. Trust stays verifiable., Value: 1
+				8 text Work moves forward.
+				9 text Trust stays verifiable.
+			10 text Agree on the work in private. Put each milestone on chain. Release payment only when the rules say it is due.
+			11 text FW RULES FIRST
+			12 text FUNDS SECOND
+		52 text Private session unlocked for this wallet. Session credentials stay in memory only.
+		53 button Dismiss
+		13 container Wallet and agreement controls
+			14 text 01
+			15 text Connect your wallet
+			16 text Private access follows the signed wallet
+			17 text Local role
+			18 pop up button (collapsed, settable) Local role, Value: Client, ID: demo-role, Secondary Actions: Expand
+				19 menu
+					20 Choose a seeded role…
+					21 (selected) Client
+					22 Freelancer
+					23 Arbiter 1 · 0x90F7…b906
+					24 Arbiter 2 · 0x15d3…6A65
+					25 Arbiter 3 · 0x9965…A4dc
+					26 Arbiter 4 · 0x976E…0aa9
+					27 Arbiter 5 · 0x14dC…9955
+					28 Arbiter 6 · 0x2361…1E8f
+			29 text Development accounts only
+			49 text 0x7099…79C8
+			50 container
+				51 text Client  · chain  31337
+			57 button Sign in to unlock private terms
+			33 text 02
+			34 text Open one agreement
+			35 text Enter a job ID. There is no public job directory.
+			36 container
+				37 text Agreement ID #
+				38 text field (settable) Agreement ID, ID: job-id
+				39 button Open agreement →
+					40 text Open agreement
+					56 text →
+		58 text ⌑ Private by authorization.  Sign a SIWE message to load private agreement text, file access, rejection reasons and evidence. Signing in is separate from each contract transaction.
+		42 text A QUIETER WAY TO WORK TOGETHER
+		43 heading One agreement. Clear next steps., Value: 2
+			44 text One agreement.
+			45 text Clear next steps.
+		46 text Open an agreement by its ID to see milestone status, chain deadlines and the actions available to your wallet. Private terms stay closed until you sign in.
+		47 text ✓ Exact token amounts ✓ Deadline-aware actions ✓ Private evidence access fairwork.  · Local prototype Local chain only · No real funds · Not audited Chain time shown in UTC
+
+The focused UI element is 0 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+Reauthenticated first tab; opened proposal:
+Browser tab: 4, Title: "Fairwork — milestone escrow", URL: "http://localhost:3000/".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
++		58 text NEW DIRECT PROPOSAL
++		59 heading Create a private agreement, Value: 2
++			60 text Create a private agreement
++		61 text Terms are committed on chain and encrypted in private storage after the proposal confirms.
++		62 button Close
++		63 container
++			64 text Freelancer wallet address
++			65 text field (settable) Freelancer wallet address
++		66 container
++			67 text Token
++			68 pop up button (collapsed, settable) Token, Value: USDC · 0x5FbD…0aa3, Secondary Actions: Expand
++				69 menu
++					70 (selected) USDC · 0x5FbD…0aa3
++					71 WBTC · 0xe7f1…0512
++		72 container
++			73 text Review window · seconds
++			74 stepper (settable, integer) Review window · seconds, Value: 3600
++		75 container
++			76 text Revision limit
++			77 stepper (settable, integer) Revision limit, Value: 2
++		78 container
++			79 text Agreement title
++			80 text field (settable) Agreement title
++		81 container
++			82 text Description
++			83 text entry area (settable) Description
++		84 container
++			85 text Scope
++			86 text entry area (settable) Scope
++		87 container
++			88 text Delivery rules
++			89 text entry area (settable) Delivery rules
++		90 text PAYMENT PLAN
++		91 text Milestones
++		92 button ＋ Add milestone
++		93 text 01
++		94 container
++			95 text Milestone  1
++		96 container
++			97 text Amount ·  USDC
++			98 text field (settable) Amount · USDC
++		99 container
++			100 text Delivery time · seconds
++			101 stepper (settable, integer) Delivery time · seconds, Value: 86400
++		102 container
++			103 text Acceptance criteria
++			104 text entry area (settable) Acceptance criteria
++		105 text Each milestone amount is exact integer token units. No unlimited approval.
++		106 button Cancel
++		107 button Review and create proposal →
++			108 text Review and create proposal
++			109 text →
+The focused UI element is 57 button ＋ Create a private agreement
+Title attribute: 

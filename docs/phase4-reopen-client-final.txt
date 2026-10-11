@@ -1,0 +1,29 @@
+(node:4804) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/dispute-settlement-view.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ settled disclosure preserves the authoritative odd-amount median and event credits (1.1374ms)
+✔ no matching resolution or a non-settled on-chain status never discloses a result (0.1343ms)
+✔ matching IDs retain exact large bigint amounts and per-credit source rows (0.205ms)
+✔ duplicate resolutions and inconsistent or malformed credit rows fail closed (0.1288ms)
+(node:33784) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/local-arbitration-gas.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ local arbitration gas reserve applies only to demo advanceDispute on chain 31337 (0.4827ms)
+✔ local arbitration gas reserve fails closed for other methods, wallets and chains (0.1304ms)
+(node:24264) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/phase4-reopen-job-private-reset.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ creating job 32 clears job 31 private view before publishing its snapshot (5.5048ms)
+✔ Phase 5 supplemental: isolated migration backup preserves its key and encrypted row (876.4941ms)
+ℹ isolated temporary CWD; copied key decrypts the copied ciphertext row; Prisma generation and production sources remain frozen
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1008.3132

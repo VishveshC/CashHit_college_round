@@ -1,0 +1,26 @@
+(node:19232) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/routes.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 4 reopened backend: outsider route matrix and generic-ID hiding
+  ✔ job terms GET: authenticated outsider receives indistinguishable 404 (15.3914ms)
+  ✔ dispute evidence GET: authenticated outsider receives indistinguishable 404 (2.0103ms)
+  ✔ job files GET: authenticated outsider receives indistinguishable 404 (6.952ms)
+  ✔ rejection notes GET: authenticated outsider receives indistinguishable 404 (2.5506ms)
+  ✔ timeline GET: authenticated outsider receives indistinguishable 404 (1.8464ms)
+  ✔ audit GET: authenticated outsider receives indistinguishable 404 (1.3262ms)
+  ✔ job terms PUT: authenticated outsider receives indistinguishable 404 (1.8794ms)
+  ✔ evidence POST: authenticated outsider receives indistinguishable 404 (2.97ms)
+  ✔ rejection note POST: authenticated outsider receives indistinguishable 404 (2.2026ms)
+  ✔ file upload POST: authenticated outsider receives indistinguishable 404 (2.6663ms)
+  ✔ file ticket and content routes deny a real file exactly like a missing file (5.2069ms)
+  ✔ each private write checks Origin and CSRF before route-specific work (1.7293ms)
+✔ Phase 4 reopened backend: outsider route matrix and generic-ID hiding (742.5355ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1243.2525

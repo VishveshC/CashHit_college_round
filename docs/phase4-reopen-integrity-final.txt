@@ -1,0 +1,51 @@
+UNCHANGED manifest phase1-frozen-tests.json
+UNCHANGED manifest phase2-additional-frozen-tests.json
+UNCHANGED manifest phase2-frozen-tests.json
+UNCHANGED manifest phase3-additional-frozen-tests.json
+UNCHANGED manifest phase3-frozen-tests.json
+UNCHANGED manifest phase3-public-build-frozen-tests.json
+UNCHANGED manifest phase4-acceptance-frozen-tests.json
+UNCHANGED manifest phase4-arbiter-terms-frozen-tests.json
+UNCHANGED manifest phase4-demo-frozen-tests.json
+UNCHANGED manifest phase4-evidence-plan-frozen-tests.json
+UNCHANGED manifest phase4-reopen-artifact-test-frozen.json
+UNCHANGED manifest phase4-reopen-final-tests-frozen.json
+UNCHANGED manifest phase4-reopen-route-authorization-frozen.json
+UNCHANGED manifest phase4-retention-frozen-tests.json
+UNCHANGED manifest phase4-retention-regressions-frozen-tests.json
+UNCHANGED manifest phase4-retention-zero-frozen-tests.json
+UNCHANGED manifest phase4-root-additional-frozen-tests.json
+UNCHANGED manifest phase4-root-frozen-tests.json
+UNCHANGED manifest phase4-runtime-parent-frozen-tests.json
+UNCHANGED manifest phase4-runtime-shutdown-frozen-tests.json
+UNCHANGED manifest phase4-secret-allowlist-frozen-tests.json
+UNCHANGED manifest phase4-secret-fixture-scope-frozen-tests.json
+UNCHANGED manifest phase4-security-cookie-order-frozen-tests.json
+UNCHANGED manifest phase4-security-corrected-frozen-tests.json
+UNCHANGED manifest phase4-security-frozen-tests.json
+UNCHANGED manifest phase4-security-jobzero-frozen-tests.json
+UNCHANGED manifest phase4-security-regressions-frozen-tests.json
+UNCHANGED manifest phase4-ui-additional-frozen-tests.json
+UNCHANGED manifest phase4-ui-cache-frozen-tests.json
+UNCHANGED manifest phase4-ui-frozen-tests.json
+UNCHANGED manifest phase4-ui-jobid-frozen-tests.json
+UNCHANGED manifest phase4-ui-private-read-frozen-tests.json
+UNCHANGED manifest phase4-ui-recovery-frozen-tests.json
+UNCHANGED manifest phase4-web-trace-frozen-tests.json
+UNCHANGED manifest phase5-backend-aggregate-frozen-manifest.json
+UNCHANGED manifest phase5-backend-corrected-frozen-tests.json
+UNCHANGED manifest phase5-backend-evidence-collision-frozen-tests.json
+UNCHANGED manifest phase5-backend-evidence-idempotency-frozen-tests.json
+UNCHANGED manifest phase5-backend-frozen-tests.json
+UNCHANGED manifest phase5-backend-malformed-pdf-frozen-tests.json
+UNCHANGED manifest phase5-backend-migration-preservation-frozen-tests.json
+UNCHANGED manifest phase5-backend-upload-frozen-tests.json
+UNCHANGED manifest phase5-contract-frozen-tests.json
+UNCHANGED manifest phase5-ui-confirmation-terms-frozen-tests.json
+UNCHANGED manifest phase5-ui-cross-tab-session-frozen-tests.json
+UNCHANGED manifest phase5-ui-frozen-tests.json
+UNCHANGED manifest phase5-ui-unknown-transaction-frozen-tests.json
+PASS 47 manifests; 132 unique frozen files unchanged.
+Phase 5 source baseline: 71/75 files unchanged; 4 non-financial source files changed.
+Financial contract sources: 6/6 unchanged.
+Phase 5 comparison preserved; no write to docs/phase5-source-comparison.json.

@@ -1,0 +1,43 @@
+✖ one command resets, deploys and seeds the repeatable local demo (72285.9913ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 72598.3629
+
+✖ failing tests:
+
+test at scripts\phase4\test\demo.test.mjs:69:1
+✖ one command resets, deploys and seeds the repeatable local demo (72285.9913ms)
+  AssertionError [ERR_ASSERTION]: second demo run failed
+  stdout:
+  
+  stderr:
+  (node:14556) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/routes.ts is not specified and it doesn't parse as CommonJS.
+  Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+  To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+  (Use `node --trace-warnings ...` to show where the warning was created)
+  Phase 4 demo failed: ReferenceError: Cannot access 'jobId' before initialization
+      at Object.jobPUT (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/lib/server/routes.ts:439:25)
+      at async runPrivateApiProbe (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4/demo.mjs:578:27)
+      at async acceptanceProgress (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4/demo.mjs:489:24)
+      at async main (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4/demo.mjs:392:27)
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4/test/demo.test.mjs:78:10)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+exit code: 1

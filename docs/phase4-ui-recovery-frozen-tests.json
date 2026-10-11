@@ -1,0 +1,14 @@
+[
+  {
+    "Hash": "5FD1383039D950BD9D36657DEB65C0860FEFF855A940504E1239CA6354D94EEB",
+    "file": "apps/web/test/phase4-ui-recovery.test.ts"
+  },
+  {
+    "Hash": "AE2215EA9DE29EA0F39653E500CAA1C71366553AF2201F1C53DC55A384BF2DAC",
+    "file": "docs/phase4-ui-recovery-red.txt"
+  },
+  {
+    "Hash": "1E49E1608413A27BED1C4C832904F64A82878C10CB49B3A76C72D63316057877",
+    "file": "docs/phase4-ui-recovery-red-root.txt"
+  }
+]

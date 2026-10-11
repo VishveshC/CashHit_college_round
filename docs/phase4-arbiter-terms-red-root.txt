@@ -1,0 +1,39 @@
+(node:34476) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-arbiter-terms.test.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\vishvesh\Documents\ChatGPT\BNB\apps\web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▶ Phase 4 current assigned arbiter may read private job description and criteria
+  ✖ a currently assigned arbiter reads the private description and acceptance criteria and the read is logged (13.8278ms)
+  ✔ previous-panel, settled-panel, and stranger wallets receive the same generic 404 (9.5927ms)
+  ✔ an assigned arbiter remains read-only while a party can still update terms (13.1523ms)
+✖ Phase 4 current assigned arbiter may read private job description and criteria (732.8534ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 2
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1205.5354
+
+✖ failing tests:
+
+test at apps\web\test\security-arbiter-terms.test.ts:166:13
+✖ a currently assigned arbiter reads the private description and acceptance criteria and the read is logged (13.8278ms)
+  AssertionError [ERR_ASSERTION]: spec §6.1 allows the assigned panel to read private job description and criteria when needed
+  
+  404 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-arbiter-terms.test.ts:169:14)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/apps/web/test/security-arbiter-terms.test.ts:166:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+exit code: 1

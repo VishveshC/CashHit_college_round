@@ -1,0 +1,120 @@
+Browser tab: 4, Title: "Fairwork — milestone escrow", URL: "http://localhost:3000/".
+1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/
+	2 container
+		3 link Description: Fairwork home, Value: localhost:3000/#top
+		4 text LOCAL CHAIN · 31337
+		5 button Connect wallet
+		6 container top
+			7 text MILESTONE ESCROW · LOCAL PROTOTYPE
+			8 heading Work moves forward. Trust stays verifiable., Value: 1
+				9 text Work moves forward.
+				10 text Trust stays verifiable.
+			11 text Agree on the work in private. Put each milestone on chain. Release payment only when the rules say it is due.
+			12 text FW RULES FIRST
+			13 text FUNDS SECOND
+		14 container Wallet and agreement controls
+			15 text 01
+			16 text Connect your wallet
+			17 text Private access follows the signed wallet
+			18 text Local role
+			19 pop up button (collapsed, settable) Local role, Value: Choose a seeded role…, ID: demo-role, Secondary Actions: Expand
+				20 menu
+					21 (selected) Choose a seeded role…
+					22 Client
+					23 Freelancer
+					24 Arbiter 1 · 0x90F7…b906
+					25 Arbiter 2 · 0x15d3…6A65
+					26 Arbiter 3 · 0x9965…A4dc
+					27 Arbiter 4 · 0x976E…0aa9
+					28 Arbiter 5 · 0x14dC…9955
+					29 Arbiter 6 · 0x2361…1E8f
+			30 text Development accounts only
+			31 button Connect browser wallet ↗
+				32 text Connect browser wallet
+				33 text ↗
+			34 text 02
+			35 text Open one agreement
+			36 text Enter a job ID. There is no public job directory.
+			37 container
+				38 text Agreement ID #
+				39 text field (settable) Agreement ID, Value: 0, ID: job-id
+				40 button Open agreement →
+					41 text Open agreement
+					42 text →
+		43 container
+			44 text AGREEMENT  # 0
+		45 heading Private agreement, Value: 2
+			46 text Private agreement
+		47 text Terms are encrypted off chain. Verify them after signing in as a party.
+		48 text Cancelled AGREEMENT VALUE
+		49 text 0.001001 USDC
+		50 text PARTIES
+		51 container
+			52 text 0x7099…79C8 ↔ 0x3C44…93BC
+		53 text MILESTONES
+		54 container
+			55 text 1 steps
+		56 text REVISIONS
+		57 container
+			58 text 1 rounds
+		59 text PINNED DEPLOYMENT Chain  31337 Escrow 
+		60 text 0x9fE4…a6e0
+		61 text Code hash 
+		62 container
+			63 text 0xc1cd5694 …
+		64 text Estimated chain time ·  2026-10-10 23:10:26 UTC
+		65 container
+			66 text AGREEMENT TERMS
+			67 heading What was agreed, Value: 3
+				68 text What was agreed
+			69 text ⌑ ⌑ Private terms are sealed Sign in with a party wallet to read the scope, delivery rules and acceptance criteria. ON-CHAIN COMMITMENTS Title
+			70 container 0xf21e8510991bf8fbc493c5c932b044a4a23340f029c19ab14c938e0a7053fcd0
+				71 text 0xf21e851099 … 53fcd0
+			72 text Description
+			73 container 0x57564491525557e64c1d43de6c74ce38f9b8d6dae04b3b6618caa087fd2f3bd9
+				74 text 0x5756449152 … 2f3bd9
+			75 text Scope
+			76 container 0x6dfa7a0ca560f72ce5b379ac2d1e3d8bd2fcad3811d909355b3a30244c1b9631
+				77 text 0x6dfa7a0ca5 … 1b9631
+			78 text Delivery rules
+			79 container 0xa4e8f9031051d6144a538235fc1657e012230d7a41b98e0d6af5e2284f657565
+				80 text 0xa4e8f90310 … 657565
+		81 container
+			82 text YOUR LEDGER
+			83 heading Available to withdraw, Value: 3
+				84 text Available to withdraw
+			85 text ↗ — Connect a wallet and refresh to read its claimable and withdrawn balances. Withdrawn to wallet — Principal still locked — Dispute deposits held —
+			86 button (disabled) Refresh this wallet’s ledger
+		87 container
+			88 text WORK IN PROGRESS
+			89 heading Milestone ledger, Value: 3
+				90 text Milestone ledger
+			91 text Chain deadlines · UTC · estimated countdown
+			92 button 01 Milestone 1 Criteria commitment 0x0d101b9a… Ready 0.001001 USDC Window closed ⌄
+				93 text 01
+				94 container
+					95 text Milestone  1
+				96 text Criteria commitment 0x0d101b9a…
+				97 text Ready
+				98 text 0.001001 USDC
+				99 text Window closed
+				100 text ⌄
+			101 text MILESTONE  1
+			102 heading Ready, Value: 4
+				103 text Ready
+			104 text Deadline Not started Delivery deadline Not started Grace ends Not started Review ends Not started Response ends Not started Delivery duration 30 s Submission version —  /  2 AVAILABLE ACTIONS  · based on chain state and wallet role
+		105 container
+			106 text VERIFIABLE HISTORY
+			107 heading Activity ledger, Value: 3
+				108 text Activity ledger
+			109 text Chain Private audit Job Cancelled Chain · 2026-10-10 22:01:19 UTC
+			110 container 0x145e8175fee1ebcd3b90472dc3b164fb9771eae7d650e6bf8103505142bb08cc
+				111 text 0x145e8175 …
+			112 text Job Created Chain · 2026-10-10 22:00:19 UTC
+			113 container 0xb5f3d8fd2ce7565545344d753facc1aad928a4e04f5325c9855f4ce1e7f89e5b
+				114 text 0xb5f3d8fd …
+		115 text Fresh chain read 03:42:50  · countdown estimates advance from this read
+		116 button ↻ Refresh
+		117 text fairwork.  · Local prototype Local chain only · No real funds · Not audited Chain time shown in UTC
+
+The focused UI element is 1 AXWebArea Fairwork — milestone escrow, URL: localhost:3000/

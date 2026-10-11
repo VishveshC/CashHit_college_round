@@ -1,0 +1,97 @@
+
+> fairwork-v3@0.0.0 test:contracts
+> node scripts/forge-test.mjs --match-path test/Phase2*.t.sol
+
+forge-std 1.17.0, commit f3dae6e6ee381f25eb6a246f7da9b85c91a68219, normalized source SHA-256 verified.
+No files changed, compilation skipped
+
+Ran 25 tests for test/Phase2Milestones.t.sol:Phase2MilestonesTest
+[FAIL: EvmError: Revert] test_A23_ResponseWindowEqualsImmutableFundingWindow() (gas: 5288)
+[FAIL: call reverted as expected, but without data] test_A24_SubmissionGetterRejectsUnknownJobsAndOutOfRangeMilestones() (gas: 8341)
+[FAIL: EvmError: Revert] test_A24_SubmissionHistoryIsBoundedAtSixAndNeverOverwritesOlderVersions() (gas: 616226)
+[FAIL: EvmError: Revert] test_A25_DonatedSurplusNeverBecomesMilestoneClaimable() (gas: 747716)
+[FAIL: EvmError: Revert] test_A25_FailedTokenTransferCannotBlockMissedDeadlineRefund() (gas: 1377138)
+[FAIL: EvmError: Revert] test_A25_FailedTokenTransferCannotBlockSettlementAndClaimRemainsBacked() (gas: 1311970)
+[FAIL: EvmError: Revert] test_A25_OnlyLastTerminalMilestoneClosesJobAndPayoutCannotRepeat() (gas: 810688)
+[FAIL: EvmError: Revert] test_A25_RuntimeCodeDriftCannotBlockMissedDeadlineRefund() (gas: 634889)
+[FAIL: EvmError: Revert] test_A25_RuntimeCodeDriftCannotBlockSettlementButStillBlocksWithdrawal() (gas: 615257)
+[FAIL: EvmError: Revert] test_A25_SettlementCreditAndWithdrawalAreIsolatedAcrossTokenDecimals() (gas: 1815121)
+[FAIL: EvmError: Revert] test_A27_ApprovalAndReviewSilenceEmitCausesAndCompatibleCredits() (gas: 712920)
+[FAIL: EvmError: Revert] test_A27_SubmissionAndRejectionEventsExposeExactAuditFields() (gas: 616681)
+[FAIL: EvmError: Revert] test_A27_TimeoutRefundCausesAndCompatibleCreditsIdentifyEachPath() (gas: 712919)
+[FAIL: call reverted as expected, but without data] test_F10_F11_F20_F21_F24_UnknownJobsAndInvalidStatesRevert() (gas: 31750)
+[FAIL: EvmError: Revert] test_F10_F13_SubmitRecordsVersionOneAndAllowsEmptyOpaqueReference() (gas: 605950)
+[FAIL: EvmError: Revert] test_F10_F21_DifferentMilestoneDurationsKeepIndependentDeadlinesAndExits() (gas: 751872)
+[FAIL: EvmError: Revert] test_F10_SubmissionRemainsOpenThroughDeliveryDeadlineAndClosesAtGraceEnd() (gas: 1125250)
+[FAIL: EvmError: Revert] test_F11_ApprovalIsClientOnlyAndCreditsFreelancerWithoutTokenTransfer() (gas: 615312)
+[FAIL: EvmError: Revert] test_F11_F12_F20_ReviewBoundaryEminus1Eplus() (gas: 1397672)
+[FAIL: EvmError: Revert] test_F12_RejectRequiresClientReasonAndAvailableRevision() (gas: 615269)
+[FAIL: EvmError: Revert] test_F13_F24_ResponseBoundaryEminus1Eplus() (gas: 908899)
+[FAIL: EvmError: Revert] test_F13_ResubmissionRefreshesReviewClockAndKeepsHistoryAndRejectionMetadata() (gas: 616302)
+[FAIL: EvmError: Revert] test_F20_F21_F24_NondisputedReadySubmittedAndRejectedStatesHavePublicBoundedExits() (gas: 810697)
+[FAIL: call reverted as expected, but without data] test_F21_MissedDeadlineRefundBoundaryEminus1Eplus() (gas: 830134)
+[FAIL: EvmError: Revert] test_F22_RevisionLimitsZeroOneAndFiveAreIndependentPerMilestone() (gas: 615303)
+Suite result: FAILED. 0 passed; 25 failed; 0 skipped; finished in 8.94ms (122.43ms CPU time)
+Warning: Failure from "C:/Users/vishvesh/Documents/ChatGPT/BNB/cache/invariant/failures/Phase2SettlementInvariantTest/invariants/invariant_A25_FundedPrincipalIsAlwaysLockedClaimableOrWithdrawn" file was ignored because invariant test settings have changed: target selectors changed
+
+Ran 2 tests for test/Phase2Milestones.t.sol:Phase2SettlementInvariantTest
+[FAIL: invariant must exercise real production settlement paths: 0 < 3] invariant_A25_FundedPrincipalIsAlwaysLockedClaimableOrWithdrawn
+[FAIL: EvmError: Revert] invariant_F20_F21_F24_ExpiredNondisputedStatesHaveBoundedPublicExits
+Phase2SettlementInvariantTest invariants: 2/2 invariants broken
+[FAIL: invariant must exercise real production settlement paths: 0 < 3] invariant_A25_FundedPrincipalIsAlwaysLockedClaimableOrWithdrawn
+[FAIL: EvmError: Revert] invariant_F20_F21_F24_ExpiredNondisputedStatesHaveBoundedPublicExits
+ Phase2SettlementInvariantTest invariants (runs: 1, calls: 1, reverts: 0)
+
+╭-------------------------+-------------+-------+---------+----------╮
+| Contract                | Selector    | Calls | Reverts | Discards |
++====================================================================+
+| Phase2SettlementHandler | advanceTime | 1     | 0       | 0        |
+╰-------------------------+-------------+-------+---------+----------╯
+
+[FAIL: EvmError: Revert] test_F20_F21_F24_StatefulHandlerCanDrainEveryNondisputedLifecycle() (gas: 152814)
+Suite result: FAILED. 0 passed; 2 failed; 0 skipped; finished in 12.00ms (3.05ms CPU time)
+
+Ran 2 test suites in 14.71ms (20.94ms CPU time): 0 tests passed, 27 failed, 0 skipped (27 total tests)
+
+Failing tests:
+Encountered 25 failing tests in test/Phase2Milestones.t.sol:Phase2MilestonesTest
+[FAIL: EvmError: Revert] test_A23_ResponseWindowEqualsImmutableFundingWindow() (gas: 5288)
+[FAIL: call reverted as expected, but without data] test_A24_SubmissionGetterRejectsUnknownJobsAndOutOfRangeMilestones() (gas: 8341)
+[FAIL: EvmError: Revert] test_A24_SubmissionHistoryIsBoundedAtSixAndNeverOverwritesOlderVersions() (gas: 616226)
+[FAIL: EvmError: Revert] test_A25_DonatedSurplusNeverBecomesMilestoneClaimable() (gas: 747716)
+[FAIL: EvmError: Revert] test_A25_FailedTokenTransferCannotBlockMissedDeadlineRefund() (gas: 1377138)
+[FAIL: EvmError: Revert] test_A25_FailedTokenTransferCannotBlockSettlementAndClaimRemainsBacked() (gas: 1311970)
+[FAIL: EvmError: Revert] test_A25_OnlyLastTerminalMilestoneClosesJobAndPayoutCannotRepeat() (gas: 810688)
+[FAIL: EvmError: Revert] test_A25_RuntimeCodeDriftCannotBlockMissedDeadlineRefund() (gas: 634889)
+[FAIL: EvmError: Revert] test_A25_RuntimeCodeDriftCannotBlockSettlementButStillBlocksWithdrawal() (gas: 615257)
+[FAIL: EvmError: Revert] test_A25_SettlementCreditAndWithdrawalAreIsolatedAcrossTokenDecimals() (gas: 1815121)
+[FAIL: EvmError: Revert] test_A27_ApprovalAndReviewSilenceEmitCausesAndCompatibleCredits() (gas: 712920)
+[FAIL: EvmError: Revert] test_A27_SubmissionAndRejectionEventsExposeExactAuditFields() (gas: 616681)
+[FAIL: EvmError: Revert] test_A27_TimeoutRefundCausesAndCompatibleCreditsIdentifyEachPath() (gas: 712919)
+[FAIL: call reverted as expected, but without data] test_F10_F11_F20_F21_F24_UnknownJobsAndInvalidStatesRevert() (gas: 31750)
+[FAIL: EvmError: Revert] test_F10_F13_SubmitRecordsVersionOneAndAllowsEmptyOpaqueReference() (gas: 605950)
+[FAIL: EvmError: Revert] test_F10_F21_DifferentMilestoneDurationsKeepIndependentDeadlinesAndExits() (gas: 751872)
+[FAIL: EvmError: Revert] test_F10_SubmissionRemainsOpenThroughDeliveryDeadlineAndClosesAtGraceEnd() (gas: 1125250)
+[FAIL: EvmError: Revert] test_F11_ApprovalIsClientOnlyAndCreditsFreelancerWithoutTokenTransfer() (gas: 615312)
+[FAIL: EvmError: Revert] test_F11_F12_F20_ReviewBoundaryEminus1Eplus() (gas: 1397672)
+[FAIL: EvmError: Revert] test_F12_RejectRequiresClientReasonAndAvailableRevision() (gas: 615269)
+[FAIL: EvmError: Revert] test_F13_F24_ResponseBoundaryEminus1Eplus() (gas: 908899)
+[FAIL: EvmError: Revert] test_F13_ResubmissionRefreshesReviewClockAndKeepsHistoryAndRejectionMetadata() (gas: 616302)
+[FAIL: EvmError: Revert] test_F20_F21_F24_NondisputedReadySubmittedAndRejectedStatesHavePublicBoundedExits() (gas: 810697)
+[FAIL: call reverted as expected, but without data] test_F21_MissedDeadlineRefundBoundaryEminus1Eplus() (gas: 830134)
+[FAIL: EvmError: Revert] test_F22_RevisionLimitsZeroOneAndFiveAreIndependentPerMilestone() (gas: 615303)
+
+Encountered 2 failing tests in test/Phase2Milestones.t.sol:Phase2SettlementInvariantTest
+[FAIL: invariant must exercise real production settlement paths: 0 < 3] invariant_A25_FundedPrincipalIsAlwaysLockedClaimableOrWithdrawn
+[FAIL: EvmError: Revert] invariant_F20_F21_F24_ExpiredNondisputedStatesHaveBoundedPublicExits
+Phase2SettlementInvariantTest invariants: 2/2 invariants broken
+[FAIL: invariant must exercise real production settlement paths: 0 < 3] invariant_A25_FundedPrincipalIsAlwaysLockedClaimableOrWithdrawn
+[FAIL: EvmError: Revert] invariant_F20_F21_F24_ExpiredNondisputedStatesHaveBoundedPublicExits
+ Phase2SettlementInvariantTest invariants (runs: 1, calls: 1, reverts: 0)
+[FAIL: EvmError: Revert] test_F20_F21_F24_StatefulHandlerCanDrainEveryNondisputedLifecycle() (gas: 152814)
+
+Encountered a total of 27 failing tests, 0 tests succeeded
+
+Tip: Run `forge test --rerun` to retry only the 27 failed tests
+
+Fuzz seed: 0x7142bb661578ccc101a7b4ff2d39873333656a6d0da574f51ae106bc3a72a18d (use `--fuzz-seed` to reproduce)

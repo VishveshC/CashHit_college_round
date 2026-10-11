@@ -1,0 +1,17 @@
+{
+  "title": "Phase 5 UI cross-tab session invalidation RED freeze",
+  "frozen_at": "2026-10-11 Asia/Kolkata",
+  "command": "node --experimental-strip-types --test apps/web/test/phase5-ui-cross-tab-session.test.ts",
+  "test_exit": 1,
+  "redloghash": "6973BE832A3198DCF7EBA07920457E8D7AF9A7475E9932FCF2FA38A9BB6FD09A",
+  "frozen_files": [
+    {
+      "file": "apps/web/test/phase5-ui-cross-tab-session.test.ts",
+      "Hash": "E307EAA610A4604F43C628AD002599CBD71B5FEACCF4C77B7D6F50BC22523FBD"
+    },
+    {
+      "file": "docs/phase5-ui-cross-tab-session-red.log",
+      "Hash": "6973BE832A3198DCF7EBA07920457E8D7AF9A7475E9932FCF2FA38A9BB6FD09A"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+✖ one command resets, deploys and seeds the repeatable local demo (62.0208ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 354.127
+
+✖ failing tests:
+
+test at scripts\phase4\test\demo.test.mjs:69:1
+✖ one command resets, deploys and seeds the repeatable local demo (62.0208ms)
+  AssertionError [ERR_ASSERTION]: first demo run failed
+  stdout:
+  
+  stderr:
+  node:internal/modules/cjs/loader:1424
+    throw err;
+    ^
+  
+  Error: Cannot find module 'C:\Users\vishvesh\Documents\ChatGPT\BNB\scripts\phase4\demo.mjs'
+      at Module._resolveFilename (node:internal/modules/cjs/loader:1421:15)
+      at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)
+      at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)
+      at Module._load (node:internal/modules/cjs/loader:1227:37)
+      at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+      at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+      at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+      at node:internal/main/run_main_module:33:47 {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: []
+  }
+  
+  Node.js v24.11.1
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/vishvesh/Documents/ChatGPT/BNB/scripts/phase4/test/demo.test.mjs:71:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+Recorded exit code: 1
